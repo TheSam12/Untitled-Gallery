@@ -29,6 +29,7 @@
     },
     "announcement-bar": {
       "type": "announcement-bar",
+      "disabled": true,
       "custom_css": [
 
       ],

@@ -1,5 +1,15 @@
 {
   "sections": {
+    "main_title_Q3rn6e": {
+      "type": "main-title",
+      "settings": {
+        "title": "shakespeare was right - all the world really is a stage",
+        "fontFormat": "uppercase",
+        "position": "center",
+        "desktopFontSize": 32,
+        "mobileFontSize": 28
+      }
+    },
     "7647cdf7-201f-4137-b502-6f16c65a7d2d": {
       "type": "image-with-text-overlay",
       "disabled": true,
@@ -201,6 +211,7 @@
     }
   },
   "order": [
+    "main_title_Q3rn6e",
     "7647cdf7-201f-4137-b502-6f16c65a7d2d",
     "slideshow_DgG37M",
     "featured_collection_7JCU3y",
