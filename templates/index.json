@@ -3,7 +3,7 @@
     "main_title_BzFwkb": {
       "type": "main-title",
       "settings": {
-        "title": "shakespeare was right - all the world really is a stage",
+        "title": "shakespeare was right - <br>all the world really is a stage",
         "fontFormat": "uppercase",
         "position": "center",
         "desktopFontSize": 32,
