@@ -1575,6 +1575,11 @@ shopify-payment-terms{
   font-weight: 400;
 }
 
+.sfMono{
+  font-family: 'SF Mono';
+  font-weight: 400;
+}
+
 .top-0{
   top: 0px;
 }

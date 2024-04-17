@@ -1,13 +1,13 @@
 {%- liquid
   unless heading_font
-    assign heading_font = 'font-body'
+    assign heading_font = 'sfMono'
   endunless
 
   if heading_font == 'font-heading'
     if heading_font_size != blank
       assign heading_font_size = heading_font_size
     else
-      assign heading_font_size = 'text-heading-secondary'
+      assign heading_font_size = 'text-base leading-1'
     endif
   endif
 
@@ -18,7 +18,7 @@
 
 <{{ tag }}
   x-data="{ expanded: false }"
-  class="border-b{% if last_in_loop %} border-b-0{% endif %}"
+  class="border-b{% if last_in_loop %} border-b-0{% endif %} px-[20px]"
 >
   <h2 class="{{ heading_font }} {{ heading_font_size }} break-word">
     <button
