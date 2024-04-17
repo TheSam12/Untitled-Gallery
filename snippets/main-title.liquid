@@ -1,0 +1,79 @@
+{% assign title = section.settings.title %}
+{% assign fontFormat = section.settings.fontFormat %}
+{% assign position = section.settings.position %}
+{% assign desktopFontSize = section.settings.desktopFontSize %}
+{% assign mobileFontSize = section.settings.mobileFontSize %}
+
+<div>
+    <h1 class="{{ fontFormat }} md:text-[{{ desktopFontSize }}px] text-[{{ mobileFontSize }}px] text-{{ position }}">
+        {{ title | escape }}
+    </h1>
+</div>
+
+{% schema %}
+{
+    "name": "Main Title",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "shakespeare was right - all the world really is a stage"
+        },
+        {
+            "type": "select",
+            "id": "fontFormat",
+            "label": "Font Format",
+            "options": [
+                {
+                    "value": "uppercase",
+                    "label": "Uppercase"
+                },
+                {
+                    "value": "capitalize",
+                    "label": "Capitalize"
+                },
+                {
+                    "value": "downcase",
+                    "label": "Downcase"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "position",
+            "label": "Text Positioning",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "center",
+                    "label": "Center"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ]
+        },
+        {
+            "type": "range",
+            "id": "desktopFontSize",
+            "label":"Desktop Font Size",
+            "default": 32,
+            "min": 30,
+            "max": 40
+        },
+        {
+            "type": "range",
+            "id": "mobileFontSize",
+            "label":"Mobile Font Size",
+            "default": 28,
+            "min": 20,
+            "max": 30
+        }
+    ]
+}
+{% endschema %}
