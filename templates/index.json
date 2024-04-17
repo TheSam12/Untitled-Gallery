@@ -118,28 +118,28 @@
         "question_3t4rPk": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
+            "question": "What kind of work do you specialize in?",
             "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
           }
         },
         "question_rnmzaP": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
+            "question": "What's a limited edition?",
             "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
           }
         },
         "question_9Mi8zc": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "Who will my print be framed?",
+            "answer": "<p>Framing options vary for each piece and are listed on the individual artwork pages. Our standard glazing offer is a minimum 90% UV acrylic plexiglass, or you can upgrade to an anti reflective Optium museum plexiglass.<\/p>"
           }
         },
         "question_eYQVRr": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
+            "question": "Are the artists involved in production?",
             "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
           }
         },
