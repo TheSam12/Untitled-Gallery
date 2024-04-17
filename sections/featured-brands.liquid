@@ -9,7 +9,7 @@
         {% for block in section.blocks %}
             {% if block.settings.brandImage != blank %}
                 <div>
-                    <img src="{{ block.settings.brandImage | image_url: 'master' }}" alt="Brand Image {% forloop.index %}"/>
+                    <img src="{{ block.settings.brandImage | file_url: 'master' }}" alt="Brand Image {% forloop.index %}"/>
                 </div>
             {% endif %}
         {% endfor %}
