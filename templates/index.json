@@ -184,7 +184,7 @@
       ],
       "settings": {
         "title": "FAQs",
-        "two_columns_desktop": true,
+        "two_columns_desktop": false,
         "heading_font": "font-heading",
         "color_scheme": ""
       }
