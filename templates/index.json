@@ -186,7 +186,8 @@
         "title": "FAQs",
         "two_columns_desktop": false,
         "heading_font": "font-heading",
-        "color_scheme": ""
+        "color_scheme": "",
+        "faqImg": "shopify:\/\/shop_images\/Rectangle_40067.jpg"
       }
     }
   },
