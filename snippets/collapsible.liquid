@@ -5,7 +5,7 @@
     if heading_font_size != blank
       assign heading_font_size = heading_font_size
     else
-      assign heading_font_size = 'text-base leading-1'
+      assign heading_font_size = 'text-xl leading-1'
     endif
   endif
 
@@ -56,7 +56,7 @@
     x-collapse
     x-cloak
   >
-    <div class="rte richtext break-word pb-theme text-base {{ expanded_content_max_width }}">
+    <div class="rte richtext break-word pb-theme text-lg {{ expanded_content_max_width }}">
       {{ expanded_content }}
     </div>
   </div>
