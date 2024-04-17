@@ -1,6 +1,6 @@
 {
   "sections": {
-    "main_title_Q3rn6e": {
+    "main_title_BzFwkb": {
       "type": "main-title",
       "settings": {
         "title": "shakespeare was right - all the world really is a stage",
@@ -8,26 +8,6 @@
         "position": "center",
         "desktopFontSize": 32,
         "mobileFontSize": 28
-      }
-    },
-    "7647cdf7-201f-4137-b502-6f16c65a7d2d": {
-      "type": "image-with-text-overlay",
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/1800_x_800px_1.png",
-        "image_mobile": "shopify:\/\/shop_images\/Untitled_design_2.png",
-        "indent_image": false,
-        "height": "natural",
-        "title": "",
-        "heading_size": "text-heading-feature",
-        "text": "",
-        "content_position": "justify-start items-center text-left",
-        "content_width_desktop": "lg:w-2\/3",
-        "color_scheme": "scheme4",
-        "scheme_text_color_only": false,
-        "cta_link": "",
-        "cta_text": "View All",
-        "cta_style": "link"
       }
     },
     "slideshow_DgG37M": {
@@ -211,8 +191,7 @@
     }
   },
   "order": [
-    "main_title_Q3rn6e",
-    "7647cdf7-201f-4137-b502-6f16c65a7d2d",
+    "main_title_BzFwkb",
     "slideshow_DgG37M",
     "featured_collection_7JCU3y",
     "featured_collection_carousel_UbidKX",
