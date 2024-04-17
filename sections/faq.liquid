@@ -15,26 +15,34 @@
     -%}
   {% endif %}
 
-  <ul
-    {% if two_columns_desktop %}
-      class="lg:hidden border border-[#d9d9d9]"
-      {% else %}
-      class="border border-[#d9d9d9]"
-    {% endif %}
-  >
-    {% for block in section.blocks %}
-      {%- render 'collapsible',
-        tag: 'li',
-        title: block.settings.question,
-        id: block.id,
-        expanded_content: block.settings.answer,
-        heading_font: heading_font,
-        expanded_content_max_width: section.settings.expanded_content_max_width,
-        last_in_loop: forloop.last
-      -%}
-    {% endfor %}
-  </ul>
-
+  <div {% if section.settings.faqImg != blank %}class="grid grid-cols-12 gap-4"{% endif %}>
+    <div {% if section.settings.faqImg != blank %}class="col-span-7"{% endif %}>
+      <ul
+        {% if two_columns_desktop %}
+          class="lg:hidden border border-[#d9d9d9]"
+          {% else %}
+          class="border border-[#d9d9d9]"
+        {% endif %}
+      >
+        {% for block in section.blocks %}
+          {%- render 'collapsible',
+            tag: 'li',
+            title: block.settings.question,
+            id: block.id,
+            expanded_content: block.settings.answer,
+            heading_font: heading_font,
+            expanded_content_max_width: section.settings.expanded_content_max_width,
+            last_in_loop: forloop.last
+          -%}
+        {% endfor %}
+      </ul>
+    </div>
+    {% if section.settings.faqImg != blank %}
+    <div class="col-span-5">
+      <img src="{{ section.settings.faqImg | img_url: "master" }}" alt="{{ section.settings.faqImg.alt }}">
+    </div>
+  {% endif %}
+  </div>
   {%- if two_columns_desktop -%}
     <div class="hidden gap-gutter bg-gridline-color lg:-mb-gridline lg:grid lg:grid-cols-2">
       <ul class="bg-scheme-background">
@@ -129,6 +137,11 @@
       "id": "color_scheme",
       "default": "scheme1",
       "label": "Color scheme"
+    },
+    {
+      "type": "image_picker",
+      "id": "faqImg",
+      "label": "Section Image"
     }
   ],
   "blocks": [
