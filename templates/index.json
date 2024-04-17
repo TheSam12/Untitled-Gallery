@@ -2,6 +2,7 @@
   "sections": {
     "7647cdf7-201f-4137-b502-6f16c65a7d2d": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/1800_x_800px_1.png",
         "image_mobile": "shopify:\/\/shop_images\/Untitled_design_2.png",
@@ -18,9 +19,193 @@
         "cta_text": "View All",
         "cta_style": "link"
       }
+    },
+    "slideshow_DgG37M": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_BNkNay": {
+          "type": "slide",
+          "settings": {
+            "indent_image": false,
+            "title": "Image slide",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link",
+            "color_scheme": "",
+            "scheme_text_color_only": false
+          }
+        },
+        "slide_44KMaU": {
+          "type": "slide",
+          "settings": {
+            "indent_image": false,
+            "title": "Image slide",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link",
+            "color_scheme": "",
+            "scheme_text_color_only": false
+          }
+        },
+        "slide_Qbt7Eh": {
+          "type": "slide",
+          "settings": {
+            "indent_image": false,
+            "title": "Image slide",
+            "text": "",
+            "content_position": "justify-center items-center text-center",
+            "content_width_desktop": "lg:w-2\/3",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link",
+            "color_scheme": "",
+            "scheme_text_color_only": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_BNkNay",
+        "slide_44KMaU",
+        "slide_Qbt7Eh"
+      ],
+      "settings": {
+        "height": "natural",
+        "heading_size": "text-heading-feature",
+        "autoplay": false,
+        "autoplay_interval": "5000",
+        "color_scheme": ""
+      }
+    },
+    "featured_collection_7JCU3y": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "",
+        "product_tile_type": "standard",
+        "grid": 3,
+        "rows": 2,
+        "grid_mobile": "1",
+        "show_view_all": false,
+        "enable_quick_buy": false,
+        "quick_buy_button_style": "theme-button",
+        "color_scheme": ""
+      }
+    },
+    "featured_collection_carousel_UbidKX": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "",
+        "product_tile_type": "standard",
+        "product_limit": 5,
+        "show_view_all": false,
+        "image_crop": "none",
+        "mobile_product_tile_width": "80",
+        "desktop_product_tile_width": 22,
+        "enable_quick_buy": false,
+        "quick_buy_button_style": "theme-button",
+        "color_scheme": ""
+      }
+    },
+    "newsletter_QPpAxK": {
+      "type": "newsletter",
+      "settings": {
+        "section_title": "",
+        "subheading": "<p>Receive special offers and first look at new products.<\/p>",
+        "text_size": "text-base",
+        "color_scheme": ""
+      }
+    },
+    "faq_Gbkbyk": {
+      "type": "faq",
+      "blocks": {
+        "question_3t4rPk": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "question_rnmzaP": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "question_9Mi8zc": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "question_eYQVRr": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "question_jw6gTe": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "question_RwzUWW": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "question_qDRrgT": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        },
+        "question_7rrck7": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_3t4rPk",
+        "question_rnmzaP",
+        "question_9Mi8zc",
+        "question_eYQVRr",
+        "question_jw6gTe",
+        "question_RwzUWW",
+        "question_qDRrgT",
+        "question_7rrck7"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "two_columns_desktop": true,
+        "heading_font": "font-heading",
+        "color_scheme": ""
+      }
     }
   },
   "order": [
-    "7647cdf7-201f-4137-b502-6f16c65a7d2d"
+    "7647cdf7-201f-4137-b502-6f16c65a7d2d",
+    "slideshow_DgG37M",
+    "featured_collection_7JCU3y",
+    "featured_collection_carousel_UbidKX",
+    "newsletter_QPpAxK",
+    "faq_Gbkbyk"
   ]
 }
