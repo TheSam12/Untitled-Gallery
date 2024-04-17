@@ -5,7 +5,7 @@
   assign text = section.settings.text
   assign link = section.settings.link
 -%}
-test
+
 {%- if section.settings.home_page_only == false or template.name == 'index' -%}
   {%- if display == 'static' -%}
     <section
@@ -22,7 +22,7 @@ test
           {{ text | escape }}
         </a>
       {%- else -%}
-        <p class="px-section-horizontal-spacing">{{ text | escape }}</p>
+        <p class="px-section-horizontal-spacing">{{ text | escape }} test part 2</p>
       {%- endif -%}
     </section>
   {%- else -%}
