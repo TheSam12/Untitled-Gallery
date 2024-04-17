@@ -18,6 +18,8 @@
   <ul
     {% if two_columns_desktop %}
       class="lg:hidden border border-[#d9d9d9]"
+      {% else %}
+      class="border border-[#d9d9d9]"
     {% endif %}
   >
     {% for block in section.blocks %}
