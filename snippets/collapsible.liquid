@@ -18,7 +18,7 @@
 
 <{{ tag }}
   x-data="{ expanded: false }"
-  class="border-b-gridline border-gridline-color px-section-horizontal-spacing{% if last_in_loop %} -mb-gridline{% endif %}"
+  class="border-b{% if last_in_loop %} border-b-0{% endif %}"
 >
   <h2 class="{{ heading_font }} {{ heading_font_size }} break-word">
     <button
