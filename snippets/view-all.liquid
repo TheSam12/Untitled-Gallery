@@ -1,0 +1,25 @@
+{%- liquid
+  assign display_view_all_underneath = false
+
+  if title == '' and show_link
+    assign display_view_all_underneath = true
+  endif
+
+  if title != '' and show_link and settings.section_title_align == 'center'
+    assign display_view_all_underneath = true
+  endif
+-%}
+
+{% if display_view_all_underneath %}
+  <div
+    class="bg-scheme-background px-section-horizontal-spacing pb-theme-double pt-theme text-scheme-text  {% if settings.section_title_align == 'center' %}text-center{% else %}text-right{% endif %} border-t-gridline border-gridline-color"
+    data-color-scheme="{{ section_color }}"
+  >
+    <a
+      class="inline-block text-scheme-text hover:text-scheme-accent theme-link"
+      href="{{ link_url }}"
+    >
+      {{- link_text -}}
+    </a>
+  </div>
+{% endif %}
