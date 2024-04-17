@@ -1,0 +1,49 @@
+
+<section>
+    <div>
+        <h2>
+            {{ section.settings.title }}
+        </h2>
+    </div>
+    <div>
+        {% for block in section.blocks %}
+            {% if block.settings.brandImage != blank %}
+                <div>
+                    <img src="{{ block.settings.brandImage | file_url: 'master' }}" alt="Brand Image {% forloop.index %}"/>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Featured Brands",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "Our Partners"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "brands",
+                "name": "Brands",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "brandImage",
+                        "label": "Brand Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Featured Brands"
+            }
+        ]
+    }
+{% endschema %}
