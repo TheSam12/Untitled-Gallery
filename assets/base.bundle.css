@@ -1580,8 +1580,10 @@ shopify-payment-terms{
   font-weight: 400;
 }
 
-#splide01 .splide__slide{
-  width: 95% !important; 
+@media (min-width:1024px){
+  #splide01 .splide__slide{
+    width: 95% !important; 
+  }
 }
 
 .top-0{
