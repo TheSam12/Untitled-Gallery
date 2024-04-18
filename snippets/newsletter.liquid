@@ -1,9 +1,9 @@
 {%- assign form_id = 'Contact-' | append: section_id -%}
 <section
-  class="border-b-gridline border-gridline-color bg-scheme-background py-section-vertical-spacing text-scheme-text bg-[url('{{ bgImg | img_url: 'master' }}')]"
+  class="border-b-gridline border-gridline-color bg-scheme-background py-section-vertical-spacing text-scheme-text bg-[url('{{ bgImg | img_url: 'master' }}')] bg-cover"
   data-color-scheme="{{ section_color }}"
 >
-  <div class="lg:w-1/3 m-auto">
+  <div class="lg:w-1/3 m-auto py-[40px] lg:py-[80px]">
     <div class="{{ text_size_class }}{% if text_size_class contains 'xl' %} lg:w-1/2{% endif %}">
       {% if section_title != blank %}
         <h2 class="font-heading text-[24px] lg:text-[32px] text-center" for="Email">
