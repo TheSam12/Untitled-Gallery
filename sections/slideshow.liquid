@@ -124,7 +124,7 @@
         x-init="checkIfWrapped"
         @resize.window.debounce.250="checkIfWrapped"
       >
-        <ul x-ref="pagination" class="splide__pagination"></ul>
+        {% comment %} <ul x-ref="pagination" class="splide__pagination"></ul> {% endcomment %}
         <div
           class="splide__arrows col-end-last flex items-center justify-end gap-1 text-scheme-text"
           :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
