@@ -118,57 +118,50 @@
         "question_3t4rPk": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "What kind of work do you specialize in?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
           }
         },
         "question_rnmzaP": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "What's a limited edition?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
           }
         },
         "question_9Mi8zc": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "Who will my print be framed?",
+            "answer": "<p>Framing options vary for each piece and are listed on the individual artwork pages. Our standard glazing offer is a minimum 90% UV acrylic plexiglass, or you can upgrade to an anti reflective Optium museum plexiglass.<\/p>"
           }
         },
         "question_eYQVRr": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "Are the artists involved in production?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
           }
         },
         "question_jw6gTe": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "How do I know my limited edition is authentic?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
           }
         },
         "question_RwzUWW": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "Do I own the copyright if I buy a limited edition?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
           }
         },
         "question_qDRrgT": {
           "type": "question",
           "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
-          }
-        },
-        "question_7rrck7": {
-          "type": "question",
-          "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.<\/p>"
+            "question": "Where can I find out more about shipping?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
           }
         }
       },
@@ -179,8 +172,7 @@
         "question_eYQVRr",
         "question_jw6gTe",
         "question_RwzUWW",
-        "question_qDRrgT",
-        "question_7rrck7"
+        "question_qDRrgT"
       ],
       "settings": {
         "title": "FAQs",
