@@ -1,6 +1,6 @@
 {%- assign form_id = 'Contact-' | append: section_id -%}
 <section
-  class="border-b-gridline border-gridline-color bg-scheme-background py-section-vertical-spacing text-scheme-text bg-[{{ bgImg | img_url: 'master' }}]"
+  class="border-b-gridline border-gridline-color bg-scheme-background py-section-vertical-spacing text-scheme-text bg-['url({{ bgImg | img_url: 'master' }}'')]"
   data-color-scheme="{{ section_color }}"
 >
   <div class="lg:w-1/3 m-auto">
