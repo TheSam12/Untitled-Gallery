@@ -75,7 +75,7 @@
       ],
       "settings": {
         "height": "natural",
-        "heading_size": "text-heading-feature",
+        "heading_size": 32,
         "autoplay": false,
         "autoplay_interval": "5000",
         "color_scheme": "",
