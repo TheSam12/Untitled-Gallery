@@ -99,6 +99,7 @@
               loading: loading,
             -%}
           </li>
+          <p>{{ forloop.index }}</p>
         {% endfor %}
       </ul>
     </div>
@@ -160,9 +161,6 @@
     {% endif %}
     #splide01 .splide__slide{
       width:95% !important;
-      {% if forloop.index > 1 %}
-        left:50%;
-      {% endif %}
     }
   {% endstyle %}
 </section>
