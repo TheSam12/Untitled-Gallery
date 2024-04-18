@@ -36,7 +36,7 @@
             </label>
             <input
               type="email"
-              class="font-body block w-full border-b-text border-current bg-transparent pb-1 leading-[inherit] placeholder-current"
+              class="bg-[#fff] border border-[#e5e7eb] px-[20px] py-[11.2px]"
               name="contact[email]"
               id="Email-{{ section.id }}"
               value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
@@ -45,7 +45,7 @@
               autocapitalize="off"
             >
             <button
-              class="theme-link mt-2 py-1 leading-[inherit] hover:text-scheme-accent shrink-0 lg:ml-2 lg:mt-0"
+              class="bg-black px-[30px] py-[15px] sfMono text-[#fff]"
               type="submit"
               name="commit"
               id="Subscribe"
