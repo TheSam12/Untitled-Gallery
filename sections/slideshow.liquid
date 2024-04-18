@@ -10,7 +10,7 @@
 
 <section
   class="relative border-b-gridline border-gridline-color bg-scheme-background pb-theme-double text-scheme-text"
-  data-color-scheme="{{ section_color }}"
+  data-color-scheme="{{ section_color }}" id="slideshow-{{ section.id }}"
 >
   <div
     x-data="
@@ -153,6 +153,14 @@
     {% endif %}
   </div>
 </section>
+
+{% if !pagination %}
+  {% style %}
+  #slideshow-{{ section.id }} .splide__pagination{
+    display:none
+  }
+  {% endstyle %}
+{% endif %}
 
 {% unless request.design_mode %}
   <script src="{{ 'splide.bundle.min.js' | asset_url }}" type="module"></script>
