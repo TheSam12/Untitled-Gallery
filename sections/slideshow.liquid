@@ -152,13 +152,16 @@
       </div>
     {% endif %}
   </div>
-  {% if pagination != true %}
-    {% style %}
+  {% style %}
+    {% if pagination != true %}
       #splide01 .splide__pagination{
         display:none
       }
-    {% endstyle %}
-  {% endif %}
+    {% endif %}
+    #splide01 .splide__slide{
+      width:95% !important
+    }
+  {% endstyle %}
 </section>
 
 {% unless request.design_mode %}
