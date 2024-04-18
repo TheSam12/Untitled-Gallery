@@ -69,7 +69,8 @@
         "heading_size": "text-heading-feature",
         "autoplay": false,
         "autoplay_interval": "5000",
-        "color_scheme": ""
+        "color_scheme": "",
+        "pagination": true
       }
     },
     "featured_collection_7JCU3y": {
