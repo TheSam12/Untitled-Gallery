@@ -14,7 +14,7 @@
   class="{% unless hide_bottom_border %}border-b-gridline{% endunless %} border-gridline-color bg-scheme-background pb-[16px] lg:pb-[24px] pt-[40px] lg:pt-[80px] text-scheme-text {% if settings.section_title_align == 'left' %}lg:flex items-end justify-between{% else %}text-center{% endif %}"
   data-color-scheme="{{ section_color }}"
 >
-  <h2 class="{{ settings.section_title_font }} text-heading-standard {{ heading_width_class }} break-word">
+  <h2 class="{{ settings.section_title_font }} text-[24px] lg:text-[32px] {{ heading_width_class }} break-word">
     {{ title }}
   </h2>
   {%- if show_view_all -%}
