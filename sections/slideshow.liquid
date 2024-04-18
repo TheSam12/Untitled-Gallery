@@ -124,8 +124,8 @@
             }
           "
           x-init="checkIfWrapped"
+          @resize.window.debounce.250="checkIfWrapped"
         {% endif %}
-        @resize.window.debounce.250="checkIfWrapped"
       >
         {% if pagination %}
           <ul x-ref="pagination" class="splide__pagination"></ul>
