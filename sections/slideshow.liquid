@@ -152,15 +152,14 @@
       </div>
     {% endif %}
   </div>
+  {% if pagination != true %}
+    {% style %}
+      #splide01 .splide__pagination{
+        display:none
+      }
+    {% endstyle %}
+  {% endif %}
 </section>
-
-{% if !pagination %}
-  {% style %}
-    #splide01 .splide__pagination{
-      display:none
-    }
-  {% endstyle %}
-{% endif %}
 
 {% unless request.design_mode %}
   <script src="{{ 'splide.bundle.min.js' | asset_url }}" type="module"></script>
