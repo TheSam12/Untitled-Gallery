@@ -99,9 +99,9 @@
               loading: loading,
             -%}
           </li>
-          {% if forloop.index > 1 && forloop.index < forloop.last %}
+          {% unless forloop.first && forloop.last %}
             <p>{{ forloop.index }}</p>
-          {% endif %}
+          {% endunless %}
         {% endfor %}
       </ul>
     </div>
