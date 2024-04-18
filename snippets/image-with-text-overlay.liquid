@@ -22,7 +22,7 @@
     class="text-scheme-text {% unless scheme_text_color_only %} bg-scheme-background{% endunless %}{% unless settings.fill_image_to_border_edge %} p-2 lg:p-4{% endunless %}{% if indent_image %} p-8 lg:p-16{% endif %} h-full w-full"
     data-color-scheme="{{ color_scheme }}"
   >
-    <div class="{% if settings.fill_image_to_border_edge == false or height == 'full_screen' or height == 'full_height' %}relative h-full w-full{% endif %}">
+    <div class="{% if settings.fill_image_to_border_edge == false or height == 'full_screen' or height == 'full_height' %}relative h-full w-full{% endif %} h-full">
       {% if image != blank %}
         <div
           {% if image_mobile != blank %}
