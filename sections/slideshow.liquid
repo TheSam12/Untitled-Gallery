@@ -155,11 +155,14 @@
   {% style %}
     {% if pagination != true %}
       #splide01 .splide__pagination{
-        display:none
+        display:none;
       }
     {% endif %}
     #splide01 .splide__slide{
-      width:95% !important
+      width:95% !important;
+      {% if forloop.index > 1 %}
+        left:50%;
+      {% endif %}
     }
   {% endstyle %}
 </section>
