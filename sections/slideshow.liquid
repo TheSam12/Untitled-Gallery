@@ -68,10 +68,8 @@
             assign image = block.settings.image
             assign image_mobile = block.settings.image_mobile
             assign indent_image = block.settings.indent_image
-            assign timer = block.settings.timer
             assign title = block.settings.title
             assign text = block.settings.text
-            assign desc = block.settings.desc
             assign cta_link = block.settings.cta_link
             assign cta_text = block.settings.cta_text
             assign cta_style = block.settings.cta_style
@@ -94,10 +92,8 @@
               color_scheme: color_scheme,
               scheme_text_color_only: scheme_text_color_only,
               content_width_desktop: content_width_desktop,
-              timer: timer,
               title: title,
               text: text,
-              desc: desc,
               cta_link: cta_link,
               cta_text: cta_text,
               cta_style: cta_style,
@@ -303,12 +299,6 @@
         },
         {
           "type": "text",
-          "id": "timer",
-          "label": "Countdown Timer",
-          "default": "Starts in 2d 3h 47m 28s"
-        },
-        {
-          "type": "text",
           "id": "title",
           "label": "Heading",
           "default": "Image slide"
@@ -317,12 +307,6 @@
           "type": "richtext",
           "id": "text",
           "label": "Text"
-        },
-        {
-          "type": "richtext",
-          "id": "desc",
-          "label": "Paint Description",
-          "default": "Untitled takes flight in a print by Baldwim Green."
         },
         {
           "type": "select",
