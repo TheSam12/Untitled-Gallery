@@ -1066,7 +1066,7 @@ function Layout(Splide2, Components2, options) {
   }
   function cssSlideSize() {
     var gap = unit(options.gap);
-    return "calc((100%" + (gap && " + " + gap) + ")/" + (options.perPage || 1) + (gap && " - " + gap) + ")";
+    return "calc((95%" + (gap && " + " + gap) + ")/" + (options.perPage || 1) + (gap && " - " + gap) + ")";
   }
   function listSize() {
     return rect(list)[resolve("width")];
