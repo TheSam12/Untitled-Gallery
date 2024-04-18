@@ -1580,6 +1580,14 @@ shopify-payment-terms{
   font-weight: 400;
 }
 
+#splide01 .splide__slide{
+  width:95% !important;
+}
+
+#splide01 .left-slider{
+  left: 50px;
+}
+
 .top-0{
   top: 0px;
 }
