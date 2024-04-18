@@ -99,7 +99,7 @@
               loading: loading,
             -%}
           </li>
-          {% unless forloop.last %}
+          {% unless forloop.first and forloop.last %}
             <p>{{ forloop.index }}</p>
           {% endunless %}
         {% endfor %}
