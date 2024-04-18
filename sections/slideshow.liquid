@@ -114,18 +114,16 @@
     {% if section.blocks.size > 1 %}
       <div
         class="mx-1 grid grid-cols-[minmax(0,_1fr)_auto] gap-2 no-js:hidden lg:mx-4{% if settings.fill_image_to_border_edge %} mt-2{% endif %}"
-        {% if pagination %}
-          x-data="
-            {
-              paginationIsWrapped: false,
-              checkIfWrapped() {
-                this.paginationIsWrapped = hasWrappedChildren(this.$refs.pagination)
-              }
+        x-data="
+          {
+            paginationIsWrapped: false,
+            checkIfWrapped() {
+              this.paginationIsWrapped = hasWrappedChildren(this.$refs.pagination)
             }
-          "
-          x-init="checkIfWrapped"
-          @resize.window.debounce.250="checkIfWrapped"
-        {% endif %}
+          }
+        "
+        x-init="checkIfWrapped"
+        @resize.window.debounce.250="checkIfWrapped"
       >
         {% if pagination %}
           <ul x-ref="pagination" class="splide__pagination"></ul>
