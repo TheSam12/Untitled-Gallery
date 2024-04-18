@@ -1,11 +1,13 @@
 {%- liquid
   assign section_color = section.settings.color_scheme
   assign text_size_class = section.settings.text_size
+  assign bgImg = section.settings.bgImg
 -%}
 
 {% render 'newsletter',
   section_color: section_color,
   text_size_class: text_size_class,
+  bgImg: bgImg,
   section_title: section.settings.section_title,
   subheading: section.settings.subheading,
   section_id: section.id
@@ -22,6 +24,11 @@
     ]
   },
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "bgImg",
+      "label": "Background Image"
+    },
     {
       "type": "text",
       "id": "section_title",
