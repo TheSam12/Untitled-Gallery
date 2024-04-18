@@ -67,6 +67,10 @@
       <div
         class="{{ content_width_desktop }} bg-[#fff] lg:w-2/5 p-[20px] text-left text-scheme-text"
       >
+        {% if timer != blank %}
+          <p class="px-[8px] py-[3px] border rounded-[30px] border-color-[#e5e7eb] sfMono">{{ timer }}</p>
+        {% endif %}
+
         {% if title != blank %}
           <h2 class="font-heading {{ heading_size_class }} break-word">
             {{ title }}
@@ -76,6 +80,12 @@
         {% if text != blank %}
           <div class="rte mt-4 text-base">
             {{ text }}
+          </div>
+        {% endif %}
+
+        {% if desc != blank %}
+          <div class="rte mt-4 text-base">
+            {{ desc }}
           </div>
         {% endif %}
 
