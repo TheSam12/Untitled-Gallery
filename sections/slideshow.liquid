@@ -132,7 +132,7 @@
           class="splide__arrows col-end-last flex items-center justify-end gap-1 text-scheme-text"
           :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
         >
-          <button class="splide__arrow splide__arrow--prev w-8">
+          <button class="splide__arrow splide__arrow--prev">
             <span class="sr-only">
               {{- 'sections.slideshow.previous_slide' | t -}}
             </span>
@@ -140,7 +140,7 @@
               {% render 'icon-arrow-left' %}
             </span>
           </button>
-          <button class="splide__arrow splide__arrow--next w-8">
+          <button class="splide__arrow splide__arrow--next">
             <span class="sr-only">
               {{- 'sections.slideshow.next_slide' | t -}}
             </span>
