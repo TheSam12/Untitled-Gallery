@@ -181,6 +181,12 @@
         "color_scheme": "",
         "faqImg": "shopify:\/\/shop_images\/Rectangle_40067.jpg"
       }
+    },
+    "featured_brands_nDG4md": {
+      "type": "featured-brands",
+      "settings": {
+        "title": "Our Partners"
+      }
     }
   },
   "order": [
@@ -189,6 +195,7 @@
     "featured_collection_7JCU3y",
     "featured_collection_carousel_UbidKX",
     "newsletter_QPpAxK",
-    "faq_Gbkbyk"
+    "faq_Gbkbyk",
+    "featured_brands_nDG4md"
   ]
 }
