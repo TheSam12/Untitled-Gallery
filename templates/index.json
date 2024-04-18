@@ -116,8 +116,8 @@
     "newsletter_QPpAxK": {
       "type": "newsletter",
       "settings": {
-        "section_title": "",
-        "subheading": "<p>Receive special offers and first look at new products.<\/p>",
+        "section_title": "Curated works — straight to your inbox",
+        "subheading": "<p>Tell us which artists are on your radar, and we’ll keep you in the loop about upcoming collaborations and more.<\/p>",
         "text_size": "text-base",
         "color_scheme": ""
       }
