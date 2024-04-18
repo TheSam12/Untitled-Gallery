@@ -75,7 +75,7 @@
             assign cta_style = block.settings.cta_style
           -%}
           <li
-            class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% comment %}left-slider{% endcomment %} {% endunless %}"
+            class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
             data-index="{{ forloop.index0 }}"
             {{ block.shopify_attributes }}
           >
