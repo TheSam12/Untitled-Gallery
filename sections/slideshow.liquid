@@ -130,7 +130,7 @@
         {% endif %}
         <div
           class="splide__arrows col-end-last flex items-center justify-end gap-1 text-scheme-text"
-          :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
+          {% if pagination %}:class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"{% endif %}
         >
           <button class="splide__arrow splide__arrow--prev w-8">
             <span class="sr-only">
