@@ -113,7 +113,7 @@
     {% endif %}
     {% if section.blocks.size > 1 %}
       <div
-        class="mx-1 {% if pagination %}grid grid-cols-[minmax(0,_1fr)_auto]{% endif %} gap-2 no-js:hidden lg:mx-4"
+        class="mx-1 {% if pagination %}grid{% endif %} grid-cols-[minmax(0,_1fr)_auto] gap-2 no-js:hidden lg:mx-4"
         x-data="
           {
             paginationIsWrapped: false,
