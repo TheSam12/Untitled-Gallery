@@ -3,7 +3,7 @@
   class="border-b-gridline border-gridline-color bg-scheme-background py-section-vertical-spacing text-scheme-text"
   data-color-scheme="{{ section_color }}"
 >
-  <div class="justify-center px-section-horizontal-spacing lg:flex lg:items-center lg:justify-between">
+  <div class="">
     <div class="{{ text_size_class }}{% if text_size_class contains 'xl' %} lg:w-1/2{% endif %}">
       {% if section_title != blank %}
         <h2 class="font-heading text-heading-standard" for="Email">
@@ -30,13 +30,13 @@
           </p>
         {% else %}
           <input type="hidden" name="contact[tags]" value="newsletter">
-          <div class="items-end lg:ml-4 lg:flex">
+          <div class="items-end lg:flex gap-[15px]">
             <label class="sr-only" for="Email-{{ section.id }}">
               {{- 'general.newsletter_form.email_placeholder' | t -}}
             </label>
             <input
               type="email"
-              class="bg-[#fff] border border-[#e5e7eb] px-[20px] py-[11.2px]"
+              class="bg-[#fff] border border-[#e5e7eb] px-[20px] py-[11.2px] w-full"
               name="contact[email]"
               id="Email-{{ section.id }}"
               value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
