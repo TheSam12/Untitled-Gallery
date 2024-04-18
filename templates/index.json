@@ -16,6 +16,7 @@
         "slide_BNkNay": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_40057_3.jpg",
             "indent_image": false,
             "title": "Image slide",
             "text": "",
@@ -31,6 +32,7 @@
         "slide_44KMaU": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_40057.jpg",
             "indent_image": false,
             "title": "Image slide",
             "text": "",
@@ -46,6 +48,7 @@
         "slide_Qbt7Eh": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_40057_4.jpg",
             "indent_image": false,
             "title": "Image slide",
             "text": "",
