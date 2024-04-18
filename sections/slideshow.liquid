@@ -1,6 +1,7 @@
 {%- liquid
   assign section_color = section.settings.color_scheme
   assign heading_size_class = section.settings.heading_size
+  assign pagination = section.settings.pagination
 
   if section.settings.autoplay
     assign no_border_on_slide = true
@@ -124,7 +125,9 @@
         x-init="checkIfWrapped"
         @resize.window.debounce.250="checkIfWrapped"
       >
-        <ul x-ref="pagination" class="splide__pagination"></ul>
+        {% if pagination %}
+          <ul x-ref="pagination" class="splide__pagination"></ul>
+        {% endif %}
         <div
           class="splide__arrows col-end-last flex items-center justify-end gap-1 text-scheme-text"
           :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
@@ -252,6 +255,11 @@
       "id": "color_scheme",
       "default": "scheme1",
       "label": "Color scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "pagination",
+      "label": "Show Pagination"
     }
   ],
   "blocks": [
