@@ -6,13 +6,13 @@
   <div class="lg:w-1/2 m-auto">
     <div class="{{ text_size_class }}{% if text_size_class contains 'xl' %} lg:w-1/2{% endif %}">
       {% if section_title != blank %}
-        <h2 class="font-heading text-heading-standard" for="Email">
+        <h2 class="font-heading text-[24px] lg:text-[32px] text-center" for="Email">
           {{ section_title | escape }}
         </h2>
       {% endif %}
 
       {% if subheading != blank %}
-        <div class="[&_a[href]]:underline [&_a[href]]:hover:text-scheme-accent{% if section_title != blank %} mt-2{% endif %}">
+        <div class="[&_a[href]]:underline [&_a[href]]:hover:text-scheme-accent{% if section_title != blank %} mt-2{% endif %} text-center sfMono text-[14px]">
           {{ subheading }}
         </div>
       {% endif %}
