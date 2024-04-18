@@ -1582,6 +1582,9 @@ shopify-payment-terms{
 
 #splide01 .splide__slide{
   width:95% !important;
+}
+
+#splide01 .left-slider, #splide01 .left-slider ~ .is-prev, #splide01 .left-slider ~ .is-next{
   left: 50px;
 }
 
