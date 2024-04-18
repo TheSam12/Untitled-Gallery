@@ -12,13 +12,13 @@
   endunless
 -%}
 
-<image-with-placeholder class="relative">
+<image-with-placeholder class="relative h-full">
   {{-
     image
     | image_url: width: 3000
     | image_tag:
       loading: loading,
-      class: 'peer/image',
+      class: 'peer/image h-full',
       sizes: sizes,
       widths: widths
   }}

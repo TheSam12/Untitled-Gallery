@@ -26,7 +26,7 @@
       {% if image != blank %}
         <div
           {% if image_mobile != blank %}
-            class="hidden lg:block"
+            class="hidden lg:block h-full"
           {% endif %}
         >
           {% if height == 'full_screen' or height == 'full_height' %}
@@ -37,7 +37,7 @@
         </div>
 
         {% if image_mobile != blank %}
-          <div class="lg:hidden">
+          <div class="lg:hidden h-full">
             {% assign image = image_mobile %}
             {% if height == 'full_screen' or height == 'full_height' %}
               {% render 'image-fit', image: image, loading: loading %}
