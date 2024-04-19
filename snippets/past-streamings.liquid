@@ -86,11 +86,9 @@
                 aria-label="{{ 'media.play_video' | t }}"
               >
                 <span
-                  class="absolute left-1/2 top-1/2 z-20 flex h-14 w-14 items-center justify-center lg:h-20 lg:w-20"
+                  class="absolute left-1/2 top-1/2 z-20 flex items-center justify-center"
                 >
-                  <span class="inline-block h-8 w-8">
                     {%- render 'icon-play' -%}
-                  </span>
                 </span>
                 {%- if video != blank -%}
                   {{
