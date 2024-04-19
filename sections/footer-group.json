@@ -5,54 +5,40 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "text_zWhrTj": {
-          "type": "text",
-          "disabled": true,
+        "menu_TrMgtJ": {
+          "type": "menu",
           "settings": {
-            "heading": "",
-            "text": ""
-          }
-        },
-        "text": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "heading": "",
-            "text": ""
+            "main_linklist": "footer",
+            "show_heading": true
           }
         },
         "8029b983-fcaa-448f-b0c8-a99a101ca41c": {
           "type": "menu",
-          "disabled": true,
           "settings": {
-            "main_linklist": "",
-            "show_heading": false
+            "main_linklist": "home-menu",
+            "show_heading": true
           }
         },
         "menu": {
           "type": "menu",
-          "disabled": true,
+          "settings": {
+            "main_linklist": "main-menu",
+            "show_heading": true
+          }
+        },
+        "menu_G6e8H6": {
+          "type": "menu",
           "settings": {
             "main_linklist": "",
             "show_heading": true
           }
-        },
-        "43078a1a-6a94-4fe8-8243-309a88e314ee": {
-          "type": "social_media",
-          "disabled": true,
-          "settings": {
-            "show_social": true,
-            "social_title": "Follow us",
-            "enable_follow_on_shop": false
-          }
         }
       },
       "block_order": [
-        "text_zWhrTj",
-        "text",
+        "menu_TrMgtJ",
         "8029b983-fcaa-448f-b0c8-a99a101ca41c",
         "menu",
-        "43078a1a-6a94-4fe8-8243-309a88e314ee"
+        "menu_G6e8H6"
       ],
       "custom_css": [
         "h2 {font-weight: 400; font-family: \"SF Mono\"; text-decoration: underline;}"
