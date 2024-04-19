@@ -11,13 +11,13 @@ document.addEventListener('alpine:init', () => {
     }) => ({
       autoplay,
       autoplayInterval,
-      loop,
       playing: false,
       splide: null,
       rate: 0,
       mode,
       gap,
       onlyIfNeeded,
+      loop,
       maxLgBreakpointMQL: window.matchMedia('(max-width: 1023px)'),
       init() {
         if (typeof Splide === 'undefined') {
