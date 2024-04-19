@@ -99,7 +99,7 @@
 
 {% schema %}
 {
-    "name": "Upcoming Life Streaming",
+    "name": "Past Life Streaming",
     "disabled_on": {
         "groups": [
             "header",
@@ -112,7 +112,7 @@
             "type": "text",
             "id": "title",
             "label": "Section Title",
-            "default": "Upcoming Life Streaming"
+            "default": "Past Life Streaming"
         },
         {
             "type": "checkbox",
@@ -129,8 +129,8 @@
     ],
     "blocks": [
         {
-            "type": "upcomingBanner",
-            "name": "Upcoming Banner",
+            "type": "pastVideos",
+            "name": "Past Videos",
             "settings": [
               {
                 "type": "header",
@@ -192,25 +192,16 @@
     ],
     "presets": [
         {
-            "name": "Upcoming Life Streaming",
+            "name": "Past Life Streaming",
             "blocks": [
                 {
-                    "type": "upcomingBanner"
+                    "type": "pastVideos"
                 },
                 {
-                    "type": "upcomingBanner"
+                    "type": "pastVideos"
                 },
                 {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
+                    "type": "pastVideos"
                 }
             ]
         }
