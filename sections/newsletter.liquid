@@ -2,12 +2,14 @@
   assign section_color = section.settings.color_scheme
   assign text_size_class = section.settings.text_size
   assign bgImg = section.settings.bgImg
+  assign bgImgMobile = section.settings.bgImgMobile
 -%}
 
 {% render 'newsletter',
   section_color: section_color,
   text_size_class: text_size_class,
   bgImg: bgImg,
+  bgImgMobile: bgImgMobile,
   section_title: section.settings.section_title,
   subheading: section.settings.subheading,
   section_id: section.id
@@ -27,7 +29,12 @@
     {
       "type": "image_picker",
       "id": "bgImg",
-      "label": "Background Image"
+      "label": "Background Image For Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgImgMobile",
+      "label": "Background Image For Mobile"
     },
     {
       "type": "text",
