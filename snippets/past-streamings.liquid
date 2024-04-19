@@ -128,7 +128,7 @@
                       x-ref: 'video'
                   }}
                 {%- else -%}
-                  <video x-ref="video" controls class="{{ media_class }}">
+                  <video x-ref="video" controls class="{{ media_class }}" id="video-{{ id }}-{{ forloop.index }}">
                     <source
                       src="{{ 'placeholder-video.mp4' | asset_url }}"
                       type="video/mp4"
