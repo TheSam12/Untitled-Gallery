@@ -213,9 +213,11 @@
       {{- 'general.accessibility.skip_to_content' | t -}}
     </a>
 
-    {% sections 'header-group' %}
-    {%- section 'menu-drawer' -%}
-    {% render 'header-group-support' %}
+    <div class="lg:container">
+      {% sections 'header-group' %}
+      {%- section 'menu-drawer' -%}
+      {% render 'header-group-support' %}
+    </div>
 
     <main id="MainContent" class="container m-auto">
       {{ content_for_layout }}
