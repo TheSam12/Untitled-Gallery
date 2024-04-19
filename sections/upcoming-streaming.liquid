@@ -1,7 +1,6 @@
 {% liquid
     assign section_color = section.settings.section_color
     assign pagination = section.settings.pagination
-    assign cta = section.settings.cta
  %}
 <section id="upcoming-streaming-{{ section.id }}" data-color-scheme="{{ section_color }}">
     <div
@@ -84,7 +83,7 @@
         {% endif %}
     </div>
     <div class="flex justify-center mt-[20px] lg:mt-[40px]">
-      <a class="text-white menlo px-[40px] py-[10px] bg-black lg:w-fit w-full " src="{{ cta }}">View all</a>
+      <a class="text-white menlo px-[40px] py-[10px] bg-black lg:w-fit w-full " src="#">View all</a>
     </div>
 </section>
 {% style %}
