@@ -8,7 +8,6 @@
         Theme_Slideshow({
         autoplay: false,
         autoplayInterval: false,
-        gap: '12px',
         mode: 'carousel',
         onlyIfNeeded: true,
         })
@@ -58,7 +57,7 @@
               <ul x-ref="pagination" class="splide__pagination"></ul>
             {% endif %}
             <div
-              class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[15px] text-scheme-text"
+              class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[12px] text-scheme-text"
               :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
             >
               <button class="splide__arrow splide__arrow--prev">
