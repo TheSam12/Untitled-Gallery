@@ -53,7 +53,7 @@
       >
         {%- for block in section.blocks -%}
           <div
-            class="break-word bg-scheme-background px-section-horizontal-spacing py-section-vertical-spacing text-scheme-text lg:col-span-var"
+            class="break-word bg-scheme-background py-section-vertical-spacing text-scheme-text lg:col-span-var"
             style="--col-span: {{ desktop_col_span }};"
             {{ block.shopify_attributes }}
           >
@@ -150,7 +150,7 @@
   {% endif %}
 
   <div>
-    <div class="px-section-horizontal-spacing py-section-vertical-spacing lg:flex lg:flex-wrap lg:items-center lg:justify-between">
+    <div class="py-section-vertical-spacing lg:flex lg:flex-wrap lg:items-center lg:justify-between">
       <div class="mb-4 space-y-2 text-sm lg:mb-0 lg:flex-1">
         <p>
           &copy; {{ 'now' | date: '%Y' }},
