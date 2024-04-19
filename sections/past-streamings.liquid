@@ -1,0 +1,219 @@
+{% liquid
+    assign section_color = section.settings.section_color
+    assign pagination = section.settings.pagination
+ %}
+<section id="upcoming-streaming-{{ section.id }}" data-color-scheme="{{ section_color }}">
+    <div
+    x-data="
+        Theme_Slideshow({
+        autoplay: false,
+        autoplayInterval: false,
+        mode: 'carousel',
+        gap: '20px',
+        onlyIfNeeded: true,
+        loop: true,
+        })
+    "
+    class="splide no-pagination-needed relative">
+    {% if section.settings.title != '' %} 
+        {%- render 'section-title',
+        title: section.settings.title,
+        section_color: section_color
+        -%}
+    {% endif %}
+        <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
+            <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
+                {% for block in section.blocks %}
+                    {% liquid
+                        assign video = block.settings.video
+                        assign mode = block.settings.mode
+                        assign ratio = block.settings.aspect_ratio
+                     %}
+                     <li
+                        class="splide__slide max-w-[60%] lg:w-[22%]"
+                    >
+                        {% render 'past-streamings'
+                            video: video,
+                            mode: mode,
+                            container_id: section.id,
+                            ratio: ratio
+                         %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% if section.blocks.size > 1 %}
+          <div
+            class="absolute grid-cols-[minmax(0,_1fr)_auto] hidden lg:block lg:mx-4 mx-1 no-js:hidden right-0 top-[86px] {% if pagination %}grid{% endif %}"
+            {% if pagination %}
+            x-data="
+              {
+                paginationIsWrapped: false,
+                checkIfWrapped() {
+                  this.paginationIsWrapped = hasWrappedChildren(this.$refs.pagination)
+                }
+              }
+            "
+            x-init="checkIfWrapped"
+            @resize.window.debounce.250="checkIfWrapped"
+            {% endif %}
+          >
+            {% if pagination %}
+              <ul x-ref="pagination" class="splide__pagination"></ul>
+            {% endif %}
+            <div
+              class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[12px] text-scheme-text"
+              {% if pagination %}:class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"{% endif %}
+            >
+              <button class="splide__arrow splide__arrow--prev">
+                <span class="sr-only">
+                  {{- 'sections.slideshow.previous_slide' | t -}}
+                </span>
+                <span class="block">
+                  {% render 'icon-arrow-left' %}
+                </span>
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <span class="sr-only">
+                  {{- 'sections.slideshow.next_slide' | t -}}
+                </span>
+                <span class="block">
+                  {% render 'icon-arrow-right' %}
+                </span>
+              </button>
+            </div>
+          </div>
+        {% endif %}
+    </div>
+    <div class="flex justify-center mt-[20px] lg:mt-[40px]">
+      <a class="text-white menlo px-[40px] py-[15px] bg-black lg:w-fit w-full text-center" src="#">View all</a>
+    </div>
+</section>
+{% style %}
+  {% if pagination != true %}
+    .no-pagination-needed .splide__pagination{
+      display:none;
+    }
+  {% endif %}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Upcoming Life Streaming",
+    "disabled_on": {
+        "groups": [
+            "header",
+            "footer",
+            "aside"
+        ]
+    },
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Upcoming Life Streaming"
+        },
+        {
+            "type": "checkbox",
+            "id": "pagination",
+            "label": "Show Pagination",
+            "default": false
+        },
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "default": "scheme1",
+            "label": "Color scheme"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "upcomingBanner",
+            "name": "Upcoming Banner",
+            "settings": [
+              {
+                "type": "header",
+                "content": "Video"
+              },
+              {
+                "id": "video",
+                "type": "video",
+                "label": "Video",
+                "info": "If set, will be used instead of the embedded video option. Offers improved performance."
+              },
+              {
+                "type": "select",
+                "id": "mode",
+                "label": "Mode",
+                "options": [
+                  {
+                    "value": "preview",
+                    "label": "Preview"
+                  },
+                  {
+                    "value": "autoplay",
+                    "label": "Autoplay"
+                  }
+                ],
+                "default": "preview",
+                "info": "Autoplay will not play sound or show controls."
+              },
+              {
+                "type": "select",
+                "id": "aspect_ratio",
+                "label": "Aspect ratio",
+                "default": "1.778",
+                "options": [
+                  {
+                    "value": "natural",
+                    "label": "Natural"
+                  },
+                  {
+                    "value": "1",
+                    "label": "Square (1:1)"
+                  },
+                  {
+                    "value": "1.333",
+                    "label": "Landscape (4:3)"
+                  },
+                  {
+                    "value": "0.6667",
+                    "label": "Portrait (2:3)"
+                  },
+                  {
+                    "value": "1.778",
+                    "label": "Widescreen (16:9)"
+                  }
+                ]
+              }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Upcoming Life Streaming",
+            "blocks": [
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
