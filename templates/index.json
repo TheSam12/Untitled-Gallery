@@ -353,66 +353,6 @@
         "color_scheme": "",
         "faqImg": "shopify:\/\/shop_images\/Rectangle_40067.jpg"
       }
-    },
-    "past_streamings_3Q7wbm": {
-      "type": "past-streamings",
-      "blocks": {
-        "upcoming_banner_r9JCkj": {
-          "type": "upcomingBanner",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        },
-        "upcoming_banner_gU9a86": {
-          "type": "upcomingBanner",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        },
-        "upcoming_banner_7FgCyP": {
-          "type": "upcomingBanner",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        },
-        "upcoming_banner_QecgGt": {
-          "type": "upcomingBanner",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        },
-        "upcoming_banner_qthNUj": {
-          "type": "upcomingBanner",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        },
-        "upcoming_banner_fifWi8": {
-          "type": "upcomingBanner",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        }
-      },
-      "block_order": [
-        "upcoming_banner_r9JCkj",
-        "upcoming_banner_gU9a86",
-        "upcoming_banner_7FgCyP",
-        "upcoming_banner_QecgGt",
-        "upcoming_banner_qthNUj",
-        "upcoming_banner_fifWi8"
-      ],
-      "settings": {
-        "title": "Past Life Streaming",
-        "pagination": false,
-        "color_scheme": ""
-      }
     }
   },
   "order": [
@@ -423,7 +363,6 @@
     "featured_brands_nDG4md",
     "reviews_ENymgr",
     "newsletter_QPpAxK",
-    "faq_Gbkbyk",
-    "past_streamings_3Q7wbm"
+    "faq_Gbkbyk"
   ]
 }
