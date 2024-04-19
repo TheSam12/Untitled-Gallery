@@ -25,20 +25,12 @@
             "main_linklist": "main-menu",
             "show_heading": true
           }
-        },
-        "menu_G6e8H6": {
-          "type": "menu",
-          "settings": {
-            "main_linklist": "",
-            "show_heading": true
-          }
         }
       },
       "block_order": [
         "menu_TrMgtJ",
         "8029b983-fcaa-448f-b0c8-a99a101ca41c",
-        "menu",
-        "menu_G6e8H6"
+        "menu"
       ],
       "custom_css": [
         "h2 {font-weight: 400; font-family: \"SF Mono\"; text-decoration: underline;}"
