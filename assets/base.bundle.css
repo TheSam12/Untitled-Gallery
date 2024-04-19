@@ -1585,6 +1585,12 @@ shopify-payment-terms{
   font-weight: 400;
 }
 
+@media (max-width:1023px){
+  .faq-title-modify .text-scheme-text h2{
+    text-align: center; 
+  }
+}
+
 @media (min-width:1024px){
   #splide01 .splide__slide{
     width: 95% !important; 
