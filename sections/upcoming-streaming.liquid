@@ -1,0 +1,173 @@
+{% liquid
+    assign section_color = section.settings.section_color
+    assign pagination = section.settings.pagination
+ %}
+<section id="upcoming-streaming-{{ section.id }}" data-color-scheme="{{ section_color }}">
+    <div
+    x-data="
+        Theme_Slideshow({
+        autoplay: false,
+        autoplayInterval: false,
+        mode: 'carousel',
+        gap: '20px',
+        onlyIfNeeded: true,
+        loop: false,
+        })
+    "
+    class="splide no-pagination-needed relative">
+    {% if section.settings.title != '' %} 
+        {%- render 'section-title',
+        title: section.settings.title,
+        section_color: section_color
+        -%}
+    {% endif %}
+        <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
+            <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
+                {% for block in section.blocks %}
+                    {% liquid
+                        assign banner = block.settings.banner
+                        assign desc = block.settings.desc
+                        assign date = block.settings.date
+                     %}
+                     <li
+                        class="splide__slide border border-[#d9d9d9] is-active max-w-[60%] lg:max-w-[27%] p-[16px]"
+                    >
+                        {% render 'upcoming-streaming'
+                            banner: banner,
+                            desc: desc,
+                            date: date
+                         %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% if section.blocks.size > 1 %}
+          <div
+            class="absolute grid-cols-[minmax(0,_1fr)_auto] hidden lg:block lg:mx-4 mx-1 no-js:hidden right-0 top-[86px] {% if pagination %}grid{% endif %}"
+            x-data="
+              {
+                paginationIsWrapped: false,
+                checkIfWrapped() {
+                  this.paginationIsWrapped = hasWrappedChildren(this.$refs.pagination)
+                }
+              }
+            "
+            x-init="checkIfWrapped"
+            @resize.window.debounce.250="checkIfWrapped"
+          >
+            {% if pagination %}
+              <ul x-ref="pagination" class="splide__pagination"></ul>
+            {% endif %}
+            <div
+              class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[12px] text-scheme-text"
+              :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
+            >
+              <button class="splide__arrow splide__arrow--prev">
+                <span class="sr-only">
+                  {{- 'sections.slideshow.previous_slide' | t -}}
+                </span>
+                <span class="block">
+                  {% render 'icon-arrow-left' %}
+                </span>
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <span class="sr-only">
+                  {{- 'sections.slideshow.next_slide' | t -}}
+                </span>
+                <span class="block">
+                  {% render 'icon-arrow-right' %}
+                </span>
+              </button>
+            </div>
+          </div>
+        {% endif %}
+    </div>
+</section>
+{% style %}
+  {% if pagination != true %}
+    .no-pagination-needed .splide__pagination{
+      display:none;
+    }
+  {% endif %}
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Upcoming Life Streaming",
+    "disabled_on": {
+        "groups": [
+            "header",
+            "footer",
+            "aside"
+        ]
+    },
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title",
+            "default": "Upcoming Life Streaming"
+        },
+        {
+            "type": "checkbox",
+            "id": "pagination",
+            "label": "Show Pagination",
+            "default": false
+        },
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "default": "scheme1",
+            "label": "Color scheme"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "upcomingBanner",
+            "name": "Upcoming Banner",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "banner",
+                    "label": "Banner Image"
+                },
+                {
+                    "type": "text",
+                    "id": "date",
+                    "label": "Streaming Start Date"
+                },
+                {
+                    "type": "text",
+                    "id": "desc",
+                    "label": "Streaming Description"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Upcoming Life Streaming",
+            "blocks": [
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                },
+                {
+                    "type": "upcomingBanner"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
