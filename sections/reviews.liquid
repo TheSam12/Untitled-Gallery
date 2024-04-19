@@ -44,6 +44,7 @@
         {% if section.blocks.size > 1 %}
           <div
             class="absolute grid-cols-[minmax(0,_1fr)_auto] hidden lg:block lg:mx-4 mx-1 no-js:hidden right-0 top-[86px] {% if pagination %}grid{% endif %}"
+            {% if pagination %}
             x-data="
               {
                 paginationIsWrapped: false,
@@ -54,6 +55,7 @@
             "
             x-init="checkIfWrapped"
             @resize.window.debounce.250="checkIfWrapped"
+            {% endif %}
           >
             {% if pagination %}
               <ul x-ref="pagination" class="splide__pagination"></ul>
