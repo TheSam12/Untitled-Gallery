@@ -134,7 +134,7 @@
           <ul x-ref="pagination" class="splide__pagination"></ul>
         {% endif %}
         <div
-          class="hidden lg:flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[15px] mt-[30px] text-scheme-text"
+          class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[15px] mt-[30px] text-scheme-text"
           :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
         >
           <button class="splide__arrow splide__arrow--prev">
