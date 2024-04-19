@@ -1588,6 +1588,8 @@ shopify-payment-terms{
 @media (max-width:1023px){
   .faq-title-modify .text-scheme-text h2{
     text-align: center; 
+    max-width: 60%;
+    margin: auto;
   }
 }
 
