@@ -155,42 +155,6 @@
         "color_scheme": ""
       }
     },
-    "past_streamings_hEE7wR": {
-      "type": "past-streamings",
-      "blocks": {
-        "past_videos_DkjnK6": {
-          "type": "pastVideos",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        },
-        "past_videos_LNHJqj": {
-          "type": "pastVideos",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        },
-        "past_videos_zU3nxy": {
-          "type": "pastVideos",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778"
-          }
-        }
-      },
-      "block_order": [
-        "past_videos_DkjnK6",
-        "past_videos_LNHJqj",
-        "past_videos_zU3nxy"
-      ],
-      "settings": {
-        "title": "Past Life Streaming",
-        "pagination": false,
-        "color_scheme": ""
-      }
-    },
     "featured_brands_nDG4md": {
       "type": "featured-brands",
       "blocks": {
@@ -396,7 +360,6 @@
     "slideshow_ThtBr4",
     "upcoming_streaming_mBKP6T",
     "featured_collection_carousel_UbidKX",
-    "past_streamings_hEE7wR",
     "featured_brands_nDG4md",
     "reviews_ENymgr",
     "newsletter_QPpAxK",
