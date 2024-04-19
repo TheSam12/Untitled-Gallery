@@ -1,5 +1,6 @@
 {% liquid
     assign section_color = section.settings.section_color
+    assign pagination = section.settings.pagination
  %}
 <section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}">
     {% if section.settings.title != '' %} 
@@ -98,6 +99,12 @@
             "type": "text",
             "id": "title",
             "label": "Section Title"
+        },
+        {
+            "type": "checkbox",
+            "id": "pagination",
+            "label": "Show Pagination",
+            "default": false
         },
         {
             "type": "color_scheme",
