@@ -14,7 +14,7 @@
         loop: false, 
         })
     "
-    class="splide no-pagination-needed relative">
+    class="splide no-pagination-needed relative splide--double">
     {% if section.settings.title != '' %} 
         {%- render 'section-title',
         title: section.settings.title,
@@ -33,7 +33,7 @@
                         assign colaboration = block.settings.colaboration
                      %}
                      <li
-                        class="splide__slide w-[100%]"
+                        class="splide__slide"
                     >
                         {% render 'past-streamings'
                             video: video,

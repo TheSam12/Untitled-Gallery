@@ -14,7 +14,7 @@
         loop: false,
         })
     "
-    class="splide no-pagination-needed relative">
+    class="splide no-pagination-needed relative splide--quadruple">
     {% if section.settings.title != '' %} 
         {%- render 'section-title',
         title: section.settings.title,
@@ -30,7 +30,7 @@
                         assign date = block.settings.date
                      %}
                      <li
-                        class="splide__slide max-w-[60%] lg:w-[22%]"
+                        class="splide__slide"
                     >
                         {% render 'upcoming-streaming'
                             banner: banner,
