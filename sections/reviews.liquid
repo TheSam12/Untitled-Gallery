@@ -3,12 +3,6 @@
     assign pagination = section.settings.pagination
  %}
 <section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}">
-    {% if section.settings.title != '' %} 
-        {%- render 'section-title',
-        title: section.settings.title,
-        section_color: section_color
-        -%}
-    {% endif %}
     <div
     x-data="
         Theme_Slideshow({
@@ -20,6 +14,12 @@
         })
     "
     class="splide no-pagination-needed">
+    {% if section.settings.title != '' %} 
+        {%- render 'section-title',
+        title: section.settings.title,
+        section_color: section_color
+        -%}
+    {% endif %}
         <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for block in section.blocks %}
@@ -58,7 +58,7 @@
               <ul x-ref="pagination" class="splide__pagination"></ul>
             {% endif %}
             <div
-              class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[15px] mt-[24px] lg:mt-[30px] text-scheme-text"
+              class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[15px] text-scheme-text"
               :class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"
             >
               <button class="splide__arrow splide__arrow--prev">
