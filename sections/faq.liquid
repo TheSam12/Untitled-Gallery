@@ -15,8 +15,8 @@
     -%}
   {% endif %}
 
-  <div {% if section.settings.faqImg != blank %}class="grid grid-cols-2 gap-4"{% endif %}>
-    <div {% if section.settings.faqImg != blank %}class="col-span-1"{% endif %}>
+  <div {% if section.settings.faqImg != blank %}class="flex-col-reverse flex lg:grid lg:grid-cols-2 gap-4"{% endif %}>
+    <div {% if section.settings.faqImg != blank %}class="lg:col-span-1"{% endif %}>
       <ul
         {% if two_columns_desktop %}
           class="lg:hidden border border-[#d9d9d9]"
@@ -38,7 +38,7 @@
       </ul>
     </div>
     {% if section.settings.faqImg != blank %}
-    <div class="col-span-1">
+    <div class="lg:col-span-1">
       <img src="{{ section.settings.faqImg | img_url: "master" }}" alt="{{ section.settings.faqImg.alt }}">
     </div>
   {% endif %}
