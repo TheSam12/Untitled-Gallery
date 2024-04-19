@@ -1,0 +1,124 @@
+{% liquid
+    assign section_color = section.settings.section_color
+ %}
+<section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}">
+    {% if section.settings.title != '' %} 
+        {%- render 'section-title',
+        title: section.settings.title,
+        section_color: section_color
+        -%}
+    {% endif %}
+    <div
+    x-data="
+        Theme_Slideshow({
+        autoplay: false,
+        autoplayInterval: false,
+        gap: '20px',
+        mode: 'carousel',
+        onlyIfNeeded: true,
+        })
+    "
+    class="splide">
+        <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
+            <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
+                {% for block in section.blocks %}
+                    {% liquid
+                        assign quotes = block.settings.quotes
+                        assign review = block.settings.review
+                        assign reviewer = block.settings.reviewer
+                        assign orders = block.settings.orders
+                     %}
+                     <li
+                        class="splide__slide w-[var(--mobile-slide-width)] border-b-gridline border-gridline-color bg-scheme-background no-js:!block lg:w-[var(--desktop-slide-width)]"
+                    >
+                        {% render 'reviews'
+                            quotes: quotes,
+                            review: review,
+                            reviewer: reviewer,
+                            orders: orders
+                         %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Reviews",
+    "disabled_on": {
+        "groups": [
+            "header",
+            "footer",
+            "aside"
+        ]
+    },
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Section Title"
+        },
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "default": "scheme1",
+            "label": "Color scheme"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "reviews",
+            "name": "Reviews",
+            "settings": [
+                {
+                    "type": "html",
+                    "id": "quote",
+                    "label": "Quotes Icon SVG"
+                },
+                {
+                    "type": "richtext",
+                    "id": "review",
+                    "label": "Main Review"
+                },
+                {
+                    "type": "richtext",
+                    "id": "reviewer",
+                    "label": "Reviewer"
+                },
+                {
+                    "type": "text",
+                    "id": "orders",
+                    "label": "Who Ordered It"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Reviews",
+            "blocks": [
+                {
+                    "type": "reviews"
+                },
+                {
+                    "type": "reviews"
+                },
+                {
+                    "type": "reviews"
+                },
+                {
+                    "type": "reviews"
+                },
+                {
+                    "type": "reviews"
+                },
+                {
+                    "type": "reviews"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
