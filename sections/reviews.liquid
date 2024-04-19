@@ -13,7 +13,7 @@
         onlyIfNeeded: true,
         })
     "
-    class="splide no-pagination-needed">
+    class="splide no-pagination-needed relative">
     {% if section.settings.title != '' %} 
         {%- render 'section-title',
         title: section.settings.title,
@@ -42,7 +42,7 @@
         </div>
         {% if section.blocks.size > 1 %}
           <div
-            class="mx-1 {% if pagination %}grid{% endif %} grid-cols-[minmax(0,_1fr)_auto] gap-2 no-js:hidden lg:mx-4"
+            class="absolute gap-2 grid-cols-[minmax(0,_1fr)_auto] hidden lg:block lg:mx-4 mx-1 no-js:hidden right-0 top-[80px] {% if pagination %}grid{% endif %}"
             x-data="
               {
                 paginationIsWrapped: false,
@@ -66,7 +66,10 @@
                   {{- 'sections.slideshow.previous_slide' | t -}}
                 </span>
                 <span class="block">
-                  {% render 'icon-arrow-left' %}
+                  {% render 'icon-arrow-left'
+                    width:24,
+                    height:24
+                 %}
                 </span>
               </button>
               <button class="splide__arrow splide__arrow--next">
@@ -74,7 +77,10 @@
                   {{- 'sections.slideshow.next_slide' | t -}}
                 </span>
                 <span class="block">
-                  {% render 'icon-arrow-right' %}
+                  {% render 'icon-arrow-right'
+                    width:24,
+                    height:24
+                 %}
                 </span>
               </button>
             </div>
