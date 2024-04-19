@@ -63,6 +63,7 @@ document.addEventListener('alpine:init', () => {
           interval: this.autoplayInterval,
           autoplay: this.autoplay,
           drag: !this.autoplay,
+          perPage: this.slidesToShow || 1,
         };
 
         if (this.mode === 'carousel') {
