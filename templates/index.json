@@ -149,8 +149,8 @@
         "product_limit": 5,
         "show_view_all": false,
         "image_crop": "none",
-        "mobile_product_tile_width": "80",
-        "desktop_product_tile_width": 22,
+        "mobile_product_tile_width": "60",
+        "desktop_product_tile_width": 20,
         "enable_quick_buy": false,
         "quick_buy_button_style": "theme-button",
         "color_scheme": ""
