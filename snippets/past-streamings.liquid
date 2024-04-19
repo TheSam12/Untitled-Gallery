@@ -142,9 +142,20 @@
         </div>
     {%- endcase -%}
   </div>
-  
+  <div class="video-duration"></div>
   {% unless request.design_mode %}
     <script src="{{ 'video.js' | asset_url }}" type="module"></script>
     <script src="{{ 'html-video.js' | asset_url }}" type="module"></script>
+    <script>
+        const video = document.getElementById("{{ id }}");
+        const videoDurationEl = document.querySelector(".video-duration");
+
+        video.addEventListener("loadedmetadata", () => {
+        const duration = video.duration;
+        const minutes = Math.floor(duration / 60);
+        const seconds = Math.floor(duration % 60);
+        videoDurationEl.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+        });
+    </script>
   {% endunless %}
   
