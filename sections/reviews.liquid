@@ -23,7 +23,6 @@
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for block in section.blocks %}
                     {% liquid
-                        assign quotes = block.settings.quotes
                         assign review = block.settings.review
                         assign reviewer = block.settings.reviewer
                         assign orders = block.settings.orders
@@ -112,11 +111,6 @@
             "type": "reviews",
             "name": "Reviews",
             "settings": [
-                {
-                    "type": "html",
-                    "id": "quote",
-                    "label": "Quotes Icon SVG"
-                },
                 {
                     "type": "richtext",
                     "id": "review",
