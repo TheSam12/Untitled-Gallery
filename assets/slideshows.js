@@ -7,9 +7,11 @@ document.addEventListener('alpine:init', () => {
       mode = 'slideshow',
       gap = null,
       onlyIfNeeded = false,
+      loop = true,
     }) => ({
       autoplay,
       autoplayInterval,
+      loop,
       playing: false,
       splide: null,
       rate: 0,
