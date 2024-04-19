@@ -7,7 +7,6 @@ document.addEventListener('alpine:init', () => {
       mode = 'slideshow',
       gap = null,
       onlyIfNeeded = false,
-      loop = true,
     }) => ({
       autoplay,
       autoplayInterval,
@@ -53,10 +52,10 @@ document.addEventListener('alpine:init', () => {
       },
       initSplide() {
         const options = {
-          type: this.loop? 'loop' : 'carousel',
           arrows: true,
           pagination: true,
           rewind: true,
+          type: 'loop',
           speed: 600,
           start: parseInt(this.$root.dataset.start, 10) - 1 || 0,
           interval: this.autoplayInterval,
