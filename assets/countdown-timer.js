@@ -17,5 +17,5 @@ function updateCountdown(date) {
   }
 }
 
-const futureDate = new Date('2023-01-01T00:00:00Z'); // Set the date and time you want to count down to
+const futureDate = new Date('2024-06-05T00:00:00Z'); // Set the date and time you want to count down to
 const intervalId = setInterval(() => updateCountdown(futureDate), 1000);
