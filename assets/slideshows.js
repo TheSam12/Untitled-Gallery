@@ -55,7 +55,6 @@ document.addEventListener('alpine:init', () => {
           arrows: true,
           pagination: true,
           rewind: true,
-          type: 'loop',
           speed: 600,
           start: parseInt(this.$root.dataset.start, 10) - 1 || 0,
           interval: this.autoplayInterval,
@@ -87,7 +86,7 @@ document.addEventListener('alpine:init', () => {
           });
         }
 
-        this.splide.mount(); 
+        this.splide.mount();
       },
       destroyOrInitIfNeeded() {
         const slideEls = Array.from(
