@@ -17,7 +17,7 @@
       Theme_Slideshow({
         autoplay: {{ section.settings.autoplay }},
         autoplayInterval: {{ section.settings.autoplay_interval }},
-        loop: {{ section.settings.loop }}
+        {% comment %} loop: {{ section.settings.loop }} {% endcomment %}
       })
     "
     class="splide"
