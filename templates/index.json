@@ -78,6 +78,7 @@
         "heading_size": 32,
         "autoplay": false,
         "autoplay_interval": "5000",
+        "loop": true,
         "color_scheme": "",
         "pagination": false
       }
