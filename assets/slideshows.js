@@ -4,12 +4,14 @@ document.addEventListener('alpine:init', () => {
     ({
       autoplay = false,
       autoplayInterval = null,
+      loop = false,
       mode = 'slideshow',
       gap = null,
       onlyIfNeeded = false,
     }) => ({
       autoplay,
       autoplayInterval,
+      loop,
       playing: false,
       splide: null,
       rate: 0,
@@ -55,11 +57,11 @@ document.addEventListener('alpine:init', () => {
           arrows: true,
           pagination: true,
           rewind: true,
-          // type: 'loop',
           speed: 600,
           start: parseInt(this.$root.dataset.start, 10) - 1 || 0,
           interval: this.autoplayInterval,
           autoplay: this.autoplay,
+          loop: this.loop,
           drag: !this.autoplay,
         };
 
