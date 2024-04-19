@@ -58,7 +58,7 @@
                   x-ref: 'video'
               }}
             {%- else -%}
-              <video autoplay muted class="{{ media_class }}">
+              <video controls class="{{ media_class }}">
                 <source
                   src="{{ 'placeholder-video.mp4' | asset_url }}"
                   type="video/mp4"
@@ -128,7 +128,7 @@
                       x-ref: 'video'
                   }}
                 {%- else -%}
-                  <video x-ref="video" autoplay muted class="{{ media_class }}">
+                  <video x-ref="video" controls class="{{ media_class }}">
                     <source
                       src="{{ 'placeholder-video.mp4' | asset_url }}"
                       type="video/mp4"
