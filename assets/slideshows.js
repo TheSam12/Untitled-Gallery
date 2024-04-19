@@ -52,7 +52,7 @@ document.addEventListener('alpine:init', () => {
       },
       initSplide() {
         const options = {
-          type: 'loop',
+          type: this.loop? 'loop' : 'carousel',
           arrows: true,
           pagination: true,
           rewind: true,
