@@ -28,6 +28,9 @@
                         assign video = block.settings.video
                         assign mode = block.settings.mode
                         assign ratio = block.settings.aspect_ratio
+                        assign avatar = block.settings.avatar
+                        assign name = block.settings.name
+                        assign colaboration = block.settings.colaboration
                      %}
                      <li
                         class="splide__slide w-[80%] lg:w-[40%]"
@@ -36,7 +39,10 @@
                             video: video,
                             mode: mode,
                             container_id: section.id,
-                            ratio: ratio
+                            ratio: ratio,
+                            avatar: avatar,
+                            name: name,
+                            colaboration: colaboration
                          %}
                     </li>
                 {% endfor %}
@@ -190,6 +196,21 @@
                     "label": "Widescreen (16:9)"
                   }
                 ]
+              },
+              {
+                "type": "image_picker",
+                "id": "avatar",
+                "label": "Avatar Image"
+              },
+              {
+                "type": "text",
+                "id": "name",
+                "label": "Colaborator Name"
+              },
+              {
+                "type": "text",
+                "id": "colaboration",
+                "label": "Colaboration Amount"
               }
             ]
         }
