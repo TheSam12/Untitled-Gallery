@@ -8,7 +8,6 @@ document.addEventListener('alpine:init', () => {
       gap = null,
       onlyIfNeeded = false,
       loop = true,
-      slidesToShow = null,
     }) => ({
       autoplay,
       autoplayInterval,
@@ -19,7 +18,6 @@ document.addEventListener('alpine:init', () => {
       gap,
       onlyIfNeeded,
       loop,
-      slidesToShow, 
       maxLgBreakpointMQL: window.matchMedia('(max-width: 1023px)'),
       init() {
         if (typeof Splide === 'undefined') {
@@ -65,7 +63,7 @@ document.addEventListener('alpine:init', () => {
           interval: this.autoplayInterval,
           autoplay: this.autoplay,
           drag: !this.autoplay,
-          perPage: this.slidesToShow || 1,
+          perPage: 2,
         };
 
         if (this.mode === 'carousel') {
