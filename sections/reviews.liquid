@@ -19,7 +19,7 @@
         onlyIfNeeded: true,
         })
     "
-    class="splide">
+    class="splide no-pagination-needed">
         <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for block in section.blocks %}
@@ -82,6 +82,13 @@
         {% endif %}
     </div>
 </section>
+{% style %}
+  {% if pagination != true %}
+    .no-pagination-needed .splide__pagination{
+      display:none;
+    }
+  {% endif %}
+{% endstyle %}
 
 {% schema %}
 {
