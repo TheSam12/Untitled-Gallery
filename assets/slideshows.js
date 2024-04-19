@@ -87,7 +87,7 @@ document.addEventListener('alpine:init', () => {
           });
         }
 
-        this.splide.mount();
+        this.splide.mount(); 
       },
       destroyOrInitIfNeeded() {
         const slideEls = Array.from(
