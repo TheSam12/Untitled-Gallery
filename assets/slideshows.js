@@ -11,7 +11,6 @@ document.addEventListener('alpine:init', () => {
     }) => ({
       autoplay,
       autoplayInterval,
-      loop,
       playing: false,
       splide: null,
       rate: 0,
