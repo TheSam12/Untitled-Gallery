@@ -128,7 +128,7 @@
                       x-ref: 'video'
                   }}
                 {%- else -%}
-                  <video x-ref="video" controls class="{{ media_class }}" id="video-{{ id }}-{{ forloop.index }}">
+                  <video x-ref="video" controls class="{{ media_class }}">
                     <source
                       src="{{ 'placeholder-video.mp4' | asset_url }}"
                       type="video/mp4"
@@ -142,20 +142,5 @@
         </div>
     {%- endcase -%}
   </div>
-  <div class="video-duration">00:00</div>
-  {% unless request.design_mode %}
-    <script src="{{ 'video.js' | asset_url }}" type="module"></script>
-    <script src="{{ 'html-video.js' | asset_url }}" type="module"></script>
-    <script>
-        const video = document.getElementById("video-{{ id }}-{{ forloop.index }}");
-        const videoDurationEl = document.querySelector(".video-duration");
-
-        video.addEventListener("loadedmetadata", () => {
-        const duration = video.duration;
-        const minutes = Math.floor(duration / 60);
-        const seconds = Math.floor(duration % 60);
-        videoDurationEl.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
-        });
-    </script>
-  {% endunless %}
+  
   

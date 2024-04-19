@@ -96,6 +96,10 @@
     }
   {% endif %}
 {% endstyle %}
+{% unless request.design_mode %}
+  <script src="{{ 'video.js' | asset_url }}" type="module"></script>
+  <script src="{{ 'html-video.js' | asset_url }}" type="module"></script>
+{% endunless %}
 
 {% schema %}
 {
