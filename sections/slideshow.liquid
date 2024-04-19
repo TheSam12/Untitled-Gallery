@@ -164,6 +164,7 @@
       }
     {% endif %}
   {% endstyle %}
+  <p id="countdownTimer"></p>
 </section>
 
 {% unless request.design_mode %}
@@ -172,6 +173,7 @@
 {% endunless %}
 
 {{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'countdown-timer.js' | asset_url }}" type="module"></script>
 
 {% schema %}
 {
