@@ -117,6 +117,7 @@
       "type": "newsletter",
       "settings": {
         "bgImg": "shopify:\/\/shop_images\/Rectangle_40069.jpg",
+        "bgImgMobile": "shopify:\/\/shop_images\/Group_8.jpg",
         "section_title": "Curated works — straight to your inbox",
         "subheading": "<p>Tell us which artists are on your radar, and we’ll keep you in the loop about upcoming collaborations and more.<\/p>",
         "text_size": "text-base",
