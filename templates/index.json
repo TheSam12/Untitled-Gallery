@@ -113,6 +113,129 @@
         "color_scheme": ""
       }
     },
+    "featured_brands_nDG4md": {
+      "type": "featured-brands",
+      "blocks": {
+        "brands_NF43QG": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276499.png"
+          }
+        },
+        "brands_xiTazd": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276503.png"
+          }
+        },
+        "brands_ULdXFU": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276500.png"
+          }
+        },
+        "brands_FVinXV": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276501.png"
+          }
+        },
+        "brands_Xz3HLe": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276504.png"
+          }
+        },
+        "brands_gaxRmG": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/HYPEBEAST-Logo_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "brands_NF43QG",
+        "brands_xiTazd",
+        "brands_ULdXFU",
+        "brands_FVinXV",
+        "brands_Xz3HLe",
+        "brands_gaxRmG"
+      ],
+      "settings": {
+        "title": "Our Partners"
+      }
+    },
+    "reviews_ENymgr": {
+      "type": "reviews",
+      "blocks": {
+        "reviews_pEnzfr": {
+          "type": "reviews",
+          "settings": {
+            "quote": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"50\" height=\"40\" viewbox=\"0 0 50 40\" fill=\"none\">\n<path d=\"M12.2581 40C9.89247 40 7.95699 39.5238 6.45161 38.5714C4.94624 37.619 3.70968 36.4021 2.74194 34.9206C1.55914 33.2275 0.806452 31.3757 0.483871 29.3651C0.16129 27.3545 0 25.7143 0 24.4444C0 19.2593 1.34409 14.5503 4.03226 10.3175C6.72043 6.08467 10.914 2.64551 16.6129 0L18.0645 2.85714C14.7312 4.23281 11.828 6.40212 9.35484 9.36508C6.98925 12.328 5.80645 15.3439 5.80645 18.4127C5.80645 19.6825 5.96774 20.7936 6.29032 21.746C8.01075 20.3704 10 19.6825 12.2581 19.6825C15.0538 19.6825 17.4731 20.582 19.5161 22.381C21.5591 24.1799 22.5806 26.6667 22.5806 29.8413C22.5806 32.8042 21.5591 35.2381 19.5161 37.1429C17.4731 39.0476 15.0538 40 12.2581 40ZM39.6774 40C37.3118 40 35.3763 39.5238 33.871 38.5714C32.3656 37.619 31.129 36.4021 30.1613 34.9206C28.9785 33.2275 28.2258 31.3757 27.9032 29.3651C27.5806 27.3545 27.4194 25.7143 27.4194 24.4444C27.4194 19.2593 28.7634 14.5503 31.4516 10.3175C34.1398 6.08467 38.3333 2.64551 44.0323 0L45.4839 2.85714C42.1505 4.23281 39.2473 6.40212 36.7742 9.36508C34.4086 12.328 33.2258 15.3439 33.2258 18.4127C33.2258 19.6825 33.3871 20.7936 33.7097 21.746C35.4301 20.3704 37.4194 19.6825 39.6774 19.6825C42.4731 19.6825 44.8925 20.582 46.9355 22.381C48.9785 24.1799 50 26.6667 50 29.8413C50 32.8042 48.9785 35.2381 46.9355 37.1429C44.8925 39.0476 42.4731 40 39.6774 40Z\" fill=\"#D9D9D9\"><\/path>\n<\/svg>",
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
+            "reviewer": "<p>Review of Untitled by Baldwin Green<\/p>",
+            "orders": "Collector’s 1st order"
+          }
+        },
+        "reviews_NKPmGD": {
+          "type": "reviews",
+          "settings": {
+            "quote": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"50\" height=\"40\" viewbox=\"0 0 50 40\" fill=\"none\">\n<path d=\"M12.2581 40C9.89247 40 7.95699 39.5238 6.45161 38.5714C4.94624 37.619 3.70968 36.4021 2.74194 34.9206C1.55914 33.2275 0.806452 31.3757 0.483871 29.3651C0.16129 27.3545 0 25.7143 0 24.4444C0 19.2593 1.34409 14.5503 4.03226 10.3175C6.72043 6.08467 10.914 2.64551 16.6129 0L18.0645 2.85714C14.7312 4.23281 11.828 6.40212 9.35484 9.36508C6.98925 12.328 5.80645 15.3439 5.80645 18.4127C5.80645 19.6825 5.96774 20.7936 6.29032 21.746C8.01075 20.3704 10 19.6825 12.2581 19.6825C15.0538 19.6825 17.4731 20.582 19.5161 22.381C21.5591 24.1799 22.5806 26.6667 22.5806 29.8413C22.5806 32.8042 21.5591 35.2381 19.5161 37.1429C17.4731 39.0476 15.0538 40 12.2581 40ZM39.6774 40C37.3118 40 35.3763 39.5238 33.871 38.5714C32.3656 37.619 31.129 36.4021 30.1613 34.9206C28.9785 33.2275 28.2258 31.3757 27.9032 29.3651C27.5806 27.3545 27.4194 25.7143 27.4194 24.4444C27.4194 19.2593 28.7634 14.5503 31.4516 10.3175C34.1398 6.08467 38.3333 2.64551 44.0323 0L45.4839 2.85714C42.1505 4.23281 39.2473 6.40212 36.7742 9.36508C34.4086 12.328 33.2258 15.3439 33.2258 18.4127C33.2258 19.6825 33.3871 20.7936 33.7097 21.746C35.4301 20.3704 37.4194 19.6825 39.6774 19.6825C42.4731 19.6825 44.8925 20.582 46.9355 22.381C48.9785 24.1799 50 26.6667 50 29.8413C50 32.8042 48.9785 35.2381 46.9355 37.1429C44.8925 39.0476 42.4731 40 39.6774 40Z\" fill=\"#D9D9D9\"><\/path>\n<\/svg>",
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
+            "reviewer": "<p>Review of Untitled by Ava Thompson<\/p>",
+            "orders": "Collector’s 5th order"
+          }
+        },
+        "reviews_ERttHg": {
+          "type": "reviews",
+          "settings": {
+            "quote": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"50\" height=\"40\" viewbox=\"0 0 50 40\" fill=\"none\">\n<path d=\"M12.2581 40C9.89247 40 7.95699 39.5238 6.45161 38.5714C4.94624 37.619 3.70968 36.4021 2.74194 34.9206C1.55914 33.2275 0.806452 31.3757 0.483871 29.3651C0.16129 27.3545 0 25.7143 0 24.4444C0 19.2593 1.34409 14.5503 4.03226 10.3175C6.72043 6.08467 10.914 2.64551 16.6129 0L18.0645 2.85714C14.7312 4.23281 11.828 6.40212 9.35484 9.36508C6.98925 12.328 5.80645 15.3439 5.80645 18.4127C5.80645 19.6825 5.96774 20.7936 6.29032 21.746C8.01075 20.3704 10 19.6825 12.2581 19.6825C15.0538 19.6825 17.4731 20.582 19.5161 22.381C21.5591 24.1799 22.5806 26.6667 22.5806 29.8413C22.5806 32.8042 21.5591 35.2381 19.5161 37.1429C17.4731 39.0476 15.0538 40 12.2581 40ZM39.6774 40C37.3118 40 35.3763 39.5238 33.871 38.5714C32.3656 37.619 31.129 36.4021 30.1613 34.9206C28.9785 33.2275 28.2258 31.3757 27.9032 29.3651C27.5806 27.3545 27.4194 25.7143 27.4194 24.4444C27.4194 19.2593 28.7634 14.5503 31.4516 10.3175C34.1398 6.08467 38.3333 2.64551 44.0323 0L45.4839 2.85714C42.1505 4.23281 39.2473 6.40212 36.7742 9.36508C34.4086 12.328 33.2258 15.3439 33.2258 18.4127C33.2258 19.6825 33.3871 20.7936 33.7097 21.746C35.4301 20.3704 37.4194 19.6825 39.6774 19.6825C42.4731 19.6825 44.8925 20.582 46.9355 22.381C48.9785 24.1799 50 26.6667 50 29.8413C50 32.8042 48.9785 35.2381 46.9355 37.1429C44.8925 39.0476 42.4731 40 39.6774 40Z\" fill=\"#D9D9D9\"><\/path>\n<\/svg>",
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
+            "reviewer": "<p>Review of Untitled by Elena Rodriguez<\/p>",
+            "orders": "Collector’s 14th order"
+          }
+        },
+        "reviews_iMj7LF": {
+          "type": "reviews",
+          "settings": {
+            "quote": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"50\" height=\"40\" viewbox=\"0 0 50 40\" fill=\"none\">\n<path d=\"M12.2581 40C9.89247 40 7.95699 39.5238 6.45161 38.5714C4.94624 37.619 3.70968 36.4021 2.74194 34.9206C1.55914 33.2275 0.806452 31.3757 0.483871 29.3651C0.16129 27.3545 0 25.7143 0 24.4444C0 19.2593 1.34409 14.5503 4.03226 10.3175C6.72043 6.08467 10.914 2.64551 16.6129 0L18.0645 2.85714C14.7312 4.23281 11.828 6.40212 9.35484 9.36508C6.98925 12.328 5.80645 15.3439 5.80645 18.4127C5.80645 19.6825 5.96774 20.7936 6.29032 21.746C8.01075 20.3704 10 19.6825 12.2581 19.6825C15.0538 19.6825 17.4731 20.582 19.5161 22.381C21.5591 24.1799 22.5806 26.6667 22.5806 29.8413C22.5806 32.8042 21.5591 35.2381 19.5161 37.1429C17.4731 39.0476 15.0538 40 12.2581 40ZM39.6774 40C37.3118 40 35.3763 39.5238 33.871 38.5714C32.3656 37.619 31.129 36.4021 30.1613 34.9206C28.9785 33.2275 28.2258 31.3757 27.9032 29.3651C27.5806 27.3545 27.4194 25.7143 27.4194 24.4444C27.4194 19.2593 28.7634 14.5503 31.4516 10.3175C34.1398 6.08467 38.3333 2.64551 44.0323 0L45.4839 2.85714C42.1505 4.23281 39.2473 6.40212 36.7742 9.36508C34.4086 12.328 33.2258 15.3439 33.2258 18.4127C33.2258 19.6825 33.3871 20.7936 33.7097 21.746C35.4301 20.3704 37.4194 19.6825 39.6774 19.6825C42.4731 19.6825 44.8925 20.582 46.9355 22.381C48.9785 24.1799 50 26.6667 50 29.8413C50 32.8042 48.9785 35.2381 46.9355 37.1429C44.8925 39.0476 42.4731 40 39.6774 40Z\" fill=\"#D9D9D9\"><\/path>\n<\/svg>",
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
+            "reviewer": "<p>Review of Untitled by Ava Thompson<\/p>",
+            "orders": "Collector’s 2nd order"
+          }
+        },
+        "reviews_3AJhJn": {
+          "type": "reviews",
+          "settings": {
+            "quote": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"50\" height=\"40\" viewbox=\"0 0 50 40\" fill=\"none\">\n<path d=\"M12.2581 40C9.89247 40 7.95699 39.5238 6.45161 38.5714C4.94624 37.619 3.70968 36.4021 2.74194 34.9206C1.55914 33.2275 0.806452 31.3757 0.483871 29.3651C0.16129 27.3545 0 25.7143 0 24.4444C0 19.2593 1.34409 14.5503 4.03226 10.3175C6.72043 6.08467 10.914 2.64551 16.6129 0L18.0645 2.85714C14.7312 4.23281 11.828 6.40212 9.35484 9.36508C6.98925 12.328 5.80645 15.3439 5.80645 18.4127C5.80645 19.6825 5.96774 20.7936 6.29032 21.746C8.01075 20.3704 10 19.6825 12.2581 19.6825C15.0538 19.6825 17.4731 20.582 19.5161 22.381C21.5591 24.1799 22.5806 26.6667 22.5806 29.8413C22.5806 32.8042 21.5591 35.2381 19.5161 37.1429C17.4731 39.0476 15.0538 40 12.2581 40ZM39.6774 40C37.3118 40 35.3763 39.5238 33.871 38.5714C32.3656 37.619 31.129 36.4021 30.1613 34.9206C28.9785 33.2275 28.2258 31.3757 27.9032 29.3651C27.5806 27.3545 27.4194 25.7143 27.4194 24.4444C27.4194 19.2593 28.7634 14.5503 31.4516 10.3175C34.1398 6.08467 38.3333 2.64551 44.0323 0L45.4839 2.85714C42.1505 4.23281 39.2473 6.40212 36.7742 9.36508C34.4086 12.328 33.2258 15.3439 33.2258 18.4127C33.2258 19.6825 33.3871 20.7936 33.7097 21.746C35.4301 20.3704 37.4194 19.6825 39.6774 19.6825C42.4731 19.6825 44.8925 20.582 46.9355 22.381C48.9785 24.1799 50 26.6667 50 29.8413C50 32.8042 48.9785 35.2381 46.9355 37.1429C44.8925 39.0476 42.4731 40 39.6774 40Z\" fill=\"#D9D9D9\"><\/path>\n<\/svg>",
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
+            "reviewer": "<p>Review of Untitled by Baldwin Green<\/p>",
+            "orders": "Collector’s 6th order"
+          }
+        },
+        "reviews_adrBfc": {
+          "type": "reviews",
+          "settings": {
+            "quote": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"50\" height=\"40\" viewbox=\"0 0 50 40\" fill=\"none\">\n<path d=\"M12.2581 40C9.89247 40 7.95699 39.5238 6.45161 38.5714C4.94624 37.619 3.70968 36.4021 2.74194 34.9206C1.55914 33.2275 0.806452 31.3757 0.483871 29.3651C0.16129 27.3545 0 25.7143 0 24.4444C0 19.2593 1.34409 14.5503 4.03226 10.3175C6.72043 6.08467 10.914 2.64551 16.6129 0L18.0645 2.85714C14.7312 4.23281 11.828 6.40212 9.35484 9.36508C6.98925 12.328 5.80645 15.3439 5.80645 18.4127C5.80645 19.6825 5.96774 20.7936 6.29032 21.746C8.01075 20.3704 10 19.6825 12.2581 19.6825C15.0538 19.6825 17.4731 20.582 19.5161 22.381C21.5591 24.1799 22.5806 26.6667 22.5806 29.8413C22.5806 32.8042 21.5591 35.2381 19.5161 37.1429C17.4731 39.0476 15.0538 40 12.2581 40ZM39.6774 40C37.3118 40 35.3763 39.5238 33.871 38.5714C32.3656 37.619 31.129 36.4021 30.1613 34.9206C28.9785 33.2275 28.2258 31.3757 27.9032 29.3651C27.5806 27.3545 27.4194 25.7143 27.4194 24.4444C27.4194 19.2593 28.7634 14.5503 31.4516 10.3175C34.1398 6.08467 38.3333 2.64551 44.0323 0L45.4839 2.85714C42.1505 4.23281 39.2473 6.40212 36.7742 9.36508C34.4086 12.328 33.2258 15.3439 33.2258 18.4127C33.2258 19.6825 33.3871 20.7936 33.7097 21.746C35.4301 20.3704 37.4194 19.6825 39.6774 19.6825C42.4731 19.6825 44.8925 20.582 46.9355 22.381C48.9785 24.1799 50 26.6667 50 29.8413C50 32.8042 48.9785 35.2381 46.9355 37.1429C44.8925 39.0476 42.4731 40 39.6774 40Z\" fill=\"#D9D9D9\"><\/path>\n<\/svg>",
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
+            "reviewer": "<p>Review of Untitled by Elena Rodriguez<\/p>",
+            "orders": "Collector’s 3rd order"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_pEnzfr",
+        "reviews_NKPmGD",
+        "reviews_ERttHg",
+        "reviews_iMj7LF",
+        "reviews_3AJhJn",
+        "reviews_adrBfc"
+      ],
+      "settings": {
+        "title": "What clients say about us",
+        "color_scheme": ""
+      }
+    },
     "newsletter_QPpAxK": {
       "type": "newsletter",
       "settings": {
@@ -193,58 +316,6 @@
         "color_scheme": "",
         "faqImg": "shopify:\/\/shop_images\/Rectangle_40067.jpg"
       }
-    },
-    "featured_brands_nDG4md": {
-      "type": "featured-brands",
-      "blocks": {
-        "brands_NF43QG": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276499.png"
-          }
-        },
-        "brands_xiTazd": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276503.png"
-          }
-        },
-        "brands_ULdXFU": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276500.png"
-          }
-        },
-        "brands_FVinXV": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276501.png"
-          }
-        },
-        "brands_Xz3HLe": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276504.png"
-          }
-        },
-        "brands_gaxRmG": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/HYPEBEAST-Logo_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "brands_NF43QG",
-        "brands_xiTazd",
-        "brands_ULdXFU",
-        "brands_FVinXV",
-        "brands_Xz3HLe",
-        "brands_gaxRmG"
-      ],
-      "settings": {
-        "title": "Our Partners"
-      }
     }
   },
   "order": [
@@ -252,8 +323,9 @@
     "slideshow_ThtBr4",
     "featured_collection_7JCU3y",
     "featured_collection_carousel_UbidKX",
+    "featured_brands_nDG4md",
+    "reviews_ENymgr",
     "newsletter_QPpAxK",
-    "faq_Gbkbyk",
-    "featured_brands_nDG4md"
+    "faq_Gbkbyk"
   ]
 }
