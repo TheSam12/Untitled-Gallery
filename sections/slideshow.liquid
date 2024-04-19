@@ -17,7 +17,7 @@
       Theme_Slideshow({
         autoplay: {{ section.settings.autoplay }},
         autoplayInterval: {{ section.settings.autoplay_interval }},
-        loop = true
+        loop: {{ section.settings.loop }}
       })
     "
     class="splide"
@@ -248,6 +248,12 @@
           "label": "10 Seconds"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Slider Loop",
+      "default": false
     },
     {
       "type": "header",
