@@ -8,7 +8,7 @@ document.addEventListener('alpine:init', () => {
       gap = null,
       onlyIfNeeded = false,
       loop = true,
-      rows = null,
+      rows = null, 
     }) => ({
       autoplay,
       autoplayInterval,
