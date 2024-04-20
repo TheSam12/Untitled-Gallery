@@ -333,6 +333,74 @@
         "pagination": false,
         "color_scheme": ""
       }
+    },
+    "reviews_tpmTtJ": {
+      "type": "reviews",
+      "blocks": {
+        "reviews_78kYzn": {
+          "type": "reviews",
+          "settings": {
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
+            "reviewer": "<p>Review of Untitled by Baldwin Green<\/p>",
+            "orders": "Collector’s 1st order"
+          }
+        },
+        "reviews_z9nzQG": {
+          "type": "reviews",
+          "settings": {
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
+            "reviewer": "<p>Review of Untitled by Ava Thompson<\/p>",
+            "orders": "Collector’s 5th order"
+          }
+        },
+        "reviews_tbkjDU": {
+          "type": "reviews",
+          "settings": {
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
+            "reviewer": "<p>Review of Untitled by Elena Rodriguez<\/p>",
+            "orders": "Collector’s 14th order"
+          }
+        },
+        "reviews_XQbDTB": {
+          "type": "reviews",
+          "settings": {
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
+            "reviewer": "<p>Review of Untitled by Ava Thompson<\/p>",
+            "orders": "Collector’s 2nd order"
+          }
+        },
+        "reviews_6CYhFr": {
+          "type": "reviews",
+          "settings": {
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
+            "reviewer": "<p>Review of Untitled by Baldwin Green<\/p>",
+            "orders": "Collector’s 1st order"
+          }
+        },
+        "reviews_6nJg3t": {
+          "type": "reviews",
+          "settings": {
+            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
+            "reviewer": "<p>Review of Untitled by Ava Thompson<\/p>",
+            "orders": "Collector’s 5th order"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_78kYzn",
+        "reviews_z9nzQG",
+        "reviews_tbkjDU",
+        "reviews_XQbDTB",
+        "reviews_6CYhFr",
+        "reviews_6nJg3t"
+      ],
+      "settings": {
+        "title": "What clients say about us",
+        "pagination": false,
+        "color_scheme": "",
+        "mobile_product_tile_width": "80",
+        "desktop_product_tile_width": 27
+      }
     }
   },
   "order": [
@@ -343,6 +411,7 @@
     "featured_brands_nDG4md",
     "newsletter_QPpAxK",
     "faq_Gbkbyk",
-    "past_streamings_aMhw9w"
+    "past_streamings_aMhw9w",
+    "reviews_tpmTtJ"
   ]
 }
