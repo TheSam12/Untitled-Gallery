@@ -333,6 +333,72 @@
         "pagination": false,
         "color_scheme": ""
       }
+    },
+    "reviews_Xwe3Fa": {
+      "type": "reviews",
+      "blocks": {
+        "reviews_RzcFUc": {
+          "type": "reviews",
+          "settings": {
+            "review": "",
+            "reviewer": "",
+            "orders": ""
+          }
+        },
+        "reviews_fLca3y": {
+          "type": "reviews",
+          "settings": {
+            "review": "",
+            "reviewer": "",
+            "orders": ""
+          }
+        },
+        "reviews_Lj6k4p": {
+          "type": "reviews",
+          "settings": {
+            "review": "",
+            "reviewer": "",
+            "orders": ""
+          }
+        },
+        "reviews_74LP7G": {
+          "type": "reviews",
+          "settings": {
+            "review": "",
+            "reviewer": "",
+            "orders": ""
+          }
+        },
+        "reviews_4PgYCN": {
+          "type": "reviews",
+          "settings": {
+            "review": "",
+            "reviewer": "",
+            "orders": ""
+          }
+        },
+        "reviews_EYtDm3": {
+          "type": "reviews",
+          "settings": {
+            "review": "",
+            "reviewer": "",
+            "orders": ""
+          }
+        }
+      },
+      "block_order": [
+        "reviews_RzcFUc",
+        "reviews_fLca3y",
+        "reviews_Lj6k4p",
+        "reviews_74LP7G",
+        "reviews_4PgYCN",
+        "reviews_EYtDm3"
+      ],
+      "settings": {
+        "title": "",
+        "pagination": false,
+        "color_scheme": ""
+      }
     }
   },
   "order": [
@@ -343,6 +409,7 @@
     "featured_brands_nDG4md",
     "newsletter_QPpAxK",
     "faq_Gbkbyk",
-    "past_streamings_aMhw9w"
+    "past_streamings_aMhw9w",
+    "reviews_Xwe3Fa"
   ]
 }
