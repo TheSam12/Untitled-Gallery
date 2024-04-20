@@ -18,7 +18,7 @@ document.addEventListener('alpine:init', () => {
       gap,
       onlyIfNeeded,
       loop,
-      perPage,
+      perPage, 
       maxLgBreakpointMQL: window.matchMedia('(max-width: 1023px)'),
       init() {
         if (typeof Splide === 'undefined') {
