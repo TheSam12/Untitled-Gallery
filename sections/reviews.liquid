@@ -1,8 +1,30 @@
 {% liquid
     assign section_color = section.settings.section_color
     assign pagination = section.settings.pagination
+    assign mobile_product_tile_width = section.settings.mobile_product_tile_width
+    assign desktop_product_tile_width = section.settings.desktop_product_tile_width
+
+    case desktop_product_tile_width
+      when '40'
+        assign sizes = '(min-width: 1024px) 40vw'
+      when '60'
+        assign sizes = '(min-width: 1024px) 60vw'
+      when '80'
+        assign sizes = '(min-width: 1024px) 80vw'
+      when '100'
+        assign sizes = '(min-width: 1024px) 100vw'
+    endcase
+  
+    case mobile_product_tile_width
+      when '60'
+        assign sizes = sizes | append: ', 60vw'
+      when '80'
+        assign sizes = sizes | append: ', 80vw'
+      when '100'
+        assign sizes = sizes | append: ', 100vw'
+    endcase
  %}
-<section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}">
+<section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}" style="--mobile-slide-width: {{ mobile_product_tile_width }}%; --desktop-slide-width: {{ desktop_product_tile_width }}%;">
     <div
     x-data="
         Theme_Slideshow({
@@ -31,7 +53,7 @@
                         assign orders = block.settings.orders
                      %}
                      <li
-                        class="splide__slide border border-[#d9d9d9] is-active max-w-[80%] lg:max-w-[27%] p-[16px]"
+                        class="splide__slide border border-[#d9d9d9] is-active w-[--mobile-placeholder-width] lg:w-[--desktop-placeholder-width] p-[16px]"
                     >
                         {% render 'reviews'
                             review: review,
@@ -121,6 +143,36 @@
             "id": "color_scheme",
             "default": "scheme1",
             "label": "Color scheme"
+        },
+        {
+          "type": "select",
+          "id": "mobile_product_tile_width",
+          "label": "Mobile width",
+          "options": [
+            {
+              "value": "60",
+              "label": "60%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ],
+          "default": "80"
+        },
+        {
+          "type": "range",
+          "id": "desktop_product_tile_width",
+          "label": "Desktop width",
+          "min": 20,
+          "max": 40,
+          "step": 2,
+          "default": 27,
+          "unit": "%"
         }
     ],
     "blocks": [
