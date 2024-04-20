@@ -396,7 +396,7 @@
       ],
       "settings": {
         "title": "What clients say about us",
-        "pagination": false,
+        "pagination": true,
         "color_scheme": "",
         "mobile_product_tile_width": "80",
         "desktop_product_tile_width": 27
