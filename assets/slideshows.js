@@ -56,7 +56,7 @@ document.addEventListener('alpine:init', () => {
       initSplide() {
         const options = {
           type: this.loop? 'loop' : 'carousel',
-          perPage: this.perPage,
+          perPage: this.perPage? 'perPage' : 'carousel',
           arrows: true,
           pagination: true,
           rewind: true,
