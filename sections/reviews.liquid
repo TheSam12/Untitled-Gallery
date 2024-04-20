@@ -1,8 +1,30 @@
 {% liquid
     assign section_color = section.settings.section_color
     assign pagination = section.settings.pagination
+    assign mobile_product_tile_width = section.settings.mobile_product_tile_width
+    assign desktop_product_tile_width = section.settings.desktop_product_tile_width
+
+    case desktop_product_tile_width
+      when '40'
+        assign sizes = '(min-width: 1024px) 40vw'
+      when '60'
+        assign sizes = '(min-width: 1024px) 60vw'
+      when '80'
+        assign sizes = '(min-width: 1024px) 80vw'
+      when '100'
+        assign sizes = '(min-width: 1024px) 100vw'
+    endcase
+  
+    case mobile_product_tile_width
+      when '60'
+        assign sizes = sizes | append: ', 60vw'
+      when '80'
+        assign sizes = sizes | append: ', 80vw'
+      when '100'
+        assign sizes = sizes | append: ', 100vw'
+    endcase
  %}
-<section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}">
+<section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}" style="--mobile-slide-width: {{ mobile_product_tile_width }}%; --desktop-slide-width: {{ desktop_product_tile_width }}%;">
     <div
     x-data="
         Theme_Slideshow({
