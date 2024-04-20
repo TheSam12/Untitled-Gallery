@@ -389,23 +389,12 @@
             "name": "Elena Rodriguez",
             "colaboration": "5 collaborations"
           }
-        },
-        "past_videos_YmkTre": {
-          "type": "pastVideos",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778",
-            "avatar": "shopify:\/\/shop_images\/avatar-1.jpg",
-            "name": "Baldwim Green",
-            "colaboration": "3 collaborations"
-          }
         }
       },
       "block_order": [
         "past_videos_zi34QY",
         "past_videos_qJVUdE",
-        "past_videos_TPNwRY",
-        "past_videos_YmkTre"
+        "past_videos_TPNwRY"
       ],
       "settings": {
         "title": "Past Life Streaming",
