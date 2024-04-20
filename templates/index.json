@@ -208,72 +208,6 @@
         "title": "Our Partners"
       }
     },
-    "reviews_ENymgr": {
-      "type": "reviews",
-      "blocks": {
-        "reviews_pEnzfr": {
-          "type": "reviews",
-          "settings": {
-            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
-            "reviewer": "<p>Review of Untitled by Baldwin Green<\/p>",
-            "orders": "Collector’s 1st order"
-          }
-        },
-        "reviews_NKPmGD": {
-          "type": "reviews",
-          "settings": {
-            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
-            "reviewer": "<p>Review of Untitled by Ava Thompson<\/p>",
-            "orders": "Collector’s 5th order"
-          }
-        },
-        "reviews_ERttHg": {
-          "type": "reviews",
-          "settings": {
-            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
-            "reviewer": "<p>Review of Untitled by Elena Rodriguez<\/p>",
-            "orders": "Collector’s 14th order"
-          }
-        },
-        "reviews_iMj7LF": {
-          "type": "reviews",
-          "settings": {
-            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
-            "reviewer": "<p>Review of Untitled by Ava Thompson<\/p>",
-            "orders": "Collector’s 2nd order"
-          }
-        },
-        "reviews_3AJhJn": {
-          "type": "reviews",
-          "settings": {
-            "review": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>",
-            "reviewer": "<p>Review of Untitled by Baldwin Green<\/p>",
-            "orders": "Collector’s 6th order"
-          }
-        },
-        "reviews_adrBfc": {
-          "type": "reviews",
-          "settings": {
-            "review": "<p>Lorem ipsum dolor sit amet consectetur. Scelerisque faucibus tortor massa lobortis id velit. Tortor purus ipsum aliquam pharetra leo mauris varius laoreet. Nunc adipiscing ultrices augue non pellentesque. Duis eros erat aliquam vel eget. Magna nulla praesent quis lectus.<\/p>",
-            "reviewer": "<p>Review of Untitled by Elena Rodriguez<\/p>",
-            "orders": "Collector’s 3rd order"
-          }
-        }
-      },
-      "block_order": [
-        "reviews_pEnzfr",
-        "reviews_NKPmGD",
-        "reviews_ERttHg",
-        "reviews_iMj7LF",
-        "reviews_3AJhJn",
-        "reviews_adrBfc"
-      ],
-      "settings": {
-        "title": "What clients say about us",
-        "pagination": false,
-        "color_scheme": ""
-      }
-    },
     "newsletter_QPpAxK": {
       "type": "newsletter",
       "settings": {
@@ -407,7 +341,6 @@
     "upcoming_streaming_mBKP6T",
     "featured_collection_carousel_UbidKX",
     "featured_brands_nDG4md",
-    "reviews_ENymgr",
     "newsletter_QPpAxK",
     "faq_Gbkbyk",
     "past_streamings_aMhw9w"
