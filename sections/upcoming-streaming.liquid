@@ -12,7 +12,7 @@
         gap: '20px',
         onlyIfNeeded: true,
         loop: true,
-        slidesToShow: 4,
+        perPage: 4,
         })
     "
     class="splide no-pagination-needed relative">
@@ -31,7 +31,7 @@
                         assign date = block.settings.date
                      %}
                      <li
-                        class="splide__slide max-w-[60%] lg:w-[22%]"
+                        class="splide__slide"
                     >
                         {% render 'upcoming-streaming'
                             banner: banner,
