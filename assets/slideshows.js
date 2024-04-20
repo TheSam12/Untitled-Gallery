@@ -13,7 +13,6 @@ document.addEventListener('alpine:init', () => {
       autoplayInterval,
       playing: false,
       splide: null,
-      slidesToShow: null,
       rate: 0,
       mode,
       gap,
