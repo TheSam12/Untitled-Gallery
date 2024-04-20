@@ -8,6 +8,7 @@ document.addEventListener('alpine:init', () => {
       gap = null,
       onlyIfNeeded = false,
       loop = true,
+      rows = 1,
     }) => ({
       autoplay,
       autoplayInterval,
@@ -18,6 +19,7 @@ document.addEventListener('alpine:init', () => {
       gap,
       onlyIfNeeded,
       loop,
+      rows,
       maxLgBreakpointMQL: window.matchMedia('(max-width: 1023px)'),
       init() {
         if (typeof Splide === 'undefined') {
@@ -55,7 +57,7 @@ document.addEventListener('alpine:init', () => {
       initSplide() {
         const options = {
           type: this.loop? 'loop' : 'carousel',
-          perPage: this.perPage,
+          rows: this.rows,
           arrows: true,
           pagination: true,
           rewind: true,
