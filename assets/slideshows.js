@@ -8,7 +8,7 @@ document.addEventListener('alpine:init', () => {
       gap = null,
       onlyIfNeeded = false,
       loop = true,
-      rows = 1,
+      rows = null,
     }) => ({
       autoplay,
       autoplayInterval,
@@ -19,7 +19,7 @@ document.addEventListener('alpine:init', () => {
       gap,
       onlyIfNeeded,
       loop,
-      rows, 
+      rows,
       maxLgBreakpointMQL: window.matchMedia('(max-width: 1023px)'),
       init() {
         if (typeof Splide === 'undefined') {
