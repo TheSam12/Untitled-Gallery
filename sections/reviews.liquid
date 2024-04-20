@@ -24,7 +24,9 @@
         assign sizes = sizes | append: ', 100vw'
     endcase
  %}
-<section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}" style="--mobile-slide-width: {{ mobile_product_tile_width }}%; --desktop-slide-width: {{ desktop_product_tile_width }}%;">
+<section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}" 
+  style="--mobile-slide-width: {{ mobile_product_tile_width }}%; --desktop-slide-width: {{ desktop_product_tile_width }}%;"
+>
     <div
     x-data="
         Theme_Slideshow({
@@ -53,7 +55,7 @@
                         assign orders = block.settings.orders
                      %}
                      <li
-                        class="splide__slide border border-[#d9d9d9] is-active w-[var(--mobile-placeholder-width)] lg:w-[var(--desktop-placeholder-width)] p-[16px]"
+                        class="splide__slide border border-[#d9d9d9] is-active w-[var(--mobile-slide-width)] lg:w-[var(--desktop-slide-width)] p-[16px]"
                     >
                         {% render 'reviews'
                             review: review,
