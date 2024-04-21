@@ -1598,7 +1598,7 @@ shopify-payment-terms{
 .splide .splide__arrow .splide__arrow--next svg,
 .splide .splide__arrow .splide__arrow--prev svg{
   fill: unset;
-  height: unset;
+  height: unset; 
   width: unset;
 }
 
