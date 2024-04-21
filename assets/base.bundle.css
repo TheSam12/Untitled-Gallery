@@ -1585,7 +1585,7 @@ shopify-payment-terms{
   font-weight: 400;
 }
 
-.splide .splide__arrow.splide__arrow--next,
+/* .splide .splide__arrow.splide__arrow--next,
 .splide .splide__arrow.splide__arrow--prev{
   background: transparent;
   height: unset;
@@ -1600,7 +1600,7 @@ shopify-payment-terms{
   fill: unset;
   height: unset; 
   width: unset;
-}
+} */
 
 @media (max-width:1023px){
   .faq-title-modify .text-scheme-text h2{

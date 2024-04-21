@@ -25,9 +25,20 @@
     endcase
  %}
 <section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}" 
-  style="--mobile-slide-width: {{ mobile_product_tile_width }}%; --desktop-slide-width: {{ desktop_product_tile_width }}%;" 
+  style="--mobile-slide-width: {{ mobile_product_tile_width }}%; --desktop-slide-width: {{ desktop_product_tile_width }}%;"
 >
-    <div class="splide no-pagination-needed relative" id="reviews-slide">
+    <div
+    x-data="
+        Theme_Slideshow({
+        autoplay: false,
+        autoplayInterval: false,
+        mode: 'carousel',
+        gap: '20px',
+        onlyIfNeeded: true,
+        loop: true,
+        })
+    "
+    class="splide no-pagination-needed relative">
     {% if section.settings.title != '' %} 
         {%- render 'section-title',
         title: section.settings.title,
@@ -57,6 +68,18 @@
         {% if section.blocks.size > 1 %}
           <div
             class="absolute grid-cols-[minmax(0,_1fr)_auto] hidden lg:block lg:mx-4 mx-1 no-js:hidden right-0 top-[86px] {% if pagination %}grid{% endif %}"
+            {% if pagination %}
+            x-data="
+              {
+                paginationIsWrapped: false,
+                checkIfWrapped() {
+                  this.paginationIsWrapped = hasWrappedChildren(this.$refs.pagination)
+                }
+              }
+            "
+            x-init="checkIfWrapped"
+            @resize.window.debounce.250="checkIfWrapped"
+            {% endif %}
           >
             {% if pagination %}
               <ul x-ref="pagination" class="splide__pagination"></ul>
@@ -86,25 +109,6 @@
         {% endif %}
     </div>
 </section>
-
-<script>
-  document.addEventListener('alpine:init', () => {
-    const carousel = document.getElementById('reviews-slide');
-  
-    if (carousel) {
-      new Splide(carousel, {
-        mode: 'carousel',
-        gap: '20px',
-        perPage: 3,
-        breakpoints: {
-          1023: {
-            perPage: 1,
-          },
-        },
-      }).mount();
-    }
-  });
-</script>
 {% style %}
   {% if pagination != true %}
     .no-pagination-needed .splide__pagination{

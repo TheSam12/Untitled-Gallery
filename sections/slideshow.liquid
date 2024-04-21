@@ -12,7 +12,16 @@
   class="relative border-b-gridline border-gridline-color bg-scheme-background text-scheme-text"
   data-color-scheme="{{ section_color }}"
 >
-  <div class="splide" id="main-slideshow">
+  <div
+    x-data="
+      Theme_Slideshow({
+        autoplay: {{ section.settings.autoplay }},
+        autoplayInterval: {{ section.settings.autoplay_interval }},
+        loop: {{ section.settings.loop }}, 
+      })
+    "
+    class="splide"
+  >
     {% if section.settings.autoplay %}
       <button
         class="absolute left-0 top-0 z-10 p-2"
@@ -152,28 +161,19 @@
   </div>
   {% style %}
     {% if pagination != true %}
-      #main-slideshow .splide__pagination{
+      #splide01 .splide__pagination{
         display:none;
       }
     {% endif %}
   {% endstyle %}
 </section>
 
-<script>
-  document.addEventListener('alpine:init', () => {
-    const carousel = document.getElementById('main-slideshow');
-  
-    if (carousel) {
-      new Splide(carousel, {
-        mode: 'carousel',
-        gap: '20px',
-        type: 'loop', 
-        perPage: 1,
-      }).mount();
-    }
-  });
-</script>
+{% unless request.design_mode %}
+  <script src="{{ 'splide.bundle.min.js' | asset_url }}" type="module"></script>
+  <script src="{{ 'slideshows.js' | asset_url }}" type="module"></script>
+{% endunless %}
 
+{{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'countdown-timer.js' | asset_url }}" type="module"></script>
 
 {% schema %}
