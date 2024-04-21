@@ -86,22 +86,20 @@
 </section>
 <script>
   document.addEventListener('alpine:init', () => {
-    Alpine.data('slider', () => ({
-      init() {
-        this.splide = new Splide('#past-streaming', {
-          mode: 'carousel',
-          perPage: 2,
-          gap: '20px',
-          breakpoints: {
-            1023: {
-              perPage: 1,
-            },
+    const carousel = document.getElementById('past-streaming');
+  
+    if (carousel) {
+      new Splide(carousel, {
+        mode: 'carousel',
+        gap: '20px',
+        perPage: 2,
+        breakpoints: {
+          1023: {
+            perPage: 1,
           },
-        });
-
-        this.splide.mount();
-      },
-    }));
+        },
+      }).mount();
+    }
   });
 </script>
 {% style %}

@@ -161,18 +161,16 @@
 
 <script>
   document.addEventListener('alpine:init', () => {
-    Alpine.data('slider', () => ({
-      init() {
-        this.splide = new Splide('#main-slideshow', {
-          mode: 'carousel',
-          type: 'loop',
-          perPage: 1,
-          gap: '20px',
-        });
-
-        this.splide.mount();
-      },
-    }));
+    const carousel = document.getElementById('main-slideshow');
+  
+    if (carousel) {
+      new Splide(carousel, {
+        mode: 'carousel',
+        gap: '20px',
+        type: 'loop', 
+        perPage: 1,
+      }).mount();
+    }
   });
 </script>
 

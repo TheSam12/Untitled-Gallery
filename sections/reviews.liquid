@@ -89,22 +89,20 @@
 
 <script>
   document.addEventListener('alpine:init', () => {
-    Alpine.data('slider', () => ({
-      init() {
-        this.splide = new Splide('#reviews-slide', {
-          mode: 'carousel',
-          perPage: 3,
-          gap: '20px',
-          breakpoints: {
-            1023: {
-              perPage: 1,
-            },
+    const carousel = document.getElementById('reviews-slide');
+  
+    if (carousel) {
+      new Splide(carousel, {
+        mode: 'carousel',
+        gap: '20px',
+        perPage: 3,
+        breakpoints: {
+          1023: {
+            perPage: 1,
           },
-        });
-
-        this.splide.mount();
-      },
-    }));
+        },
+      }).mount();
+    }
   });
 </script>
 {% style %}
