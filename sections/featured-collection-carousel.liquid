@@ -174,13 +174,6 @@
   -%}
 </section>
 
-{% unless request.design_mode %}
-  <script src="{{ 'splide.bundle.min.js' | asset_url }}" type="module"></script>
-  <script src="{{ 'slideshows.js' | asset_url }}" type="module"></script>
-{% endunless %}
-
-{{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
-
 {% if enable_quick_buy and section.settings.product_tile_type == 'standard' %}
   {% unless request.design_mode %}
     <script src="{{ 'product-form.js' | asset_url }}" type="module"></script>

@@ -3,18 +3,7 @@
     assign pagination = section.settings.pagination
  %}
 <section id="upcoming-streaming-{{ section.id }}" data-color-scheme="{{ section_color }}">
-    <div
-    x-data="
-        Theme_Slideshow({
-        autoplay: false,
-        autoplayInterval: false,
-        mode: 'carousel',
-        gap: '20px',
-        onlyIfNeeded: true,
-        loop: true, 
-        })
-    "
-    class="splide no-pagination-needed relative">
+    <div class="splide no-pagination-needed relative" id="past-streaming">
     {% if section.settings.title != '' %} 
         {%- render 'section-title',
         title: section.settings.title,
@@ -95,6 +84,28 @@
       <a class="text-white menlo px-[40px] py-[15px] bg-black lg:w-fit w-full text-center" src="#">View all</a>
     </div>
 </section>
+<script>
+  document.addEventListener('alpine:init', () => {
+    const carousel = document.getElementById('past-streaming');
+  
+    if (carousel) {
+      new Splide(carousel, {
+        autoplay: false,
+        autoplayInterval: false,
+        mode: 'carousel',
+        gap: '20px',
+        onlyIfNeeded: true,
+        loop: true, 
+        perPage: 2,
+        breakpoints: {
+          1023: {
+            perPage: 1,
+          },
+        },
+      }).mount();
+    }
+  });
+</script>
 {% style %}
   {% if pagination != true %}
     .no-pagination-needed .splide__pagination{

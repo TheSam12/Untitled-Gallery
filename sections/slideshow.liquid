@@ -168,12 +168,6 @@
   {% endstyle %}
 </section>
 
-{% unless request.design_mode %}
-  <script src="{{ 'splide.bundle.min.js' | asset_url }}" type="module"></script>
-  <script src="{{ 'slideshows.js' | asset_url }}" type="module"></script>
-{% endunless %}
-
-{{ 'modules-slideshow.bundle.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'countdown-timer.js' | asset_url }}" type="module"></script>
 
 {% schema %}
