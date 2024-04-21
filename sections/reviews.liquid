@@ -57,18 +57,6 @@
         {% if section.blocks.size > 1 %}
           <div
             class="absolute grid-cols-[minmax(0,_1fr)_auto] hidden lg:block lg:mx-4 mx-1 no-js:hidden right-0 top-[86px] {% if pagination %}grid{% endif %}"
-            {% if pagination %}
-            x-data="
-              {
-                paginationIsWrapped: false,
-                checkIfWrapped() {
-                  this.paginationIsWrapped = hasWrappedChildren(this.$refs.pagination)
-                }
-              }
-            "
-            x-init="checkIfWrapped"
-            @resize.window.debounce.250="checkIfWrapped"
-            {% endif %}
           >
             {% if pagination %}
               <ul x-ref="pagination" class="splide__pagination"></ul>
@@ -101,24 +89,22 @@
 
 <script>
   document.addEventListener('alpine:init', () => {
-    const carousel = document.getElementById('reviews-slide');
-  
-    if (carousel) {
-      new Splide(carousel, {
-        autoplay: false,
-        autoplayInterval: false,
-        mode: 'carousel',
-        gap: '20px',
-        onlyIfNeeded: true,
-        loop: true, 
-        perPage: 3,
-        breakpoints: {
-          1023: {
-            perPage: 1,
+    Alpine.data('slider', () => ({
+      init() {
+        this.splide = new Splide('#reviews-slide', {
+          mode: 'carousel',
+          perPage: 3,
+          gap: '20px',
+          breakpoints: {
+            1023: {
+              perPage: 1,
+            },
           },
-        },
-      }).mount();
-    }
+        });
+
+        this.splide.mount();
+      },
+    }));
   });
 </script>
 {% style %}

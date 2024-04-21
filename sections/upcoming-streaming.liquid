@@ -67,24 +67,22 @@
 </section>
 <script>
   document.addEventListener('alpine:init', () => {
-    const carousel = document.getElementById('upcoming-streaming');
-  
-    if (carousel) {
-      new Splide(carousel, {
-        autoplay: false,
-        autoplayInterval: false,
-        mode: 'carousel',
-        gap: '20px',
-        onlyIfNeeded: true,
-        loop: false, 
-        perPage: 4,
-        breakpoints: {
-          1023: {
-            perPage: 1,
+    Alpine.data('slider', () => ({
+      init() {
+        this.splide = new Splide('#upcoming-streaming', {
+          mode: 'carousel',
+          perPage: 4,
+          gap: '20px',
+          breakpoints: {
+            1023: {
+              perPage: 1,
+            },
           },
-        },
-      }).mount();
-    }
+        });
+
+        this.splide.mount();
+      },
+    }));
   });
 </script>
 {% style %}
