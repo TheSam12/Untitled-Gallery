@@ -1585,8 +1585,8 @@ shopify-payment-terms{
   font-weight: 400;
 }
 
-.splide .splide__arrow .splide__arrow--next,
-.splide .splide__arrow .splide__arrow--prev{
+.splide .splide__arrow.splide__arrow--next,
+.splide .splide__arrow.splide__arrow--prev{
   background: transparent;
   height: unset;
   position: unset;
@@ -1595,8 +1595,8 @@ shopify-payment-terms{
   width: unset;
 }
 
-.splide .splide__arrow .splide__arrow--next svg,
-.splide .splide__arrow .splide__arrow--prev svg{
+.splide .splide__arrow.splide__arrow--next svg,
+.splide .splide__arrow.splide__arrow--prev svg{
   fill: unset;
   height: unset; 
   width: unset;
