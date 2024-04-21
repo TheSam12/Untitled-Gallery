@@ -65,7 +65,7 @@
               class="flex  splide__arrows col-end-last items-center {% if pagination %}justify-end{% else %}justify-center{% endif %} gap-[12px] text-scheme-text"
               {% if pagination %}:class="{ 'items-start pt-0.5' : paginationIsWrapped, 'items-center' : !paginationIsWrapped }"{% endif %}
             >
-              <button class="">
+              <button class="splide__arrow splide__arrow--prev">
                 <span class="sr-only">
                   {{- 'sections.slideshow.previous_slide' | t -}}
                 </span>
