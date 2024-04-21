@@ -27,18 +27,7 @@
 <section id="reviews-{{ section.id }}" data-color-scheme="{{ section_color }}" 
   style="--mobile-slide-width: {{ mobile_product_tile_width }}%; --desktop-slide-width: {{ desktop_product_tile_width }}%;" 
 >
-    <div
-    x-data="
-        Theme_Slideshow({
-        autoplay: false,
-        autoplayInterval: false,
-        mode: 'carousel',
-        gap: '20px',
-        onlyIfNeeded: true,
-        loop: true,
-        })
-    "
-    class="splide no-pagination-needed relative">
+    <div class="splide no-pagination-needed relative" id="reviews-slide">
     {% if section.settings.title != '' %} 
         {%- render 'section-title',
         title: section.settings.title,
@@ -109,6 +98,29 @@
         {% endif %}
     </div>
 </section>
+
+<script>
+  document.addEventListener('alpine:init', () => {
+    const carousel = document.getElementById('reviews-slide');
+  
+    if (carousel) {
+      new Splide(carousel, {
+        autoplay: false,
+        autoplayInterval: false,
+        mode: 'carousel',
+        gap: '20px',
+        onlyIfNeeded: true,
+        loop: true, 
+        perPage: 3,
+        breakpoints: {
+          1023: {
+            perPage: 1,
+          },
+        },
+      }).mount();
+    }
+  });
+</script>
 {% style %}
   {% if pagination != true %}
     .no-pagination-needed .splide__pagination{
