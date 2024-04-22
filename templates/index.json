@@ -140,20 +140,116 @@
         "color_scheme": ""
       }
     },
-    "featured_collection_carousel_UbidKX": {
-      "type": "featured-collection-carousel",
+    "featured_collection_DK46nE": {
+      "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Works on untitled gallery",
         "collection": "",
         "product_tile_type": "standard",
-        "product_limit": 10,
-        "show_view_all": false,
-        "image_crop": "none",
-        "mobile_product_tile_width": "60",
-        "desktop_product_tile_width": 20,
+        "grid": 4,
+        "rows": 2,
+        "grid_mobile": "1",
+        "show_view_all": true,
         "enable_quick_buy": false,
         "quick_buy_button_style": "theme-button",
         "color_scheme": ""
+      }
+    },
+    "past_streamings_aMhw9w": {
+      "type": "past-streamings",
+      "blocks": {
+        "past_videos_zi34QY": {
+          "type": "pastVideos",
+          "settings": {
+            "mode": "preview",
+            "aspect_ratio": "1.778",
+            "avatar": "shopify:\/\/shop_images\/avatar-1.jpg",
+            "name": "Baldwim Green",
+            "colaboration": "3 collaborations"
+          }
+        },
+        "past_videos_qJVUdE": {
+          "type": "pastVideos",
+          "settings": {
+            "mode": "preview",
+            "aspect_ratio": "1.778",
+            "avatar": "shopify:\/\/shop_images\/avatar-2.jpg",
+            "name": "Ava Thompson",
+            "colaboration": "2 collaborations"
+          }
+        },
+        "past_videos_TPNwRY": {
+          "type": "pastVideos",
+          "settings": {
+            "mode": "preview",
+            "aspect_ratio": "1.778",
+            "avatar": "shopify:\/\/shop_images\/avatar-3.jpg",
+            "name": "Elena Rodriguez",
+            "colaboration": "5 collaborations"
+          }
+        }
+      },
+      "block_order": [
+        "past_videos_zi34QY",
+        "past_videos_qJVUdE",
+        "past_videos_TPNwRY"
+      ],
+      "settings": {
+        "title": "Past Life Streaming",
+        "pagination": false,
+        "color_scheme": ""
+      }
+    },
+    "featured_brands_nDG4md": {
+      "type": "featured-brands",
+      "blocks": {
+        "brands_NF43QG": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276499.png"
+          }
+        },
+        "brands_xiTazd": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276503.png"
+          }
+        },
+        "brands_ULdXFU": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276500.png"
+          }
+        },
+        "brands_FVinXV": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276501.png"
+          }
+        },
+        "brands_Xz3HLe": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/Frame_1171276504.png"
+          }
+        },
+        "brands_gaxRmG": {
+          "type": "brands",
+          "settings": {
+            "brandImage": "shopify:\/\/shop_images\/HYPEBEAST-Logo_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "brands_NF43QG",
+        "brands_xiTazd",
+        "brands_ULdXFU",
+        "brands_FVinXV",
+        "brands_Xz3HLe",
+        "brands_gaxRmG"
+      ],
+      "settings": {
+        "title": "Our Partners"
       }
     },
     "reviews_tpmTtJ": {
@@ -222,58 +318,6 @@
         "color_scheme": "",
         "mobile_product_tile_width": "80",
         "desktop_product_tile_width": 27
-      }
-    },
-    "featured_brands_nDG4md": {
-      "type": "featured-brands",
-      "blocks": {
-        "brands_NF43QG": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276499.png"
-          }
-        },
-        "brands_xiTazd": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276503.png"
-          }
-        },
-        "brands_ULdXFU": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276500.png"
-          }
-        },
-        "brands_FVinXV": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276501.png"
-          }
-        },
-        "brands_Xz3HLe": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/Frame_1171276504.png"
-          }
-        },
-        "brands_gaxRmG": {
-          "type": "brands",
-          "settings": {
-            "brandImage": "shopify:\/\/shop_images\/HYPEBEAST-Logo_1.png"
-          }
-        }
-      },
-      "block_order": [
-        "brands_NF43QG",
-        "brands_xiTazd",
-        "brands_ULdXFU",
-        "brands_FVinXV",
-        "brands_Xz3HLe",
-        "brands_gaxRmG"
-      ],
-      "settings": {
-        "title": "Our Partners"
       }
     },
     "newsletter_QPpAxK": {
@@ -356,62 +400,17 @@
         "color_scheme": "",
         "faqImg": "shopify:\/\/shop_images\/Rectangle_40067.jpg"
       }
-    },
-    "past_streamings_aMhw9w": {
-      "type": "past-streamings",
-      "blocks": {
-        "past_videos_zi34QY": {
-          "type": "pastVideos",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778",
-            "avatar": "shopify:\/\/shop_images\/avatar-1.jpg",
-            "name": "Baldwim Green",
-            "colaboration": "3 collaborations"
-          }
-        },
-        "past_videos_qJVUdE": {
-          "type": "pastVideos",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778",
-            "avatar": "shopify:\/\/shop_images\/avatar-2.jpg",
-            "name": "Ava Thompson",
-            "colaboration": "2 collaborations"
-          }
-        },
-        "past_videos_TPNwRY": {
-          "type": "pastVideos",
-          "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778",
-            "avatar": "shopify:\/\/shop_images\/avatar-3.jpg",
-            "name": "Elena Rodriguez",
-            "colaboration": "5 collaborations"
-          }
-        }
-      },
-      "block_order": [
-        "past_videos_zi34QY",
-        "past_videos_qJVUdE",
-        "past_videos_TPNwRY"
-      ],
-      "settings": {
-        "title": "Past Life Streaming",
-        "pagination": false,
-        "color_scheme": ""
-      }
     }
   },
   "order": [
     "main_title_BzFwkb",
     "slideshow_ThtBr4",
     "upcoming_streaming_mBKP6T",
-    "featured_collection_carousel_UbidKX",
-    "reviews_tpmTtJ",
+    "featured_collection_DK46nE",
+    "past_streamings_aMhw9w",
     "featured_brands_nDG4md",
+    "reviews_tpmTtJ",
     "newsletter_QPpAxK",
-    "faq_Gbkbyk",
-    "past_streamings_aMhw9w"
+    "faq_Gbkbyk"
   ]
 }
