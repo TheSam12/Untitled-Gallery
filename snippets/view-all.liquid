@@ -12,11 +12,11 @@
 
 {% if display_view_all_underneath %}
   <div
-    class="bg-scheme-background px-section-horizontal-spacing pb-theme-double pt-theme text-scheme-text  {% if settings.section_title_align == 'center' %}text-center{% else %}text-right{% endif %} border-t-gridline border-gridline-color"
+    class="flex justify center mt-[20px] lg:mt-[40px]"
     data-color-scheme="{{ section_color }}"
   >
     <a
-      class="inline-block text-scheme-text hover:text-scheme-accent theme-link"
+      class="text-white menlo px-[40px] py-[15px] bg-black lg:w-fit w-full text-center"
       href="{{ link_url }}"
     >
       {{- link_text -}}
