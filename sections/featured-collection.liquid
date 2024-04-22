@@ -43,11 +43,11 @@
   class="featured-collection border-b-gridline border-gridline-color"
   data-color-scheme="{{ section_color }}"
 >
-  {% liquid
+  {% comment %} {% liquid
     if section.settings.title != ''
       render 'section-title', title: section.settings.title, section_color: section_color
     endif
-  %}
+  %} {% endcomment %}
 
   <div class="bg-scheme-background">
     <ul class="grid grid-cols-2 {{ desktop_grid_class }} gap-gutter bg-gridline-color gap-[20px]">
@@ -132,6 +132,7 @@
   </div>
 
   {%- render 'view-all',
+    title: section.settings.title,
     show_link: show_view_all,
     link_text: view_all_text,
     link_url: collection.url,
