@@ -45,7 +45,7 @@
 >
   {% liquid
     if section.settings.title != ''
-      render 'section-title', title: section.settings.title, show_link: show_view_all, link_text: view_all_text, link_url: collection.url, section_color: section_color
+      render 'section-title', title: section.settings.title, section_color: section_color
     endif
   %}
 
