@@ -267,6 +267,7 @@
     ></script>
     <script src="https://untitledgalleryapp--development.gadget.app/api/client/web.min.js" defer></script>
     <script>
+      async mainQuery () => {
       const response = await api.query(`
         query GetAppName {
           gadgetMeta {
@@ -277,6 +278,8 @@
       
       console.log(response.data.gadgetMeta.slug);
       // => untitledgalleryapp
+      };
+      mainQuery();
     </script>
     
 
