@@ -274,7 +274,7 @@
       });
       async function test(){
         const shopifyProductImageRecord = await api.shopifyProductImage.findMany();
-        console.log(shopifyProductImageRecord);
+        console.log(shopifyProductImageRecord.source);
       }
       test();
     </script> 
