@@ -272,16 +272,11 @@
       window.api = new Gadget({
         environment: "Development"
       });
-      const response = api.query(`
-        query GetAppName {
-          session {
-            roles
-          }
-        }
-      `);
+      const record = await api.currentSession.get();
+      console.log(record.id); //=> a string
+      console.log(record.state); //=> a state value like { "created": "loggedOut" }
+      console.log(record.createdAt); //=> a Date object
       
-      console.log(response);
-      // => untitledgalleryapp
     </script> 
     
 
