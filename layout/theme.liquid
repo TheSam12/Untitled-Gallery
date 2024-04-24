@@ -267,6 +267,12 @@
     ></script>
     <script src="https://untitledgalleryapp--development.gadget.app/api/client/web.min.js" defer></script>
     <script>
+      // create a new instance of the Gadget client at the `api` global connected to the Development environment
+      window.api = new Gadget({
+        environment: "Development"
+      })
+    </script>
+    <script>
       const response = await api.query(`
         query GetAppName {
           gadgetMeta {
