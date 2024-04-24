@@ -267,6 +267,19 @@
     ></script>
     <script src="https://untitledgalleryapp.gadget.app/api/client/web.min.js" async></script>
     <script>
+      import {
+        Client,
+        BrowserSessionStorageType,
+      } from "@gadget-client/untitledgalleryapp";
+      const api = new Client({
+        authenticationMode: {
+          browserSession: {
+            storageType: BrowserSessionStorageType.Session,
+          },
+        },
+      });
+    </script>
+    <script>
       // create a new instance of the Gadget client at the `api` global connected to the Development environment
       window.api = new Gadget({
         environment: "Development"
