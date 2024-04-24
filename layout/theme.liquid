@@ -274,13 +274,13 @@
       });
       const response = api.query(`
         query GetAppName {
-          gadgetMeta {
-            slug
+          Sessions {
+            roles
           }
         }
       `);
       
-      console.log(response.data);
+      console.log(response);
       // => untitledgalleryapp
     </script> 
     
