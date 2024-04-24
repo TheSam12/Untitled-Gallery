@@ -273,10 +273,9 @@
         environment: "Development"
       });
       async function test(){
-        const record = await api.currentSession.get();
-        console.log(record.id); //=> a string
-        console.log(record.state); //=> a state value like { "created": "loggedOut" }
-        console.log(record.createdAt); //=> a Date object
+        const artistRecords = await api.artist.findMany();
+        console.log(artistRecords.length); //=> a number
+        console.log(artistRecords[0].id); //=> a string
       }
       test();
     </script> 
