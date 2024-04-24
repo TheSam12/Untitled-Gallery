@@ -272,11 +272,13 @@
       window.api = new Gadget({
         environment: "Development"
       });
-      const record = await api.currentSession.get();
-      console.log(record.id); //=> a string
-      console.log(record.state); //=> a state value like { "created": "loggedOut" }
-      console.log(record.createdAt); //=> a Date object
-      
+      async function test(){
+        const record = await api.currentSession.get();
+        console.log(record.id); //=> a string
+        console.log(record.state); //=> a state value like { "created": "loggedOut" }
+        console.log(record.createdAt); //=> a Date object
+      }
+      test();
     </script> 
     
 
