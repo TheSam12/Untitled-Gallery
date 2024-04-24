@@ -274,8 +274,7 @@
       });
       async function test(){
         const shopifyProductImageRecord = await api.shopifyProductImage.findFirst();
-        console.log(shopifyProductImageRecord.id); //=> a string
-        console.log(shopifyProductImageRecord.createdAt); //=> a Date object
+        console.log(shopifyProductImageRecord);
       }
       test();
     </script> 
