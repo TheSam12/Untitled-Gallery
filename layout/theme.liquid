@@ -284,7 +284,7 @@
       window.api = new Gadget({
         environment: "Development"
       });
-      const response = api.query(`
+      const response = await api.query(`
         query GetAppName {
           gadgetMeta {
             slug
