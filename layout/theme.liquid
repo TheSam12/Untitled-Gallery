@@ -267,25 +267,16 @@
     ></script>
     <script src="https://untitledgalleryapp--development.gadget.app/api/client/web.min.js" defer></script>
     <script>
-      const result = fetch(
-        "https://untitledgalleryapp--development.gadget.app/api/graphql",
-        {
-          headers: {
-            accept: "application/json",
-            "content-type": "application/json",
-          },
-          body: JSON.stringify({
-            query: `
-            query GetAppName {
-              gadgetMeta {
-                name
-              }
-            }
-          `,
-          }),
-          method: "POST",
+      const response = await api.query(`
+        query GetAppName {
+          gadgetMeta {
+            slug
+          }
         }
-      );
+      `);
+      
+      console.log(response.data.gadgetMeta.slug);
+      // => untitledgalleryapp
     </script>
     
 
