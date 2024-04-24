@@ -206,6 +206,8 @@
       }
     {% endstyle %}
     <script src="https://cdn.tailwindcss.com" async></script>
+    <script src="https://untitledgalleryapp--development.gadget.app/api/client/web.min.js" async></script>
+    <script src="https://untitledgalleryapp--development.gadget.app/api/graphql" async></script> 
   </head>
 
   <body>
@@ -265,8 +267,6 @@
       src="{{ 'alpine.bundle.js' | asset_url }}"
       type="module"
     ></script>
-    <script src="https://untitledgalleryapp--development.gadget.app/api/client/web.min.js" async></script>
-    <script src="https://untitledgalleryapp--development.gadget.app/api/graphql" async></script> 
     <script>
       // create a new instance of the Gadget client at the `api` global connected to the Development environment
       window.api = new Gadget({
