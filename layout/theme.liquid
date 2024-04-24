@@ -273,9 +273,9 @@
         environment: "Development"
       });
       async function test(){
-        const shopifyProductRecord = await api.shopifyProduct.findFirst();
-        console.log(shopifyProductRecord.id); //=> a string
-        console.log(shopifyProductRecord.createdAt); //=> a Date object
+        const shopifyProductImageRecord = await api.shopifyProductImage.findFirst();
+        console.log(shopifyProductImageRecord.id); //=> a string
+        console.log(shopifyProductImageRecord.createdAt); //=> a Date object
       }
       test();
     </script> 
