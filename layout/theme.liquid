@@ -273,7 +273,7 @@
         environment: "Development"
       });
       async function test(){
-        const shopifyProductImageRecord = await api.shopifyProductImage.findFirst();
+        const shopifyProductImageRecord = await api.shopifyProductImage.findMany();
         console.log(shopifyProductImageRecord);
       }
       test();
