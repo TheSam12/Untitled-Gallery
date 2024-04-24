@@ -267,10 +267,25 @@
     ></script>
     <script src="https://untitledgalleryapp--development.gadget.app/api/client/web.min.js" async></script>
     <script>
-      fetch('https://untitledgalleryapp--development.gadget.app/api/graphql')
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
+      const result = await fetch(
+        "https://untitledgalleryapp--development.gadget.app/api/graphql",
+        {
+          headers: {
+            accept: "application/json",
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            query: `
+            query GetAppName {
+              gadgetMeta {
+                name
+              }
+            }
+          `,
+          }),
+          method: "POST",
+        }
+      );
     </script>
     
 
