@@ -273,9 +273,8 @@
         environment: "Development"
       });
       async function test(){
-        const artistRecords = await api.artist.findMany();
-        console.log(artistRecords.length); //=> a number
-        console.log(artistRecords[0].id); //=> a string
+        const record = await api.currentSession.get();
+        console.log(record);
       }
       test();
     </script> 
