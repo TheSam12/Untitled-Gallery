@@ -274,7 +274,7 @@
       });
       async function test(){
         const shopifyProductRecord = await api.shopifyProduct.findMany();
-        console.log(shopifyProductRecord); 
+        console.log(shopifyProductRecord.length); 
       }
       test();
     </script> 
