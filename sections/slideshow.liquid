@@ -167,7 +167,7 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ products: [] }" x-effect="fetchProduct(this)">
+<div x-data="{ products: [] }" x-init="fetchProduct($data)">
   <template x-for="(product, index) in products" :key="index">
     <div>
       <p>ID: <span x-text="product[0].id"></span></p>
@@ -182,7 +182,7 @@
       api.shopifyProduct.findMany({ first: 5 }), 
       api.shopifyProductImage.findMany({ first: 5 })]);
     data.products = [shopifyProductRecord, shopifyProductImageRecord];
-    console.log(products)
+    return data.products
   }
 </script>
 
