@@ -169,18 +169,23 @@
 </section>
 <div x-data="{ shopifyProductRecord: null }">
   <template x-if="shopifyProductRecord">
+    <h2>Producto Shopify</h2>
     <p>ID: <span x-text="shopifyProductRecord.id"></span></p>
-    <p>Created at: <span x-text="shopifyProductRecord.createdAt.toLocaleString()"></span></p>
+    <p>Fecha de creación: <span x-text="shopifyProductRecord.createdAt.toLocaleDateString()"></span></p>
   </template>
 
   <script>
-    async function fetchshopifyProductRecord() {
+    async function fetchProduct() {
       const shopifyProductRecord = await api.shopifyProduct.findFirst();
       return shopifyProductRecord;
     }
 
-    fetchshopifyProductRecord().then((record) => {
-      document.querySelector('[x-data]').__x.$data.shopifyProductRecord = record;
+    fetchProduct().then((data) => {
+      document.addEventListener('alpine:init', () => {
+        Alpine.data('product', () => ({
+          shopifyProductRecord: data,
+        }));
+      });
     });
   </script>
 </div>
