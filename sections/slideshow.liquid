@@ -167,22 +167,25 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ products: [] }" x-effect="fetchProduct($data)">
+<div x-data="{ products: [], images: [] }" x-effect="fetchProduct($data)">
   <template x-for="(product, index) in products" :key="index">
     <div>
-      <p>ID: <span x-text="product[0].id"></span></p>
-      <p>Fecha de creación: <span x-text="product[0].createdAt.toLocaleDateString()"></span></p> 
-      <img x-bind:src="product[1].source" height="100" width="100"> 
+      <p>ID: <span x-text="product.id"></span></p>
+      <p>Fecha de creación: <span x-text="product.createdAt.toLocaleDateString()"></span></p> 
     </div>
   </template>
+  <template x-for="(image, index) in images" :key="index">
+    <img x-bind:src="image.source" height="100" width="100">
+  </template> 
 </div>
 <script>
   async function fetchProduct(data) {
-    const [shopifyProductRecord, shopifyProductImageRecord]= await Promise.all([
-      api.shopifyProduct.findMany({ first: 5 }), 
-      api.shopifyProductImage.findMany()]);
-    data.products = [shopifyProductRecord, shopifyProductImageRecord];
-    console.log(data.products);
+    const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 5 }); 
+    const shopifyProductImageRecord = await api.shopifyProductImage.findMany();
+    data.products = shopifyProductRecord;
+    data.images = shopifyProductImageRecord;
+    return data.products;
+    return data.images;
   }
 </script>
 
