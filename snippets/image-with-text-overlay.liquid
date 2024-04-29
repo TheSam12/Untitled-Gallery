@@ -72,6 +72,9 @@
             {{ title }}
           </h2>
         {% endif %}
+        <p>ID: <span x-text="product.id"></span></p>
+        <p>Fecha de creación: <span x-text="product.title"></span></p> 
+        <img x-bind:src="product.images?.edges[0]?.node?.source" height="100" width="100">
 
         {% if text != blank %}
           <div class="rte mt-2 text-[20px]">
