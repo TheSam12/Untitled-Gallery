@@ -48,7 +48,7 @@
     <div class="splide__track h-[50vh] lg:h-auto">
       <ul class="splide__list lg:left-[3.5%] relative">
         <div x-data="{ products: [] }" x-effect="fetchProduct($data)">
-          <template x-for="(product, index) in products" :key="index">
+          <div x-for="(product, index) in products" :key="index">
           {% for block in section.blocks %}
             {%- liquid
               assign height = section.settings.height
@@ -107,7 +107,7 @@
               -%}
             </li>
           {% endfor %}
-          </template>
+        </div>
         </div>
       </ul>
     </div>
