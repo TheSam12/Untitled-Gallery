@@ -46,7 +46,8 @@
     {% endif %}
 
     <div class="splide__track h-[50vh] lg:h-auto" x-data="{ products: [] }" x-effect="fetchProduct($data)">
-      <template class="splide__list lg:left-[3.5%] relative" x-for="(product, index) in products" :key="index">
+      <ul class="splide__list lg:left-[3.5%] relative">
+        <template x-for="(product, index) in products" :key="index">
         {% for block in section.blocks %}
           {%- liquid
             assign height = section.settings.height
@@ -76,7 +77,7 @@
             assign cta_text = block.settings.cta_text
             assign cta_style = block.settings.cta_style
           -%}
-          <div
+          <li
             class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
             data-index="{{ forloop.index0 }}"
             {{ block.shopify_attributes }}
@@ -103,9 +104,10 @@
               cta_style: cta_style,
               loading: loading,
             -%}
-            </div>
+            </li>
         {% endfor %}
-      </template>
+        </template>
+      </ul>
     </div>
     {% if section.settings.autoplay %}
       <div class="bg-gridline-color/30">
