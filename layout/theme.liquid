@@ -208,6 +208,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://untitledgalleryapp--development.gadget.app/api/client/web.min.js"></script>
     <script src="https://untitledgalleryapp--development.gadget.app/api/graphql"></script> 
+    <script>
+      // create a new instance of the Gadget client at the `api` global connected to the Development environment
+      window.api = new Gadget({
+        environment: "Development"
+      });
+    </script> 
   </head>
 
   <body>
@@ -267,17 +273,6 @@
       src="{{ 'alpine.bundle.js' | asset_url }}"
       type="module"
     ></script>
-    <script>
-      // create a new instance of the Gadget client at the `api` global connected to the Development environment
-      window.api = new Gadget({
-        environment: "Development"
-      });
-      async function test(){
-        const shopifyProductRecord = await api.shopifyProduct.findMany();
-        console.log(shopifyProductRecord.length); 
-      }
-      test();
-    </script> 
     
 
 

@@ -168,6 +168,14 @@
   {% endstyle %}
 </section>
 
+<script>
+  async function test(){
+    const shopifyProductRecord = await api.shopifyProduct.findMany();
+    console.log(shopifyProductRecord.length); 
+  }
+  test();
+</script>
+
 {% unless request.design_mode %}
   <script src="{{ 'splide.bundle.min.js' | asset_url }}" type="module"></script>
   <script src="{{ 'slideshows.js' | asset_url }}" type="module"></script>
