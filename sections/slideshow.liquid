@@ -167,15 +167,16 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ shopifyProductRecord: null }" x-effect="fetchProduct($data)"> 
+<div x-data="{ products: [] }" x-effect="fetchProduct($data)"> 
+  <template x-for="(product, index) in products" :key="index">
     <h2>Producto Shopify</h2>
-    <p>ID: <span x-text="shopifyProductRecord.id"></span></p>
-    <p>Fecha de creación: <span x-text="shopifyProductRecord.createdAt.toLocaleDateString()"></span></p>
-
+    <p>ID: <span x-text="product.id"></span></p>
+    <p>Fecha de creación: <span x-text="product.createdAt.toLocaleDateString()"></span></p>
+  </template>
   <script>
     async function fetchProduct(data) {
-      const shopifyProductRecord = await api.shopifyProduct.findFirst();
-      data.shopifyProductRecord = shopifyProductRecord;
+      const products = await api.shopifyProduct.findMany({ first: 5 });
+      data.products = products;
     }
   </script>
 </div>
