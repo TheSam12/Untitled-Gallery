@@ -167,21 +167,19 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-init="fetchProduct($data)">
-  <div x-data="{ shopifyProductRecord }">
-    <template x-if="shopifyProductRecord">
-      <h2>Producto Shopify</h2>
-      <p>ID: <span x-text="shopifyProductRecord.id"></span></p>
-      <p>Fecha de creación: <span x-text="shopifyProductRecord.createdAt.toLocaleDateString()"></span></p>
-    </template>
+<div x-data="{ shopifyProductRecord }" x-effect="fetchProduct($data)">
+  <template x-if="shopifyProductRecord">
+    <h2>Producto Shopify</h2>
+    <p>ID: <span x-text="shopifyProductRecord.id"></span></p>
+    <p>Fecha de creación: <span x-text="shopifyProductRecord.createdAt.toLocaleDateString()"></span></p>
+  </template>
 
-    <script>
-      async function fetchProduct(data) {
-        const shopifyProductRecord = await api.shopifyProduct.findFirst();
-        data.shopifyProductRecord = shopifyProductRecord;
-      }
-    </script>
-  </div>
+  <script>
+    async function fetchProduct(data) {
+      const shopifyProductRecord = await api.shopifyProduct.findFirst();
+      data.shopifyProductRecord = shopifyProductRecord;
+    }
+  </script>
 </div>
 
 {% unless request.design_mode %}
