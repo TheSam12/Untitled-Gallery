@@ -167,7 +167,7 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ shopifyProductRecord: null }" x-init="fetchProduct($data)">
+<div x-data="{ shopifyProductRecord }" x-init="fetchProduct($data)">
   <template x-if="shopifyProductRecord">
     <h2>Producto Shopify</h2>
     <p>ID: <span x-text="shopifyProductRecord.id"></span></p>
