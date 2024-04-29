@@ -79,7 +79,7 @@
           -%}
           <li
             class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
-            data-index="{{ forloop.index0 }}"
+            :data-index="${index}"
             {{ block.shopify_attributes }}
           >
             {%-
