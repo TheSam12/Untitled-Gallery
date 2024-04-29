@@ -167,7 +167,7 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ products: [], images: [] }" x-effect="fetchProduct($data)">
+<div x-data="{ products: [] }" x-effect="fetchProduct($data)">
   <template x-for="(product, index) in products" :key="index">
     <div>
       <p>ID: <span x-text="product.id"></span></p>
@@ -175,9 +175,6 @@
       <img x-bind:src="product.images?.edges[0]?.node?.source" height="100" width="100">
     </div>
   </template>
-  {% comment %} <template x-for="(image, index) in images" :key="index">
-    <img x-bind:src="image.source" height="100" width="100">
-  </template>  {% endcomment %}
 </div>
 <script>
   async function fetchProduct(data) {
