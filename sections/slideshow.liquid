@@ -178,7 +178,7 @@
 </div> {% endcomment %}
 <script>
   async function fetchProduct(data) {
-    const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 5, select: { 
+    const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 3, select: { 
         images: {
           edges: {
             node: {
