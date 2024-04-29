@@ -170,9 +170,9 @@
 <div x-data="{ products: [] }" x-effect="fetchProduct(this)">
   <template x-for="(product, index) in products" :key="index">
     <div>
-      <p>ID: <span x-text="[0]product.id"></span></p>
-      <p>Fecha de creación: <span x-text="[0]product.createdAt.toLocaleDateString()"></span></p> 
-      <img src="[1]product.source">
+      <p>ID: <span x-text="product[0].id"></span></p>
+      <p>Fecha de creación: <span x-text="product[0].createdAt.toLocaleDateString()"></span></p> 
+      <img src="product[1].source">
     </div>
   </template>
 </div>
