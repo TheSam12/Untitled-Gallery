@@ -1,6 +1,10 @@
-const countdownElement = document.getElementById('countdownTimer');
+const countdownElements = document.querySelectorAll('[id^="countdownTimer"]');
 
-function updateCountdown(date) {
+countdownElements.forEach((element) => {
+  const intervalId = setInterval(() => updateCountdown(futureDate, element), 1000);
+});
+
+function updateCountdown(date, element) {
   const now = new Date();
   const diffMs = date - now;
 
@@ -9,13 +13,10 @@ function updateCountdown(date) {
   const diffMins = Math.floor((diffMs % 3600000) / 60000); // minutes
   const diffSecs = Math.floor((diffMs % 60000) / 1000); // seconds
 
-  countdownElement.innerHTML = `${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
+  element.innerHTML = `${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
 
   if (diffMs < 0) {
     clearInterval(intervalId);
-    countdownElement.innerHTML = 'Time is up!';
+    element.innerHTML = 'Time is up!';
   }
 }
-
-const futureDate = new Date('2024-04-24T00:00:00Z'); // Set the date and time you want to count down to
-const intervalId = setInterval(() => updateCountdown(futureDate), 1000);
