@@ -105,9 +105,8 @@
               >
                 {%- if video != blank -%}
                   <video>
-                    <source
-                      src="{{ video }}"
-                    >
+                    {% assign videoId = video | split: '?v=' %}
+                    <source width="560" height="315" src="https://www.youtube.com/embed/{{ videoId[1] }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
                   </video>
                 {%- else -%}
                   <video x-ref="video" controls class="{{ media_class }}">
