@@ -170,7 +170,7 @@
 
 <script>
   async function test(){
-    const shopifyProductRecord = await api.shopifyProduct.findMany({findFirst: 5});
+    const shopifyProductRecord = await api.shopifyProduct.findMany({ first: 5 });
     console.log(shopifyProductRecord);
   }
   test();
