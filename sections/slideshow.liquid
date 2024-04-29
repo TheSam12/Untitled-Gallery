@@ -167,7 +167,7 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ products: [] }" x-effect="fetchProduct(this)">
+<div x-data="fetchProduct()">
   <template x-for="(product, index) in products" :key="index">
     <div>
       <p>ID: <span x-text="product[0].id"></span></p>
