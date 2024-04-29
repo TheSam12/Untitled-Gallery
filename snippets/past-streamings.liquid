@@ -44,19 +44,11 @@
             @pause="pause"
           >
             {%- if video != blank -%}
-              {{
-                video
-                | video_tag:
-                  autoplay: false,
-                  image_size: '2048x',
-                  loop: true,
-                  controls: false,
-                  preload: 'none',
-                  class: media_class,
-                  muted: true,
-                  id: player_id,
-                  x-ref: 'video'
-              }}
+              <video>
+                <source
+                  src="{{ video }}"
+                >
+              </video>
             {%- else -%}
               <video controls class="{{ media_class }}">
                 <source
