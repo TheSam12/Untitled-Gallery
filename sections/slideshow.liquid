@@ -45,8 +45,8 @@
       </button>
     {% endif %}
 
-    <div class="splide__track h-[50vh] lg:h-auto" x-data="{ products: [] }" x-effect="fetchProduct($data)">
-      <ul class="splide__list lg:left-[3.5%] relative">
+    <div class="splide__track h-[50vh] lg:h-auto">
+      <ul class="splide__list lg:left-[3.5%] relative" x-data="{ products: [] }" x-effect="fetchProduct($data)">
         <template x-for="(product, index) in products" :key="index">
         {% for block in section.blocks %}
           {%- liquid
@@ -79,8 +79,7 @@
           -%}
           <li
             class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
-            :data-index="${index}"
-            {{ block.shopify_attributes }}
+            data-index="{{ forloop.index0 }}"
           >
             {%-
               render 'image-with-text-overlay',
