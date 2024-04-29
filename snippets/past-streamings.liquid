@@ -91,13 +91,7 @@
                     {%- render 'icon-play' -%}
                 </span>
                 {%- if video != blank -%}
-                  {{
-                    video.preview_image
-                    | image_url: width: 2000
-                    | image_tag:
-                      class: preview_image_media_class,
-                      sizes: sizes
-                  }}
+                  <img src="https://img.youtube.com/vi/{{ video.id }}/0.jpg" height="100" width="100" class="w-full h-full">
                 {%- else -%}
                   {{
                     'image'
