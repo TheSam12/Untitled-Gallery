@@ -64,7 +64,7 @@
         class="{{ content_width_desktop }} bg-[#fff] lg:w-2/5 p-[20px] text-left text-scheme-text" 
       >
         {% if timer != blank %}
-          {% comment %} <p class="px-[8px] py-[3px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex w-fit mb-[10px]"><span id="countdownTimer" class="ml-[10px]"></span></p> {% endcomment %}
+          <p class="px-[8px] py-[3px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex w-fit mb-[10px]">{{ timer }} <span id="countdownTimer" class="ml-[10px]"></span></p>
         {% endif %}
 
         {% if title != blank %}
@@ -72,9 +72,6 @@
             {{ title }}
           </h2>
         {% endif %}
-        <p>ID: <span x-text="product.id"></span></p>
-      <p>Fecha de creación: <span x-text="product.title"></span></p> 
-      <img x-bind:src="product.images?.edges[0]?.node?.source" height="100" width="100">
 
         {% if text != blank %}
           <div class="rte mt-2 text-[20px]">
