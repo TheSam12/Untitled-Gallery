@@ -172,7 +172,7 @@
     <div>
       <p>ID: <span x-text="product.id"></span></p>
       <p>Fecha de creación: <span x-text="product.title"></span></p> 
-      <img x-bind:src="product.images.source" height="100" width="100">
+      <img x-bind:src="product.images.edges[0].source" height="100" width="100">
     </div>
   </template>
   {% comment %} <template x-for="(image, index) in images" :key="index">
@@ -183,7 +183,12 @@
   async function fetchProduct(data) {
     const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 5, select: { 
         images: {
-          source: true,
+          edges: {
+            node: {
+              id: true,
+              source: true,
+            },
+          },
         },
         id: true,
         title: true,
