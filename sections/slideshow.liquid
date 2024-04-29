@@ -168,12 +168,12 @@
   {% endstyle %}
 </section>
 <div x-data="{ shopifyProductRecord: [] }" x-effect="fetchProduct($data)">
-  <template x-for="(product, index) in shopifyProductRecord" :key="index">
-    <div>
+  {% comment %} <template x-for="(product, index) in shopifyProductRecord" :key="index"> {% endcomment %}
+    <div x-for="(product, index) in shopifyProductRecord" :key="index">
       <p>ID: <span x-text="product.id"></span></p>
       <p>Fecha de creación: <span x-text="product.createdAt.toLocaleDateString()"></span></p> 
     </div>
-  </template>
+  {% comment %} </template> {% endcomment %}
 </div>
 <script>
   async function fetchProduct(data) {
