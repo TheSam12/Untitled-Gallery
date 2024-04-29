@@ -177,7 +177,7 @@
   <script>
     async function fetchProduct() {
       const shopifyProductRecord = await api.shopifyProduct.findFirst();
-      return shopifyProductRecord;
+      $data.shopifyProductRecord = shopifyProductRecord;
     }
   </script>
 </div>
