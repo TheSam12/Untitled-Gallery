@@ -161,6 +161,7 @@
         "past_videos_zi34QY": {
           "type": "pastVideos",
           "settings": {
+            "video": "https:\/\/www.youtube.com\/watch?v=w7aAYLY9kIk",
             "mode": "preview",
             "aspect_ratio": "1.778",
             "avatar": "shopify:\/\/shop_images\/avatar-1.jpg",
@@ -171,6 +172,7 @@
         "past_videos_qJVUdE": {
           "type": "pastVideos",
           "settings": {
+            "video": "",
             "mode": "preview",
             "aspect_ratio": "1.778",
             "avatar": "shopify:\/\/shop_images\/avatar-2.jpg",
@@ -181,6 +183,7 @@
         "past_videos_TPNwRY": {
           "type": "pastVideos",
           "settings": {
+            "video": "",
             "mode": "preview",
             "aspect_ratio": "1.778",
             "avatar": "shopify:\/\/shop_images\/avatar-3.jpg",
