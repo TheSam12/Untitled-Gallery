@@ -44,11 +44,19 @@
             @pause="pause"
           >
             {%- if video != blank -%}
-              <video>
-                <source
-                  src="{{ video }}"
-                >
-              </video>
+              {{
+                video
+                | video_tag:
+                  autoplay: false,
+                  image_size: '2048x',
+                  loop: true,
+                  controls: false,
+                  preload: 'none',
+                  class: media_class,
+                  muted: true,
+                  id: player_id,
+                  x-ref: 'video'
+              }}
             {%- else -%}
               <video controls class="{{ media_class }}">
                 <source
@@ -83,11 +91,13 @@
                     {%- render 'icon-play' -%}
                 </span>
                 {%- if video != blank -%}
-                  <video>
-                    <source
-                      src="{{ video }}"
-                    >
-                  </video>
+                  {{
+                    video.preview_image
+                    | image_url: width: 2000
+                    | image_tag:
+                      class: preview_image_media_class,
+                      sizes: sizes
+                  }}
                 {%- else -%}
                   {{
                     'image'
@@ -104,10 +114,20 @@
                 @pause="pause"
               >
                 {%- if video != blank -%}
-                  <video>
-                    {% assign videoId = video | split: '?v=' %}
-                    <source width="560" height="315" src="https://www.youtube.com/embed/{{ videoId[1] }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-                  </video>
+                  {{
+                    video
+                    | video_tag:
+                      autoplay: true,
+                      image_size: '2048x',
+                      loop: loop,
+                      controls: true,
+                      preload: 'none',
+                      class: media_class,
+                      muted: false,
+                      id: player_id,
+                      x-ref: 'video',
+                      source: '{{ video }}'
+                  }}
                 {%- else -%}
                   <video x-ref="video" controls class="{{ media_class }}">
                     <source
