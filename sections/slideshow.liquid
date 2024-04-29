@@ -183,11 +183,6 @@
   async function fetchProduct(data) {
     const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 5, select: { 
         images: {
-          edges: {
-            node: {
-              id: true,
-            },
-          },
           source: true,
         },
         id: true,
