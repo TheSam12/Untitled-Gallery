@@ -144,7 +144,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Works on untitled gallery",
-        "collection": "",
+        "collection": "frontpage",
         "product_tile_type": "standard",
         "grid": 4,
         "rows": 2,
