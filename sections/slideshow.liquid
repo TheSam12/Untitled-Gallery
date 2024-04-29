@@ -45,8 +45,8 @@
       </button>
     {% endif %}
 
-    <div class="splide__track h-[50vh] lg:h-auto">
-      <ul class="splide__list lg:left-[3.5%] relative">
+    <div class="splide__track h-[50vh] lg:h-auto" x-data="{ products: [] }" x-effect="fetchProduct($data)">
+      <ul class="splide__list lg:left-[3.5%] relative" x-for="(product, index) in products" :key="index">
         {% for block in section.blocks %}
           {%- liquid
             assign height = section.settings.height
@@ -167,7 +167,7 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ products: [] }" x-effect="fetchProduct($data)">
+{% comment %} <div x-data="{ products: [] }" x-effect="fetchProduct($data)">
   <template x-for="(product, index) in products" :key="index">
     <div>
       <p>ID: <span x-text="product.id"></span></p>
@@ -175,7 +175,7 @@
       <img x-bind:src="product.images?.edges[0]?.node?.source" height="100" width="100">
     </div>
   </template>
-</div>
+</div> {% endcomment %}
 <script>
   async function fetchProduct(data) {
     const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 5, select: { 
