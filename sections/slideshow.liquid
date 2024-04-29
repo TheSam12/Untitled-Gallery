@@ -179,7 +179,7 @@
   async function fetchProduct(data) {
     const [shopifyProductRecord, shopifyProductImageRecord]= await Promise.all([
       api.shopifyProduct.findMany({ first: 5 }), 
-      api.shopifyProductImage.findMany({ first: 5 });]);
+      api.shopifyProductImage.findMany({ first: 5 })]);
     data.products = [shopifyProductRecord, shopifyProductImageRecord];
     console.log(products)
   }
