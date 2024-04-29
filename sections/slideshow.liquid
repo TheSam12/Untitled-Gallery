@@ -170,7 +170,7 @@
 <div x-data="{ shopifyProductRecord: null }" x-effect="fetchProduct($data)"> 
     <h2>Producto Shopify</h2>
     <p>ID: <span x-text="product.id"></span></p>
-    <p>Fecha de creación: <span x-text="product.createdAt.toLocaleDateString()"></span></p>
+    <p>Fecha de creación: <span x-text="product.createdAt.toLocaleDateString()"></span></p> 
   <script>
     async function fetchProduct(data) {
       const shopifyProductRecord = await api.shopifyProduct.findMany({ first: 5 });
