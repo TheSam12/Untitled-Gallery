@@ -182,7 +182,7 @@
       api.shopifyProduct.findMany({ first: 5 }), 
       api.shopifyProductImage.findMany()]);
     const relatedProducts = shopifyProductRecord.map(product => {
-      const images = shopifyProductImageRecord.filter(image => shopifyProductImage.product === product.id);
+      const images = shopifyProductImageRecord.filter(image => image.product === product.id);
       return {...product, images };
     });
 
