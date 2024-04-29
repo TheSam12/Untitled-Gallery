@@ -167,7 +167,7 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ products: [] }" x-effect="fetchProduct($data)">
+{% comment %} <div x-data="{ products: [] }" x-effect="fetchProduct($data)">
   <template x-for="(product, index) in products" :key="index">
     <div>
       <p>ID: <span x-text="product.id"></span></p>
@@ -194,7 +194,7 @@
     data.products = shopifyProductRecord;
     return data.products;
   }
-</script>
+</script> {% endcomment %}
 
 {% unless request.design_mode %}
   <script src="{{ 'splide.bundle.min.js' | asset_url }}" type="module"></script>
