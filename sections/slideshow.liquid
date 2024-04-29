@@ -167,7 +167,15 @@
     {% endif %}
   {% endstyle %}
 </section>
-
+<div x-data="{ gadgets: {{ data|json }} }">
+  <template x-for="(shopifyProduct, index) in gadgets" :key="index">
+    <div>
+      <h2 x-text="shopifyProduct.name"></h2>
+      <p x-text="shopifyProduct.description"></p>
+      <p x-text="shopifyProduct.price"></p>
+    </div>
+  </template>
+</div>
 <script>
   async function test(){
     const shopifyProductRecord = await api.shopifyProduct.findMany({ first: 5 });
