@@ -184,8 +184,8 @@
     const shopifyProductImageRecord = await api.shopifyProductImage.findMany();
     data.products = shopifyProductRecord;
     data.images = shopifyProductImageRecord;
-    return data.products;
-    return data.images;
+    console.log(data.products);
+    console.log(data.images);
   }
 </script>
 
