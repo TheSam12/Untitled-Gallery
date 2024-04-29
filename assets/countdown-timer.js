@@ -13,12 +13,12 @@ function updateCountdown(date, element) {
   const diffMins = Math.floor((diffMs % 3600000) / 60000); // minutes
   const diffSecs = Math.floor((diffMs % 60000) / 1000); // seconds
 
-  element.innerHTML = `${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
+  element.innerHTML = `Starts in ${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
 
   if (diffMs < 0) {
     clearInterval(intervalId);
-    element.innerHTML = 'Time is up!';
+    element.innerHTML = 'Go live!';
   }
 }
-const futureDate = new Date('2024-04-30T00:00:00Z'); // Set the date and time you want to count down to
+const futureDate = new Date('2024-05-30T00:00:00Z'); // Set the date and time you want to count down to
 const intervalId = setInterval(() => updateCountdown(futureDate), 1000);
