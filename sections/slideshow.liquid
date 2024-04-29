@@ -174,18 +174,25 @@
       <p>Fecha de creación: <span x-text="product.createdAt.toLocaleDateString()"></span></p> 
     </div>
   </template>
-  <template x-for="(image, index) in images" :key="index">
+  {% comment %} <template x-for="(image, index) in images" :key="index">
     <img x-bind:src="image.source" height="100" width="100">
-  </template> 
+  </template>  {% endcomment %}
 </div>
 <script>
   async function fetchProduct(data) {
-    const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 5 }); 
-    const shopifyProductImageRecord = await api.shopifyProductImage.findMany();
+    const shopifyProductRecord= await api.shopifyProduct.findMany({ first: 5, select: { 
+        images: {
+          edges: {
+            node: {
+              id: true,
+              createdAt: true,
+            },
+          },
+        },
+      } 
+    }); 
     data.products = shopifyProductRecord;
-    data.images = shopifyProductImageRecord;
     console.log(data.products);
-    console.log(data.images);
   }
 </script>
 
