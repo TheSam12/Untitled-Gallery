@@ -168,12 +168,12 @@
   {% endstyle %}
 </section>
 <div x-data="{ shopifyProductRecord: [] }" x-init="fetchProduct($data)">
-  <template x-for="(product, index) in shopifyProductRecord" :key="index">
+  <div x-for="(product, index) in shopifyProductRecord" :key="index">
     <div>
       <p>ID: <span x-text="product.id"></span></p>
       <p>Fecha de creación: <span x-text="product.createdAt.toLocaleDateString()"></span></p> 
     </div>
-  </template>
+  </div>
   <script>
     async function fetchProduct(data) {
       const shopifyProductRecord = await api.shopifyProduct.findMany({ first: 5 });
