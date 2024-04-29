@@ -177,7 +177,7 @@
 </div>
 <script>
   async function fetchProduct(data) {
-    const shopifyProductRecord = await api.shopifyProduct.findMany({ first: 5 }), await api.shopifyProductImage.findMany({ first: 5 });
+    const shopifyProductRecord = await api.shopifyProduct.findMany({ first: 5 });
     data.shopifyProductRecord = shopifyProductRecord;
     console.log(shopifyProductRecord)
   }
