@@ -167,7 +167,7 @@
     {% endif %}
   {% endstyle %}
 </section>
-<div x-data="{ shopifyProductRecord: null }">
+<div x-data="{ shopifyProductRecord: null }" x-init="fetchProduct()">
   <template x-if="shopifyProductRecord">
     <h2>Producto Shopify</h2>
     <p>ID: <span x-text="shopifyProductRecord.id"></span></p>
@@ -177,16 +177,8 @@
   <script>
     async function fetchProduct() {
       const shopifyProductRecord = await api.shopifyProduct.findFirst();
-      return shopifyProductRecord;
+      $data.shopifyProductRecord = shopifyProductRecord;
     }
-
-    fetchProduct().then((data) => {
-      document.addEventListener('alpine:init', () => {
-        Alpine.data('product', () => ({
-          shopifyProductRecord: data,
-        }));
-      });
-    });
   </script>
 </div>
 
