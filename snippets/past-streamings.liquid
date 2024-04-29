@@ -114,10 +114,8 @@
                 @pause="pause"
               >
                 {%- if video != blank -%}
-                  {% assign video_id = %}
                   <iframe
-                    src="https://www.youtube.com/embed/{{ video_url.video_id }}?enablejsapi=1&autoplay=1"
-                    class="js-youtube"
+                    src="{{ video }}"
                     allow="autoplay; encrypted-media"
                     allowfullscreen
                   ></iframe>
