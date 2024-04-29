@@ -46,7 +46,7 @@
     {% endif %}
 
     <div class="splide__track h-[50vh] lg:h-auto">
-      <ul class="splide__list lg:left-[3.5%] relative" x-for="(product, index) in products" :key="index">
+      <ul class="splide__list lg:left-[3.5%] relative">
         {% for block in section.blocks %}
           {%- liquid
             assign height = section.settings.height
