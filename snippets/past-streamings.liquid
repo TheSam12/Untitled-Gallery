@@ -83,13 +83,11 @@
                     {%- render 'icon-play' -%}
                 </span>
                 {%- if video != blank -%}
-                  {{
-                    video.preview_image
-                    | image_url: width: 2000
-                    | image_tag:
-                      class: preview_image_media_class,
-                      sizes: sizes
-                  }}
+                  <video>
+                    <source
+                      src="{{ video }}"
+                    >
+                  </video>
                 {%- else -%}
                   {{
                     'image'
@@ -106,19 +104,11 @@
                 @pause="pause"
               >
                 {%- if video != blank -%}
-                  {{
-                    video
-                    | video_tag:
-                      autoplay: true,
-                      image_size: '2048x',
-                      loop: loop,
-                      controls: true,
-                      preload: 'none',
-                      class: media_class,
-                      muted: false,
-                      id: player_id,
-                      x-ref: 'video'
-                  }}
+                  <video>
+                    <source
+                      src="{{ video }}"
+                    >
+                  </video>
                 {%- else -%}
                   <video x-ref="video" controls class="{{ media_class }}">
                     <source
