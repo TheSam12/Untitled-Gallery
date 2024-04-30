@@ -136,6 +136,7 @@
       ],
       "settings": {
         "title": "Upcoming Life Streaming",
+        "collection": "frontpage",
         "pagination": false,
         "color_scheme": ""
       }
