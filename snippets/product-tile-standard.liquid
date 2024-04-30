@@ -297,8 +297,8 @@
           </p>
           <p class="neueSwift text-[14px] text-[#030303]">{{ product.price | money }}</p> 
         </div>
-        <p class="sfMono text-[14px] mt-[12px]">{{ product.metafields.custom.artist.value.name }}</p>
-        <p class="sfMono text-[14px] text-[#9d9d9d] mt-[12px]">{% if sold_out %}Sold out{% endif %}</p>
+        <p class="sfMono text-[14px] mt-[5px]">{{ product.metafields.custom.artist.value.name }}</p>
+        <p class="sfMono text-[14px] text-[#9d9d9d] mt-[5px]">{% if sold_out %}Sold out{% endif %}</p>
       </div>
       <div class="{{ price_class }}">
         {% if sold_out %}
