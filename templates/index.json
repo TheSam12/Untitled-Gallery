@@ -18,7 +18,7 @@
         "collection": "frontpage",
         "autoplay": false,
         "autoplay_interval": "5000",
-        "loop": false,
+        "loop": true,
         "color_scheme": "",
         "pagination": false,
         "content_position": "justify-end items-end text-right",
