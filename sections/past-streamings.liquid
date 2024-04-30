@@ -25,11 +25,25 @@
         <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for product in collection.products %}
+                    {% liquid
+                        assign video = product.metafields.custom.livestreaming.video
+                        assign mode = section.settings.mode
+                        assign ratio = section.settings.aspect_ratio
+                        assign avatar = product.metafields.custom.artist.avatar
+                        assign name = product.metafields.custom.artist.name
+                        assign colaboration = product.metafields.custom.artist.number_of_contributions
+                     %}
                      <li
                         class="splide__slide w-[90%] lg:w-[40%] cursor-pointer" 
                     >
                         {% render 'past-streamings'
-                            container_id: section.id
+                            video: video,
+                            mode: mode,
+                            container_id: section.id,
+                            ratio: ratio,
+                            avatar: avatar,
+                            name: name,
+                            colaboration: colaboration
                          %}
                     </li>
                 {% endfor %}
@@ -118,15 +132,60 @@
             "default": false
         },
         {
+          "type": "collection",
+          "id": "collection",
+          "label": "Past Streamings Collection"
+        },
+        {
             "type": "color_scheme",
             "id": "color_scheme",
             "default": "scheme1",
             "label": "Color scheme"
         },
         {
-          "type": "collection",
-          "id": "collection",
-          "label": "Past Streamings Collection"
+          "type": "select",
+          "id": "mode",
+          "label": "Mode",
+          "options": [
+            {
+              "value": "preview",
+              "label": "Preview"
+            },
+            {
+              "value": "autoplay",
+              "label": "Autoplay"
+            }
+          ],
+          "default": "preview",
+          "info": "Autoplay will not play sound or show controls."
+        },
+        {
+          "type": "select",
+          "id": "aspect_ratio",
+          "label": "Aspect ratio",
+          "default": "1.778",
+          "options": [
+            {
+              "value": "natural",
+              "label": "Natural"
+            },
+            {
+              "value": "1",
+              "label": "Square (1:1)"
+            },
+            {
+              "value": "1.333",
+              "label": "Landscape (4:3)"
+            },
+            {
+              "value": "0.6667",
+              "label": "Portrait (2:3)"
+            },
+            {
+              "value": "1.778",
+              "label": "Widescreen (16:9)"
+            }
+          ]
         }
     ],
     "blocks": [
@@ -144,51 +203,6 @@
                 "label": "Video",
                 "info": "If set, will be used instead of the embedded video option. Offers improved performance.",
                 "accept": ["youtube"]
-              },
-              {
-                "type": "select",
-                "id": "mode",
-                "label": "Mode",
-                "options": [
-                  {
-                    "value": "preview",
-                    "label": "Preview"
-                  },
-                  {
-                    "value": "autoplay",
-                    "label": "Autoplay"
-                  }
-                ],
-                "default": "preview",
-                "info": "Autoplay will not play sound or show controls."
-              },
-              {
-                "type": "select",
-                "id": "aspect_ratio",
-                "label": "Aspect ratio",
-                "default": "1.778",
-                "options": [
-                  {
-                    "value": "natural",
-                    "label": "Natural"
-                  },
-                  {
-                    "value": "1",
-                    "label": "Square (1:1)"
-                  },
-                  {
-                    "value": "1.333",
-                    "label": "Landscape (4:3)"
-                  },
-                  {
-                    "value": "0.6667",
-                    "label": "Portrait (2:3)"
-                  },
-                  {
-                    "value": "1.778",
-                    "label": "Widescreen (16:9)"
-                  }
-                ]
               },
               {
                 "type": "image_picker",
