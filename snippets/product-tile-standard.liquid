@@ -296,11 +296,11 @@
         <div class="flex justify-between">
           <p
             aria-hidden="true"
-            class="{% if sold_out %}text-scheme-secondary line-through{% endif %}"
+            class="neueSwift text-[14px]"
           >
             {{ product.title }}
           </p>
-          <p class="sfMono text-[14px]">{{ product.metafields.custom.artist.value.name }}</p>
+          <p class="neueSwift text-[14px]">{{ product.price }}</p>
         </div>
       </div>
       <div class="{{ price_class }}">
