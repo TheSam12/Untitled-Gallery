@@ -26,19 +26,17 @@
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for product in collection.products %}
                     {% liquid
-                        assign video = product.metafields.custom.livestreaming.video
                         assign mode = section.settings.mode
                         assign ratio = section.settings.aspect_ratio
                         assign avatar = product.metafields.custom.artist.avatar
                         assign name = product.metafields.custom.artist.name
                         assign colaboration = product.metafields.custom.artist.number_of_contributions 
                      %}
-                     {{ video | json }}
+                     {{ avatar | json }}
                      <li
                         class="splide__slide w-[90%] lg:w-[40%] cursor-pointer" 
                     >
                         {% render 'past-streamings'
-                            video: video,
                             mode: mode,
                             container_id: section.id,
                             ratio: ratio,
