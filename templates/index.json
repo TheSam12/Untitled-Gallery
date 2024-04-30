@@ -155,6 +155,49 @@
         "color_scheme": ""
       }
     },
+    "past_streamings_VckLLb": {
+      "type": "past-streamings",
+      "blocks": {
+        "past_videos_HVmmEb": {
+          "type": "pastVideos",
+          "settings": {
+            "mode": "preview",
+            "aspect_ratio": "1.778",
+            "name": "",
+            "colaboration": ""
+          }
+        },
+        "past_videos_L3mP8d": {
+          "type": "pastVideos",
+          "settings": {
+            "mode": "preview",
+            "aspect_ratio": "1.778",
+            "name": "",
+            "colaboration": ""
+          }
+        },
+        "past_videos_Bqtgkn": {
+          "type": "pastVideos",
+          "settings": {
+            "mode": "preview",
+            "aspect_ratio": "1.778",
+            "name": "",
+            "colaboration": ""
+          }
+        }
+      },
+      "block_order": [
+        "past_videos_HVmmEb",
+        "past_videos_L3mP8d",
+        "past_videos_Bqtgkn"
+      ],
+      "settings": {
+        "title": "Past Life Streaming",
+        "pagination": false,
+        "color_scheme": "",
+        "collection": "frontpage"
+      }
+    },
     "featured_brands_nDG4md": {
       "type": "featured-brands",
       "blocks": {
@@ -362,6 +405,7 @@
     "slideshow_ThtBr4",
     "upcoming_streaming_mBKP6T",
     "featured_collection_DK46nE",
+    "past_streamings_VckLLb",
     "featured_brands_nDG4md",
     "reviews_tpmTtJ",
     "newsletter_QPpAxK",
