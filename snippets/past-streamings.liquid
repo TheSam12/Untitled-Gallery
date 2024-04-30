@@ -1,7 +1,6 @@
 {%- liquid
     assign id = section.id | append: '-' | append: video.id
     assign media_class = 'absolute inset-0 w-full h-full object-cover object-center'
-    assign preview_image_media_class = media_class | append: ' transition duration-300 scale-100 group-hover:scale-105'
   
     if ratio != 'natural'
       assign ratio_percentage = 1 | divided_by: ratio | times: 100
