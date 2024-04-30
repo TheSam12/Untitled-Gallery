@@ -26,10 +26,10 @@
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for product in collection.products %}
                     {% liquid
-                        assign video = product.metafields.livestreaming.video
-                        assign avatar = product.metafields.artist.photo
-                        assign name = product.metafields.artist.name
-                        assign colaboration = product.metafields.artist.numberOfContributions
+                        assign video = product.metafields.custom.livestreaming.video
+                        assign avatar = product.metafields.custom.artist.photo
+                        assign name = product.metafields.custom.artist.name
+                        assign colaboration = product.metafields.custom.artist.numberOfContributions
                      %}
                      <li
                         class="splide__slide w-[90%] lg:w-[40%] cursor-pointer" 
