@@ -85,55 +85,6 @@
     },
     "upcoming_streaming_mBKP6T": {
       "type": "upcoming-streaming",
-      "blocks": {
-        "upcoming_banner_mDfhaR": {
-          "type": "upcomingBanner",
-          "settings": {
-            "banner": "shopify:\/\/shop_images\/Rectangle_40052.jpg",
-            "date": "Today · 5:30 PM",
-            "desc": "Lorem ipsum dolor sit amet consectetur"
-          }
-        },
-        "upcoming_banner_JUNGUH": {
-          "type": "upcomingBanner",
-          "settings": {
-            "banner": "shopify:\/\/shop_images\/Rectangle_40052_1.jpg",
-            "date": "Today · 6:10 PM",
-            "desc": "Lorem ipsum dolor sit amet consectetur"
-          }
-        },
-        "upcoming_banner_pRURQt": {
-          "type": "upcomingBanner",
-          "settings": {
-            "banner": "shopify:\/\/shop_images\/Frame_1171276474.jpg",
-            "date": "Today · 7:15 PM",
-            "desc": "Lorem ipsum dolor sit amet consectetur"
-          }
-        },
-        "upcoming_banner_cELCff": {
-          "type": "upcomingBanner",
-          "settings": {
-            "banner": "shopify:\/\/shop_images\/Rectangle_40052_2.jpg",
-            "date": "Tomorrow · 8:15 AM",
-            "desc": "Lorem ipsum dolor sit amet consectetur"
-          }
-        },
-        "upcoming_banner_7NywXB": {
-          "type": "upcomingBanner",
-          "settings": {
-            "banner": "shopify:\/\/shop_images\/Rectangle_40052_4.jpg",
-            "date": "Tomorrow · 9:20 AM",
-            "desc": "Lorem ipsum dolor sit amet consectetur"
-          }
-        }
-      },
-      "block_order": [
-        "upcoming_banner_mDfhaR",
-        "upcoming_banner_JUNGUH",
-        "upcoming_banner_pRURQt",
-        "upcoming_banner_cELCff",
-        "upcoming_banner_7NywXB"
-      ],
       "settings": {
         "title": "Upcoming Livestreaming",
         "collection": "frontpage",
