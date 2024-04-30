@@ -82,7 +82,7 @@
         "loop": true,
         "color_scheme": "",
         "pagination": false,
-        "content_position": "justify-center items-center text-center",
+        "content_position": "justify-end items-end text-right",
         "content_width_desktop": "lg:w-2\/3",
         "scheme_text_color_only": false
       }
