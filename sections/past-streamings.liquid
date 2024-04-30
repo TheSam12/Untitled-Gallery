@@ -25,12 +25,11 @@
         <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for product in collection.products %}
-                  {% for artist in product.metaobjects.artist.values %}
                     {% liquid
-                        assign video = product.metafields.ProductMetaobjects.livestreaming.video
-                        assign avatar = artist.photo
-                        assign name = artist.name
-                        assign colaboration = artist.numberOfContributions
+                        assign video = product.metaobjects.livestreaming.video
+                        assign avatar = product.metaobjects.artist.photo
+                        assign name = product.metaobjects.artist.name
+                        assign colaboration = product.metaobjects.artist.numberOfContributions
                      %}
                      <li
                         class="splide__slide w-[90%] lg:w-[40%] cursor-pointer" 
@@ -43,7 +42,6 @@
                             colaboration: colaboration
                          %}
                     </li>
-                  {% endfor %}
                 {% endfor %}
             </ul>
         </div>
