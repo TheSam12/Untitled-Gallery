@@ -1,6 +1,7 @@
 {% liquid
     assign section_color = section.settings.section_color
     assign pagination = section.settings.pagination
+    assign collection = section.settings.collection
  %}
 <section id="upcoming-streaming-{{ section.id }}" data-color-scheme="{{ section_color }}">
     <div
@@ -23,11 +24,11 @@
     {% endif %}
         <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
-                {% for block in section.blocks %}
+                {% for product in collection.products %}
                     {% liquid
-                        assign banner = block.settings.banner
-                        assign desc = block.settings.desc
-                        assign date = block.settings.date
+                        assign banner = product.metafields.custom.livestreaming.value.banner
+                        assign desc = product.metafields.custom.livestreaming.value.desc
+                        assign date = product.metafields.custom.livestreaming.value.date
                      %}
                      <li
                         class="splide__slide cursor-pointer"
@@ -112,6 +113,11 @@
             "id": "title",
             "label": "Section Title",
             "default": "Upcoming Life Streaming"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Upcoming Collection"
         },
         {
             "type": "checkbox",
