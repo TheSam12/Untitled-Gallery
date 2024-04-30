@@ -2,6 +2,7 @@
   assign section_color = section.settings.color_scheme
   assign heading_size_class = section.settings.heading_size
   assign pagination = section.settings.pagination
+  assign collection = section.settings.collection
 
   if section.settings.autoplay
     assign no_border_on_slide = true
@@ -47,7 +48,7 @@
 
     <div class="splide__track h-[50vh] lg:h-auto">
       <ul class="splide__list lg:left-[3.5%] relative">
-        {% for block in section.blocks %}
+        {% for product in collection.products %}
           {%- liquid
             assign height = section.settings.height
 
@@ -61,17 +62,15 @@
               assign loading = 'eager'
             endif
 
-            assign content_position = block.settings.content_position
-            assign content_width_desktop = block.settings.content_width_desktop
-            assign color_scheme = block.settings.color_scheme
-            assign scheme_text_color_only = block.settings.scheme_text_color_only
-            assign image = block.settings.image
-            assign image_mobile = block.settings.image_mobile
-            assign indent_image = block.settings.indent_image
-            assign timer = block.settings.timer
-            assign title = block.settings.title
-            assign text = block.settings.text
-            assign desc = block.settings.desc
+            assign content_position = section.settings.content_position
+            assign content_width_desktop = section.settings.content_width_desktop
+            assign color_scheme = section.settings.color_scheme
+            assign scheme_text_color_only = section.settings.scheme_text_color_only
+            assign image = product.metafields.custom.livestreaming.value.main_slideshow_image
+            assign timer = product.metafields.custom.livestreaming.value.star_time
+            assign title = product.metafields.custom.livestreaming.value.title
+            assign text = product.metafields.custom.artist.value.name
+            assign desc = product.metafields.custom.livestreaming.value.description
             assign cta_link = block.settings.cta_link
             assign cta_text = block.settings.cta_text
             assign cta_style = block.settings.cta_style
@@ -79,14 +78,11 @@
           <li
             class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
             data-index="{{ forloop.index0 }}"
-            {{ block.shopify_attributes }}
           >
             {%-
               render 'image-with-text-overlay',
               height: height,
               image: image,
-              image_mobile: image_mobile,
-              indent_image: indent_image,
               no_border: no_border_on_slide,
               content_position: content_position,
               heading_size_class: heading_size_class,
@@ -241,6 +237,11 @@
       "default": 32
     },
     {
+      "type": "collection",
+      "id": "collection",
+      "label": "Main Slideshow Collection"
+    },
+    {
       "type": "checkbox",
       "id": "autoplay",
       "label": "Auto-rotate slides",
@@ -297,6 +298,80 @@
       "type": "checkbox",
       "id": "pagination",
       "label": "Show Pagination"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "justify-start items-start text-left",
+          "label": "Top left"
+        },
+        {
+          "value": "justify-center items-start text-center",
+          "label": "Top center"
+        },
+        {
+          "value": "justify-end items-start text-right",
+          "label": "Top right"
+        },
+        {
+          "value": "justify-start items-center text-left",
+          "label": "Left"
+        },
+        {
+          "value": "justify-center items-center text-center",
+          "label": "Center"
+        },
+        {
+          "value": "justify-end items-center text-right",
+          "label": "Right"
+        },
+        {
+          "value": "justify-start items-end text-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "justify-center items-end text-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "justify-end items-end text-right",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "justify-center items-center text-center"
+    },
+    {
+      "type": "select",
+      "id": "content_width_desktop",
+      "label": "Width on desktop",
+      "default": "lg:w-2/3",
+      "options": [
+        {
+          "value": "lg:w-1/3",
+          "label": "One third"
+        },
+        {
+          "value": "lg:w-1/2",
+          "label": "One half"
+        },
+        {
+          "value": "lg:w-2/3",
+          "label": "Two thirds"
+        },
+        {
+          "value": "lg:w-full",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "id": "scheme_text_color_only",
+      "type": "checkbox",
+      "label": "Apply text color only",
+      "default": false
     }
   ],
   "blocks": [
