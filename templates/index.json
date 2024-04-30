@@ -157,39 +157,8 @@
     },
     "past_streamings_VckLLb": {
       "type": "past-streamings",
-      "blocks": {
-        "past_videos_HVmmEb": {
-          "type": "pastVideos",
-          "settings": {
-            "video": "",
-            "name": "",
-            "colaboration": ""
-          }
-        },
-        "past_videos_L3mP8d": {
-          "type": "pastVideos",
-          "settings": {
-            "video": "",
-            "name": "",
-            "colaboration": ""
-          }
-        },
-        "past_videos_Bqtgkn": {
-          "type": "pastVideos",
-          "settings": {
-            "video": "",
-            "name": "",
-            "colaboration": ""
-          }
-        }
-      },
-      "block_order": [
-        "past_videos_HVmmEb",
-        "past_videos_L3mP8d",
-        "past_videos_Bqtgkn"
-      ],
       "settings": {
-        "title": "Past Livetreaming",
+        "title": "Past Livestreaming",
         "pagination": false,
         "collection": "frontpage",
         "color_scheme": "",
