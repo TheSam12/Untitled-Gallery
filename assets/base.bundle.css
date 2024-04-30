@@ -1602,6 +1602,22 @@ shopify-payment-terms{
   width: unset;
 } */
 
+.greenDot{
+  width: 12px;
+  height: 12px;
+  background-color: #569e31;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.redDot{
+  width: 12px;
+  height: 12px;
+  background-color: #d22f27;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
 @media (max-width:1023px){
   .faq-title-modify .text-scheme-text h2{
     text-align: center; 
