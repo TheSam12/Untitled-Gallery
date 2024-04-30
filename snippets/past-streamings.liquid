@@ -90,7 +90,7 @@
                     {%- render 'icon-play' -%}
                 </span>
                 {%- if video != blank -%}
-                  <img src="https://img.youtube.com/vi/{{ video.id }}/0.jpg" height="100" width="100" class="w-full h-full">
+                  <img src="https://img.youtube.com/vi/{{ video_id }}/0.jpg" height="100" width="100" class="w-full h-full">
                 {%- else -%}
                   {{
                     'image'
@@ -108,7 +108,7 @@
               >
                 {%- if video != blank -%}
                   <iframe
-                    src="{{ video.id }}"
+                    src="{{ video_id }}"
                     allow="autoplay; encrypted-media"
                     allowfullscreen
                     class="w-full h-full"

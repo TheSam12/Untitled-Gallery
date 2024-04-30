@@ -27,6 +27,7 @@
                 {% for product in collection.products %}
                     {% liquid
                         assign video = product.metafields.custom.livestreaming.value.video
+                        assign video_id = video | split: "/" | last | split: "?" | first
                         assign mode = section.settings.mode
                         assign ratio = section.settings.aspect_ratio
                         assign avatar = product.metafields.custom.artist.value.photo
@@ -38,6 +39,7 @@
                     >
                         {% render 'past-streamings'
                             video: video,
+                            video_id: video_id,
                             mode: mode,
                             container_id: section.id,
                             ratio: ratio,
