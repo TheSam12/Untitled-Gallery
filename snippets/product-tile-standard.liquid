@@ -293,12 +293,15 @@
             {{ product.vendor }}
           </p>
         {% endif %}
-        <p
-          aria-hidden="true"
-          class="{% if sold_out %}text-scheme-secondary line-through{% endif %}"
-        >
-          {{ product.title }}
-        </p>
+        <div class="flex justify-between">
+          <p
+            aria-hidden="true"
+            class="{% if sold_out %}text-scheme-secondary line-through{% endif %}"
+          >
+            {{ product.title }}
+          </p>
+          <p class="sfMono text-[14px]">{{ product.metafields.custom.artist.value.name }}</p>
+        </div>
       </div>
       <div class="{{ price_class }}">
         {% if sold_out %}
