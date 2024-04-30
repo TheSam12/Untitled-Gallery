@@ -30,15 +30,17 @@
                         assign desc = product.metafields.custom.livestreaming.value.description
                         assign date = product.metafields.custom.livestreaming.value.start_time | split: 'T' | first
                      %}
-                     <li
-                        class="splide__slide cursor-pointer"
-                    >
-                        {% render 'upcoming-streaming'
-                            banner: banner,
-                            desc: desc,
-                            date: date
-                         %}
-                    </li>
+                     {% if banner != null %}
+                      <li
+                          class="splide__slide cursor-pointer"
+                      >
+                          {% render 'upcoming-streaming'
+                              banner: banner,
+                              desc: desc,
+                              date: date
+                          %}
+                      </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>
