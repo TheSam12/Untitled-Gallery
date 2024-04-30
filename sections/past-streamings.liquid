@@ -27,6 +27,7 @@
                 {% for product in collection.products %}
                     {% liquid
                         assign video = product.metaobjects.livestreaming.video
+                        assign title = product.title
                         assign avatar = product.metaobjects.artist.photo
                         assign name = product.metaobjects.artist.name
                         assign colaboration = product.metaobjects.artist.numberOfContributions
@@ -36,6 +37,7 @@
                     >
                         {% render 'past-streamings'
                             video: video,
+                            title: title,
                             container_id: section.id,
                             avatar: avatar,
                             name: name,
