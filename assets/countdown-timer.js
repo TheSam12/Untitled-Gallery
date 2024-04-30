@@ -28,10 +28,10 @@ const countdownElementsCloses = document.querySelectorAll('[id^="countdownTimerC
 countdownElementsCloses.forEach((element) => {
   const time = element.textContent;
   const futureDate = new Date(time);
-  const intervalId = setInterval(() => updateCountdown(futureDate, element), 1000);
+  const intervalId = setInterval(() => updateCountdownCloses(futureDate, element), 1000);
 });
 
-function updateCountdown(date, element) {
+function updateCountdownCloses(date, element) {
   const now = new Date();
   const diffMs = date - now;
 
