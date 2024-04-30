@@ -155,54 +155,6 @@
         "color_scheme": ""
       }
     },
-    "past_streamings_aMhw9w": {
-      "type": "past-streamings",
-      "blocks": {
-        "past_videos_zi34QY": {
-          "type": "pastVideos",
-          "settings": {
-            "video": "https:\/\/www.youtube.com\/watch?v=w7aAYLY9kIk",
-            "mode": "preview",
-            "aspect_ratio": "1.778",
-            "avatar": "shopify:\/\/shop_images\/avatar-1.jpg",
-            "name": "Baldwim Green",
-            "colaboration": "3 collaborations"
-          }
-        },
-        "past_videos_qJVUdE": {
-          "type": "pastVideos",
-          "settings": {
-            "video": "",
-            "mode": "preview",
-            "aspect_ratio": "1.778",
-            "avatar": "shopify:\/\/shop_images\/avatar-2.jpg",
-            "name": "Ava Thompson",
-            "colaboration": "2 collaborations"
-          }
-        },
-        "past_videos_TPNwRY": {
-          "type": "pastVideos",
-          "settings": {
-            "video": "",
-            "mode": "preview",
-            "aspect_ratio": "1.778",
-            "avatar": "shopify:\/\/shop_images\/avatar-3.jpg",
-            "name": "Elena Rodriguez",
-            "colaboration": "5 collaborations"
-          }
-        }
-      },
-      "block_order": [
-        "past_videos_zi34QY",
-        "past_videos_qJVUdE",
-        "past_videos_TPNwRY"
-      ],
-      "settings": {
-        "title": "Past Life Streaming",
-        "pagination": false,
-        "color_scheme": ""
-      }
-    },
     "featured_brands_nDG4md": {
       "type": "featured-brands",
       "blocks": {
@@ -410,7 +362,6 @@
     "slideshow_ThtBr4",
     "upcoming_streaming_mBKP6T",
     "featured_collection_DK46nE",
-    "past_streamings_aMhw9w",
     "featured_brands_nDG4md",
     "reviews_tpmTtJ",
     "newsletter_QPpAxK",
