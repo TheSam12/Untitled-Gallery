@@ -75,6 +75,7 @@
             assign cta_text = block.settings.cta_text
             assign cta_style = block.settings.cta_style
           -%}
+          {% if image != null %}
           <li
             class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
             data-index="{{ forloop.index0 }}"
@@ -100,6 +101,7 @@
               loading: loading,
             -%}
           </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </div>
