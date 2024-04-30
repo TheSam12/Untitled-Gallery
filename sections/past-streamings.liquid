@@ -26,7 +26,7 @@
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
                 {% for product in collection.products %}
                     {% liquid
-                        assign video = product.metafields.livestreaming.video.value
+                        assign video = product.metafields.livestreaming.value.video
                         assign mode = section.settings.mode
                         assign ratio = section.settings.aspect_ratio
                         assign avatar = product.metafields.custom.artist.avatar
