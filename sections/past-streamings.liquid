@@ -1,6 +1,7 @@
 {% liquid
     assign section_color = section.settings.section_color
     assign pagination = section.settings.pagination
+    assign collection = section.settings.collection
  %}
 <section id="upcoming-streaming-{{ section.id }}" data-color-scheme="{{ section_color }}">
     <div
@@ -23,23 +24,19 @@
     {% endif %}
         <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
-                {% for block in section.blocks %}
+                {% for product in collection.products %}
                     {% liquid
-                        assign video = block.settings.video
-                        assign mode = block.settings.mode
-                        assign ratio = block.settings.aspect_ratio
-                        assign avatar = block.settings.avatar
-                        assign name = block.settings.name
-                        assign colaboration = block.settings.colaboration
+                        assign video = product.metafields.livestreaming.video
+                        assign avatar = product.metafields.artist.photo
+                        assign name = product.metafields.artist.name
+                        assign colaboration = product.metafields.artist.numberOfContributions
                      %}
                      <li
                         class="splide__slide w-[90%] lg:w-[40%] cursor-pointer" 
                     >
                         {% render 'past-streamings'
                             video: video,
-                            mode: mode,
                             container_id: section.id,
-                            ratio: ratio,
                             avatar: avatar,
                             name: name,
                             colaboration: colaboration
@@ -135,6 +132,12 @@
             "id": "color_scheme",
             "default": "scheme1",
             "label": "Color scheme"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Past Streamings Collection",
+          "default": "Home"
         }
     ],
     "blocks": [
