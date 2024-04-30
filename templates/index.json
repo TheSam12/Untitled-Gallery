@@ -12,67 +12,6 @@
     },
     "slideshow_ThtBr4": {
       "type": "slideshow",
-      "blocks": {
-        "slide_rAHV6A": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_40057_3.jpg",
-            "indent_image": false,
-            "timer": "Starts in",
-            "title": "Untitled",
-            "text": "<p>by BALDWIN GREEN<\/p>",
-            "desc": "<p>Untitled takes flight in a print by Baldwim Green.<\/p>",
-            "content_position": "justify-end items-end text-right",
-            "content_width_desktop": "lg:w-2\/3",
-            "cta_link": "",
-            "cta_text": "",
-            "cta_style": "link",
-            "color_scheme": "",
-            "scheme_text_color_only": false
-          }
-        },
-        "slide_LGCWk3": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_40057.jpg",
-            "indent_image": false,
-            "timer": "Starts in 2d 3h 47m 28s",
-            "title": "Untitled",
-            "text": "<p>by BALDWIN GREEN<\/p>",
-            "desc": "<p>Untitled takes flight in a print by Baldwim Green.<\/p>",
-            "content_position": "justify-end items-end text-right",
-            "content_width_desktop": "lg:w-2\/3",
-            "cta_link": "",
-            "cta_text": "",
-            "cta_style": "link",
-            "color_scheme": "",
-            "scheme_text_color_only": false
-          }
-        },
-        "slide_jnqR77": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_40057_4.jpg",
-            "indent_image": false,
-            "timer": "Starts in 2d 3h 47m 28s",
-            "title": "Untitled",
-            "text": "<p>by BALDWIN GREEN<\/p>",
-            "desc": "<p>Untitled takes flight in a print by Baldwim Green.<\/p>",
-            "content_position": "justify-end items-end text-right",
-            "content_width_desktop": "lg:w-2\/3",
-            "cta_link": "",
-            "cta_text": "",
-            "cta_style": "link",
-            "color_scheme": "",
-            "scheme_text_color_only": false
-          }
-        }
-      },
-      "block_order": [
-        "slide_rAHV6A",
-        "slide_LGCWk3",
-        "slide_jnqR77"
-      ],
       "settings": {
         "height": "natural",
         "heading_size": 32,
