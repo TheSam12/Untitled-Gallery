@@ -34,6 +34,7 @@
                         assign name = product.metafields.custom.artist.value.name
                         assign colaboration = product.metafields.custom.artist.value.number_of_contributions 
                      %} 
+                     {% if video != null %}
                      <li
                         class="splide__slide w-[90%] lg:w-[40%] cursor-pointer" 
                     >
@@ -48,6 +49,7 @@
                             colaboration: colaboration
                          %}
                     </li>
+                  {% endif %}
                 {% endfor %}
             </ul>
         </div>
