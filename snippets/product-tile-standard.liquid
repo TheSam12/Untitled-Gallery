@@ -276,7 +276,7 @@
       endif
     %}
     <div
-      class="{{ layout_class }} "
+      class="{{ layout_class }}"
     >
       {% if enable_quick_buy and settings.quick_buy_position == 'over_image' %}
         <a
@@ -288,7 +288,7 @@
         </a>
       {% endif %}
       <div class="{{ title_class }} break-word">
-        <div class="flex justify-between">
+        <div class="flex justify-between mt-[12px]">
           <p
             aria-hidden="true"
             class="neueSwift text-[14px] text-[#030303]"
@@ -297,8 +297,8 @@
           </p>
           <p class="neueSwift text-[14px] text-[#030303]">{{ product.price | money }}</p> 
         </div>
-        <p class="sfMono text-[14px]">{{ product.metafields.custom.artist.value.name }}</p>
-        <p class="sfMono text-[14px] text-[#9d9d9d]">{% if sold_out %}Sold out{% endif %}</p>
+        <p class="sfMono text-[14px] mt-[12px]">{{ product.metafields.custom.artist.value.name }}</p>
+        <p class="sfMono text-[14px] text-[#9d9d9d] mt-[12px]">{% if sold_out %}Sold out{% endif %}</p>
       </div>
       <div class="{{ price_class }}">
         {% if sold_out %}
