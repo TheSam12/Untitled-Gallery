@@ -288,11 +288,6 @@
         </a>
       {% endif %}
       <div class="{{ title_class }} break-word">
-        {% if settings.product_grid_show_vendor and product.vendor != '' %}
-          <p class="mb-1 text-scheme-secondary{% if sold_out %} line-through{% endif %}">
-            {{ product.vendor }}
-          </p>
-        {% endif %}
         <div class="flex justify-between">
           <p
             aria-hidden="true"
@@ -302,6 +297,7 @@
           </p>
           <p class="neueSwift text-[14px] text-[#030303]">{{ product.price | money }}</p> 
         </div>
+        <p class="sfMono text-[14px]">{{ product.metafields.custom.artist.value.name }}</p>
       </div>
       <div class="{{ price_class }}">
         {% if sold_out %}
