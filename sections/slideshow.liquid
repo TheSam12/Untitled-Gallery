@@ -68,7 +68,6 @@
             assign scheme_text_color_only = section.settings.scheme_text_color_only
             assign image = product.metafields.custom.livestreaming.value.main_slideshow_image
             assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
-            assign upcoming_time = product.metafields.custom.livestreaming.value.start_time
             assign current_time = 'now' | date: '%s'
             assign title = product.metafields.custom.livestreaming.value.title
             assign text = product.metafields.custom.artist.value.name
@@ -91,7 +90,6 @@
               scheme_text_color_only: scheme_text_color_only,
               content_width_desktop: content_width_desktop,
               timer: timer,
-              upcoming_time: upcoming_time,
               current_time: current_time,
               title: title,
               text: text,
