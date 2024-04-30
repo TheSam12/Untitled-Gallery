@@ -48,7 +48,7 @@
 
     <div class="splide__track h-[50vh] lg:h-auto">
       <ul class="splide__list lg:left-[3.5%] relative">
-        {% for product in collection.products %}
+        {% for product in collection.products limit: 3 %}
           {%- liquid
             assign height = section.settings.height
 
