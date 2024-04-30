@@ -135,7 +135,8 @@
         "upcoming_banner_7NywXB"
       ],
       "settings": {
-        "title": "Upcoming Life Streaming",
+        "title": "Upcoming Livestreaming",
+        "collection": "frontpage",
         "pagination": false,
         "color_scheme": ""
       }
