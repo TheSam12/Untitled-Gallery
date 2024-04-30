@@ -42,7 +42,7 @@
                 {% endfor %}
             </ul>
         </div>
-        {% if section.blocks.size > 1 %}
+        {% if collection.products.size > 1 %}
           <div
             class="absolute grid-cols-[minmax(0,_1fr)_auto] hidden lg:block lg:mx-4 mx-1 no-js:hidden right-0 top-[86px] {% if pagination %}grid{% endif %}"
             {% if pagination %}
@@ -132,52 +132,9 @@
             "label": "Color scheme"
         }
     ],
-    "blocks": [
-        {
-            "type": "upcomingBanner",
-            "name": "Upcoming Banner",
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "banner",
-                    "label": "Banner Image"
-                },
-                {
-                    "type": "text",
-                    "id": "date",
-                    "label": "Streaming Start Date"
-                },
-                {
-                    "type": "text",
-                    "id": "desc",
-                    "label": "Streaming Description"
-                }
-            ]
-        }
-    ],
     "presets": [
         {
-            "name": "Upcoming Life Streaming",
-            "blocks": [
-                {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
-                },
-                {
-                    "type": "upcomingBanner"
-                }
-            ]
+            "name": "Upcoming Life Streaming"
         }
     ]
 }
