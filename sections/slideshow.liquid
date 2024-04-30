@@ -108,7 +108,6 @@
         ></div>
       </div>
     {% endif %}
-    {% if collection.products.size > 1 %} 
       <div
         class="mx-1 {% if pagination %}grid{% endif %} grid-cols-[minmax(0,_1fr)_auto] gap-2 no-js:hidden lg:mx-4"
         {% if pagination %}
@@ -149,7 +148,6 @@
           </button>
         </div>
       </div>
-    {% endif %}
   </div>
   {% style %}
     {% if pagination != true %}
