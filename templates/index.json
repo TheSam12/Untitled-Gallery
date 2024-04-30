@@ -161,8 +161,7 @@
         "past_videos_HVmmEb": {
           "type": "pastVideos",
           "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778",
+            "video": "",
             "name": "",
             "colaboration": ""
           }
@@ -170,8 +169,7 @@
         "past_videos_L3mP8d": {
           "type": "pastVideos",
           "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778",
+            "video": "",
             "name": "",
             "colaboration": ""
           }
@@ -179,8 +177,7 @@
         "past_videos_Bqtgkn": {
           "type": "pastVideos",
           "settings": {
-            "mode": "preview",
-            "aspect_ratio": "1.778",
+            "video": "",
             "name": "",
             "colaboration": ""
           }
@@ -192,10 +189,12 @@
         "past_videos_Bqtgkn"
       ],
       "settings": {
-        "title": "Past Life Streaming",
+        "title": "Past Livetreaming",
         "pagination": false,
+        "collection": "frontpage",
         "color_scheme": "",
-        "collection": "frontpage"
+        "mode": "preview",
+        "aspect_ratio": "1.778"
       }
     },
     "featured_brands_nDG4md": {
