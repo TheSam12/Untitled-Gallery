@@ -28,7 +28,7 @@
                     {% liquid
                         assign banner = product.metafields.custom.livestreaming.value.thumbnail
                         assign desc = product.metafields.custom.livestreaming.value.description
-                        assign date = product.metafields.custom.livestreaming.value.start_time | split: "T" | first
+                        assign date = product.metafields.custom.livestreaming.value.start_time | split: "at" | first
                      %}
                      <li
                         class="splide__slide cursor-pointer"
