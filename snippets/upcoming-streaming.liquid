@@ -11,7 +11,7 @@
                         {% elsif date == tomorrow %}
                         <span>Tomorrow · {{ start_date | date: "%H:%M %Z" }}</span>
                         {% else %}
-                        <span>{{ date | date: "%B %d, at %H:%M %Z" }}</span>
+                        <span>{{ start_date | date: "%B %d, at %H:%M %Z" }}</span>
                     {% endif %}
                 </p>
                 <p class="neueSwift text-white text-[16px] leading-[20px] mt-[10px]">
