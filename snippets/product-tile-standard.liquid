@@ -262,7 +262,7 @@
           <p class="absolute right-[16px] top-[16px] py-[6px] px-[12px] bg-white border-solid rounded-full border-[#e5e7eb] sfMono text-[14px] flex gap-[8px] items-center">
             {% if upcoming_date > current_date %}<span>Upcoming</span>{% else %}
             {% if product.metafields.custom.livestreaming.value.status == 'Live' %}<span class="redDot"></span>Live{% else %}
-            {% if close_date > current_date %}<span class="greenDot"></span>Available{% endif %}{% endif %}
+            {% if close_date > current_date || close_date < current_date %}<span class="greenDot"></span>Available{% endif %}{% endif %}
             {% endif %}</p>
         {% endif %} 
       </div>
