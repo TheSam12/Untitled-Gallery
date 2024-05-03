@@ -41,7 +41,7 @@
         "title": "Works on untitled gallery",
         "collection": "frontpage",
         "product_tile_type": "standard",
-        "grid": 4,
+        "grid": 3,
         "rows": 2,
         "grid_mobile": "1",
         "show_view_all": true,
