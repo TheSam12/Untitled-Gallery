@@ -28,10 +28,10 @@
                     {% liquid
                         assign banner = product.metafields.custom.livestreaming.value.thumbnail
                         assign desc = product.metafields.custom.livestreaming.value.description
-                        assign timer = product.metafields.custom.livestreaming.value.start_time | date: "%Y-%m-%d"
+                        assign timer = product.metafields.custom.livestreaming.value.start_time | date: "%Y-%m-%d" | date: "%s"
                         assign start_date = product.metafields.custom.livestreaming.value.start_time
-                        assign today = 'now' | date: "%Y-%m-%d"
-                        assign tomorrow = today | plus: 86400
+                        assign today = 'now' | date: "%Y-%m-%d" | date: "%s"
+                        assign tomorrow = today | plus: 86400 | date: "%s"
                         assign url = product.url
                      %}
                      {% if banner != null %}
