@@ -30,7 +30,7 @@
                         assign desc = product.metafields.custom.livestreaming.value.description
                         assign timer = product.metafields.custom.livestreaming.value.start_time | date: "%s"
                         assign start_date = product.metafields.custom.livestreaming.value.start_time
-                        assign today = 'now' | date: "%s"
+                        assign today = date | date: "%s"
                         assign tomorrow = today | plus: 86400
                         assign url = product.url
                      %}
