@@ -29,6 +29,7 @@
                         assign banner = product.metafields.custom.livestreaming.value.thumbnail
                         assign desc = product.metafields.custom.livestreaming.value.description
                         assign date = product.metafields.custom.livestreaming.value.start_time | split: 'T' | first
+                        assign url = product.url
                      %}
                      {% if banner != null %}
                       <li
@@ -37,7 +38,8 @@
                           {% render 'upcoming-streaming'
                               banner: banner,
                               desc: desc,
-                              date: date
+                              date: date,
+                              url: url
                           %}
                       </li>
                     {% endif %}
