@@ -6,10 +6,10 @@
         <div class="absolute flex flex-col justify-end h-full w-full top-0">
             <div class="p-[20px] bg-gradient-to-t from-black">
                 <p class="sfMono text-white text-[14px] ">
-                    {% if reference_date == today %}
+                    {% if timer == today %}
                         <span>Today · {{ start_date | date: "%H:%M %Z" }}</span>
                         {% else%}
-                        {% if reference_date == tomorrow %}
+                        {% if timer == tomorrow %}
                             <span>Tomorrow · {{ start_date | date: "%H:%M %Z" }}</span>
                             {% else %}
                             <span>{{ start_date | date: "%B %d, at %H:%M %Z" }}</span>
