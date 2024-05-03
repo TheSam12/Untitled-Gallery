@@ -28,8 +28,8 @@
                     {% liquid
                         assign banner = product.metafields.custom.livestreaming.value.thumbnail
                         assign desc = product.metafields.custom.livestreaming.value.description
+                        assign reference_date = product.metafields.custom.livestreaming.value.start_time | date: "%s"
                         assign start_date = product.metafields.custom.livestreaming.value.start_time
-                        assign date = product.metafields.custom.livestreaming.value.start_time | date: "%s"
                         assign today = 'now' | date: "%s"
                         assign tomorrow = today | plus: 86400
                         assign url = product.url
@@ -42,7 +42,7 @@
                               banner: banner,
                               desc: desc,
                               start_date: start_date,
-                              date: date,
+                              reference_date: reference_date,
                               today: today,
                               tomorrow: tomorrow,
                               url: url
