@@ -7,12 +7,12 @@
             <div class="p-[20px] bg-gradient-to-t from-black">
                 <p class="sfMono text-white text-[14px] ">
                     {% if timer == today %}
-                        <span>Today · {{ start_date | date: "%H:%M %Z" }}</span>
+                        <span>Today · {{ start_date | date: "%I:%M %p %Z" }}</span>
                         {% else%}
                         {% if timer == tomorrow %}
-                            <span>Tomorrow · {{ start_date | date: "%H:%M %Z" }}</span>
+                            <span>Tomorrow · {{ start_date | date: "%I:%M %p %Z" }}</span>
                             {% else %}
-                            <span>{{ start_date | date: "%B %d, at %H:%M %Z" }}</span>
+                            <span>{{ start_date | date: "%B %d, at %I:%M %p %Z" }}</span>
                         {% endif %}
                     {% endif %}
                 </p>
