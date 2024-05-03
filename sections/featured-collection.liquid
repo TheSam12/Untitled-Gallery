@@ -50,7 +50,7 @@
   %}
 
   <div class="bg-scheme-background">
-    <ul class="grid grid-cols-2 {{ desktop_grid_class }} gap-gutter bg-gridline-color gap-[20px]">
+    <ul class="grid grid-cols-2 {{ desktop_grid_class }} gap-gutter bg-gridline-color lg:gap-[100px] gap-[20px]">
       {% for product in collection.products limit: product_limit %}
         {%- assign counter = counter | plus: 1 -%}
         <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text">
