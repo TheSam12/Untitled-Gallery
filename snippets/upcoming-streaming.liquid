@@ -6,7 +6,7 @@
         <div class="absolute flex flex-col justify-end h-full w-full top-0">
             <div class="p-[20px] bg-gradient-to-t from-black">
                 <p class="sfMono text-white text-[14px] ">
-                    {{ date | date: '%s' | plus: 3600 | date: '%A, %B %e, %Y at %l:%M%P' }}
+                    {{ date | date: '%s' | plus: 3600 | date: '%B %e, at %H:%M%P' }}
                 </p>
                 <p class="neueSwift text-white text-[16px] leading-[20px] mt-[10px]">
                     {{ desc }}
