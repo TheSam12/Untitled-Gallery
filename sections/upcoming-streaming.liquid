@@ -28,7 +28,9 @@
                     {% liquid
                         assign banner = product.metafields.custom.livestreaming.value.thumbnail
                         assign desc = product.metafields.custom.livestreaming.value.description
-                        assign date = product.metafields.custom.livestreaming.value.start_time
+                        assign start_date = product.metafields.custom.livestreaming.value.start_time
+                        assign today = 'now' | date: "%s"
+                        assign tomorrow = today | plus: 86400
                         assign url = product.url
                      %}
                      {% if banner != null %}
@@ -38,7 +40,9 @@
                           {% render 'upcoming-streaming'
                               banner: banner,
                               desc: desc,
-                              date: date,
+                              start_date: start_date,
+                              today: today,
+                              tomorrow: tomorrow,
                               url: url
                           %}
                       </li>
