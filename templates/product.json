@@ -1,1 +1,217 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{}},"fd36a39b-75ab-4852-8966-e25b84bb8665":{"type":"vendor","settings":{}},"price":{"type":"price","settings":{"text_size":"text-heading-standard"}},"variant_picker":{"type":"variant_picker","settings":{"option_style":"buttons","hide_option_labels":false,"hide_sold_out_variants":false,"hide_unavailable_variants":false}},"quantity_selector":{"type":"quantity_selector","disabled":true,"settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"enable_payment_button":true,"show_pickup_availability":false,"show_gift_card_recipient":false}},"49ed2513-193b-4cfd-a5e6-8f0699ddf132":{"type":"popup","settings":{"icon":"none","text":"Printing & Framing","page":"printing-framing","text_color":"text"}},"bf8fd03c-4b65-4821-8ecb-56eb4bb59d4f":{"type":"popup","settings":{"icon":"none","text":"Shipping & Returns","page":"shipping-returns","text_color":"text"}},"56b2d764-03fe-43b6-a318-e1d14e6114d5":{"type":"popup","settings":{"icon":"none","text":"FAQs","page":"faqs","text_color":"text"}},"ff57981b-2d3a-46c3-a0d8-12621de43693":{"type":"share","settings":{}}},"block_order":["title","fd36a39b-75ab-4852-8966-e25b84bb8665","price","variant_picker","quantity_selector","buy_buttons","49ed2513-193b-4cfd-a5e6-8f0699ddf132","bf8fd03c-4b65-4821-8ecb-56eb4bb59d4f","56b2d764-03fe-43b6-a318-e1d14e6114d5","ff57981b-2d3a-46c3-a0d8-12621de43693"],"custom_css":[],"settings":{"desktop_media_width":"one-half","desktop_media_position":"left","two_media_per_row":false,"first_media_full_width":true,"variant_media_behavior":"single_variant_mode","always_show_product_featured_media_first":false,"enable_variant_media":false,"enable_image_zoom":false,"enable_video_looping":false,"max_width_of_content":"w-full","color_scheme":"scheme5","override_header_footer_color_scheme":false}},"0f75d27d-2780-40af-88c3-b3d069810a7d":{"type":"custom-liquid","settings":{"title":"","subheading":"","custom_liquid":"<section class=\"bg-scheme-background text-scheme-text overflow-hidden border-t-grid border-grid-color\" data-color-scheme=\"primary\">\n  <div class=\"py-theme\">\n    <div class=\"flex text-sm default text-left justify-start\">\n      <div class=\"w-full lg:w-1\/2\">\n\n<h3 class=\"font-heading text-2xl\">MEDIUM<\/h3>\n\n<br><br>\n<p>Each museum-quality Giclee Fine Art Print is part of our Premier collection and is available as an open edition for a limited time. Printed and framed locally in the USA, UK or Germany on medium gloss, artist-grade, acid-free 300gsm photo paper using archival inks. All our artworks are made-to-order specifically for you.<\/p>\n<br>\n<p>\nThe Fuji Crystal Archive Pearl paper has a rich metallic base. The colours have a reflective, metallic and 3-dimensional feel which creates a distinctive pearl-like appearance. High mid-tones & highlights add luminosity & iridescence which lends this paper to artworks that want to accentuate warmth and depth of colour.<\/p>\n<br>\n<p>\nOur premium hardwood frames are available in black, white and a beautiful natural wood. Each frame is handcrafted with a sheet of UV-blocking acrylic glass and comes with easy hanging hardware so your artwork is ready to hang as soon as it arrives.\n<\/p>\n        <\/div>\n<\/div>\n    <\/div>\n  <\/div>\n<\/section>","color_scheme":""}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","product_tile_type":"standard","limit":"4","products_per_row_desktop":"4","products_per_row_mobile":"1","enable_quick_buy":false,"quick_buy_button_style":"theme-button","color_scheme":""}},"27cb9b49-243c-49b2-86c9-54ba71372520":{"type":"custom-liquid","custom_css":[".text-scheme-text {text-align: center;}"],"settings":{"title":"Curated works — straight to your inbox","subheading":"Tell us which artists are on your radar, and we’ll keep you in the loop about upcoming collaborations and more.\n\nReveal 10% off coupon code by entering your email","custom_liquid":"<div class=\"klaviyo-form-Y3xxRH\"><\/div>","color_scheme":"scheme4"}},"0474235b-051b-451f-83ff-390f6ac9dcc4":{"type":"text-columns-with-images","blocks":{"template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-1":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Printspace64031.jpg","title":"GALLERY QUALITY","text":"<p>We print on the same high quality material used by most galleries<\/p>","cta_link":"","cta_text":"","color_scheme":""}},"template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-2":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Brand-coa.jpg","title":"CERTIFIED","text":"<p>Certificate of authenticity included with every print<\/p>","cta_link":"","cta_text":"","color_scheme":""}},"template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-3":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/framing-video-1-compressor.png","title":"PERFECT FRAMES","text":"<p>We custom make each frame by hand and guarantee a perfect piece<\/p>","cta_link":"","cta_text":"","color_scheme":""}},"3af234c8-540b-4fc9-a0e4-1974517d3be2":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Framing-Hero_A-compressor.jpg","title":"READY-TO-HANG","text":"<p>Our frames come ready to hang right out of the box<\/p>","cta_link":"","cta_text":"","color_scheme":"scheme1"}}},"block_order":["template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-1","template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-2","template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-3","3af234c8-540b-4fc9-a0e4-1974517d3be2"],"custom_css":["section {margin-bottom: 50px;}"],"settings":{"title":"ALL OUR PRODUCTS ARE","crop":"1.3","text_alignment":"text-left"}}},"order":["main","0f75d27d-2780-40af-88c3-b3d069810a7d","related-products","27cb9b49-243c-49b2-86c9-54ba71372520","0474235b-051b-451f-83ff-390f6ac9dcc4"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "fd36a39b-75ab-4852-8966-e25b84bb8665": {
+          "type": "vendor",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "text_size": "text-heading-standard"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "buttons",
+            "hide_option_labels": false,
+            "hide_sold_out_variants": false,
+            "hide_unavailable_variants": false
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "49ed2513-193b-4cfd-a5e6-8f0699ddf132": {
+          "type": "popup",
+          "settings": {
+            "icon": "none",
+            "text": "Printing & Framing",
+            "page": "printing-framing",
+            "text_color": "text"
+          }
+        },
+        "bf8fd03c-4b65-4821-8ecb-56eb4bb59d4f": {
+          "type": "popup",
+          "settings": {
+            "icon": "none",
+            "text": "Shipping & Returns",
+            "page": "shipping-returns",
+            "text_color": "text"
+          }
+        },
+        "56b2d764-03fe-43b6-a318-e1d14e6114d5": {
+          "type": "popup",
+          "settings": {
+            "icon": "none",
+            "text": "FAQs",
+            "page": "faqs",
+            "text_color": "text"
+          }
+        },
+        "ff57981b-2d3a-46c3-a0d8-12621de43693": {
+          "type": "share",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "fd36a39b-75ab-4852-8966-e25b84bb8665",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "49ed2513-193b-4cfd-a5e6-8f0699ddf132",
+        "bf8fd03c-4b65-4821-8ecb-56eb4bb59d4f",
+        "56b2d764-03fe-43b6-a318-e1d14e6114d5",
+        "ff57981b-2d3a-46c3-a0d8-12621de43693"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "desktop_media_width": "one-half",
+        "desktop_media_position": "left",
+        "two_media_per_row": false,
+        "first_media_full_width": true,
+        "variant_media_behavior": "single_variant_mode",
+        "always_show_product_featured_media_first": false,
+        "enable_variant_media": false,
+        "enable_image_zoom": false,
+        "enable_video_looping": false,
+        "max_width_of_content": "w-full",
+        "color_scheme": "scheme5",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "0f75d27d-2780-40af-88c3-b3d069810a7d": {
+      "type": "custom-liquid",
+      "settings": {
+        "title": "",
+        "subheading": "",
+        "custom_liquid": "<section class=\"bg-scheme-background text-scheme-text overflow-hidden border-t-grid border-grid-color\" data-color-scheme=\"primary\">\n  <div class=\"py-theme\">\n    <div class=\"flex text-sm default text-left justify-start\">\n      <div class=\"w-full lg:w-1\/2\">\n\n<h3 class=\"font-heading text-2xl\">MEDIUM<\/h3>\n\n<br><br>\n<p>Each museum-quality Giclee Fine Art Print is part of our Premier collection and is available as an open edition for a limited time. Printed and framed locally in the USA, UK or Germany on medium gloss, artist-grade, acid-free 300gsm photo paper using archival inks. All our artworks are made-to-order specifically for you.<\/p>\n<br>\n<p>\nThe Fuji Crystal Archive Pearl paper has a rich metallic base. The colours have a reflective, metallic and 3-dimensional feel which creates a distinctive pearl-like appearance. High mid-tones & highlights add luminosity & iridescence which lends this paper to artworks that want to accentuate warmth and depth of colour.<\/p>\n<br>\n<p>\nOur premium hardwood frames are available in black, white and a beautiful natural wood. Each frame is handcrafted with a sheet of UV-blocking acrylic glass and comes with easy hanging hardware so your artwork is ready to hang as soon as it arrives.\n<\/p>\n        <\/div>\n<\/div>\n    <\/div>\n  <\/div>\n<\/section>",
+        "color_scheme": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "product_tile_type": "standard",
+        "limit": "4",
+        "products_per_row_desktop": "4",
+        "products_per_row_mobile": "1",
+        "enable_quick_buy": false,
+        "quick_buy_button_style": "theme-button",
+        "color_scheme": ""
+      }
+    },
+    "27cb9b49-243c-49b2-86c9-54ba71372520": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".text-scheme-text {text-align: center;}"
+      ],
+      "settings": {
+        "title": "Curated works — straight to your inbox",
+        "subheading": "Tell us which artists are on your radar, and we’ll keep you in the loop about upcoming collaborations and more.\n\nReveal 10% off coupon code by entering your email",
+        "custom_liquid": "<div class=\"klaviyo-form-Y3xxRH\"><\/div>",
+        "color_scheme": "scheme4"
+      }
+    },
+    "0474235b-051b-451f-83ff-390f6ac9dcc4": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/image-with-placeholder_Printspace64031_jpg.jpg",
+            "title": "GALLERY QUALITY",
+            "text": "<p>We print on the same high quality material used by most galleries<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/image-with-placeholder_Brand-coa_jpg.jpg",
+            "title": "CERTIFIED",
+            "text": "<p>Certificate of authenticity included with every print<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/image-with-placeholder_framing-video-1-compressor_png.jpg",
+            "title": "PERFECT FRAMES",
+            "text": "<p>We custom make each frame by hand and guarantee a perfect piece<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "3af234c8-540b-4fc9-a0e4-1974517d3be2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/image-with-placeholder_Framing-Hero_A-compressor_jpg.jpg",
+            "title": "READY-TO-HANG",
+            "text": "<p>Our frames come ready to hang right out of the box<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "scheme1"
+          }
+        }
+      },
+      "block_order": [
+        "template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-1",
+        "template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-2",
+        "template--20330611376460__0474235b-051b-451f-83ff-390f6ac9dcc4-column-3",
+        "3af234c8-540b-4fc9-a0e4-1974517d3be2"
+      ],
+      "custom_css": [
+        "section {margin-bottom: 50px;}"
+      ],
+      "settings": {
+        "title": "ALL OUR PRODUCTS ARE",
+        "crop": "1.3",
+        "text_alignment": "text-left"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0f75d27d-2780-40af-88c3-b3d069810a7d",
+    "related-products",
+    "27cb9b49-243c-49b2-86c9-54ba71372520",
+    "0474235b-051b-451f-83ff-390f6ac9dcc4"
+  ]
+}
