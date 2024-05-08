@@ -26,45 +26,9 @@
         "overlay_homepage": false,
         "overlay_text_color_scheme": ""
       }
-    },
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "disabled": true,
-      "custom_css": [
-
-      ],
-      "settings": {
-        "home_page_only": true,
-        "hide_on_mobile": true,
-        "display": "static",
-        "text": "Dive into live creativity. Discover & own artworks from the world’s most highly-anticipated artists. Coming Soon...",
-        "link": "",
-        "speed": 180,
-        "direction": "normal",
-        "repeat_text": true,
-        "separator": "none",
-        "separator_repeats": 1,
-        "spacing_between_repeated_separators": "",
-        "color_scheme": "scheme1"
-      }
-    },
-    "hero-logo": {
-      "type": "hero-logo",
-      "disabled": true,
-      "settings": {
-        "home_page_only": true,
-        "show_bottom_border": true,
-        "mobile_text_scale": 2,
-        "desktop_text_scale": 7,
-        "alignment": "left",
-        "logo_max_width": 100,
-        "color_scheme": ""
-      }
     }
   },
   "order": [
-    "header",
-    "announcement-bar",
-    "hero-logo"
+    "header"
   ]
 }
