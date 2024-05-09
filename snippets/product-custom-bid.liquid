@@ -1,5 +1,15 @@
 <div class="my-[20px]">
-    <p class="text-[14px] uppercase text-[#9d9d9d]">Starting bid</p>
-    <h3 class="text-[43px] neueSwift">{{ 100 | money_without_trailing_zeros }}</h3>
-    <p class="text-[14px] text-[#9d9d9d]">Reserve price not met</p>
+    <div>
+        <p class="text-[14px] uppercase text-[#9d9d9d]">Starting bid</p>
+        <h3 class="text-[43px] neueSwift" id="bidAmount">{{ 100 | money_without_trailing_zeros }}</h3>
+        <p class="text-[14px] text-[#9d9d9d]">Reserve price not met</p>
+    </div>
+    <div>
+        <form>
+            <input id="firstBid"/>
+            <input id="secondBid"/>
+            <input id="thirdBid"/>
+            <input id="fourthBid"/>
+        </form>
+    </div>
 </div>
