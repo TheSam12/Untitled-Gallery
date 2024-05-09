@@ -7,6 +7,10 @@
     {{- block.shopify_attributes -}}
   {% endif %}
 >
+  <div class="relative overflow-hidden h-[15px]">
+    <hr class="relative top-[50%] border-t-[#e5e7eb]"/>
+    <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0 right-[50%]">or </p>
+  </div>
   {% unless product.has_only_default_variant %}
     {% for option in product.options_with_values %}
       {% liquid
@@ -36,10 +40,6 @@
           assign label_class = 'sr-only'
         endunless
       %}
-      <div class="relative overflow-hidden h-[15px]">
-        <hr class="relative top-[50%] border-t-[#e5e7eb]"/>
-        <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0 right-[50%]">or </p>
-      </div>
 
       <fieldset class="product-variant-picker-block mt-8  no-js:hidden">
         {%- if option_style == 'drop_down' -%}
