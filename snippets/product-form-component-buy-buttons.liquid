@@ -152,7 +152,7 @@
             <span>
               <template x-if="currentVariantAvailable">
                 <span>
-                  {{- 'products.product.add_to_cart' | t -}}
+                  Buy the edition from {{ product.price | money }}
                 </span>
               </template>
               <template x-if="!currentVariantAvailable">
