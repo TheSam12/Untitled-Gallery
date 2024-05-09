@@ -265,6 +265,8 @@
               {% endif %}
             >
               {% if upcoming_date > current_date %}
+                <img src="{{ 'upcoming-image.jpg' | asset_url }}" width="3000" height="unset" class="peer/image h-full">
+                {% else %}
                 {%-
                   render 'product-media',
                   media: media,
