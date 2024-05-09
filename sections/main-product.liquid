@@ -304,17 +304,17 @@
       <h2 class="neueSwift text-[43px] capitalize pb-[20px]">Edition Details</h2>
       <div class="grid grid-cols-2 gap-5">
         <div>
-          <h4 class="sfMono text-[14px] capitalize">Dimensions</h4>
-          <p class="sfMono text-[12px]">{{ product.metafields.custom.edition_details.value.dimensions }}</p>
-          <h4 class="sfMono text-[14px] capitalize">Medium</h4>
-          <p class="sfMono text-[12px]">{{ product.metafields.custom.edition_details.value.sizes }}</p>
-          <h4 class="sfMono text-[14px] capitalize">Finishing</h4>
-          <p class="sfMono text-[12px]">{{ product.metafields.custom.edition_details.value.finishing }}</p>
+          <h4 class="sfMono text-[14px] capitalize mb-[8px]">Dimensions</h4>
+          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.dimensions }}</p>
+          <h4 class="sfMono text-[14px] capitalize mb-[8px]">Medium</h4>
+          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.sizes }}</p>
+          <h4 class="sfMono text-[14px] capitalize mb-[8px]">Finishing</h4>
+          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.finishing }}</p>
         </div>
         <div>
-          <h4 class="sfMono text-[14px] capitalize">Release Date</h4>
-          <p class="sfMono text-[12px]">{{ product.metafields.custom.edition_details.value.release_date | date }}</p>
-          <h4 class="sfMono text-[14px] capitalize">Artist</h4>
+          <h4 class="sfMono text-[14px] capitalize mb-[8px]">Release Date</h4>
+          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.release_date | date }}</p>
+          <h4 class="sfMono text-[14px] capitalize mb-[8px]">Artist</h4>
           <div class="flex gap-3 items-center">
             <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full">
             <p class="sfMono text-[12px]">{{ product.metafields.custom.artist.value.name }}</p>
