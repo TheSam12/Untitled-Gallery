@@ -7,9 +7,12 @@
     {{- block.shopify_attributes -}}
   {% endif %}
 >
-  <div class="relative overflow-hidden h-[15px]">
+  <div class="relative overflow-hidden h-[22px]">
     <hr class="relative top-[50%] border-t-[#e5e7eb]"/>
-    <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0 right-[50%]">or </p>
+    <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0 right-[50%] leading-[22px]">or</p>
+  </div>
+  <div>
+    <p class="capitalize sfMono text-[14px] text-[#9d9d9d]">Buy the edition now</p>
   </div>
   {% unless product.has_only_default_variant %}
     {% for option in product.options_with_values %}
@@ -131,7 +134,7 @@
                 %}
                 <div class="label-only-input relative px-1{% if hide_sold_out_variants %} [&:has(.sold-out)]:hidden{% endif %}{% if hide_unavailable_variants %} [&:has(.unavailable)]:hidden{% endif %}">
                   <input
-                    class="peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0"
+                    class="peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]"
                     @keydown="lockOptionChangeHandler()"
                     @change="optionChange($el)"
                     @keyup="unlockOptionChangeHandler($el)"
@@ -147,7 +150,7 @@
                   >
                   <label
                     class="
-                      relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[1px] rounded-full{% endunless %} cursor-pointer rounded-button border-text {% unless option.name == 'Color' %}border-transparent {% endunless %}text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
+                      relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[1px] rounded-full{% endunless %} cursor-pointer rounded-button border-text text-[12px] {% unless option.name == 'Color' %}border-transparent {% endunless %}text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
                       peer-[.unavailable]:line-through {% if option.name == 'Color' %}
                       peer-[:not(.sold-out,.unavailable)]:[&>span:first-of-type]:hidden{% endif %}
                     "
