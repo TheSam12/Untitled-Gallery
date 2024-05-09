@@ -307,7 +307,9 @@
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Dimensions</h4>
           {% assign details_dimensions = product.metafields.custom.edition_details.value.dimensions %}
           {% assign dimensions = details_dimensions | split: "\n" %}
+          <p class="sfMono text-[12px] mb-[20px]">{{ dimensions | nth: 0 }}</p>
           <p class="sfMono text-[12px] mb-[20px]">{{ dimensions | nth: 1 }}</p>
+          <p class="sfMono text-[12px] mb-[20px]">{{ dimensions | nth: 2 }}</p>
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Medium</h4>
           <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.sizes }}</p>
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Finishing</h4>
