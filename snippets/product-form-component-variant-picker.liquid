@@ -147,7 +147,7 @@
                     for="Section-{{ section.id }}-Option{{ option.position }}-{{ value | escape }}"
                     title="{{ option.value }}"
                   >
-                    {%- if is_color %}
+                    {% comment %} {%- if is_color %} {% endcomment %}
                       <span
                         class="absolute inset-0 z-10 h-full w-full bg-scheme-background/25"
                       >
@@ -159,7 +159,7 @@
                         class="block h-6 w-6 rounded-button bg-full"
                         style="background-image: url({{ color_image_url }}); background-color: {{ color_swatch_fallback }};"
                       ></span>
-                    {%- endif -%}
+                    {% comment %} {%- endif -%} {% endcomment %}
                     <span
                       {% if is_color %}
                         class="sr-only"
