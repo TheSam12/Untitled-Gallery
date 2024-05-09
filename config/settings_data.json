@@ -33,7 +33,7 @@
     "fill_image_to_border_edge": true,
     "border_width": 0,
     "enable_color_swatches": true,
-    "enable_color_swatches_on_product_tiles": false,
+    "enable_color_swatches_on_product_tiles": true,
     "enable_color_swatches_in_filters": true,
     "product_grid_show_vendor": true,
     "product_grid_show_sale_badge": false,
