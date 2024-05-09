@@ -300,7 +300,22 @@
         </div>
       {%- endif -%}
     </div>
-    apsodamdpwa
+    <div>
+      <h2>Edition Details</h2>
+      <h4>Dimensions</h4>
+      <div>{{ product.metafields.custom.edition_details.value.dimensions }}</div>
+      <h4>Medium</h4>
+      <div>{{ product.metafields.custom.edition_details.value.sizes }}</div>
+      <h4>Finishing</h4>
+      <div>{{ product.metafields.custom.edition_details.value.finishing }}</div>
+      <h4>Release Date</h4>
+      <div>{{ product.metafields.custom.edition_details.value.release_date | date }}</div>
+      <h4>Artist</h4>
+      <div class="flex gap-3">
+        <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="100" width="100" class="rounded-full">
+        <p>{{ product.metafields.custom.artist.value.name }}</p>
+      </div>
+    </div>
   </div>
 
   <div
