@@ -54,6 +54,8 @@
         render 'product-block-location-inventory', block: block, product: product
       when 'custom_liquid'
         render 'product-block-custom-liquid', block: block, product: product
+      when 'bid'
+        render 'product-custom-bid', block: block, product: product
     endcase
   endfor
 -%}
