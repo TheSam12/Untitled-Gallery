@@ -21,6 +21,11 @@
             "max_words": 30
           }
         },
+        "bid_VNbqwr": {
+          "type": "bid",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "disabled": true,
@@ -88,6 +93,7 @@
         "title",
         "fd36a39b-75ab-4852-8966-e25b84bb8665",
         "description_BaNkzT",
+        "bid_VNbqwr",
         "price",
         "variant_picker",
         "quantity_selector",
