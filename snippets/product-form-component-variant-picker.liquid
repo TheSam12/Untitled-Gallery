@@ -47,10 +47,14 @@
           </label>
         {%- else -%}
           <legend class="{{ label_class }}">
+            {% unless option.name == 'Color' %}
             {{ option.name }}:
-            {% if option.name == 'Color' -%}
+            {% else %}
+            Frame:
+            {% endunless %}
+            {% comment %} {% if option.name == 'Color' -%}
               <span x-text="option{{ forloop.index }}"></span>
-            {%- endif %}
+            {%- endif %} {% endcomment %}
           </legend>
         {%- endif -%}
         {%- case option_style -%}
