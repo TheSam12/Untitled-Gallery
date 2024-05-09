@@ -117,7 +117,24 @@
     </div>
   </noscript>
 {%- else -%}
-  <div x-data="RTE" class="rte mt-8 {{ block.shopify_attributes }}">
-    {{ product.description }}
+  <div>
+    <div x-data="RTE" class="rte mt-8 {{ block.shopify_attributes }} line-clamp" id="productDesc">
+      {{ product.description }}
+      <button id="readMoreButton">Read More</button>
+    </div>
   </div>
 {%- endif -%}
+<script>
+
+  const myParagraph = document.getElementById('productDesc');
+  const readMoreButton = document.getElementById('readMoreButton');
+  
+  readMoreButton.addEventListener('click', () => {
+    myParagraph.classList.remove('line-clamp');
+    readMoreButton.style.display = 'none';
+  });
+  
+  if (myParagraph.scrollHeight > myParagraph.offsetHeight) {
+    readMoreButton.style.display = 'block';
+  }
+  </script>
