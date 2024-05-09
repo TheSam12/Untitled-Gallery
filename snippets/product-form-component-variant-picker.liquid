@@ -124,7 +124,6 @@
               {% for value in option.values %}
                 {% liquid
                   assign color_image_url = value | handle | append: '.' | append: 'png' | file_img_url: '110x' | prepend: 'https:'
-                  assign color_swatch_fallback = value | split: ' ' | last | handle
                 %}
                 <div class="label-only-input relative px-1{% if hide_sold_out_variants %} [&:has(.sold-out)]:hidden{% endif %}{% if hide_unavailable_variants %} [&:has(.unavailable)]:hidden{% endif %}">
                   <input
@@ -144,7 +143,7 @@
                   >
                   <label
                     class="
-                      relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[2px]{% endunless %} cursor-pointer rounded-button border-text border-transparent text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
+                      relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[1px] rounded-full{% endunless %} cursor-pointer rounded-button border-text border-transparent text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
                       peer-[.unavailable]:line-through {% if option.name == 'Color' %}
                       peer-[:not(.sold-out,.unavailable)]:[&>span:first-of-type]:hidden{% endif %}
                     "
@@ -160,7 +159,7 @@
                         ></span>
                       </span>
                       <span
-                        class="block h-6 w-6 rounded-button bg-full"
+                        class="block h-6 w-6 rounded-button bg-full rounded-full"
                         style="background-image: url({{ color_image_url }}); background-color: transparent;"
                       ></span>
                     {%- endif -%}
