@@ -306,29 +306,15 @@
         </a>
       {% endif %}
       <div class="{{ title_class }} break-word">
-        <div class="flex justify-between mt-[12px]">
+        <div class="mt-[12px]">
           <p
             aria-hidden="true"
-            class="neueSwift text-[14px] text-[#030303]"
+            class="neueSwift text-[14px] text-[#9d9d9d]"
           >
             {{ product.title }}
           </p>
-          <p class="neueSwift text-[14px] text-[#030303]">{{ product.price | money }}</p> 
         </div>
         <p class="sfMono text-[14px] mt-[5px]">{{ product.metafields.custom.artist.value.name }}</p>
-        <p class="sfMono text-[14px] text-[#9d9d9d] mt-[5px]">
-          {% if sold_out %}Sold out{% else %}
-            {% if upcoming_date > current_date %}
-              <span id="countdownTimer">{{ product.metafields.custom.livestreaming.value.start_time }}</span>
-                {% else %}
-                {% if close_date > current_date %}
-                  <span id="countdownTimerCollection">{{ product.metafields.custom.livestreaming.value.end_time }}</span>
-                {% else %}
-                  <span>Completed</span>
-                {% endif %}
-            {% endif %}
-          {% endif %}
-        </p>
       </div>
       <div class="{{ price_class }}">
         {% if sold_out %}
