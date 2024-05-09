@@ -33,7 +33,7 @@
 {%- if recommendations.performed -%}
   {% if recommendations.products_count > 0 %}
     <div
-      class="related-products"
+      class="related-products mb-[24px]"
       data-color-scheme="{{ section_color }}"
     >
       <div class="related-products-container border-b-gridline border-gridline-color">
@@ -129,7 +129,6 @@
 {% schema %}
 {
   "name": "Related products",
-  "class": "mb-[24px]",
   "settings": [
     {
       "type": "paragraph",
