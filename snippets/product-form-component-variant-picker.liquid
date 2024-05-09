@@ -44,7 +44,7 @@
         endunless
       %}
 
-      <fieldset class="product-variant-picker-block mt-8  no-js:hidden">
+      <fieldset class="product-variant-picker-block {% if forloop.first %}mt-[20px]{% else %}mt-8{% endif %}  no-js:hidden">
         {%- if option_style == 'drop_down' -%}
           <label
             class="{{ label_class }}"
