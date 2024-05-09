@@ -143,7 +143,7 @@
                   >
                   <label
                     class="
-                      relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[1px] rounded-full{% endunless %} cursor-pointer rounded-button border-text border-transparent text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
+                      relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[1px] rounded-full{% endunless %} cursor-pointer rounded-button border-text {% unless option.name == 'Color' %}border-transparent {% endunless %}text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
                       peer-[.unavailable]:line-through {% if option.name == 'Color' %}
                       peer-[:not(.sold-out,.unavailable)]:[&>span:first-of-type]:hidden{% endif %}
                     "
