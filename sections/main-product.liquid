@@ -306,8 +306,9 @@
         <div class="col-span-2">
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Dimensions</h4>
           <p class="sfMono text-[12px] mb-[20px]">
-            {% for dimensions in product.metafields.custom.edition_details.value.dimensions %}
-              {% assign dimension = dimensions | split: "." %}
+            {% assign details_dimensions = product.metafields.custom.edition_details.value.dimensions %}
+            {% assign dimensions = details_dimensions | split: "." %}
+            {% for dimension in dimensions %}
               {{ dimension[0] }}<br>
               {{ dimension[1] }}<br>
               {{ dimension[2] }}
