@@ -33,10 +33,10 @@
 {%- if recommendations.performed -%}
   {% if recommendations.products_count > 0 %}
     <div
-      class="related-products mb-[24px]"
+      class="related-products"
       data-color-scheme="{{ section_color }}"
     >
-      <div class="related-products-container border-b-gridline border-gridline-color">
+      <div class="related-products-container border-b-gridline border-gridline-color mb-[24px]">
         {% if section.settings.heading != '' %}
           {%- render 'section-title',
             title: section.settings.heading,
