@@ -119,7 +119,7 @@
             <div class="mt-2 flex flex-wrap items-center justify-start{% unless is_color %} -mx-1{% else %} -mx-[calc(theme(spacing.2)_-_1px)]{% endunless %}">
               {% for value in option.values %}
                 {% liquid
-                  assign color_image_url = value | handle | append: '.' | append: 'png' | file_url: '110x' | prepend: 'https:'
+                  assign color_image_url = value | handle | append: '.' | append: 'png' | file_img_url: '110x' | prepend: 'https:'
                   assign color_swatch_fallback = value | split: ' ' | last | handle
                 %}
                 <div class="label-only-input relative px-1{% if hide_sold_out_variants %} [&:has(.sold-out)]:hidden{% endif %}{% if hide_unavailable_variants %} [&:has(.unavailable)]:hidden{% endif %}">
