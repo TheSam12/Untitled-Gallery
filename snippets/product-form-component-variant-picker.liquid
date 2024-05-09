@@ -123,7 +123,7 @@
             <div class="mt-2 flex flex-wrap items-center justify-start{% unless option.name == 'Color' %} -mx-1{% else %} -mx-[calc(theme(spacing.2)_-_1px)]{% endunless %}">
               {% for value in option.values %}
                 {% liquid
-                  assign color_image_url = value | handle | append: '.' | append: 'png' | file_img_url: '110x' | prepend: 'https:'
+                  assign color_image_url = value | handle | append: '.' | append: 'png' | file_url | prepend: 'https:'
                 %}
                 <div class="label-only-input relative px-1{% if hide_sold_out_variants %} [&:has(.sold-out)]:hidden{% endif %}{% if hide_unavailable_variants %} [&:has(.unavailable)]:hidden{% endif %}">
                   <input
@@ -151,17 +151,7 @@
                     title="{{ option.value }}"
                   >
                     {%- if option.name == 'Color' %}
-                      <span
-                        class="absolute inset-0 z-10 h-full w-full bg-scheme-background/25"
-                      >
-                        <span
-                          class="absolute bottom-0 left-0 top-1/2 z-10 h-0.5 w-full -translate-y-1/2 -rotate-45 transform bg-scheme-text"
-                        ></span>
-                      </span>
-                      <span
-                        class="block h-6 w-6 rounded-button bg-full rounded-full"
-                        style="background-image: url({{ color_image_url }}); background-color: transparent;"
-                      ></span>
+                      <img src="{{ color_image_url }}" width="50" height="50">
                     {%- endif -%}
                     <span
                       {% if option.name == 'Color' %}
