@@ -307,7 +307,7 @@
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Dimensions</h4>
           <p class="sfMono text-[12px] mb-[20px]">
             {% assign details_dimensions = product.metafields.custom.edition_details.value.dimensions %}
-            {% assign dimensions = details_dimensions | split: "." %}
+            {% assign dimensions = details_dimensions | split: "\n" %}
             {% for dimension in dimensions %}
               {{ dimension }}
             {% endfor %}
