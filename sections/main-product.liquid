@@ -303,16 +303,16 @@
     <div>
       <h2>Edition Details</h2>
       <h4>Dimensions</h4>
-      <div>{{ product.metafields.custom.edition_details.value.dimensions }}</div>
+      <p>{{ product.metafields.custom.edition_details.value.dimensions }}</p>
       <h4>Medium</h4>
-      <div>{{ product.metafields.custom.edition_details.value.sizes }}</div>
+      <p>{{ product.metafields.custom.edition_details.value.sizes }}</p>
       <h4>Finishing</h4>
-      <div>{{ product.metafields.custom.edition_details.value.finishing }}</div>
+      <p>{{ product.metafields.custom.edition_details.value.finishing }}</p>
       <h4>Release Date</h4>
-      <div>{{ product.metafields.custom.edition_details.value.release_date | date }}</div>
+      <p>{{ product.metafields.custom.edition_details.value.release_date | date }}</p>
       <h4>Artist</h4>
-      <div class="flex gap-3">
-        <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="100" width="100" class="rounded-full">
+      <div class="flex gap-3 items-center">
+        <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full">
         <p>{{ product.metafields.custom.artist.value.name }}</p>
       </div>
     </div>
