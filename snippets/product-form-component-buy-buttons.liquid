@@ -115,7 +115,7 @@
       {%- liquid
         unless quick_buy
           if block and block.settings.enable_payment_button
-            assign cta_button_classes = 'theme-button--secondary'
+            assign cta_button_classes = ''
           else
             assign cta_button_classes = 'theme-button'
           endif
