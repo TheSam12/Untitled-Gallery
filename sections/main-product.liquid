@@ -339,6 +339,10 @@
     class="product-content-container bg-scheme-background px-section-horizontal-spacing text-scheme-text {{ content_width_desktop }}"
   >
     <div class="product-block-area py-section-vertical-spacing lg:sticky lg:top-sticky-header {{ section.settings.max_width_of_content }}">
+      <div class="relative overflow-hidden">
+        <hr class="border-0 border-t-1 border-t-solid border-t-[#e5e7eb]"/>
+        <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0">or</p>
+      </div>
       {%- render 'product-form', section_color: section_color -%}
     </div>
   </div>
