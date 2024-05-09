@@ -13,9 +13,9 @@
         if settings.enable_color_swatches
           assign is_color = false
 
-          assign swatch_trigger = 'products.product.color_swatch_trigger' | t | downcase
+          assign swatch_trigger = 'products.product.color_swatch_trigger' | t 
 
-          assign option_downcase = option.name | downcase
+          assign option_downcase = option.name
 
           if option_downcase contains swatch_trigger
             assign is_color = true
@@ -48,7 +48,7 @@
         {%- else -%}
           <legend class="{{ label_class }}">
             {{ option.name }}:
-            {% if is_color -%}
+            {% if option.name == 'Color' -%}
               <span x-text="option{{ forloop.index }}"></span>
             {%- endif %}
           </legend>
@@ -116,7 +116,7 @@
               {% endfor %}
             </div>
           {%- when 'buttons' -%}
-            <div class="mt-2 flex flex-wrap items-center justify-start{% unless is_color %} -mx-1{% else %} -mx-[calc(theme(spacing.2)_-_1px)]{% endunless %}">
+            <div class="mt-2 flex flex-wrap items-center justify-start{% unless option.name == 'Color' %} -mx-1{% else %} -mx-[calc(theme(spacing.2)_-_1px)]{% endunless %}">
               {% for value in option.values %}
                 {% liquid
                   assign color_image_url = value | handle | append: '.' | append: 'png' | file_img_url: '110x' | prepend: 'https:'
@@ -140,14 +140,14 @@
                   >
                   <label
                     class="
-                      relative select-none block{% unless is_color %} p-2 min-w-9{% else %} p-[2px]{% endunless %} cursor-pointer rounded-button border-text border-transparent text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
-                      peer-[.unavailable]:line-through {% if is_color %}
+                      relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[2px]{% endunless %} cursor-pointer rounded-button border-text border-transparent text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
+                      peer-[.unavailable]:line-through {% if option.name == 'Color' %}
                       peer-[:not(.sold-out,.unavailable)]:[&>span:first-of-type]:hidden{% endif %}
                     "
                     for="Section-{{ section.id }}-Option{{ option.position }}-{{ value | escape }}"
                     title="{{ option.value }}"
                   >
-                    {%- if is_color %}
+                    {%- if option.name == 'Color' %}
                       <span
                         class="absolute inset-0 z-10 h-full w-full bg-scheme-background/25"
                       >
@@ -161,7 +161,7 @@
                       ></span>
                     {%- endif -%}
                     <span
-                      {% if is_color %}
+                      {% if option.name == 'Color' %}
                         class="sr-only"
                       {% endif %}
                     >
