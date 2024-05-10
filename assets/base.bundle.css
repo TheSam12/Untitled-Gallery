@@ -5593,6 +5593,12 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   overflow: hidden;
 }
 
+.icon-info {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
 .tooltip {
   position: absolute;
   top: 100%;
