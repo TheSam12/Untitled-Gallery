@@ -5701,7 +5701,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-body.modal-open {
+body .modal-open {
   height: 100vh;
   overflow-y: hidden;
   padding-right: 15px;
