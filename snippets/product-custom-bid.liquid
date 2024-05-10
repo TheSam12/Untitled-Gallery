@@ -11,30 +11,30 @@
             <label><input type="radio" name="num" value="15" class="bidNumbers"> 15</label>
             <label><input type="radio" name="num" value="20" class="bidNumbers"> 20</label>
             <input type="text" id="custom-num" placeholder="Enter a number">
-            <button id="update-btn">Update</button>
+            <button id="updateBid">Update</button>
             
             <script>
-            const radioInputs = document.querySelectorAll('bidNumbers');
-            const customInput = document.getElementById('custom-num');
-            const updateBtn = document.getElementById('update-btn');
-            
-            updateBtn.addEventListener('click', updateRadioValues);
-            
-            function updateRadioValues() {
-                const customValue = parseInt(customInput.value);
-                if (customValue > radioInputs[radioInputs.length - 1].value) {
-                const newValues = [];
-                let currentValue = customValue;
-                while (newValues.length < radioInputs.length) {
-                    newValues.push(currentValue);
-                    currentValue -= 5;
+                const radioInputs = document.querySelectorAll('bidNumbers');
+                const customInput = document.getElementById('custom-num');
+                const updateBtn = document.getElementById('updateBid');
+                
+                updateBtn.addEventListener('click', updateRadioValues);
+                
+                function updateRadioValues() {
+                    const customValue = parseInt(customInput.value);
+                    if (customValue > radioInputs[radioInputs.length - 1].value) {
+                    const newValues = [];
+                    let currentValue = customValue;
+                    while (newValues.length < radioInputs.length) {
+                        newValues.push(currentValue);
+                        currentValue -= 5;
+                    }
+                    newValues.reverse();
+                    radioInputs.forEach((input, index) => {
+                        input.value = newValues[index];
+                    });
+                    }
                 }
-                newValues.reverse();
-                radioInputs.forEach((input, index) => {
-                    input.value = newValues[index];
-                });
-                }
-            }
             </script>
         </form>
     </div>
