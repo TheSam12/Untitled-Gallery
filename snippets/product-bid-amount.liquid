@@ -20,14 +20,14 @@
     const overlay = document.getElementById('overlay');
 
     seeAllBidHistory.addEventListener('click', function() {
-    modal.style.display = 'block';
-    overlay.style.display = 'block';
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
     });
 
     modal.addEventListener('click', function(event) {
-    if (event.target === modal || event.target.classList.contains('cerrar')) {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-    }
+        if (event.target === modal || event.target.classList.contains('cerrar')) {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
     });
 </script>
