@@ -5595,13 +5595,14 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 
 .tooltip {
   position: absolute;
-  top: -150px;
-  left: 0;
+  top: -226px;
+  left: 130px;
   transform: translateX(-50%);
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
   display: none;
+  z-index: 10;
 }
 
 .icon-info:hover +.tooltip,
