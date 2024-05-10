@@ -5674,3 +5674,17 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   border-left: 1px solid black;
   border-top: 1px solid black;
 }
+
+.bid-hidtory-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.bid-history-modal-content {
+  background: white;
+}
+
+.bid-hidtory-modal.isOpen {
+  display: block;
+}
