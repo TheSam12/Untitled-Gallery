@@ -5608,6 +5608,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   display: block;
 }
 
-.icon-info:hover svg{
+.icon-info:hover svg circle,
+.icon-info:hover svg path{
   fill:black
 }
