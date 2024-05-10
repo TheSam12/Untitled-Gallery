@@ -5678,8 +5678,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 .bid-history-modal {
   display: none;
   position: fixed;
-  top:40%;
-  left: 40%;
+  top:30%;
+  left: 35%;
   z-index: 50;
   width:560px;
   height:400px;
