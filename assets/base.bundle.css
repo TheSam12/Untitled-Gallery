@@ -5681,6 +5681,9 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   top:50%;
   left: 40%;
   z-index: 50;
+  width:560px;
+  height:400px;
+  overflow: scroll;
 }
 
 .bid-history-modal-content {
