@@ -36,13 +36,15 @@
       class="related-products"
       data-color-scheme="{{ section_color }}"
     >
-      <div class="related-products-container border-b-gridline border-gridline-color mb-[24px] text-center">
+      <div class="related-products-container border-b-gridline border-gridline-color mb-[24px]">
+        <div class="flex justify-center">
         {% if section.settings.heading != '' %}
           {%- render 'section-title',
             title: section.settings.heading,
             section_color: section_color
           -%}
         {% endif %}
+        </div>
         <ul
           class="grid grid-cols-2 {{ desktop_grid_class }} z-10 gap-gutter bg-gridline-color"
           data-color-scheme="{{ section_color }}"
