@@ -156,7 +156,7 @@
             <span>
               <template x-if="currentVariantAvailable">
                 <span>
-                  Buy the edition from {{ product.price | money_without_trailing_zeros }}
+                  Buy the edition from df {{ product.price | money_without_trailing_zeros }}
                 </span>
               </template>
               <template x-if="!currentVariantAvailable">
