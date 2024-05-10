@@ -2,7 +2,7 @@
 <div class="relative">
     <div class="flex justify-between">
         <p class="text-[14px] sfMono text-[#e5e7eb] uppercase">bid history</p>
-        <a id="seeAllBidHistory" class="text-[14px] see-all-bid cursor-pointer" @click="openModal">See all</a>
+        <a id="seeAllBidHistory" class="text-[14px] see-all-bid cursor-pointer" @click="openModal()">See all</a>
     </div>
     <hr class="h-1 mt-[10px]"/>
     <div x-data="{ isOpen: false }" class="bid-history-modal">
@@ -13,3 +13,13 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('modal', () => ({
+        isOpen: false,
+        openModal() {
+          this.isOpen = true;
+        }
+      }));
+    });
+  </script>
