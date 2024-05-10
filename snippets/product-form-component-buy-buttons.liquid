@@ -140,8 +140,11 @@
             }
           "
           :disabled="!currentVariantAvailable || loading"
+          {% if timer > current_date %}
+            disabled
+          {% endif %}
         {% endunless %}
-        {% unless current_variant.available or timer > current_date %}
+        {% unless current_variant.available %}
           disabled="disabled"
         {% endunless %}
       >
