@@ -14,7 +14,7 @@
 <div>
   {% if current_date != blank %}
     {% if timer > current_date or close_date > current_date %}
-      <p class="px-[8px] py-[3px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex gap-[8px] w-fit mb-[10px] items-center">
+      <p class="px-[12px] py-[8px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex gap-[8px] w-fit mb-[10px] items-center">
         {% if timer > current_date %}<span id="countdownTimer">{{ upcoming_date }}</span>{% else %}{% if close_timer > current_date %}<span class="redDot"></span><span id="countdownTimerCollection">{{ close_date }}</span>{% endif %}{% endif %}
       </p>
     {% endif %}
