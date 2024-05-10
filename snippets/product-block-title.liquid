@@ -4,6 +4,9 @@
   else
     assign tag = 'h2'
   endif
+  assign current_date = 'now' | date: '%s'
+  assign upcoming_date = product.metafields.custom.livestreaming.value.start_time | date: '%s'
+  assign close_date = product.metafields.custom.livestreaming.value.end_time | date: '%s'
 %}
 
 <div>
