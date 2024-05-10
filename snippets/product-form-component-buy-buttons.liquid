@@ -141,7 +141,7 @@
           "
           :disabled="!currentVariantAvailable || loading"
           {% if timer > current_date %}
-            disabled
+            disabled="disabled"
           {% endif %}
         {% endunless %}
         {% unless current_variant.available %}
