@@ -4,7 +4,7 @@
  %}
 <div class="my-[20px]">
     <div class="relative">
-        <p class="text-[14px] uppercase text-[#9d9d9d] flex gap-2 items-center icon-info"><span>Starting bid</span><span class="cursor-pointer">{% render 'icon-info' %}</span></p>
+        <p class="text-[14px] uppercase text-[#9d9d9d] flex gap-2 items-center starting-bid-info"><span>Starting bid</span><span class="cursor-pointer">{% render 'icon-info' %}</span></p>
         <div class="tooltip p-[20px]">
             <p class="text-[16px] mb-[20px] font-bold">Other costs</p>
             <div class="grid grid-cols-10 gap-[12px]">
@@ -72,11 +72,26 @@
                 }
             </script>
         </form>
-        <div class="mt-[16px]">
-            <div class="flex gap-[12px] items-center">
-                {% render 'icon-warning' %} 
-                <span class="text-[14px] text-[#9d9d9d] h-[15px]">Buy confidently with our <span class="text-black">Buyer Protection</span></span>
-                {% render 'icon-info' %}
+    </div>
+    <div class="mt-[16px] relative">
+        <div class="flex gap-[12px] items-center buyer-protection-info">
+            {% render 'icon-warning' %} 
+            <span class="text-[14px] text-[#9d9d9d] h-[15px]">Buy confidently with our <span class="text-black">Buyer Protection</span></span>
+            {% render 'icon-info' %}
+        </div>
+        <div class="tooltip p-[20px]">
+            <p class="text-[16px] mb-[20px] font-bold">Other costs</p>
+            <div class="grid grid-cols-10 gap-[12px]">
+                <div class="col-span-1">{% render 'icon-delivery' %}</div>
+                <div class="col-span-9 mb-[20px]">
+                    <p class="text-[14px] sfMono mb-[12px]">Shipping: $ Depends on Location.</p>
+                    <p class="text-[#9d9d9d] text-[14px] mb-[16px]">from United States in 3 - 25 days</p>
+                    <a href="#" class="font-bold sfMono text-[14px] redirect-shipping">More about shipping</a>
+                </div>
+                <div class="col-span-1">{% render 'icon-bid' %}</div>
+                <div class="col-span-9">
+                    <p class="text-[14px]">Buyer's Protection fee: 9.5% + VAT</p>
+                </div>
             </div>
         </div>
     </div>

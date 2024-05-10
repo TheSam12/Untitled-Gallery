@@ -5605,13 +5605,14 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   z-index: 10;
 }
 
-.icon-info:hover +.tooltip,
+.starting-bid-info:hover +.tooltip,
+.buyer-protection-info:hover +.tooltip,
 .tooltip:hover {
   display: block;
 }
 
-.icon-info:hover svg circle,
-.icon-info:hover svg path{
+.starting-bid-info:hover svg circle,
+.starting-bid-info:hover svg path{
   stroke:black
 }
 
