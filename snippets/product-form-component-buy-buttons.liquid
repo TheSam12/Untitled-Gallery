@@ -140,13 +140,13 @@
             }
           "
           :disabled="!currentVariantAvailable || loading"
-          {% if timer > current_date %}
-            disabled="disabled"
-          {% endif %}
         {% endunless %}
         {% unless current_variant.available %}
           disabled="disabled"
         {% endunless %}
+        {% if timer > current_date %}
+          disabled="disabled"
+        {% endif %}
       >
         {% unless quick_buy %}
           <span class="hidden no-js:inline" :class="`hidden`">
