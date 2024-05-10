@@ -5613,3 +5613,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 .icon-info:hover svg path{
   stroke:black
 }
+
+.redirect-shipping::after{
+  --tw-content: var(--button-after-content);
+  content: var(--tw-content);
+}
