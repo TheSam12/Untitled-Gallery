@@ -5610,5 +5610,5 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 
 .icon-info:hover svg circle,
 .icon-info:hover svg path{
-  fill:black
+  stroke:black
 }
