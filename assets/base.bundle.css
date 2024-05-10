@@ -5595,7 +5595,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 
 .tooltip {
   position: absolute;
-  top: -100px;
+  top: -150px;
   left: 0;
   transform: translateX(-50%);
   background-color: #fff;
@@ -5622,11 +5622,11 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 .tooltip::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -13px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
-  width: 10px;
-  height: 10px;
+  width: 24px;
+  height: 24px;
   background-color: #fff;
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
