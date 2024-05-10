@@ -144,7 +144,7 @@
         {% unless current_variant.available %}
           disabled="disabled"
         {% endunless %}
-        {% if timer > current_date %}
+        {% if current_date < timer %}
           disabled="disabled"
         {% endif %}
       >
