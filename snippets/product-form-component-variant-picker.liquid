@@ -152,7 +152,7 @@
                     class="
                       relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[1px] rounded-full{% endunless %} cursor-pointer rounded-button border-text text-[12px] {% unless option.name == 'Color' %}border-transparent {% endunless %}text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
                       peer-[.unavailable]:line-through {% if option.name == 'Color' %}
-                      peer-[:not(.sold-out,.unavailable)]:[&>span:first-of-type]:hidden{% endif %}
+                      peer-[:not(.sold-out,.unavailable)]:[&>span:first-of-type]:hidden{% endif %} {% if option.name == 'Color' %}show-variant-name{% endif %}
                     "
                     for="Section-{{ section.id }}-Option{{ option.position }}-{{ value | escape }}"
                     title="{{ option.value }}"
@@ -168,6 +168,7 @@
                       {{- value -}}
                     </span>
                   </label>
+                  <div class="my-description">{{ value | escape }}</div>
                 </div>
               {% endfor %}
             </div>

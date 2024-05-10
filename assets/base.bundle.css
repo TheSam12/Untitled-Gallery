@@ -5644,3 +5644,17 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
 }
+.my-description {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.show-variant-name:hover .my-description {
+  display: block;
+}
