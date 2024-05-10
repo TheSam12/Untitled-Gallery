@@ -20,13 +20,15 @@
 -%}
 
 <section class="border-b-gridline border-gridline-color bg-gridline-color">
-  {% if section.settings.title != '' %}
-    {%- assign block_heading_level = 'h3' -%}
-    {%- render 'section-title',
-      title: section.settings.title,
-      section_color: section_color
-    -%}
-  {% endif %}
+  <div class="flex justify-center">
+    {% if section.settings.title != '' %}
+      {%- assign block_heading_level = 'h3' -%}
+      {%- render 'section-title',
+        title: section.settings.title,
+        section_color: section_color
+      -%}
+    {% endif %}
+  </div>
 
   <ul class="grid grid-cols-1 gap-gridline lg:grid-cols-12">
     {% for block in section.blocks %}
