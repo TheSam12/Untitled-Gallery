@@ -130,7 +130,6 @@
       <button
         id="addToCartButton"
         class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_classes }} {% unless current_variant.available %}opacity-50 cursor-not-allowed after:content-none{% endunless %}"
-        disabled="disabled"
         type="submit"
         {% unless quick_buy %}
           :class="
@@ -156,7 +155,7 @@
             <span>
               <template x-if="currentVariantAvailable">
                 <span>
-                  Buy the edition from df {{ product.price | money_without_trailing_zeros }}
+                  Buy the edition from {{ product.price | money_without_trailing_zeros }}
                 </span>
               </template>
               <template x-if="!currentVariantAvailable">
