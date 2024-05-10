@@ -6,17 +6,17 @@
     <div class="relative">
         <p class="text-[14px] uppercase text-[#9d9d9d] flex gap-2 items-center icon-info"><span>Starting bid</span><span class="cursor-pointer">{% render 'icon-info' %}</span></p>
         <div class="tooltip p-[20px]">
-            <p>Other costs</p>
+            <p class="text-[16px] mb-[20px] font-bold">Other costs</p>
             <div class="grid grid-cols-10 gap-[12px]">
                 <div class="col-span-1">{% render 'icon-delivery' %}</div>
-                <div class="col-span-9">
-                    <p>Shipping: $ Depends on Location.</p>
-                    <p>from United States in 3 - 25 days</p>
-                    <a href="#" class="theme-button-secondary">More about shipping</a>
+                <div class="col-span-9 mb-[20px]">
+                    <p class="text-[14px] sfMono mb-[12px]">Shipping: $ Depends on Location.</p>
+                    <p class="text-[#9d9d9d] text-[14px]">from United States in 3 - 25 days</p>
+                    <a href="#" class="theme-button-secondary font-bold sfMono text-[14px]">More about shipping</a>
                 </div>
                 <div class="col-span-1">{% render 'icon-bid' %}</div>
                 <div class="col-span-9">
-                    <p>Buyer's Protection fee: 9.5% + VAT</p>
+                    <p class="text-[14px]">Buyer's Protection fee: 9.5% + VAT</p>
                 </div>
             </div>
         </div>
