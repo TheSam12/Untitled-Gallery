@@ -5601,7 +5601,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   padding: 10px;
   display: none;
   z-index: 10;
-  width: 420px;
+  width: 435px;
 }
 
 .starting-bid-tooltip{
@@ -5610,8 +5610,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 }
 
 .buyer-protection-tooltip{
-  top: -220px;
-  right: 0px;
+  top: -210px;
+  right: -104px;
 }
 
 .starting-bid-info:hover +.tooltip,
