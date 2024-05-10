@@ -291,12 +291,12 @@
         <div class="">
           <p
             aria-hidden="true"
-            class="neueSwift text-[14px] text-[#9d9d9d] mt-[5px]"
+            class="neueSwift text-[14px] mt-[5px]"
           >
             {{ product.title }}
           </p>
         </div>
-        <p class="sfMono text-[14px]">{{ product.metafields.custom.artist.value.name }}</p>
+        <p class="sfMono text-[14px] text-[#9d9d9d]">{{ product.metafields.custom.artist.value.name }}</p>
       </div>
       <div class="{{ price_class }}">
         {% if sold_out %}
