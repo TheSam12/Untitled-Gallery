@@ -2,6 +2,9 @@
   assign section_color = section.settings.color_scheme
   assign enable_video_looping = section.settings.enable_video_looping
   assign two_media_per_row = section.settings.two_media_per_row
+  assign current_date = 'now' | date: '%s'
+  assign upcoming_date = product.metafields.custom.livestreaming.value.start_time | date: '%s'
+  assign close_date = product.metafields.custom.livestreaming.value.end_time | date: '%s'
 
   assign models = product.media | where: 'media_type', 'model'
 
