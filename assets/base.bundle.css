@@ -5618,3 +5618,16 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   --tw-content: var(--button-after-content);
   content: var(--tw-content);
 }
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
