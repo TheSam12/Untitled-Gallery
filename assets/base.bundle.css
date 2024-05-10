@@ -5612,7 +5612,9 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 }
 
 .starting-bid-info:hover svg circle,
-.starting-bid-info:hover svg path{
+.starting-bid-info:hover svg path,
+.buyer-protection-info:hover svg circle,
+.buyer-protection-info:hover svg path{
   stroke:black
 }
 
