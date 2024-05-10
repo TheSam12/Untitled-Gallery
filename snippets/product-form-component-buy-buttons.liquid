@@ -132,9 +132,8 @@
       <button
         id="addToCartButton"
         class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_classes }} {% unless current_variant.available %}opacity-50 cursor-not-allowed after:content-none{% endunless %}"
-        {% if current_date < timer %}
+        
           disabled="disabled"
-        {% endif %}
         type="submit"
         {% unless quick_buy %}
           :class="
