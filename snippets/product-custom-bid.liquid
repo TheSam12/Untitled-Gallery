@@ -21,80 +21,84 @@
             </div>
         </div>
         <h3 class="text-[43px] neueSwift" id="bidAmount">{{ 100 | money_without_trailing_zeros }}</h3>
-        <p class="text-[14px] text-[#9d9d9d]">Reserve price not met</p>
+        {% if product.selected_or_first_available_variant.available == true %}
+         <p class="text-[14px] text-[#9d9d9d]">Reserve price not met</p>
+        {% endif %}
     </div>
-    <div class="mt-[20px]">
-        <form>
-            <div class="flex gap-[14px] justify-between mb-[16px]">
-                <div class="label-only-input relative w-full">
-                    <input type="radio" name="num" value="5" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="firstBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}> 
-                    <label for="firstBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£5</label>
+    {% if product.selected_or_first_available_variant.available == true %}
+        <div class="mt-[20px]">
+            <form>
+                <div class="flex gap-[14px] justify-between mb-[16px]">
+                    <div class="label-only-input relative w-full">
+                        <input type="radio" name="num" value="5" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="firstBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}> 
+                        <label for="firstBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£5</label>
+                    </div>
+                    <div class="lable-only-input relative w-full">
+                        <input type="radio" name="num" value="10" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="secondBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
+                        <label for="secondBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£10</label>
+                    </div>
+                    <div class="lable-only-input relative w-full">
+                        <input type="radio" name="num" value="15" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="thirdBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
+                        <label for="thirdBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£15</label>
+                    </div>
+                    <div class="lable-only-input relative w-full">
+                        <input type="radio" name="num" value="20" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="fourthBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}> 
+                        <label for="fourthBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£20</label>
+                    </div>
                 </div>
-                <div class="lable-only-input relative w-full">
-                    <input type="radio" name="num" value="10" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="secondBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
-                    <label for="secondBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£10</label>
+                <input type="text" id="custom-num" placeholder="£5 or up" class="w-full border-solid border py-[10px] px-[12px] mb-[8px] border-[#9d9d9d] {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
+                <div class="flex justify-between gap-[16px]">
+                    <button id="placeBid" class="border w-full border-black p-[10px] {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>Place bid</button>
+                    <button id="maxBid" class="border w-full border-black p-[10px] bg-black text-white {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>Set max bid</button>
                 </div>
-                <div class="lable-only-input relative w-full">
-                    <input type="radio" name="num" value="15" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="thirdBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
-                    <label for="thirdBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£15</label>
-                </div>
-                <div class="lable-only-input relative w-full">
-                    <input type="radio" name="num" value="20" class="bidNumbers peer absolute left-0 top-0 cursor-pointer opacity-0 text-[12px]" id="fourthBid" {% if timer > current_date or product.sold_out %}disabled{% endif %}> 
-                    <label for="fourthBid" class="relative select-none block p-[10px] min-w-9 rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% else %}cursor-pointer{% endif %}">£20</label>
-                </div>
-            </div>
-            <input type="text" id="custom-num" placeholder="£5 or up" class="w-full border-solid border py-[10px] px-[12px] mb-[8px] border-[#9d9d9d] {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
-            <div class="flex justify-between gap-[16px]">
-                <button id="placeBid" class="border w-full border-black p-[10px] {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>Place bid</button>
-                <button id="maxBid" class="border w-full border-black p-[10px] bg-black text-white {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>Set max bid</button>
-            </div>
-            
-            <script>
-                const radioInputs = document.querySelectorAll('bidNumbers');
-                const customInput = document.getElementById('custom-num');
                 
-                customInput.addEventListener('input', updateRadioValues);
+                <script>
+                    const radioInputs = document.querySelectorAll('bidNumbers');
+                    const customInput = document.getElementById('custom-num');
+                    
+                    customInput.addEventListener('input', updateRadioValues);
 
-                function updateRadioValues() {
-                    const customValue = parseInt(customInput.value);
-                    if (customValue > radioInputs[radioInputs.length - 1].value) {
-                        const newValues = [];
-                        let currentValue = customValue;
-                        while (newValues.length < radioInputs.length) {
-                        newValues.push(currentValue);
-                        currentValue -= 5;
+                    function updateRadioValues() {
+                        const customValue = parseInt(customInput.value);
+                        if (customValue > radioInputs[radioInputs.length - 1].value) {
+                            const newValues = [];
+                            let currentValue = customValue;
+                            while (newValues.length < radioInputs.length) {
+                            newValues.push(currentValue);
+                            currentValue -= 5;
+                            }
+                            newValues.reverse();
+                            radioInputs.forEach((input, index) => {
+                            input.value = newValues[index];
+                            });
                         }
-                        newValues.reverse();
-                        radioInputs.forEach((input, index) => {
-                        input.value = newValues[index];
-                        });
                     }
-                }
-            </script>
-        </form>
-    </div>
-    <div class="mt-[16px] relative">
-        <div class="flex gap-[12px] items-center buyer-protection-info">
-            {% render 'icon-warning' %} 
-            <span class="text-[14px] text-[#9d9d9d] h-[15px]">Buy confidently with our <span class="text-black">Buyer Protection</span></span>
-            {% render 'icon-info' %}
+                </script>
+            </form>
         </div>
-        <div class="tooltip buyer-protection-tooltip p-[20px]">
-            <p class="text-[16px] mb-[20px] font-bold">Untitled Gallery Buyer's Protection:</p>
-            <div class="grid grid-cols-10 gap-[12px] items-center">
-                <div class="col-span-1">{% render 'icon-shield' %}</div>
-                <div class="col-span-9">
-                    <p class="text-[14px] sfMono h-[15px]">Your payment is safe</p>
-                </div>
-                <div class="col-span-1">{% render 'icon-zoom' %}</div>
-                <div class="col-span-9">
-                    <p class="text-[14px] h-[15px]">All works are quality checked</p>
-                </div>
-                <div class="col-span-1">{% render 'icon-check' %}</div>
-                <div class="col-span-9">
-                    <p class="text-[14px] h-[15px]">All artists are verified</p>
+        <div class="mt-[16px] relative">
+            <div class="flex gap-[12px] items-center buyer-protection-info">
+                {% render 'icon-warning' %} 
+                <span class="text-[14px] text-[#9d9d9d] h-[15px]">Buy confidently with our <span class="text-black">Buyer Protection</span></span>
+                {% render 'icon-info' %}
+            </div>
+            <div class="tooltip buyer-protection-tooltip p-[20px]">
+                <p class="text-[16px] mb-[20px] font-bold">Untitled Gallery Buyer's Protection:</p>
+                <div class="grid grid-cols-10 gap-[12px] items-center">
+                    <div class="col-span-1">{% render 'icon-shield' %}</div>
+                    <div class="col-span-9">
+                        <p class="text-[14px] sfMono h-[15px]">Your payment is safe</p>
+                    </div>
+                    <div class="col-span-1">{% render 'icon-zoom' %}</div>
+                    <div class="col-span-9">
+                        <p class="text-[14px] h-[15px]">All works are quality checked</p>
+                    </div>
+                    <div class="col-span-1">{% render 'icon-check' %}</div>
+                    <div class="col-span-9">
+                        <p class="text-[14px] h-[15px]">All artists are verified</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 </div>
