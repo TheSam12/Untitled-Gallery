@@ -56,6 +56,11 @@
             "show_gift_card_recipient": false
           }
         },
+        "sold_out_badge_rcTzqC": {
+          "type": "sold_out_badge",
+          "settings": {
+          }
+        },
         "bidamount_PyykA7": {
           "type": "bidamount",
           "settings": {
@@ -103,6 +108,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "sold_out_badge_rcTzqC",
         "bidamount_PyykA7",
         "49ed2513-193b-4cfd-a5e6-8f0699ddf132",
         "bf8fd03c-4b65-4821-8ecb-56eb4bb59d4f",
