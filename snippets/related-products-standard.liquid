@@ -8,9 +8,6 @@
   if product.available
     assign sold_out = false
   endif
-  assign current_date = 'now' | date: '%s'
-  assign upcoming_date = product.metafields.custom.livestreaming.value.start_time | date: '%s'
-  assign close_date = product.metafields.custom.livestreaming.value.end_time | date: '%s'
 
   assign show_sale_badge = settings.product_grid_show_sale_badge
   assign show_sold_out_badge = settings.product_grid_show_sold_out_badge
@@ -290,16 +287,16 @@
           <span class="sr-only">{{ product.title }}</span>
         </a>
       {% endif %}
-      <div class="{{ title_class }} break-word p-[13px]">
+      <div class="{{ title_class }} break-word p-[13px] flex flex-col-reverse">
         <div class="">
           <p
             aria-hidden="true"
-            class="neueSwift text-[14px] text-[#9d9d9d]"
+            class="neueSwift text-[14px] text-[#9d9d9d] mt-[5px]"
           >
             {{ product.title }}
           </p>
         </div>
-        <p class="sfMono text-[14px] mt-[5px]">{{ product.metafields.custom.artist.value.name }}</p>
+        <p class="sfMono text-[14px]">{{ product.metafields.custom.artist.value.name }}</p>
       </div>
       <div class="{{ price_class }}">
         {% if sold_out %}
