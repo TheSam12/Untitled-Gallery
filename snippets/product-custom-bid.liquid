@@ -4,7 +4,7 @@
  %}
 <div class="my-[20px]">
     <div>
-        <p class="text-[14px] uppercase text-[#9d9d9d] flex gap-2 items-center"><span>Starting bid</span><span>{% render 'icon-info' %}</span></p>
+        <p class="text-[14px] uppercase text-[#9d9d9d] flex gap-2 items-center"><span>Starting bid</span><span class="cursor-pointer">{% render 'icon-info' %}</span></p>
         <h3 class="text-[43px] neueSwift" id="bidAmount">{{ 100 | money_without_trailing_zeros }}</h3>
         <p class="text-[14px] text-[#9d9d9d]">Reserve price not met</p>
     </div>
