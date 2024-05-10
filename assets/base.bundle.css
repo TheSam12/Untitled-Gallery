@@ -5604,7 +5604,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   display: none;
 }
 
-.icon-info:hover +.tooltip {
+.icon-info:hover +.tooltip,
+.tooltip:hover {
   display: block;
 }
 
