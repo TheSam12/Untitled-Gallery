@@ -25,7 +25,10 @@
                 </div>
             </div>
             <input type="text" id="custom-num" placeholder="£5 or up" class="w-full border-solid border py-[10px] px-[12px] mb-[8px] border-[#9d9d9d]">
-            <button id="updateBid">Update</button>
+            <div class="flex justify-between">
+                <button id="placeBid" class="border w-full">Place bid</button>
+                <button id="maxBid" class="border w-full">Set max bid</button>
+            </div>
             
             <script>
                 const radioInputs = document.querySelectorAll('bidNumbers');
