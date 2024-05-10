@@ -9,7 +9,7 @@
     assign current_variant = product.selected_or_first_available_variant
   endunless
 -%}
-{% if product.available %}
+{% if product.selected_or_first_available_variant.available == true %}
   <div
     {% if settings.cart_type == 'drawer' %}
       x-data="ProductForm"

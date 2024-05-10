@@ -1,7 +1,7 @@
 {%- liquid
   assign option_style_setting = option_style
 -%}
-{% if product.available %}
+{% if product.selected_or_first_available_variant.available == true %}
   <div
     {% if block %}
       {{- block.shopify_attributes -}}
