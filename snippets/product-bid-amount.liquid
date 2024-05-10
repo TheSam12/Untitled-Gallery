@@ -2,24 +2,22 @@
 <div class="relative">
     <div class="flex justify-between">
         <p class="text-[14px] sfMono text-[#e5e7eb] uppercase">bid history</p>
-        <a id="seeAllBidHistory" class="text-[14px] see-all-bid cursor-pointer" @click="openModal()">See all</a>
+        <a id="seeAllBidHistory" class="text-[14px] see-all-bid cursor-pointer">See all</a>
     </div>
     <hr class="h-1 mt-[10px]"/>
-    <div x-data="{ isOpen: false }" class="bid-history-modal">
+    <div id="historyModal" class="bid-history-modal">
         <div class="bid-history-modal-content">
-            <span class="cerrar" @click="isOpen = false">&times;</span>
+            <span class="cerrar">&times;</span>
             <h2>Ventana modal</h2>
             <p>Esto es el texto de la ventana</p>
         </div>
     </div>
 </div>
 <script>
-    document.addEventListener('alpine:init', () => {
-      Alpine.data('modal', () => ({
-        isOpen: false,
-        openModal() {
-          this.isOpen = true;
-        }
-      }));
+    const modal = document.getElementById('historyModal');
+    const seeAllBidHistory = document.getElementById('seeAllBidHistory');
+
+    seeAllBidHistory.addEventListener('click', function() {
+        modal.style.display = 'block';
     });
-  </script>
+</script>
