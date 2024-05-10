@@ -5660,3 +5660,16 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 .show-variant-name:hover +.my-description {
   display: block;
 }
+
+.my-description::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%) rotate(225deg);
+  width: 16px;
+  height: 8px;
+  background-color: black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
