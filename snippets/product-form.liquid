@@ -55,7 +55,7 @@
       when 'custom_liquid'
         render 'product-block-custom-liquid', block: block, product: product
       when 'bid'
-        render 'product-custom-bid', block: block, product: product
+        render 'product-custom-bid', block: block, product: product, current_date: current_date, close_date: close_date, upcoming_time: upcoming_time
     endcase
   endfor
 -%}

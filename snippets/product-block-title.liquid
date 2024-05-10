@@ -6,6 +6,15 @@
   endif
 %}
 
+<div>
+  {% if current_date != blank %}
+    {% if upcoming_date > current_date or close_date > current_date %}
+      <p class="px-[8px] py-[3px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex gap-[8px] w-fit mb-[10px] items-center">
+        {% if upcoming_date > current_date %}<span id="countdownTimer">{{ upcoming_date }}</span>{% else %}{% if close_date > current_date %}<span class="redDot"></span>{{ close_date }}{% endif %}{% endif %}
+      </p>
+    {% endif %}
+  {% endif %}
+</div>
 <{{ tag }}
   class="product-title-block font-heading break-word mt-4 text-heading-feature"
   data-product-title
