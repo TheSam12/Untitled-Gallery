@@ -5653,7 +5653,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   white-space: nowrap;
   padding: 10px;
   background-color: black;
-  text-align: center;
+  text-align: center; 
   color: #fff;
 }
 
