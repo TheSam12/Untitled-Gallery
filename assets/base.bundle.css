@@ -5595,14 +5595,23 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 
 .tooltip {
   position: absolute;
-  top: -226px;
-  left: 130px;
   transform: translateX(-50%);
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
   display: none;
   z-index: 10;
+  width: 400px;
+}
+
+.starting-bid-tooltip{
+  top: -226px;
+  left: 130px;
+}
+
+.buyer-protection-tooltip{
+  top: -220px;
+  right: 0px;
 }
 
 .starting-bid-info:hover +.tooltip,
