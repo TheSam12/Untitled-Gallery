@@ -8,8 +8,6 @@
   unless current_variant
     assign current_variant = product.selected_or_first_available_variant
   endunless
-  assign current_date = 'now' | date: '%s'
-  assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
 -%}
 
 <div
@@ -127,6 +125,8 @@
         else
           assign cta_button_classes = quick_buy_button_classes
         endunless
+        assign current_date = 'now' | date: '%s'
+        assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
       -%}
 
       <button
