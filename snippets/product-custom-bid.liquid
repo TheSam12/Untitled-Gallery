@@ -16,23 +16,22 @@
             <script>
                 const radioInputs = document.querySelectorAll('bidNumbers');
                 const customInput = document.getElementById('custom-num');
-                const updateBtn = document.getElementById('updateBid');
                 
-                updateBtn.addEventListener('click', updateRadioValues);
-                
+                customInput.addEventListener('input', updateRadioValues);
+
                 function updateRadioValues() {
                     const customValue = parseInt(customInput.value);
                     if (customValue > radioInputs[radioInputs.length - 1].value) {
-                    const newValues = [];
-                    let currentValue = customValue;
-                    while (newValues.length < radioInputs.length) {
+                        const newValues = [];
+                        let currentValue = customValue;
+                        while (newValues.length < radioInputs.length) {
                         newValues.push(currentValue);
                         currentValue -= 5;
-                    }
-                    newValues.reverse();
-                    radioInputs.forEach((input, index) => {
+                        }
+                        newValues.reverse();
+                        radioInputs.forEach((input, index) => {
                         input.value = newValues[index];
-                    });
+                        });
                     }
                 }
             </script>
