@@ -6,14 +6,16 @@
     </div>
     <div>
         <form>
-            <input type="radio" name="num" value="5" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="firstBid"> 
-            <label for="firstBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">5</label>
-            <input type="radio" name="num" value="10" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="secondBid">
-            <label for="secondBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">10</label>
-            <input type="radio" name="num" value="15" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="thirdBid">
-            <label for="thirdBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">15</label>
-            <input type="radio" name="num" value="20" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="fourthBid"> 
-            <label for="fourthBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">20</label>
+            <div class="flex gap-5">
+                <input type="radio" name="num" value="5" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="firstBid"> 
+                <label for="firstBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">5</label>
+                <input type="radio" name="num" value="10" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="secondBid">
+                <label for="secondBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">10</label>
+                <input type="radio" name="num" value="15" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="thirdBid">
+                <label for="thirdBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">15</label>
+                <input type="radio" name="num" value="20" class="bidNumbers peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0 text-[12px]" id="fourthBid"> 
+                <label for="fourthBid" class="relative select-none block p-2 min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through">20</label>
+            </div>
             <input type="text" id="custom-num" placeholder="Enter a number">
             <button id="updateBid">Update</button>
             
