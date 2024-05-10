@@ -8,6 +8,8 @@
   unless current_variant
     assign current_variant = product.selected_or_first_available_variant
   endunless
+  assign current_date = 'now' | date: '%s'
+  assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
 -%}
 
 <div
@@ -139,7 +141,7 @@
           "
           :disabled="!currentVariantAvailable || loading"
         {% endunless %}
-        {% unless current_variant.available %}
+        {% unless current_variant.available or timer > current_date %}
           disabled="disabled"
         {% endunless %}
       >
