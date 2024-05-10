@@ -29,7 +29,7 @@
                     <label for="fourthBid" class="relative select-none block p-[10px] min-w-9 cursor-pointer rounded-button border-text text-[12px] text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through peer-[.unavailable]:line-through text-[#9d9d9d] peer-checked:text-black {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}">£20</label>
                 </div>
             </div>
-            <input type="text" id="custom-num" placeholder="£5 or up" class="w-full border-solid border py-[10px] px-[12px] mb-[8px] border-[#9d9d9d]" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
+            <input type="text" id="custom-num" placeholder="£5 or up" class="w-full border-solid border py-[10px] px-[12px] mb-[8px] border-[#9d9d9d] {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>
             <div class="flex justify-between gap-[16px]">
                 <button id="placeBid" class="border w-full border-black p-[10px] {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>Place bid</button>
                 <button id="maxBid" class="border w-full border-black p-[10px] bg-black text-white {% if timer > current_date or product.sold_out %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date or product.sold_out %}disabled{% endif %}>Set max bid</button>
