@@ -56,6 +56,11 @@
             "show_gift_card_recipient": false
           }
         },
+        "bidamount_PyykA7": {
+          "type": "bidamount",
+          "settings": {
+          }
+        },
         "49ed2513-193b-4cfd-a5e6-8f0699ddf132": {
           "type": "popup",
           "settings": {
@@ -98,6 +103,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "bidamount_PyykA7",
         "49ed2513-193b-4cfd-a5e6-8f0699ddf132",
         "bf8fd03c-4b65-4821-8ecb-56eb4bb59d4f",
         "56b2d764-03fe-43b6-a318-e1d14e6114d5",
