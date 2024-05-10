@@ -5647,11 +5647,12 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 .my-description {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: -45px;
+  width: 84px;
+  left: -27px;
   white-space: nowrap;
-  padding: 5px;
-  background-color: #333;
+  padding: 10px;
+  background-color: black;
   color: #fff;
 }
 
