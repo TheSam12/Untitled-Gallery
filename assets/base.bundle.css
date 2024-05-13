@@ -5690,6 +5690,10 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   z-index: 40;
 }
 
+.tooltip.buyer-protection-tooltip::after{
+  left:100%;
+}
+
 @keyframes blink {
   0% {
     background-color: #d22f27;
@@ -5716,6 +5720,11 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
     top: -184px;
     right: -104px;
   }
+
+  .tooltip.buyer-protection-tooltip::after{
+    left:50%;
+  }
+
   .tooltip::after {
     content: "";
     position: absolute;
