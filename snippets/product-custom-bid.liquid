@@ -104,10 +104,10 @@
 </div>
 <style>
     .tooltip::after {
-        {% if current_date > timer %}
+        {% if current_date < timer %}
             left: 49%;
         {% endif %}
-        {% if current_date < timer and product.selected_or_first_available_variant.available == true %}
+        {% if current_date > timer and product.selected_or_first_available_variant.available == true %}
             left:48%;
         {% endif %}
     }
