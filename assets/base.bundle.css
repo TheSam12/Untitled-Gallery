@@ -5602,17 +5602,42 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   padding: 10px;
   display: none;
   z-index: 10;
-  width: 435px;
+  width: 100%;
 }
 
 .starting-bid-tooltip{
-  top: -226px;
-  left: 130px;
+  top: -5px;
 }
 
 .buyer-protection-tooltip{
-  top: -184px;
-  right: -104px;
+  top: -5px;
+}
+
+@media screen and (min-width:1024px){
+  .tooltip{
+    width: 435px;
+  }
+  .starting-bid-tooltip{
+    top: -226px;
+    left: 130px;
+  }
+  
+  .buyer-protection-tooltip{
+    top: -184px;
+    right: -104px;
+  }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%) rotate(225deg);
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+  }
 }
 
 .starting-bid-info:hover +.tooltip,
@@ -5634,18 +5659,6 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   content: var(--tw-content);
 }
 
-.tooltip::after {
-  content: "";
-  position: absolute;
-  bottom: -13px;
-  left: 50%;
-  transform: translateX(-50%) rotate(225deg);
-  width: 24px;
-  height: 24px;
-  background-color: #fff;
-  border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-}
 .my-description {
   display: none;
   position: absolute;
