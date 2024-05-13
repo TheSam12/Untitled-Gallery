@@ -110,5 +110,8 @@
         {% if current_date > timer and product.selected_or_first_available_variant.available == true %}
             left:48%;
         {% endif %}
+        {% if current_date > timer and product.selected_or_first_available_variant.available == false %}
+            left:48%;
+        {% endif %}
     }
 </style>
