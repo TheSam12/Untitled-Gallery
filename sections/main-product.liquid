@@ -186,6 +186,12 @@
       data-drag-disabled="{{ has_interactive_media }}"
       {% if product.media.size > 1 %}
         data-slideshow-enabled="true"
+        x-data="
+          Theme_Slideshow({
+            autoplay: false,
+            loop: true, 
+          })
+        "
       {% endif %}
       x-ref="splide"
     >
