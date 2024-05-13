@@ -291,6 +291,26 @@
             -%}
           {% endfor %}
         </ul>
+        <div
+          class="flex splide__arrows col-end-last items-center justify-center gap-[15px] mt-[24px] lg:mt-[30px] text-scheme-text"
+        >
+          <button class="splide__arrow splide__arrow--prev">
+            <span class="sr-only">
+              {{- 'sections.slideshow.previous_slide' | t -}}
+            </span>
+            <span class="block">
+              {% render 'icon-arrow-left-slideshow' %}
+            </span>
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <span class="sr-only">
+              {{- 'sections.slideshow.next_slide' | t -}}
+            </span>
+            <span class="block">
+              {% render 'icon-arrow-right-slideshow' %}
+            </span>
+          </button>
+        </div>
       </div>
       {% assign first_3d_model = models | first %}
       {%- if first_3d_model -%}
