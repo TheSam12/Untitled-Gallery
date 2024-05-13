@@ -47,7 +47,7 @@
     {% endif %}
 
     <div class="splide__track h-[50vh] lg:h-auto">
-      <ul class="splide__list lg:left-[3.5%] relative">
+      <ul class="splide__list lg:left-[3.5%] relative main__slideshow">
         {% for product in collection.products limit: 10 %}
           {%- liquid
             assign height = section.settings.height

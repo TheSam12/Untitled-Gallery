@@ -1633,7 +1633,7 @@ shopify-payment-terms{
 }
 
 @media (min-width:1024px){
-  #splide01 .splide__slide{
+  .main__slideshow .splide__slide{
     width: 95% !important; 
   }
 }
