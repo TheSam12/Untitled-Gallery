@@ -5719,7 +5719,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   .tooltip::after {
     content: "";
     position: absolute;
-    bottom: -13px;
+    bottom: -14px;
     transform: translateX(-50%) rotate(225deg);
     width: 24px;
     height: 24px; 
