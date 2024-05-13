@@ -133,7 +133,6 @@
           id="addToCartButton"
           class="add-to-cart {% if current_date < timer %}opacity-[0.5] cursor-not-allowed{% endif %} w-full px-1 py-4 bg-black text-white sfMono {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_classes }} {% unless current_variant.available %}opacity-50 cursor-not-allowed after:content-none{% endunless %}"
           type="submit"
-          disabled="disabled"
           {% unless quick_buy %}
             :class="
               {
@@ -141,6 +140,7 @@
               }
             "
             :disabled="!currentVariantAvailable || loading"
+            disabled="disabled"
           {% endunless %}
           {% unless current_variant.available %}
             disabled="disabled"
