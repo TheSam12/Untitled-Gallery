@@ -128,7 +128,8 @@
                 {% endfor %}
               </div>
             {%- when 'buttons' -%}
-              <div class="mt-2 flex flex-wrap items-center justify-start{% unless option.name == 'Color' %} -mx-1{% else %} -mx-[calc(theme(spacing.2)_-_1px)]{% endunless %}">
+              <div class="mt-2 flex flex-wrap items-center justify-start{% unless option.name == 'Color' %} -mx-1{% else %} -mx-[calc(theme(spacing.2)_-_1px)]{% endunless %}
+                {% if option.name == 'Color' %} absolute -top-[27px] left-[60px]{% endif %}">
                 {% for value in option.values %}
                   {% liquid
                     assign color_image_url = value | handle | append: '.' | append: 'png' | file_url | prepend: 'https:'
@@ -154,7 +155,6 @@
                         relative select-none block{% unless option.name == 'Color' %} p-2 min-w-9{% else %} p-[1px] rounded-full{% endunless %} cursor-pointer rounded-button border-text text-[12px] {% unless option.name == 'Color' %}border-transparent {% endunless %}text-center peer-checked:border-scheme-text peer-[.sold-out]:line-through
                         peer-[.unavailable]:line-through {% if option.name == 'Color' %}
                         peer-[:not(.sold-out,.unavailable)]:[&>span:first-of-type]:hidden{% endif %} {% if option.name == 'Color' %}show-variant-name{% endif %}
-                        {% if option.name == 'Color' %} absolute -top-[27px] left-[60px]{% endif %}
                       "
                       for="Section-{{ section.id }}-Option{{ option.position }}-{{ value | escape }}"
                       title="{{ option.value }}"
