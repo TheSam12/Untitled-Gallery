@@ -5605,11 +5605,11 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 }
 
 .starting-bid-tooltip{
-  top: -190px;
+  top: -250px;
 }
 
 .buyer-protection-tooltip{
-  top: -190px;
+  top: -150px;
 }
 
 @media screen and (min-width:1024px){
