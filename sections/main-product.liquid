@@ -317,6 +317,9 @@
     <div class="product-block-area py-section-vertical-spacing lg:sticky lg:top-sticky-header {{ section.settings.max_width_of_content }}">
       {%- render 'product-form', section_color: section_color -%}
     </div>
+    <div class="lg:hidden">
+      {% render 'edition-details' %}
+    </div>
   </div>
 
   {% unless product == empty %}
