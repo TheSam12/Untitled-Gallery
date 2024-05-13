@@ -102,3 +102,10 @@
         </div>
     {% endif %}
 </div>
+<style>
+    {% if current_date > timer and product.selected_or_first_available_variant.available == true %}
+        .my-description::after {
+            left:48%
+        }
+    {% endif %}
+</style>
