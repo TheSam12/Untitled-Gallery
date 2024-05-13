@@ -103,13 +103,24 @@
     {% endif %}
 </div>
 <style>
+    @media screen and (min-width:1024px){
+        .tooltip.starting-bid-tooltip::after {
+            {% if current_date < timer %}
+                left: 50%;
+                {% elsif current_date > timer and product.selected_or_first_available_variant.available == true %}
+                    left:48%;
+                    {% else %}
+                     left:48%;
+            {% endif %}
+        }
+    }
     .tooltip.starting-bid-tooltip::after {
         {% if current_date < timer %}
-            left: 50%;
+            left: 35%;
             {% elsif current_date > timer and product.selected_or_first_available_variant.available == true %}
-                left:48%;
+                left:33%;
                 {% else %}
-                 left:48%;
+                 left:33%;
         {% endif %}
     }
 </style>
