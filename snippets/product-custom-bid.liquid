@@ -106,12 +106,10 @@
     .tooltip.starting-bid-tooltip::after {
         {% if current_date < timer %}
             left: 50%;
-        {% endif %}
-        {% if current_date > timer and product.selected_or_first_available_variant.available == true %}
-            left:48%;
-        {% endif %}
-        {% if current_date > timer and product.selected_or_first_available_variant.available == false %}
-            left:48%;
+            {% elsif current_date > timer and product.selected_or_first_available_variant.available == true %}
+                left:48%;
+                {% else %}
+                 left:48%;
         {% endif %}
     }
 </style>
