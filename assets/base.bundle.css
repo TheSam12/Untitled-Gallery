@@ -1621,6 +1621,7 @@ shopify-payment-terms{
   background-color: #d22f27;
   border-radius: 50%;
   display: block;
+  animation: blink 1s infinite;
 }
 
 @media (max-width:1023px){
@@ -5703,4 +5704,16 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 40;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #d22f27;
+  }
+  50% {
+    background-color: #9d9d9d;
+  }
+  100% {
+    background-color: #d22f27;
+  }
 }
