@@ -5718,6 +5718,10 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   }
 }
 
+.product-page__slideshow .splide__pagination{
+  display: none;
+}
+
 @media screen and (min-width:1024px){
   .tooltip{
     width: 435px;
