@@ -5604,6 +5604,18 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   width: 100%;
 }
 
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  transform: translateX(-50%) rotate(225deg);
+  width: 24px;
+  height: 24px; 
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
 .starting-bid-tooltip{
   top: -250px;
 }
@@ -5725,17 +5737,6 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
     left:50%;
   }
 
-  .tooltip::after {
-    content: "";
-    position: absolute;
-    bottom: -13px;
-    transform: translateX(-50%) rotate(225deg);
-    width: 24px;
-    height: 24px; 
-    background-color: #fff;
-    border-left: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-  }
   .bid-history-modal {
     top:30%;
     left: 35%;
