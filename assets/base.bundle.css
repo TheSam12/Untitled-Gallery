@@ -5612,34 +5612,6 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   top: -190px; 
 }
 
-@media screen and (min-width:1024px){
-  .tooltip{
-    width: 435px;
-    transform: translateX(-50%);
-  }
-  .starting-bid-tooltip{
-    top: -226px;
-    left: 130px;
-  }
-  
-  .buyer-protection-tooltip{
-    top: -184px;
-    right: -104px;
-  }
-  .tooltip::after {
-    content: "";
-    position: absolute;
-    bottom: -13px;
-    left: 50%;
-    transform: translateX(-50%) rotate(225deg);
-    width: 24px;
-    height: 24px;
-    background-color: #fff;
-    border-left: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-  }
-}
-
 .starting-bid-info:hover +.tooltip,
 .buyer-protection-info:hover +.tooltip,
 .tooltip:hover {
@@ -5692,11 +5664,10 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 .bid-history-modal {
   display: none;
   position: fixed;
-  top:30%;
-  left: 35%;
+  top:10%;
   z-index: 50;
-  width:560px;
-  height:400px;
+  width: 97%;
+  height:250px;
   overflow-y: scroll;
 }
 
@@ -5728,5 +5699,39 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   }
   100% {
     background-color: #d22f27;
+  }
+}
+
+@media screen and (min-width:1024px){
+  .tooltip{
+    width: 435px;
+    transform: translateX(-50%);
+  }
+  .starting-bid-tooltip{
+    top: -226px;
+    left: 130px;
+  }
+  
+  .buyer-protection-tooltip{
+    top: -184px;
+    right: -104px;
+  }
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%) rotate(225deg);
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+  }
+  .bid-history-modal {
+    top:30%;
+    left: 35%;
+    width:560px;
+    height:400px;
   }
 }
