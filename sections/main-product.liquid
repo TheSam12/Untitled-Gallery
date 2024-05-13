@@ -306,31 +306,8 @@
         </div>
       {%- endif -%}
     </div>
-    <div class="pt-[32px] px-[14px]">
-      <h2 class="neueSwift text-[43px] capitalize pb-[20px] text-[#030303]">Edition Details</h2>
-      <div class="grid grid-cols-3 gap-5">
-        <div class="col-span-2">
-          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Dimensions</h4>
-          {% assign details_dimensions = product.metafields.custom.edition_details.value.dimensions %}
-          {% assign dimensions = details_dimensions | split: "." %}
-          <p class="sfMono text-[12px]">{{ dimensions | slice: 0, 1 }}</p>
-          <p class="sfMono text-[12px]">{{ dimensions | slice: 1, 1 }}</p>
-          <p class="sfMono text-[12px] mb-[20px]">{{ dimensions | slice: 2, 1 }}</p>
-          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Medium</h4>
-          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.sizes }}</p>
-          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Finishing</h4>
-          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.finishing }}</p>
-        </div>
-        <div class="col-span-1">
-          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Release Date</h4>
-          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.release_date | date }}</p>
-          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Artist</h4>
-          <div class="flex gap-3 items-center">
-            <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full">
-            <p class="sfMono text-[12px]">{{ product.metafields.custom.artist.value.name }}</p>
-          </div>
-        </div>
-      </div>
+    <div class="hidden lg:block">
+     {% render 'edition-details' %}
     </div>
   </div>
 
