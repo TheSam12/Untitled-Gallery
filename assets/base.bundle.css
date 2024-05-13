@@ -5722,7 +5722,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
     bottom: -13px;
     transform: translateX(-50%) rotate(225deg);
     width: 24px;
-    height: 24px;
+    height: 24px; 
     background-color: #fff;
     border-left: 1px solid #ccc;
     border-top: 1px solid #ccc;
