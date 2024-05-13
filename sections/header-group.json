@@ -15,7 +15,7 @@
         "header_vertical_spacing": "py-4",
         "show_search": false,
         "sticky_header": false,
-        "show_icons": true,
+        "show_icons": false,
         "show_all_navigation_links": false,
         "dropdown_heading_font": "font-body",
         "dropdown_text_align": "text-left",
