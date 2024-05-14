@@ -1,6 +1,6 @@
 <div class="pt-[32px] lg:px-[14px]">
     <h2 class="neueSwift text-[43px] capitalize pb-[20px] text-[#030303]">Edition Details</h2>
-    <div class="lg:grid {% if livestreamingOn == 'on' %}lg:grid-cols-2{% else %}lg:grid-cols-11{% endif %} lg:gap-5">
+    <div class="lg:grid {% if livestreamingOn == 'on' %}lg:grid-cols-2 lg:gap-[24px]{% else %}lg:grid-cols-11 lg:gap-5{% endif %}">
       <div class="{% if livestreamingOn == 'on' %}{% else %}lg:col-span-6{% endif %}">
         <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Dimensions</h4>
         {% assign details_dimensions = product.metafields.custom.edition_details.value.dimensions %}
