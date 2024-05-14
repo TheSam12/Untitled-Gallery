@@ -122,19 +122,30 @@
       {{ product.description }}
     </div>
     <button id="readMoreButton" style="display:none" class="font-bold">Read More</button>
+    <button id="readLessButton" style="display:none" class="font-bold">Read Less</button>
   </div>
 {%- endif -%}
-<script>
 
+<script>
   const myParagraph = document.getElementById('productDesc');
   const readMoreButton = document.getElementById('readMoreButton');
-  
+  const readLessButton = document.getElementById('readLessButton');
+
   readMoreButton.addEventListener('click', () => {
     myParagraph.classList.remove('line-clamp');
     readMoreButton.style.display = 'none';
+    readLessButton.style.display = 'block';
   });
-  
+
+  readLessButton.addEventListener('click', () => {
+    myParagraph.classList.add('line-clamp');
+    readMoreButton.style.display = 'block';
+    readLessButton.style.display = 'none';
+  });
+
   if (myParagraph.scrollHeight > myParagraph.offsetHeight) {
     readMoreButton.style.display = 'block';
+  } else {
+    readLessButton.style.display = 'none';
   }
-  </script>
+</script>
