@@ -143,12 +143,13 @@
       assign variant_media_ids_array = variant_media_ids | split: ','
     endfor
   endif
+  assign livestreamingOn = product.metafields.custom.livestreaming.value.status
 
   assign complementary_products_block = section.blocks | where: 'type', 'complementary' | first
 -%}
 
 <section
-  class="grid grid-flow-row-dense grid-cols-1 border-b-gridline border-gridline-color lg:grid-cols-12 lg:gap-gutter lg:bg-gridline-color [&:not(:has(.product-media-container):has(.product-content-container))]:lg:bg-scheme-background"
+  class="grid grid-flow-row-dense grid-cols-1 border-b-gridline border-gridline-color {% if livestreamingOn == 'on' %}lg:grid-cols-3{% else %}lg:grid-cols-12{% endif %} lg:gap-gutter lg:bg-gridline-color [&:not(:has(.product-media-container):has(.product-content-container))]:lg:bg-scheme-background"
   id="{{ section.id }}"
   x-data="
     Theme_Product({
@@ -178,169 +179,206 @@
     endfor
   -%}
   <div
-    class="relative {% if product.media.size > 1 %}pb-7{% endif %} product-media-container bg-scheme-background text-scheme-text lg:pb-0 {{ media_width_desktop }} {% unless settings.fill_image_to_border_edge %}border-b-gridline border-gridline-color lg:border-0{% endunless %}"
+    class="relative {% if product.media.size > 1 %}pb-7{% endif %} product-media-container bg-scheme-background text-scheme-text lg:pb-0 {% if livestreamingOn == 'on' %}lg:col-span-2{% else %}{{ media_width_desktop }}{% endif %} {% unless settings.fill_image_to_border_edge %}border-b-gridline border-gridline-color lg:border-0{% endunless %}"
     data-product-media-container
   >
-    <div
-      class="splide splide--product lg:!sticky lg:top-sticky-header-less-gridline {% if negative_margin %}lg:-mb-gridline{% endif %} product-page__slideshow"
-      data-drag-disabled="{{ has_interactive_media }}"
-      {% if product.media.size > 1 %}
-        data-slideshow-enabled="true"
-        x-data="
-          Theme_Slideshow({
-            autoplay: false,
-            loop: false, 
-          })
-        "
-      {% endif %}
-      x-ref="splide"
-    >
-      <div class="transition-[max-height] splide__track{% if settings.fill_image_to_border_edge %} max-lg:border-b-gridline border-gridline-color{% endif %}{% unless settings.fill_image_to_border_edge %} lg:p-4{% endunless %}{% if negative_margin %} lg:border-b-gridline{% endif %}">
-        <ul
-          id="media-list-{{ product.id }}-{{ section.id }}"
-          class="
-            splide__list lg:w-full lg:grid{% if two_media_per_row and product.media.size > 1 %} lg:grid-cols-2{% else %} lg:grid-cols-1{% endif %}{% if settings.fill_image_to_border_edge %} lg:gap-gutter lg:bg-gridline-color{% else %} lg:gap-4{% endif %}
-            {% unless single_variant_mode %}
-              {% if left_over > 0 or first_media_full_width %}
-                [&>li:first-child]:col-span-2
-              {% endif %}
-              {% if last_media_full_width %}
-                [&>li:last-child]:col-span-2
-              {% endif %}
-            {% else %}
-              opacity-0
-            {% endunless %}
+    {% if livestreamingOn == 'on' %}
+      <div class="lg:grid-cols-2 lg:grid relative lg:gap-[24px]">
+        <div class="relative">
+          <img src="{{ 'live-placeholder.jpg' | asset_url }}" alt="" width="456" height="688" class="w-full">
+          <div class="absolute top-[24px] flex justify-center">
+            <div>
+              <p class="flex gap-[8px] mb-[12px] text-white uppercase sfMono text-[14px]">
+                <span class="redDot"></span><span>live</span>
+              </p>
+              <p class="text-white text-[12px] sfMono">612 watching</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-col flex justify-end">
+          <div>
+            <p class="mb-[12px] text-[14px] sfMono">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
+            <p class="mb-[12px] text-[14px] sfMono">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
+            <p class="mb-[12px] text-[14px] sfMono">🚀 Bidder 1206 raised to $590</p>
+            <p class="mb-[12px] text-[14px] sfMono">🚀 Bidder 1206 raised to $590</p>
+            <p class="mb-[12px] text-[14px] sfMono">📦 Untitled Edition is on it's way to United Kingdom</p>
+            <p class="mb-[12px] text-[14px] sfMono">📦 Untitled Edition is on it's way to United Kingdom</p>
+            <p class="mb-[12px] text-[14px] sfMono">📦 Untitled Edition is on it's way to United Kingdom</p>
+            <p class="mb-[12px] text-[14px] sfMono">📦 Untitled Edition is on it's way to United Kingdom</p>
+            <p class="mb-[12px] text-[14px] sfMono">👋 Bidder 0357 joins the live stream</p>
+            <p class="mb-[12px] text-[14px] sfMono">👋 Bidder 0357 joins the live stream</p>
+            <p class="mb-[12px] text-[14px] sfMono">🚀 Bidder 2819 raised to $600</p>
+            <p class="mb-[12px] text-[14px] sfMono">🚀 Bidder 2819 raised to $600</p>
+            <p class="text-[14px] sfMono">🚀 Bidder 2819 raised to $600</p>
+          </div>
+          <div class="relative">
+            <input type="text" placeholder="Write a message" class="w-full px-[12px] py-[6px] z-1">
+            <button class="absolute right-[12px] bottom-[6px] bg-black h-[32px] w-[32px] z-10">{% render 'icon-send' %}</button>
+          </div>
+        </div>
+      </div>
+      {% else %}
+      <div
+        class="splide splide--product lg:!sticky lg:top-sticky-header-less-gridline {% if negative_margin %}lg:-mb-gridline{% endif %} product-page__slideshow"
+        data-drag-disabled="{{ has_interactive_media }}"
+        {% if product.media.size > 1 %}
+          data-slideshow-enabled="true"
+          x-data="
+            Theme_Slideshow({
+              autoplay: false,
+              loop: false, 
+            })
           "
-          {% if single_variant_mode %}
-            :class="{ 'opacity-100' : true }"
-          {% endif %}
-          x-ref="mediaList"
-        >
-          {% for media_id_string in media_ids_array %}
-            {%- liquid
-              assign media_id = media_id_string | plus: 0
-              assign media = product.media | where: 'id', media_id | first
+        {% endif %}
+        x-ref="splide"
+      >
+        <div class="transition-[max-height] splide__track{% if settings.fill_image_to_border_edge %} max-lg:border-b-gridline border-gridline-color{% endif %}{% unless settings.fill_image_to_border_edge %} lg:p-4{% endunless %}{% if negative_margin %} lg:border-b-gridline{% endif %}">
+          <ul
+            id="media-list-{{ product.id }}-{{ section.id }}"
+            class="
+              splide__list lg:w-full lg:grid{% if two_media_per_row and product.media.size > 1 %} lg:grid-cols-2{% else %} lg:grid-cols-1{% endif %}{% if settings.fill_image_to_border_edge %} lg:gap-gutter lg:bg-gridline-color{% else %} lg:gap-4{% endif %}
+              {% unless single_variant_mode %}
+                {% if left_over > 0 or first_media_full_width %}
+                  [&>li:first-child]:col-span-2
+                {% endif %}
+                {% if last_media_full_width %}
+                  [&>li:last-child]:col-span-2
+                {% endif %}
+              {% else %}
+                opacity-0
+              {% endunless %}
+            "
+            {% if single_variant_mode %}
+              :class="{ 'opacity-100' : true }"
+            {% endif %}
+            x-ref="mediaList"
+          >
+            {% for media_id_string in media_ids_array %}
+              {%- liquid
+                assign media_id = media_id_string | plus: 0
+                assign media = product.media | where: 'id', media_id | first
 
-              assign loading = 'lazy'
+                assign loading = 'lazy'
 
-              if forloop.index <= 3 and section.index <= 3
-                assign loading = 'eager'
-              endif
-
-              if enable_variant_media or single_variant_mode
-                if forloop.first
-                  assign non_variant_media = true
-                  assign media_group_id = media.id
+                if forloop.index <= 3 and section.index <= 3
+                  assign loading = 'eager'
                 endif
 
-                if variant_media_ids_array contains media_id_string
-                  assign media_group_id = media.id
-                  assign non_variant_media = false
-                else
-                  if single_variant_mode and enable_variant_media == false and non_variant_media == false
-                    assign media_group_id = null
+                if enable_variant_media or single_variant_mode
+                  if forloop.first
+                    assign non_variant_media = true
+                    assign media_group_id = media.id
+                  endif
+
+                  if variant_media_ids_array contains media_id_string
+                    assign media_group_id = media.id
+                    assign non_variant_media = false
+                  else
+                    if single_variant_mode and enable_variant_media == false and non_variant_media == false
+                      assign media_group_id = null
+                    endif
                   endif
                 endif
-              endif
 
-              unless enable_variant_media or single_variant_mode
-                if forloop.first
-                  assign sizes = first_media_sizes
+                unless enable_variant_media or single_variant_mode
+                  if forloop.first
+                    assign sizes = first_media_sizes
+                  else
+                    assign sizes = remaining_media_sizes
+                  endif
                 else
-                  assign sizes = remaining_media_sizes
-                endif
-              else
-                assign sizes = first_media_sizes
-              endunless
-            -%}
-            <li
-              class="splide__slide bg-scheme-background{% unless forloop.first %} max-lg:[.splide:not(.is-active)_&]:hidden{% endunless %}"
-              data-index="{{ forloop.index0 }}"
-              data-order="{{ forloop.index }}"
-              {% if enable_variant_media or single_variant_mode %}
-                {% if media_group_id %}
-                  data-media-group-id="{{ media_group_id }}"
+                  assign sizes = first_media_sizes
+                endunless
+              -%}
+              <li
+                class="splide__slide bg-scheme-background{% unless forloop.first %} max-lg:[.splide:not(.is-active)_&]:hidden{% endunless %}"
+                data-index="{{ forloop.index0 }}"
+                data-order="{{ forloop.index }}"
+                {% if enable_variant_media or single_variant_mode %}
+                  {% if media_group_id %}
+                    data-media-group-id="{{ media_group_id }}"
+                  {% endif %}
                 {% endif %}
-              {% endif %}
-              {% if single_variant_mode %}
-                x-show="isMaxLgBreakpoint{% if media_group_id %} || currentMediaId === {{ media_group_id }}{% endif %}"
-                {% if two_media_per_row %}
-                  :class="{ 'col-span-2' : shouldBeFullWidth() }"
+                {% if single_variant_mode %}
+                  x-show="isMaxLgBreakpoint{% if media_group_id %} || currentMediaId === {{ media_group_id }}{% endif %}"
+                  {% if two_media_per_row %}
+                    :class="{ 'col-span-2' : shouldBeFullWidth() }"
+                  {% endif %}
                 {% endif %}
-              {% endif %}
-            >
-              {% if upcoming_date > current_date %}
-                <img src="{{ 'upcoming-image.jpg' | asset_url }}" width="3000" height="unset" class="peer/image h-full">
-                {% else %}
-                {%-
-                  render 'product-media',
-                  media: media,
-                  sizes: sizes,
-                  image_index: image_index,
-                  scroll_to: media_scroll_to,
-                  enable_video_looping: enable_video_looping,
-                  loading: loading,
-                -%}
-              {% endif %}
-            </li>
+              >
+                {% if upcoming_date > current_date %}
+                  <img src="{{ 'upcoming-image.jpg' | asset_url }}" width="3000" height="unset" class="peer/image h-full">
+                  {% else %}
+                  {%-
+                    render 'product-media',
+                    media: media,
+                    sizes: sizes,
+                    image_index: image_index,
+                    scroll_to: media_scroll_to,
+                    enable_video_looping: enable_video_looping,
+                    loading: loading,
+                  -%}
+                {% endif %}
+              </li>
 
-            {%- liquid
-              if media.media_type == 'image'
-                assign image_index = image_index | plus: 1
-              endif
-            -%}
-          {% endfor %}
-        </ul>
-        {% if product.media.size > 1 %}
-          <div
-            class="flex splide__arrows col-end-last items-center justify-center gap-[15px] mt-[24px] lg:mt-[30px] text-scheme-text"
-          >
-            <button class="splide__arrow splide__arrow--prev">
-              <span class="sr-only">
-                {{- 'sections.slideshow.previous_slide' | t -}}
-              </span>
-              <span class="block">
-                {% render 'icon-arrow-left-slideshow' %}
-              </span>
-            </button>
-            <button class="splide__arrow splide__arrow--next">
-              <span class="sr-only">
-                {{- 'sections.slideshow.next_slide' | t -}}
-              </span>
-              <span class="block">
-                {% render 'icon-arrow-right-slideshow' %}
+              {%- liquid
+                if media.media_type == 'image'
+                  assign image_index = image_index | plus: 1
+                endif
+              -%}
+            {% endfor %}
+          </ul>
+          {% if product.media.size > 1 %}
+            <div
+              class="flex splide__arrows col-end-last items-center justify-center gap-[15px] mt-[24px] lg:mt-[30px] text-scheme-text"
+            >
+              <button class="splide__arrow splide__arrow--prev">
+                <span class="sr-only">
+                  {{- 'sections.slideshow.previous_slide' | t -}}
+                </span>
+                <span class="block">
+                  {% render 'icon-arrow-left-slideshow' %}
+                </span>
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <span class="sr-only">
+                  {{- 'sections.slideshow.next_slide' | t -}}
+                </span>
+                <span class="block">
+                  {% render 'icon-arrow-right-slideshow' %}
+                </span>
+              </button>
+            </div>
+        {% endif %}
+        </div>
+        {% assign first_3d_model = models | first %}
+        {%- if first_3d_model -%}
+          <div class="px-section-horizontal-spacing text-center">
+            <button
+              aria-label="{{ 'products.product.view_in_space_label' | t }}"
+              class="product-single__view-in-space mb-2 mt-4 w-full max-w-sm border-text border-scheme-text py-2 pl-2 pr-4 text-center lg:my-4"
+              data-shopify-xr
+              data-shopify-model3d-id="{{ first_3d_model.id }}"
+              data-shopify-title="{{ product.title }}"
+              data-shopify-xr-hidden
+            >
+              <span class="inline-block w-6 align-middle">
+                {%- render 'icon-3d-model' -%}</span
+              ><span class="text-sm">
+                {{- 'products.product.view_in_space' | t -}}
               </span>
             </button>
           </div>
-      {% endif %}
+        {%- endif -%}
       </div>
-      {% assign first_3d_model = models | first %}
-      {%- if first_3d_model -%}
-        <div class="px-section-horizontal-spacing text-center">
-          <button
-            aria-label="{{ 'products.product.view_in_space_label' | t }}"
-            class="product-single__view-in-space mb-2 mt-4 w-full max-w-sm border-text border-scheme-text py-2 pl-2 pr-4 text-center lg:my-4"
-            data-shopify-xr
-            data-shopify-model3d-id="{{ first_3d_model.id }}"
-            data-shopify-title="{{ product.title }}"
-            data-shopify-xr-hidden
-          >
-            <span class="inline-block w-6 align-middle">
-              {%- render 'icon-3d-model' -%}</span
-            ><span class="text-sm">
-              {{- 'products.product.view_in_space' | t -}}
-            </span>
-          </button>
-        </div>
-      {%- endif -%}
-    </div>
+    {% endif %}
     <div class="hidden lg:block">
      {% render 'edition-details' %}
     </div>
   </div>
 
   <div
-    class="product-content-container bg-scheme-background px-section-horizontal-spacing text-scheme-text {{ content_width_desktop }}"
+    class="product-content-container bg-scheme-background px-section-horizontal-spacing text-scheme-text {% if livestreamingOn == 'on' %}lg:col-span-1{% else %}{{ content_width_desktop }}{% endif %}"
   >
     <div class="product-block-area py-section-vertical-spacing lg:sticky lg:top-sticky-header {{ section.settings.max_width_of_content }}">
       {%- render 'product-form', section_color: section_color -%}
