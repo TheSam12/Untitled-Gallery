@@ -5734,3 +5734,23 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
     width:560px;
   }
 }
+
+.selector-chat {
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+.selector-chat::before {
+  content: "";
+  display: block;
+  padding-top: 15px;
+  background: inherit;
+  filter: blur(10px);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+}
