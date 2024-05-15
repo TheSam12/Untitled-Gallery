@@ -184,7 +184,9 @@
     data-product-media-container
   >
     {% if livestreamingOn == 'on' %}
-      {% render 'livestreaming-media' %}
+      {% render 'livestreaming-media' 
+        close_date: close_date
+      %}
       {% else %}
       <div
         class="splide splide--product lg:!sticky lg:top-sticky-header-less-gridline {% if negative_margin %}lg:-mb-gridline{% endif %} product-page__slideshow"
