@@ -5720,8 +5720,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   }
   
   .buyer-protection-tooltip{
-    top: -203px;
-    right: -411px;
+    top: -184px;
+    left: 411px;
   }
 
   .tooltip.buyer-protection-tooltip::after{
