@@ -3,16 +3,20 @@
  %}
 {% if show-bid == false %}
     <div class="my-8">
-      <p class="text-[14px] uppercase text-[#9d9d9d] mb-[14px]">original product price</p>
-      <h2 class="text-[43px] neueSwift mb-[14px]">{{ product.price | money_without_trailing_zeros }}</h2>
-      <div x-data="ProductForm">
-          {% form 'product', product, id: product_form_id %}
-              {{ form | payment_terms }}
-              <input type="hidden" name="id" value="{{ product.first_available_variant.id }}">
-              <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono" type="submit">
-                  Buy the original version now {{ product.first_available_variant.id }}
-              </button>
-          {% endform %}
-      </div>
+        {% for variant in product.variants -%}
+            {% if variant.option2 == 'Original' %}
+                <p class="text-[14px] uppercase text-[#9d9d9d] mb-[14px]">original product price</p>
+                <h2 class="text-[43px] neueSwift mb-[14px]">{{ variant.price | money_without_trailing_zeros }}</h2>
+                <div x-data="ProductForm">
+                    {% form 'product', product, id: product_form_id %}
+                        {{ form | payment_terms }}
+                        <input type="hidden" name="id" value="{{ variant.id }}">
+                        <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono" type="submit">
+                            Buy the original version now
+                        </button>
+                    {% endform %}
+                </div>
+            {% endif %}
+        {%- endfor %}
     </div>
 {% endif %}
