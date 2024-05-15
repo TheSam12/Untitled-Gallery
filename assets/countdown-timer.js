@@ -15,7 +15,7 @@ function updateCountdown(date, element) {
   const diffMins = Math.floor((diffMs % 3600000) / 60000); // minutes
   const diffSecs = Math.floor((diffMs % 60000) / 1000); // seconds
 
-  element.innerHTML = `Starts in ${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
+  element.innerHTML = `${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
 
   if (diffMs < 0) {
     clearInterval(intervalId);
@@ -40,7 +40,7 @@ function updateCountdownCloses(date, element) {
   const diffMins = Math.floor((diffMs % 3600000) / 60000); // minutes
   const diffSecs = Math.floor((diffMs % 60000) / 1000); // seconds
 
-  element.innerHTML = `Closes in ${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
+  element.innerHTML = `${diffDays}d ${diffHrs}h ${diffMins}m ${diffSecs}s`;
 
   if (diffMs < 0) {
     clearInterval(intervalId);

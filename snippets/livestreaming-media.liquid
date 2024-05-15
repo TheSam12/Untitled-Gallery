@@ -27,7 +27,7 @@
                     <img src="{{ product.featured_image | image_url }}" width="" height="" class="w-[60px] h-[60px]"/>
                     <div class="bg-white px-[8px] py-[6px] flex flex-col justify-between">
                         <h2 class="text-[20px] neueSwift uppercase">{{ product.title }} <span class="opacity-[0.7] text-[14px] sfMono">{{ 100 | money_without_trailing_zeros }}</span> <span class="uppercase text-[6px] sfMono text-[#9d9d9d]">current bid</span></h2>  
-                        <p class="flex gap-[8px]"><span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span></p>
+                        <p class="flex gap-[8px]"><span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span>Closes in </span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span></p>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-[12px] mb-[12px]">
