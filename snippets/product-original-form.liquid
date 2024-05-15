@@ -3,10 +3,12 @@
  %}
 {% if show-bid == false %}
     {% for variant in product.variants %}
-        {% if variant.option1 == "Version" and variant.option2 == "Original" %}
-            <div>
-                {{ variant.price | money_without_trailing_zeros }}
-            </div>
-        {% endif %}
+        {% for option in variant.options %}
+            {% if option.name == 'Original' %}
+                <div>
+                    {{ option.price | money_without_trailing_zeros }}
+                </div>
+            {% endif %}
+        {% endfor %}
       {% endfor %}
 {% endif %}
