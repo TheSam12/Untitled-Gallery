@@ -157,7 +157,7 @@
               <span>
                 <template x-if="currentVariantAvailable">
                   <span>
-                    Buy the edition from {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+                    Buy the edition from {{ product.selected_variant.price | money_without_trailing_zeros }}
                   </span>
                 </template>
                 <template x-if="!currentVariantAvailable">
