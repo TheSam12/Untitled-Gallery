@@ -2,6 +2,23 @@
   "type": "header",
   "name": "Header",
   "sections": {
+    "announcement_bar_jwMLDh": {
+      "type": "announcement-bar",
+      "settings": {
+        "home_page_only": false,
+        "hide_on_mobile": false,
+        "display": "static",
+        "text": "Live now with Felipe Pantone, join now!",
+        "link": "",
+        "speed": 180,
+        "direction": "normal",
+        "repeat_text": true,
+        "separator": "none",
+        "separator_repeats": 1,
+        "spacing_between_repeated_separators": "",
+        "color_scheme": ""
+      }
+    },
     "header": {
       "type": "header",
       "custom_css": [
@@ -29,6 +46,7 @@
     }
   },
   "order": [
+    "announcement_bar_jwMLDh",
     "header"
   ]
 }
