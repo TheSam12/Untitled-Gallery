@@ -150,7 +150,7 @@
 -%}
 
 <section
-  class="grid grid-flow-row-dense grid-cols-1 border-b-gridline border-gridline-color {% if livestreamingOn == 'on' %}lg:grid-cols-3{% else %}lg:grid-cols-12{% endif %} lg:gap-gutter lg:bg-gridline-color [&:not(:has(.product-media-container):has(.product-content-container))]:lg:bg-scheme-background"
+  class="grid grid-flow-row-dense grid-cols-1 border-b-gridline border-gridline-color lg:grid-cols-12 lg:gap-gutter lg:bg-gridline-color [&:not(:has(.product-media-container):has(.product-content-container))]:lg:bg-scheme-background"
   id="{{ section.id }}"
   x-data="
     Theme_Product({
