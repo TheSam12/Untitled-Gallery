@@ -420,7 +420,7 @@
   <div
     class="product-content-container bg-scheme-background px-section-horizontal-spacing text-scheme-text {% if livestreamingOn == 'on' %}lg:col-span-1{% else %}{{ content_width_desktop }}{% endif %}"
   >
-    <div class="product-block-area py-section-vertical-spacing lg:sticky lg:top-sticky-header {{ section.settings.max_width_of_content }}">
+    <div class="product-block-area py-section-vertical-spacing lg:sticky lg:top-sticky-header {{ section.settings.max_width_of_content }} xl:pr-[145px]">
       {%- render 'product-form', section_color: section_color -%}
     </div>
     <div class="lg:hidden">
