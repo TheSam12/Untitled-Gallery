@@ -4,14 +4,9 @@
 {% if show-bid == false %}
     {% for variant in product.variants -%}
         {% if variant.option2 == 'Original' %}
-            {{ variant.price | money_without_trailing_zeros }}
-            <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" id="product-form-{{ section.id }}">
-                <input type="hidden" name="form_type" value="product">
-                <input type="hidden" name="utf8" value="✓">
-                <button type="submit" class="bg-black w-full text-white text-center" id="addToCartButton">Buy the original now</button>
-                <input type="hidden" name="product-id" value="{{ variant.id }}">
-                <input type="hidden" name="section-id" value="{{ section.id }}">
-            </form>
+            <p class="text-[14px] uppercase text-[#9d9d9d]">original price</p>
+            <h2 class="text-[43px] neueSwift">{{ variant.price | money_without_trailing_zeros }}</h2>
+            
         {% endif %}
       {%- endfor %}
 {% endif %}
