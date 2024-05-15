@@ -4,7 +4,7 @@
 {% if show-bid == false %}
     {% for variant in product.variants -%}
         {% if variant.option2 == 'Original' %}
-            <p class="text-[14px] uppercase text-[#9d9d9d]">original price</p>
+            <p class="text-[14px] uppercase text-[#9d9d9d]">original product price</p>
             <h2 class="text-[43px] neueSwift">{{ variant.price | money_without_trailing_zeros }}</h2>
             
         {% endif %}
