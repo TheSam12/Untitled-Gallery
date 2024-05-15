@@ -4,8 +4,8 @@
  %}
 <div class="my-[20px]">
     <div class="relative">
-        <div class="text-[14px] uppercase text-[#9d9d9d] flex gap-2 items-center relative">
-            <span class="h-[14px]">{% if timer > current_date %}Starting bid{% else %}{% if product.selected_or_first_available_variant.available %}Current bid{% else %}winning bid{% endif %}{% endif %}</span><span class="cursor-pointer starting-bid-info">{% render 'icon-info' %}</span>
+        <div class="relative flex gap-2 items-center">
+            <span class="h-[14px] text-[14px] uppercase text-[#9d9d9d]">{% if timer > current_date %}Starting bid{% else %}{% if product.selected_or_first_available_variant.available %}Current bid{% else %}winning bid{% endif %}{% endif %}</span><span class="cursor-pointer starting-bid-info">{% render 'icon-info' %}</span>
             <div class="tooltip starting-bid-tooltip p-[20px]">
                 <p class="text-[16px] mb-[20px] font-bold">Other costs</p>
                 <div class="grid grid-cols-10 gap-[12px]">
