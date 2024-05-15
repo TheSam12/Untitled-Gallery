@@ -33,12 +33,7 @@
         data-color-scheme="{{ section_color }}"
       >
         {%- liquid
-          assign direction = section.settings.direction
-          assign separator = section.settings.separator
-          assign separator_repeats = section.settings.separator_repeats
-          assign spacing_between_repeated_separators = section.settings.spacing_between_repeated_separators
-  
-          render 'scrolling-text', id: section.id, link: link, text: text, section_color: section_color, direction: direction, separator: separator, separator_repeats: separator_repeats, spacing_between_repeated_separators: spacing_between_repeated_separators
+          render 'scrolling-text', id: section.id, link: link, text: text, section_color: section_color
         -%}
       </section>
     {%- endif -%}
