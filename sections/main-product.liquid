@@ -180,7 +180,7 @@
     endfor
   -%}
   <div
-    class="relative {% if product.media.size > 1 %}pb-7{% endif %} product-media-container bg-scheme-background text-scheme-text lg:pb-0 {% if livestreamingOn == 'on' %}lg:col-span-2{% else %}{{ media_width_desktop }}{% endif %} {% unless settings.fill_image_to_border_edge %}border-b-gridline border-gridline-color lg:border-0{% endunless %}"
+    class="relative {% if product.media.size > 1 %}pb-7{% endif %} product-media-container bg-scheme-background text-scheme-text lg:pb-0 {{ media_width_desktop }} {% unless settings.fill_image_to_border_edge %}border-b-gridline border-gridline-color lg:border-0{% endunless %}"
     data-product-media-container
   >
     {% if livestreamingOn == 'on' %}
