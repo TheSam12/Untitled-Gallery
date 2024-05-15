@@ -319,10 +319,10 @@
         <p class="sfMono text-[14px] text-[#9d9d9d] mt-[5px]">
           {% if sold_out %}Sold out{% else %}
             {% if upcoming_date > current_date %}
-              <span id="countdownTimer">{{ product.metafields.custom.livestreaming.value.start_time }}</span>
+              Starts in <span id="countdownTimer">{{ product.metafields.custom.livestreaming.value.start_time }}</span>
                 {% else %}
                 {% if close_date > current_date %}
-                  <span id="countdownTimerCollection">{{ product.metafields.custom.livestreaming.value.end_time }}</span>
+                  Closes in <span id="countdownTimerCollection">{{ product.metafields.custom.livestreaming.value.end_time }}</span>
                 {% else %}
                   <span>Completed</span>
                 {% endif %}
