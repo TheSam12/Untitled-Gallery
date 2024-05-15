@@ -79,28 +79,30 @@
             </form>
         </div>
         <div class="mt-[16px] relative">
-            <div class="flex gap-[12px] items-center buyer-protection-info">
+            <div class="flex gap-[12px] items-center relative">
                 {% render 'icon-warning' %} 
                 <span class="text-[11px] h-[11px] lg:text-[14px] text-[#9d9d9d] lg:h-[14px]">Buy confidently with our <span class="text-black">Buyer Protection</span></span>
-                {% render 'icon-info' %}
-            </div>
-            <div class="tooltip buyer-protection-tooltip p-[20px]">
-                <p class="text-[16px] mb-[20px] font-bold">Untitled Gallery Buyer's Protection:</p>
-                <div class="grid grid-cols-10 gap-[12px] items-center">
-                    <div class="col-span-1">{% render 'icon-shield' %}</div>
-                    <div class="col-span-9">
-                        <p class="text-[14px] sfMono h-[15px]">Your payment is safe</p>
-                    </div>
-                    <div class="col-span-1">{% render 'icon-zoom' %}</div>
-                    <div class="col-span-9">
-                        <p class="text-[14px] h-[15px]">All works are quality checked</p>
-                    </div>
-                    <div class="col-span-1">{% render 'icon-check' %}</div>
-                    <div class="col-span-9">
-                        <p class="text-[14px] h-[15px]">All artists are verified</p>
-                    </div>
+                <div class="buyer-protection-info">
+                    {% render 'icon-info' %}
                 </div>
-            </div> 
+                <div class="tooltip buyer-protection-tooltip p-[20px]">
+                    <p class="text-[16px] mb-[20px] font-bold">Untitled Gallery Buyer's Protection:</p>
+                    <div class="grid grid-cols-10 gap-[12px] items-center">
+                        <div class="col-span-1">{% render 'icon-shield' %}</div>
+                        <div class="col-span-9">
+                            <p class="text-[14px] sfMono h-[15px]">Your payment is safe</p>
+                        </div>
+                        <div class="col-span-1">{% render 'icon-zoom' %}</div>
+                        <div class="col-span-9">
+                            <p class="text-[14px] h-[15px]">All works are quality checked</p>
+                        </div>
+                        <div class="col-span-1">{% render 'icon-check' %}</div>
+                        <div class="col-span-9">
+                            <p class="text-[14px] h-[15px]">All artists are verified</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
         </div>
     {% endif %}
 </div>
