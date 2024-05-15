@@ -6,7 +6,98 @@
         {% if variant.option2 == 'Original' %}
             <p class="text-[14px] uppercase text-[#9d9d9d]">original product price</p>
             <h2 class="text-[43px] neueSwift">{{ variant.price | money_without_trailing_zeros }}</h2>
-            
+            {% form 'product', product, id: secondary_product_form_id %}
+                {{ form | payment_terms }}
+                <div
+                  class="add-to-cart-container{% unless quick_buy %} mt-8{% endunless %}"
+                >
+                  {%- liquid
+                    unless quick_buy
+                      if block and block.settings.enable_payment_button
+                        assign cta_button_classes = ''
+                      else
+                        assign cta_button_classes = 'theme-button'
+                      endif
+                    else
+                      assign cta_button_classes = quick_buy_button_classes
+                    endunless
+                    assign current_date = 'now' | date: '%s'
+                    assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
+                  -%}
+              
+                  <button
+                    id="addToCartButtonSecondary"
+                    class="add-to-cart {% if current_date < timer %}opacity-[0.5] cursor-not-allowed{% endif %} w-full px-1 py-4 bg-black text-white sfMono {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_classes }} {% unless current_variant.available %}opacity-50 cursor-not-allowed after:content-none{% endunless %}"
+                    type="submit"
+                    {% unless quick_buy %}
+                      :class="
+                        {
+                          'opacity-50 cursor-not-allowed after:content-none': !currentVariantAvailable
+                        }
+                      "
+                      :disabled="!currentVariantAvailable || loading"
+                    {% endunless %}
+                    {% unless current_variant.available %}
+                      disabled="disabled"
+                    {% endunless %}
+                  >
+                    {% unless quick_buy %}
+                      <span class="hidden no-js:inline" :class="`hidden`">
+                        {% if current_variant.available %}
+                          {{ 'products.product.add_to_cart' | t -}}
+                        {% else %}
+                          {{ 'products.product.sold_out' | t }}
+                        {% endif %}
+                      </span>
+                      <template x-if="currentVariant">
+                        <span>
+                          <template x-if="currentVariantAvailable">
+                            <span>
+                              Buy the edition from {{ product.selected_variant.price | money_without_trailing_zeros }}
+                            </span>
+                          </template>
+                          <template x-if="!currentVariantAvailable">
+                            <span>{{ 'products.product.sold_out' | t }}</span>
+                          </template>
+                        </span>
+                      </template>
+                      <template x-if="!currentVariant">
+                        <span> {{ 'products.product.unavailable' | t }}</span>
+                      </template>
+                    {% else %}
+                      <span>
+                        {%- if current_variant -%}
+                          {%- if current_variant.available -%}
+                            {{- 'products.product.add_to_cart' | t -}}
+                          {%- else -%}
+                            <span>{{ 'products.product.sold_out' | t }}</span>
+                          {%- endif -%}
+                        {%- else -%}
+                          <span> {{ 'products.product.unavailable' | t }}</span>
+                        {%- endif -%}
+                      </span>
+                    {% endunless %}
+                  </button>
+              
+                  {%- if block
+                    and block.settings.enable_payment_button
+                    and gift_card_recipient_feature_active == false
+                  -%}
+                    {% liquid
+                      assign payment_button_wrapper_class = 'payment-button-wrapper'
+              
+                      if settings.button_color == 'transparent_background_text_border'
+                        assign payment_button_wrapper_class = payment_button_wrapper_class | append: 'payment-button-wrapper--text_background'
+                      endif
+                    %}
+                    <div
+                      class="{{ payment_button_wrapper_class }} color-scheme mt-2 rounded-button h-[90px]"
+                    >
+                      {{ form | payment_button }}
+                    </div>
+                  {%- endif -%}
+                </div>
+              {% endform %}
         {% endif %}
       {%- endfor %}
 {% endif %}
