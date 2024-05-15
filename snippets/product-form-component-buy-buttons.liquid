@@ -160,7 +160,7 @@
                 <span>
                   <template x-if="currentVariantAvailable">
                     <span>
-                      Buy the edition from {{ product.selected_variant.price | money_without_trailing_zeros }}
+                      Buy the edition from {% render 'product-form-component-price', block: block, product: product, price_text_size: block.settings.text_size %}
                     </span>
                   </template>
                   <template x-if="!currentVariantAvailable">
