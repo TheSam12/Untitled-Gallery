@@ -186,9 +186,9 @@
     {% if livestreamingOn == 'on' %}
       {% comment %}THE EMBED AGORA LIVESTREAMING SHOULD BE BETWEEN THIS COMMENTS{% endcomment %}
       <div class="lg:grid-cols-2 lg:grid relative lg:gap-[24px] lg:py-[2rem] h-screen lg:h-auto">
-        <div class="relative">
+        <div class="relative h-full lg:h-auto">
           {% comment %}HERE SHOULD BE THE LIVESTREAMING VIDEO{% endcomment %}
-          <img src="{{ 'live-placeholder.jpg' | asset_url }}" alt="" width="456" height="688" class="w-full">
+          <img src="{{ 'live-placeholder.jpg' | asset_url }}" alt="" width="456" height="688" class="w-full h-full lg:h-auto">
           {% comment %}UNTIL HERE{% endcomment %}
           <div class="absolute top-0 h-full flex flex-col justify-between w-full">
             <div class="relative top-[24px] flex justify-center w-full">
