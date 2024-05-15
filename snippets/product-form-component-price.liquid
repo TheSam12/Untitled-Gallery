@@ -19,7 +19,7 @@
 -%}
 
 <div
-  class="product-price-block {{ margin_classes }} {{ price_font_class }} {{ price_text_size }}"
+  class="product-price-block {{ margin_classes }} {{ price_font_class }} {{ price_text_size }} text-[13px] sfMono"
   :class="{ 'invisible': !currentVariant }"
   {% if block %}
     {{ block.shopify_attributes }}
