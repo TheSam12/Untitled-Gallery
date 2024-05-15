@@ -5,10 +5,8 @@
     <div class="my-8">
         {% for variant in product.variants -%}
                 {% if variant.option2 == 'Original' %}
-                    {% capture test %}
-                        <p class="text-[14px] uppercase text-[#9d9d9d] mb-[14px]">original product price</p>
-                        <h2 class="text-[43px] neueSwift mb-[14px]">{{ test.price | money_without_trailing_zeros }}</h2>
-                    {% endcapture %}
+                    <p class="text-[14px] uppercase text-[#9d9d9d] mb-[14px]">original product price</p>
+                    <h2 class="text-[43px] neueSwift mb-[14px]">{{ test.price | money_without_trailing_zeros }}</h2>
                 {% endif %}
         {%- endfor %}
         <div x-data="ProductForm">
@@ -18,7 +16,7 @@
                 <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono" type="submit">
                     Buy the original version now
                 </button>
-                <input type="hidden" name="product-id" value="{{ test.id }}">
+                <input type="hidden" name="product-id" value="{{ variant.id }}">
                 <input type="hidden" name="section-id" value="{{ section.id }}">
             </form>
         </div>
