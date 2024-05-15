@@ -5,6 +5,11 @@
     {% for variant in product.variants -%}
         {% if variant.option2 == 'Original' %}
             {{ variant.price | money_without_trailing_zeros }}
+            <form action="cart/add?id={{ variant.id }}" method="post">
+                <button type="submit" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono">
+                    Buy now the original
+                </button>
+            </form>
         {% endif %}
       {%- endfor %}
 {% endif %}
