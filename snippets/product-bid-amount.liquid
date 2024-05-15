@@ -1,44 +1,48 @@
-
-<div class="relative">
-    <div class="flex justify-between">
-        <p class="text-[14px] sfMono text-[#9d9d9d] uppercase">bid history</p>
-        <a id="seeAllBidHistory" class="text-[14px] see-all-bid cursor-pointer">See all</a>
+{% liquid
+    assign show-bid = product.metafields.custom.activate_bid.value
+ %}
+{% if show-bid == true %}
+    <div class="relative">
+        <div class="flex justify-between">
+            <p class="text-[14px] sfMono text-[#9d9d9d] uppercase">bid history</p>
+            <a id="seeAllBidHistory" class="text-[14px] see-all-bid cursor-pointer">See all</a>
+        </div>
+        <hr class="h-1 mt-[10px]"/>
+        <div class="mt-[8px]">
+            <p class="mb-[12px] text-[14px] font-bold flex justify-between">
+                <span>🇫🇷 Bidder 2819</span>
+                <span class="text-[#9d9d9d]">20m ago</span>
+                <span>$600</span>
+            </p>
+            <p class="mb-[12px] text-[14px] flex justify-between">
+                <span>🇫🇷 Bidder 2104</span>
+                <span class="text-[#9d9d9d]">28m ago</span>
+                <span>$595</span>
+            </p>
+            <p class="mb-[12px] text-[14px] flex justify-between">
+                <span>🇮🇪 Bidder 0349</span>
+                <span class="text-[#9d9d9d]">30m ago</span> 
+                <span>$590</span>
+            </p>
+        </div>
+        {% render 'bid-history-modal' %}
     </div>
-    <hr class="h-1 mt-[10px]"/>
-    <div class="mt-[8px]">
-        <p class="mb-[12px] text-[14px] font-bold flex justify-between">
-            <span>🇫🇷 Bidder 2819</span>
-            <span class="text-[#9d9d9d]">20m ago</span>
-            <span>$600</span>
-        </p>
-        <p class="mb-[12px] text-[14px] flex justify-between">
-            <span>🇫🇷 Bidder 2104</span>
-            <span class="text-[#9d9d9d]">28m ago</span>
-            <span>$595</span>
-        </p>
-        <p class="mb-[12px] text-[14px] flex justify-between">
-            <span>🇮🇪 Bidder 0349</span>
-            <span class="text-[#9d9d9d]">30m ago</span> 
-            <span>$590</span>
-        </p>
-    </div>
-    {% render 'bid-history-modal' %}
-</div>
-<div id="overlay" class="modal-overlay"></div>
-<script>
-    const modal = document.getElementById('historyModal');
-    const seeAllBidHistory = document.getElementById('seeAllBidHistory');
-    const overlay = document.getElementById('overlay');
+    <div id="overlay" class="modal-overlay"></div>
+    <script>
+        const modal = document.getElementById('historyModal');
+        const seeAllBidHistory = document.getElementById('seeAllBidHistory');
+        const overlay = document.getElementById('overlay');
 
-    seeAllBidHistory.addEventListener('click', function() {
-        modal.style.display = 'block';
-        overlay.style.display = 'block';
-    });
+        seeAllBidHistory.addEventListener('click', function() {
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        });
 
-    modal.addEventListener('click', function(event) {
-        if (event.target === modal || event.target.classList.contains('cerrar')) {
-            modal.style.display = 'none';
-            overlay.style.display = 'none';
-        }
-    });
-</script>
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal || event.target.classList.contains('cerrar')) {
+                modal.style.display = 'none';
+                overlay.style.display = 'none';
+            }
+        });
+    </script>
+{% endif %}
