@@ -7,7 +7,7 @@
             <p class="text-[14px] uppercase text-[#9d9d9d]">original product price</p>
             <h2 class="text-[43px] neueSwift">{{ variant.price | money_without_trailing_zeros }}</h2>
             <div x-data="ProductForm">
-                <form method="post" action="/cart/add?id={{ variant.id }}" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" id="product-form-{{ section.id }}">
+                <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" id="product-form-{{ section.id }}">
                     <input type="hidden" name="form_type" value="product">
                     <input type="hidden" name="utf8" value="✓">
                     <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono" type="submit">
