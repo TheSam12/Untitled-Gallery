@@ -1,4 +1,4 @@
-<section id="featured-brands-{{ section.id }}" class="mt-[40px] lg:mt-[80px]">
+<section id="featured-brands-{{ section.id }}" class="mt-[40px] lg:mt-[80px] lg:px-[84px]">
     <div>
         <h2 class="font-heading text-[32px] text-center mb-[16px] lg:mb-[24px]">
             {{ section.settings.title }}
@@ -8,7 +8,7 @@
         {% for block in section.blocks %}
             {% if block.settings.brandImage != blank %}
                 <div class="flex justify-center">
-                    <img src="{{ block.settings.brandImage | img_url: "master" }}" alt="{{ section.settings.brandImage.alt }} "/>
+                    <img src="{{ block.settings.brandImage | image_url }}" alt="{{ section.settings.brandImage.alt }} " width="" height=""/>
                 </div>
             {% endif %}
         {% endfor %}
