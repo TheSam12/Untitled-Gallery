@@ -3,6 +3,8 @@
  %}
 {% if show-bid == false %}
     {% for variant in product.variants -%}
-        {{ variant.option2 }}
+        {% if variant.option2 == 'Original' %}
+            {{ variant.option2 }}
+        {% endif %}
       {%- endfor %}
 {% endif %}
