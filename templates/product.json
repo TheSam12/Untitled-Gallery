@@ -21,6 +21,11 @@
             "max_words": 30
           }
         },
+        "original_product_g9FiaN": {
+          "type": "original_product",
+          "settings": {
+          }
+        },
         "bid_VNbqwr": {
           "type": "bid",
           "settings": {
@@ -112,6 +117,7 @@
         "title",
         "fd36a39b-75ab-4852-8966-e25b84bb8665",
         "description_BaNkzT",
+        "original_product_g9FiaN",
         "bid_VNbqwr",
         "price",
         "variant_picker",
