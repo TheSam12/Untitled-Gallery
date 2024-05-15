@@ -5,9 +5,13 @@
     {% for variant in product.variants -%}
         {% if variant.option2 == 'Original' %}
             {{ variant.price | money_without_trailing_zeros }}
-            {% form 'product', product, id: product_form_id %}
-                <button type="submit" class="bg-black w-full text-white text-center" id="addToCartButtonOriginal">Buy the original now</button>
-            {% endform %}
+            <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data">
+                <input type="hidden" name="form_type" value="product">
+                <input type="hidden" name="utf8" value="✓">
+                <button type="submit" class="bg-black w-full text-white text-center" id="addToCartButton">Buy the original now</button>
+                <input type="hidden" name="product-id" value="{{ variant.id }}">
+                <input type="hidden" name="section-id" value="{{ section.id }}">
+            </form>
         {% endif %}
       {%- endfor %}
 {% endif %}
