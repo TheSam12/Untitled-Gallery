@@ -19,7 +19,7 @@
     {% endif %}
   >
     <div class="mt-8 ">
-      <p class="text-[14px] sfMono">Limited Edition of 25 We Also Send The Original Version</p>
+      <p class="text-[14px] sfMono">Limited Edition of 25</p>
     </div>
     {% form 'product', product, id: product_form_id %}
       {{ form | payment_terms }}
@@ -157,7 +157,7 @@
               <span>
                 <template x-if="currentVariantAvailable">
                   <span>
-                    Buy the edition from {{ product.price | money_without_trailing_zeros }}
+                    Buy the edition from {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
                   </span>
                 </template>
                 <template x-if="!currentVariantAvailable">
