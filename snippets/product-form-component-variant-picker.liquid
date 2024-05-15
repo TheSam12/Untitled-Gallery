@@ -4,7 +4,11 @@
   assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
 -%}
 {% if product.selected_or_first_available_variant.available == true %}
+<<<<<<< HEAD
   {% if timer < current_date %} 
+=======
+  {% if timer > current_date %}
+>>>>>>> 775cbf3ed2ce18f3edca7f457192bcc2bb1464d0
     <div
       {% if block %}
         {{- block.shopify_attributes -}}
