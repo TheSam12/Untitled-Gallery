@@ -43,8 +43,7 @@
             assign label_class = 'sr-only'
           endunless
         %}
-        {% assign excluded_variant = option.values | where: 'value', 'Original' %}
-        {% unless excluded_variant %}
+        {% unless option.values == 'Original' %}
         {% if option.name == 'Color' %}
         <fieldset class="product-variant-picker-block {% if forloop.first %}mt-[20px]{% else %}mt-8{% endif %}  no-js:hidden relative">
           {%- if option_style == 'drop_down' -%}
