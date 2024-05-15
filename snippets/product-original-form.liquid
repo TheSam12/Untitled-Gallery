@@ -3,8 +3,6 @@
  %}
 {% if show-bid == false %}
     {% for variant in product.variants -%}
-        {% for option in variant.options -%}
-            {{ option }}
-        {%- endfor %}
+        {{ variant.option2 }}
       {%- endfor %}
 {% endif %}
