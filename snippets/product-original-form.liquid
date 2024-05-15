@@ -6,19 +6,6 @@
         {% if variant.option2 == 'Original' %}
             <p class="text-[14px] uppercase text-[#9d9d9d]">original product price</p>
             <h2 class="text-[43px] neueSwift">{{ variant.price | money_without_trailing_zeros }}</h2>
-            <input
-                class="peer absolute left-0 top-0 h-full w-full cursor-pointer opacity-0"
-                @keydown="lockOptionChangeHandler()"
-                @change="optionChange($el)"
-                @keyup="unlockOptionChangeHandler($el)"
-                type="radio"
-                id="Option1-{{ variant.name }}"
-                name="options[{{ variant.name }}]"
-                value="{{ variant.name }}"
-                checked
-                data-single-option-selector
-                data-position="1"
-              >
             <div x-data="ProductForm">
                 <form method="post" action="/cart/add?id={{ variant.id }}" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" id="product-form-{{ section.id }}">
                     <input type="hidden" name="form_type" value="product">
