@@ -4,9 +4,7 @@
 {% if show-bid == false %}
     {% for variant in product.variants -%}
         {% for option in variant.options -%}
-            {% if option == 'None Original' %}
-                {{ option }}
-            {% endif %}
+            {{ option.name }}
         {%- endfor %}
       {%- endfor %}
 {% endif %}
