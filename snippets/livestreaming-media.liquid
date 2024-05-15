@@ -1,72 +1,72 @@
 
 {% comment %}THE EMBED AGORA LIVESTREAMING SHOULD BE BETWEEN THIS COMMENTS{% endcomment %}
 <div class="relative h-screen lg:h-auto">
-<div class="relative h-full lg:h-auto">
-    {% comment %}HERE SHOULD BE THE LIVESTREAMING VIDEO{% endcomment %}
-    <img src="{{ 'live-placeholder.jpg' | asset_url }}" alt="" width="456" height="688" class="w-full h-full lg:h-auto">
-    {% comment %}UNTIL HERE{% endcomment %}
-    <div class="absolute top-0 h-full flex flex-col justify-between w-full">
-    <div class="relative top-[24px] flex justify-center w-full">
-        <div>
-        <p class="flex gap-[8px] mb-[12px] text-white uppercase sfMono text-[14px] justify-center">
-            <span class="redDot"></span><span>live</span>
-        </p>
-        <p class="text-white text-[12px] sfMono">612 watching</p>
+    <div class="relative h-full lg:h-auto">
+        {% comment %}HERE SHOULD BE THE LIVESTREAMING VIDEO{% endcomment %}
+        <img src="{{ 'live-placeholder.jpg' | asset_url }}" alt="" width="456" height="688" class="w-full h-full lg:h-auto">
+        {% comment %}UNTIL HERE{% endcomment %}
+        <div class="absolute top-0 h-full flex flex-col justify-between w-full">
+            <div class="relative top-[24px] flex justify-center w-full">
+                <div>
+                <p class="flex gap-[8px] mb-[12px] text-white uppercase sfMono text-[14px] justify-center">
+                    <span class="redDot"></span><span>live</span>
+                </p>
+                <p class="text-white text-[12px] sfMono">612 watching</p>
+                </div>
+            </div>
+            <div class="lg:hidden px-[10px] pb-[20px]">
+                <div class="mb-[12px]">
+                    {% comment %}HERE SHOULD BE THE LIVE CHAT{% endcomment %}
+                    <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
+                    {% comment %}UNTIL HERE{% endcomment %}
+                </div>
+                <div class="flex mb-[12px]">
+                    <img src="{{ product.featured_image | image_url }}" width="" height="" class="w-[60px] h-[60px]"/>
+                    <div class="bg-white px-[8px] py-[6px] flex flex-col justify-between">
+                        <h2 class="text-[20px] neueSwift uppercase">{{ product.title }} <span class="opacity-[0.7] text-[14px] sfMono">{{ 100 | money_without_trailing_zeros }}</span> <span class="uppercase text-[6px] sfMono text-[#9d9d9d]">current bid</span></h2>  
+                        <p class="flex gap-[8px]"><span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span></p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-[12px] mb-[12px]">
+                    <a class="bg-white w-full text-[14px] sfMono text-center border-solid border-[1px] pt-[10px]" href="#addToCartButton">Edition from {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}<br/><span class="text-[#9d9d9d] text-[8px]">Limited edition of 25</span></a>
+                    <a class="bg-black text-white py-[10px] w-full sfMono text-[14px] border-[1px] border-solid text-center items-center flex justify-center border-black " href="#bid-form">Place a Bid</a>
+                </div>
+                <div class="relative">
+                    {% comment %}HERE SHOULD BE THE LIVE CHAT FORM{% endcomment %}
+                    <input type="text" placeholder="Write a message" class="w-full px-[12px] py-[6px] z-1 border-solid h-[44px] border-[1px]">
+                    <button class="absolute right-[12px] bottom-[6px] bg-black h-[32px] w-[32px] z-10 flex justify-center py-[8px]">{% render 'icon-send' %}</button>
+                    {% comment %}UNTIL HERE{% endcomment %}
+                </div>
+            </div>
+            <div class="hidden lg:block px-[14px] pb-[24px]">
+                <div class="mb-[16px]">
+                    {% comment %}HERE SHOULD BE THE LIVE CHAT ALSO{% endcomment %}
+                    <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
+                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
+                    <p class="text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
+                    {% comment %}UNTIL HERE{% endcomment %}
+                </div>
+                <div class="relative">
+                    {% comment %}HERE SHOULD GO THE LIVE CHAT FORM ALSO{% endcomment %}
+                    <input type="text" placeholder="Write a message" class="w-full px-[12px] py-[6px] z-1 border-solid h-[44px] border-[1px]">
+                    <button class="absolute right-[12px] bottom-[6px] bg-black h-[32px] w-[32px] z-10 flex justify-center py-[8px]">{% render 'icon-send' %}</button>
+                    {% comment %}UNTIL HERE{% endcomment %}
+                </div>
+            </div>
         </div>
     </div>
-    <div class="lg:hidden px-[10px] pb-[20px]">
-        <div class="mb-[12px]">
-        {% comment %}HERE SHOULD BE THE LIVE CHAT{% endcomment %}
-        <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
-        {% comment %}UNTIL HERE{% endcomment %}
-        </div>
-        <div class="flex mb-[12px]">
-        <img src="{{ product.featured_image | image_url }}" width="" height="" class="w-[60px] h-[60px]"/>
-        <div class="bg-white px-[8px] py-[6px] flex flex-col justify-between">
-            <h2 class="text-[20px] neueSwift uppercase">{{ product.title }} <span class="opacity-[0.7] text-[14px] sfMono">{{ 100 | money_without_trailing_zeros }}</span> <span class="uppercase text-[6px] sfMono text-[#9d9d9d]">current bid</span></h2>  
-            <p class="flex gap-[8px]"><span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span></p>
-        </div>
-        </div>
-        <div class="grid grid-cols-2 gap-[12px] mb-[12px]">
-        <a class="bg-white w-full text-[14px] sfMono text-center border-solid border-[1px] pt-[10px]" href="#addToCartButton">Edition from {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}<br/><span class="text-[#9d9d9d] text-[8px]">Limited edition of 25</span></a>
-        <a class="bg-black text-white py-[10px] w-full sfMono text-[14px] border-[1px] border-solid text-center items-center flex justify-center border-black " href="#bid-form">Place a Bid</a>
-        </div>
-        <div class="relative">
-        {% comment %}HERE SHOULD BE THE LIVE CHAT FORM{% endcomment %}
-        <input type="text" placeholder="Write a message" class="w-full px-[12px] py-[6px] z-1 border-solid h-[44px] border-[1px]">
-        <button class="absolute right-[12px] bottom-[6px] bg-black h-[32px] w-[32px] z-10 flex justify-center py-[8px]">{% render 'icon-send' %}</button>
-        {% comment %}UNTIL HERE{% endcomment %}
-        </div>
-    </div>
-    <div class="hidden lg:block px-[14px] pb-[24px]">
-        <div class="mb-[16px]">
-        {% comment %}HERE SHOULD BE THE LIVE CHAT ALSO{% endcomment %}
-        <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
-        <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
-        <p class="text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
-        {% comment %}UNTIL HERE{% endcomment %}
-        </div>
-        <div class="relative">
-        {% comment %}HERE SHOULD GO THE LIVE CHAT FORM ALSO{% endcomment %}
-        <input type="text" placeholder="Write a message" class="w-full px-[12px] py-[6px] z-1 border-solid h-[44px] border-[1px]">
-        <button class="absolute right-[12px] bottom-[6px] bg-black h-[32px] w-[32px] z-10 flex justify-center py-[8px]">{% render 'icon-send' %}</button>
-        {% comment %}UNTIL HERE{% endcomment %}
-        </div>
-    </div>
-    </div>
-</div>
 </div>
 {% comment %}BE CAREFULL WITH SOME ITEMS IN BETWEEN IT SHOULDN'T BE DELETED{% endcomment %}
