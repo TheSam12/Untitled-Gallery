@@ -2,7 +2,11 @@
     assign show-bid = product.metafields.custom.activate_bid.value
  %}
 {% if show-bid == false %}
-    <div>
-        {{ product.options[4].price }}
-    </div>
+    {% for variant in product.variants %}
+        {% if variant.option1 == "version" and variant.option2 == "original" %}
+            <div>
+                {{ variant.price | money_without_trailing_zeros }}
+            </div>
+        {% endif %}
+      {% endfor %}
 {% endif %}
