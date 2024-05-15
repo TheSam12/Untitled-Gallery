@@ -3,7 +3,7 @@
  %}
 {% if show-bid == false %}
     {% for variant in product.variants %}
-        {% if variant.option1 == "version" and variant.option2 == "original" %}
+        {% if variant.option1 == "Version" and variant.option2 == "Original" %}
             <div>
                 {{ variant.price | money_without_trailing_zeros }}
             </div>
