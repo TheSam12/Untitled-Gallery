@@ -7,8 +7,8 @@
             {% if variant.option2 == 'Original' %}
                 <p class="text-[14px] uppercase text-[#9d9d9d] mb-[14px]">original product price</p>
                 <h2 class="text-[43px] neueSwift mb-[14px]">{{ variant.price | money_without_trailing_zeros }}</h2>
-                {% form 'product' %}
-                    <button type="submit"></button>
+                {% form 'product', product %}
+                    <button type="submit">tu mama</button>
                 {% endform %}
             {% endif %}
         {%- endfor %}
