@@ -6,7 +6,7 @@
         {% if variant.option2 == 'Original' %}
             {{ variant.price | money_without_trailing_zeros }}
             {% form 'product', product, id: product_form_id %}
-                <button type="submit" class="bg-black w-full text-white text-center">Buy original now</button>
+                <button type="submit" class="bg-black w-full text-white text-center">Buy the original now</button>
             {% endform %}
         {% endif %}
       {%- endfor %}
