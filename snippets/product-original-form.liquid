@@ -8,17 +8,17 @@
                 <p class="text-[14px] uppercase text-[#9d9d9d] mb-[14px]">original product price</p>
                 <h2 class="text-[43px] neueSwift mb-[14px]">{{ variant.price | money_without_trailing_zeros }}</h2>
             {% endif %}
+            <div x-data="ProductForm">
+                <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" id="product-form-{{ section.id }}">
+                    <input type="hidden" name="form_type" value="product">
+                    <input type="hidden" name="utf8" value="✓">
+                    <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono" type="submit">
+                        Buy the original version now
+                    </button>
+                    <input type="hidden" name="variant-id" value="{{ variant.id }}">
+                    <input type="hidden" name="section-id" value="{{ section.id }}">
+                </form>
+            </div>
         {%- endfor %}
-        <div x-data="ProductForm">
-            <form method="post" action="/cart/add" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" id="product-form-{{ section.id }}">
-                <input type="hidden" name="form_type" value="product">
-                <input type="hidden" name="utf8" value="✓">
-                <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono" type="submit">
-                    Buy the original version now
-                </button>
-                <input type="hidden" name="product-id" value="{{ product.id }}">
-                <input type="hidden" name="section-id" value="{{ section.id }}">
-            </form>
-        </div>
     </div>
 {% endif %}
