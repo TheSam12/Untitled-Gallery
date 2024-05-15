@@ -70,7 +70,7 @@ document.addEventListener('alpine:init', () => {
   Alpine.data('ProductFormSecondary', () => ({
     formEl: null,
     init() {
-      this.formEl = this.$root.querySelector('form#original-product-form');
+      this.formEl = this.$root.querySelector('form');
 
       this.formEl.addEventListener('submit', this.submit.bind(this));
     },
