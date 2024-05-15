@@ -6,7 +6,7 @@
         {% for value in option.values %}
             {% if value.name == 'Original' %}
                 <div>
-                    {{ product.price | money_without_trailing_zeros }}
+                    {{ value.price | money_without_trailing_zeros }}
                 </div>
             {% endif %}
         {% endfor %}
