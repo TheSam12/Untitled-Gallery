@@ -2,23 +2,6 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "livestreaming_announcement_pcGaD3": {
-      "type": "livestreaming-announcement",
-      "settings": {
-        "home_page_only": false,
-        "hide_on_mobile": false,
-        "display": "scrolling-text",
-        "text": "Live now with Felipe Pantone, join now!",
-        "link": "",
-        "speed": 180,
-        "direction": "normal",
-        "repeat_text": true,
-        "separator": "none",
-        "separator_repeats": 1,
-        "spacing_between_repeated_separators": "",
-        "color_scheme": ""
-      }
-    },
     "header": {
       "type": "header",
       "custom_css": [
@@ -46,7 +29,6 @@
     }
   },
   "order": [
-    "livestreaming_announcement_pcGaD3",
     "header"
   ]
 }
