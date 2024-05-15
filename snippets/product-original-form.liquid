@@ -4,7 +4,7 @@
 {% if show-bid == false %}
     {% for variant in product.variants -%}
         {% for option in variant.options -%}
-            {{ option }}{%- unless forloop.last -%}/{%- endunless -%}
+            {{ option }}
         {%- endfor %}
       {%- endfor %}
 {% endif %}
