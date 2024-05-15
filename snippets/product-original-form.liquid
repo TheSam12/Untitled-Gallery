@@ -3,12 +3,8 @@
  %}
 {% if show-bid == false %}
     {% for variant in product.variants -%}
-        {%- capture options -%}
-          {% for option in variant.options -%}
+        {% for option in variant.options -%}
             {{ option }}{%- unless forloop.last -%}/{%- endunless -%}
-          {%- endfor %}
-        {%- endcapture -%}
-        
-        {{ variant.id }}: {{ options }}
+        {%- endfor %}
       {%- endfor %}
 {% endif %}
