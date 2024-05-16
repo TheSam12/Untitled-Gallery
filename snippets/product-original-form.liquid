@@ -2,7 +2,7 @@
     assign show-bid = product.metafields.custom.activate_bid.value
  %}
 {% if show-bid == false %}
-    <div class="my-8">
+    <div class="my-8" id="original-product-price">
         {% for variant in product.variants -%}
             {% if variant.option2 == 'Original' %}
                 <p class="text-[14px] uppercase text-[#9d9d9d] mb-[14px]">original product price</p>
