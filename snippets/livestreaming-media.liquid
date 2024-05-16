@@ -28,7 +28,7 @@
                 <div class="flex mb-[12px]">
                     <img src="{{ product.featured_image | image_url }}" width="" height="" class="w-[60px] h-[60px]"/>
                     <div class="bg-white px-[8px] py-[6px] flex flex-col justify-between">
-                        <div class="flex gap-[5px]">
+                        <div class="flex gap-[5px] items-center">
                             <h2 class="text-[20px] neueSwift uppercase">{{ product.title }}</h2> 
                             <div>
                                 <p class="opacity-[0.7] text-[14px] sfMono">{% if show-bid == true %}{{ 100 | money_without_trailing_zeros }}{% else %}{% for variant in product.variants -%}{% if variant.option2 == 'Original' %}{{ variant.price | money_without_trailing_zeros }}{% endif %}{% endfor %}{% endif %}</p> 
