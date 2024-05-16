@@ -5,17 +5,17 @@
 %}
 {% if timer > current_date %}
 <div class="border-solid p-[24px] w-full border-[1px] mt-[24px]">
-    <div class="flex flex-col gap-[24px] justify-center">
-        <div>
+    <div class="flex flex-col justify-center">
+        <div class="mb-[12px]">
             <p class="text-[14px] sfMono flex gap-[5px] items-center justify-center"><span class="relative"><span class="redDot animate-ping absolute"></span><span class="redDot"></span></span> Pre-orders are open</p>
         </div>
-        <p class="text-[14px] text-[#9d9d9d] text-center">Limited number of works available</p>
-        <button class="w-full bg-black py-[16px] text-white sfMono text-[14px]">Apply for pre-order</button>
-        <p class="text-center text-[14px] underline">How pre-orders work</p>
-        <hr class="border-b-[0px] border-dashed"> 
+        <p class="text-[14px] text-[#9d9d9d] text-center mb-[16px]">Limited number of works available</p>
+        <button class="w-full bg-black py-[16px] text-white sfMono text-[14px] mb-[12px]">Apply for pre-order</button>
+        <p class="text-center text-[14px] underline mb-[16px]">How pre-orders work</p>
+        <hr class="border-b-[0px] border-dashed mb-[16px]"> 
         <p class="text-center text-[14px] font-bold sfMono">Release starts</p>
-        <p class="text-center text-[14px] sfMono">{{ upcomming | date: "%A %d, %B %I:%M %p %Z" }}</p>
-        <p class="text-center text-[14px] sfMono text-[#9d9d9d]">Minimum 5 available at launch</p>
+        <p class="text-center text-[14px] sfMono mb-[16px]">{{ upcomming | date: "%A %d, %B %I:%M %p %Z" }}</p>
+        <p class="text-center text-[14px] sfMono text-[#9d9d9d] mb-[16px]">Minimum 5 available at launch</p>
         <a class="bg-[#e5e7eb] py-[16px] text-[14px] text-center w-full flex justify-center gap-[5px] items-center" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Example+Google+Calendar+Event&details=More+help+see:+https://support.google.com/calendar/thread/81344786&dates=20201231T160000/20201231T170000&recur=RRULE:FREQ%3DWEEKLY;UNTIL%3D20210603&ctz=America/Toronto"><span class="h-[14px]">Notify me at launch </span><span>{% render 'icon-bell' %}</span></a>
     </div>
 </div>
