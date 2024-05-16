@@ -60,6 +60,8 @@
         render 'product-bid-amount', block: block, product: product
       when 'sold_out_badge'
         render 'sold-out-badge', block: block, product: product
+      when 'preorder'
+        render 'product-preorder', block: block, product: product
       when 'original_product'
         render 'product-original-form', block: block, product: product, product_form_id: product_form_id
     endcase
