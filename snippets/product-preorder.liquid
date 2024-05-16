@@ -56,9 +56,20 @@
     modal.addEventListener('click', function(event) {
         if (event.target === modal || event.target.classList.contains('cerrar')) {
             modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    });
+
+    preModal.addEventListener('click', function(event) {
+        if (event.target === modal || event.target.classList.contains('cerrar')) {
             preModal.style.display = 'none';
             overlay.style.display = 'none';
         }
     });
 </script>
+<style>
+    .bid-history-modal {
+        overflow-y: unset;
+      }
+</style>
 {% endif %} 
