@@ -33,7 +33,7 @@
     x-html="formatMoney(currentPrice)"
     :class="{ 'text-scheme-accent': currentVariant && product.compare_at_price_max && currentVariant.compare_at_price > currentVariant.price, 'invisible': !currentVariant }"
   >
-    {{ current_variant.price | money_without_trailing_zeros }}
+    {{ current_variant.price | money_without_trailing_zeros }} 
   </span>
 
   {% if product.compare_at_price_max > product.price %}
