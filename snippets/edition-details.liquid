@@ -20,7 +20,7 @@
       <div class="lg:col-span-5 hidden lg:block">
         <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Artist</h4>
         <div class="flex gap-3 items-center">
-          <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full">
+          <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full w-[50px] h-[50px] object-cover">
           <p class="sfMono text-[12px]">{{ product.metafields.custom.artist.value.name }}</p>
         </div>
       </div>
@@ -33,7 +33,7 @@
         <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.release_date | date:  "%B %d, %Y" }}</p>
         <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Artist</h4>
         <div class="flex gap-3 items-center">
-          <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full">
+          <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full w-[50px] h-[50px] object-cover">
           <p class="sfMono text-[12px]">{{ product.metafields.custom.artist.value.name }}</p>
         </div>
       </div>
