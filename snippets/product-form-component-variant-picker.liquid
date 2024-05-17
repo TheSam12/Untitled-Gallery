@@ -7,6 +7,9 @@
       assign option_value = option
     endfor
   endfor
+  for variant in product.variants
+    assign totalProductsQuantity = totalProductsQuantity | plus: variant.inventory_quantity
+  endfor
   assign show_bid = product.metafields.custom.activate_bid.value
 -%}
 {% if product.selected_or_first_available_variant.available == true %}
@@ -23,7 +26,7 @@
         </div>
       {% endif %}
       <div>
-        <p class="uppercase sfMono text-[14px] text-[#9d9d9d] mt-[20px] ">Buy the edition now</p>
+        <p class="uppercase sfMono text-[14px] text-[#9d9d9d] mt-[20px] ">Buy the {% if totalProductsQuantity > 1 %}edition{% else %}original{% endif %} now</p>
       </div>
       {% unless product.has_only_default_variant %}
         {% for option in product.options_with_values %}
