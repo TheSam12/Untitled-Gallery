@@ -14,7 +14,7 @@
 
 <div>
   {% if current_date != blank or show_bid == false %}
-    {% if timer > current_date or close_timer > current_date or show_bid == false %}
+    {% if timer > current_date or close_timer > current_date or show_bid == false %} 
       <p class="px-[12px] py-[8px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex gap-[8px] w-fit mb-[10px] items-center">
         {% if show_bid == false and product.selected_or_first_available_variant.available == true and close_date == blank %}Available{% else %}{% if timer > current_date %}<span class="h-[12px]">Starts in </span><span id="countdownTimer" class="h-[12px]">{{ upcoming_date }}</span>{% elsif product.selected_or_first_available_variant.available == false %}<span>Sold out</span>{% elsif close_timer > current_date %}<span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span class="h-[12px]">Closes in </span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span>{% endif %}{% endif %}
       </p>
