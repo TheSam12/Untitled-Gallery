@@ -12,8 +12,8 @@
                         {% form 'product', product, id: product_form_id %}
                             {{ form | payment_terms }}
                             <input type="hidden" name="id" value="{{ variant.id }}">
-                            <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono" type="submit">
-                                Buy the original version now
+                            <button id="addToCartButton" class="add-to-cart w-full px-1 py-4 bg-black text-white sfMono {% unless variant.available %}opacity-[0.5]{% endunless %}" type="submit" {% unless %}disabled{% endunless %}>
+                                {% if variant.available %}Buy the original version now{% else %}Sold out{% endif %}
                             </button>
                         {% endform %}
                     </div>
