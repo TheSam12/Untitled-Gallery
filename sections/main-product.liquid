@@ -9,48 +9,48 @@
 
   case section.settings.desktop_media_width
     when 'one-third'
-      assign content_width_desktop = 'lg:col-span-8'
+      assign content_width_desktop = 'md:col-span-8'
 
       assign media_sizes = '(min-width: 1024px) calc(100vw / 3), 100vw'
       assign half_width_media_sizes = '(min-width: 1024px) calc((100vw / 3) / 2), 100vw'
 
       if section.settings.desktop_media_position == 'right'
-        assign media_width_desktop = 'lg:col-start-9 lg:col-end-13'
+        assign media_width_desktop = 'md:col-start-9 md:col-end-13'
       else
-        assign media_width_desktop = 'lg:col-span-4'
+        assign media_width_desktop = 'md:col-span-4'
       endif
     when 'one-half'
-      assign content_width_desktop = 'lg:col-span-6'
+      assign content_width_desktop = 'md:col-span-6'
 
       assign media_sizes = '(min-width: 1024px) 50vw, 100vw'
       assign half_width_media_sizes = '(min-width: 1024px) 25vw, 100vw'
 
       if section.settings.desktop_media_position == 'right'
-        assign media_width_desktop = 'lg:col-start-7 lg:col-end-13'
+        assign media_width_desktop = 'md:col-start-7 md:col-end-13'
       else
-        assign media_width_desktop = 'lg:col-span-6'
+        assign media_width_desktop = 'md:col-span-6'
       endif
     when 'three-fifths'
-      assign content_width_desktop = 'lg:col-span-5'
+      assign content_width_desktop = 'md:col-span-5'
 
       assign media_sizes = '(min-width: 1024px) calc(100vw / 5 * 3), 100vw'
       assign half_width_media_sizes = '(min-width: 1024px) calc((100vw / 5 * 3) / 2), 100vw'
 
       if section.settings.desktop_media_position == 'right'
-        assign media_width_desktop = 'lg:col-start-6 lg:col-end-13'
+        assign media_width_desktop = 'md:col-start-6 md:col-end-13'
       else
-        assign media_width_desktop = 'lg:col-span-7'
+        assign media_width_desktop = 'md:col-span-7'
       endif
     when 'two-thirds'
-      assign content_width_desktop = 'lg:col-span-4'
+      assign content_width_desktop = 'md:col-span-4'
 
       assign media_sizes = '(min-width: 1024px) calc(100vw / 3 * 2), 100vw'
       assign half_width_media_sizes = '(min-width: 1024px) calc((100vw / 3 * 2) / 2), 100vw'
 
       if section.settings.desktop_media_position == 'right'
-        assign media_width_desktop = 'lg:col-start-5 lg:col-end-13'
+        assign media_width_desktop = 'md:col-start-5 md:col-end-13'
       else
-        assign media_width_desktop = 'lg:col-span-8'
+        assign media_width_desktop = 'md:col-span-8'
       endif
   endcase
 
@@ -150,7 +150,7 @@
 -%}
 
 <section
-  class="grid grid-flow-row-dense grid-cols-1 border-b-gridline border-gridline-color lg:grid-cols-12 lg:gap-gutter lg:bg-gridline-color [&:not(:has(.product-media-container):has(.product-content-container))]:lg:bg-scheme-background"
+  class="grid grid-flow-row-dense grid-cols-1 border-b-gridline border-gridline-color md:grid-cols-12 md:gap-gutter md:bg-gridline-color [&:not(:has(.product-media-container):has(.product-content-container))]:md:bg-scheme-background"
   id="{{ section.id }}"
   x-data="
     Theme_Product({
@@ -180,7 +180,7 @@
     endfor
   -%}
   <div
-    class="relative {% if product.media.size > 1 %}pb-7{% endif %} product-media-container bg-scheme-background text-scheme-text lg:pb-0 {{ media_width_desktop }} {% unless settings.fill_image_to_border_edge %}border-b-gridline border-gridline-color lg:border-0{% endunless %}"
+    class="relative {% if product.media.size > 1 %}pb-7{% endif %} product-media-container bg-scheme-background text-scheme-text md:pb-0 {{ media_width_desktop }} {% unless settings.fill_image_to_border_edge %}border-b-gridline border-gridline-color md:border-0{% endunless %}"
     data-product-media-container
   >
     {% if livestreamingOn == 'on' %}
@@ -189,7 +189,7 @@
       %}
       {% else %}
       <div
-        class="splide splide--product lg:!sticky lg:top-sticky-header-less-gridline {% if negative_margin %}lg:-mb-gridline{% endif %} product-page__slideshow"
+        class="splide splide--product md:!sticky md:top-sticky-header-less-gridline {% if negative_margin %}md:-mb-gridline{% endif %} product-page__slideshow"
         data-drag-disabled="{{ has_interactive_media }}"
         {% if product.media.size > 1 %}
           data-slideshow-enabled="true"
@@ -202,11 +202,11 @@
         {% endif %}
         x-ref="splide"
       >
-        <div class="transition-[max-height] splide__track{% if settings.fill_image_to_border_edge %} max-lg:border-b-gridline border-gridline-color{% endif %}{% unless settings.fill_image_to_border_edge %} lg:p-4{% endunless %}{% if negative_margin %} lg:border-b-gridline{% endif %}">
+        <div class="transition-[max-height] splide__track{% if settings.fill_image_to_border_edge %} max-md:border-b-gridline border-gridline-color{% endif %}{% unless settings.fill_image_to_border_edge %} md:p-4{% endunless %}{% if negative_margin %} md:border-b-gridline{% endif %}">
           <ul
             id="media-list-{{ product.id }}-{{ section.id }}"
             class="
-              splide__list lg:w-full lg:grid{% if two_media_per_row and product.media.size > 1 %} lg:grid-cols-2{% else %} lg:grid-cols-1{% endif %}{% if settings.fill_image_to_border_edge %} lg:gap-gutter lg:bg-gridline-color{% else %} lg:gap-4{% endif %}
+              splide__list md:w-full md:grid{% if two_media_per_row and product.media.size > 1 %} md:grid-cols-2{% else %} md:grid-cols-1{% endif %}{% if settings.fill_image_to_border_edge %} md:gap-gutter md:bg-gridline-color{% else %} md:gap-4{% endif %}
               {% unless single_variant_mode %}
                 {% if left_over > 0 or first_media_full_width %}
                   [&>li:first-child]:col-span-2
@@ -261,7 +261,7 @@
                 endunless
               -%}
               <li
-                class="splide__slide bg-scheme-background{% unless forloop.first %} max-lg:[.splide:not(.is-active)_&]:hidden{% endunless %}"
+                class="splide__slide bg-scheme-background{% unless forloop.first %} max-md:[.splide:not(.is-active)_&]:hidden{% endunless %}"
                 data-index="{{ forloop.index0 }}"
                 data-order="{{ forloop.index }}"
                 {% if enable_variant_media or single_variant_mode %}
@@ -300,7 +300,7 @@
           </ul>
           {% if product.media.size > 1 %}
             <div
-              class="flex splide__arrows col-end-last items-center justify-center gap-[15px] mt-[24px] lg:mt-[30px] text-scheme-text"
+              class="flex splide__arrows col-end-last items-center justify-center gap-[15px] mt-[24px] md:mt-[30px] text-scheme-text"
             >
               <button class="splide__arrow splide__arrow--prev">
                 <span class="sr-only">
@@ -326,7 +326,7 @@
           <div class="px-section-horizontal-spacing text-center">
             <button
               aria-label="{{ 'products.product.view_in_space_label' | t }}"
-              class="product-single__view-in-space mb-2 mt-4 w-full max-w-sm border-text border-scheme-text py-2 pl-2 pr-4 text-center lg:my-4"
+              class="product-single__view-in-space mb-2 mt-4 w-full max-w-sm border-text border-scheme-text py-2 pl-2 pr-4 text-center md:my-4"
               data-shopify-xr
               data-shopify-model3d-id="{{ first_3d_model.id }}"
               data-shopify-title="{{ product.title }}"
@@ -342,7 +342,7 @@
         {%- endif -%}
       </div>
     {% endif %}
-    <div class="hidden lg:block">
+    <div class="hidden md:block">
      {% render 'edition-details'
       livestreamingOn: livestreamingOn
      %}
@@ -352,10 +352,10 @@
   <div
     class="product-content-container bg-scheme-background px-section-horizontal-spacing text-scheme-text {{ content_width_desktop }}"
   >
-    <div class="product-block-area py-section-vertical-spacing lg:sticky lg:top-sticky-header {{ section.settings.max_width_of_content }} xl:pr-[145px]">
+    <div class="product-block-area py-section-vertical-spacing md:sticky md:top-sticky-header {{ section.settings.max_width_of_content }} xl:pr-[145px]">
       {%- render 'product-form', section_color: section_color -%}
     </div>
-    <div class="lg:hidden">
+    <div class="md:hidden">
       {% render 'edition-details' %} 
     </div>
   </div>
@@ -1023,15 +1023,15 @@
               "label": "M"
             },
             {
-              "value": "text-base lg:text-lg",
+              "value": "text-base md:text-lg",
               "label": "M / desktop L"
             },
             {
-              "value": "text-base lg:text-xl",
+              "value": "text-base md:text-xl",
               "label": "M / desktop XL"
             },
             {
-              "value": "text-base lg:text-2xl",
+              "value": "text-base md:text-2xl",
               "label": "M / desktop 2XL"
             }
           ],
@@ -1208,15 +1208,15 @@
               "label": "M"
             },
             {
-              "value": "text-base lg:text-lg",
+              "value": "text-base md:text-lg",
               "label": "M / desktop L"
             },
             {
-              "value": "text-base lg:text-xl",
+              "value": "text-base md:text-xl",
               "label": "M / desktop XL"
             },
             {
-              "value": "text-base lg:text-2xl",
+              "value": "text-base md:text-2xl",
               "label": "M / desktop 2XL"
             }
           ],
