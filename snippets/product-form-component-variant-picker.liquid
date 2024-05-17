@@ -2,6 +2,11 @@
   assign option_style_setting = option_style
   assign current_date = 'now' | date: '%s'
   assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
+  for option in product.options_with_values
+    for option in option.values
+      assign option_value = option
+    endfor
+  endfor
 -%}
 {% if product.selected_or_first_available_variant.available == true %}
   {% if timer < current_date or timer == blank %}  
@@ -10,16 +15,12 @@
         {{- block.shopify_attributes -}}
       {% endif %}
     >
-      {% for option in product.options_with_values %}
-        {% for option in option.values %}
-          {% if option == "Original" %}
-            <div class="relative overflow-hidden h-[22px]">
-              <hr class="relative top-[50%] border-t-[#e5e7eb]"/>
-              <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0 right-[50%] leading-[22px]">or</p>
-            </div>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
+      {% if option_value == "Original" %}
+        <div class="relative overflow-hidden h-[22px]">
+          <hr class="relative top-[50%] border-t-[#e5e7eb]"/>
+          <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0 right-[50%] leading-[22px]">or</p>
+        </div>
+      {% endif %}
       <div>
         <p class="uppercase sfMono text-[14px] text-[#9d9d9d] mt-[20px] ">Buy the edition now</p>
       </div>
