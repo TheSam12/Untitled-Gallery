@@ -40,6 +40,24 @@
           <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.finishing.value }}</p>
         </div>
       {% endif %}
+      {% if product.metafields.custom.framing.value != blank %}
+        <div class="lg:col-span-6">
+          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Framing</h4>
+          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.framing.value }}</p>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.authentication.value != blank %}
+        <div class="lg:col-span-6">
+          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Authentication</h4>
+          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.authentication.value }}</p>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.certificateofauthentication.value != blank %}
+        <div class="lg:col-span-6">
+          <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Certificate Of Authentication</h4>
+          <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.certificateofauthentication.value }}</p>
+        </div>
+      {% endif %}
       <div class="lg:hidden">
         {% if product.metafields.custom.release_date.value != blank %}
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Release Date</h4>
