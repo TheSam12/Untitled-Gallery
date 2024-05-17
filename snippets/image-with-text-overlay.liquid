@@ -65,7 +65,7 @@
       >
         {% if timer != blank %}
           <p class="px-[8px] py-[3px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex gap-[8px] w-fit mb-[10px] items-center">
-            {% if timer > current_time %}<span>Starts in </span><span id="countdownTimer">{{ upcoming_time }}</span>{% else %}<span class="redDot"></span> Live{% endif %}
+            {% if timer > current_time %}<span>Starts in </span><span id="countdownTimer">{{ upcoming_time }}</span>{% else %}<span class="relative"><span class="redDot animation-ping absolute"></span><span class="redDot"></span></span> Live{% endif %}
           </p>
         {% endif %}
 
