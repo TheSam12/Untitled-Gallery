@@ -24,7 +24,7 @@
     {% endif %}
         <div class="splide__track bg-gridline-color [.splide:not(.is-active)_&]:invisible no-js:[.splide:not(.is-active)_&]:visible">
             <ul class="splide__list no-js:gap-gridline no-js:overflow-x-auto [.splide:not(.is-active)_&]:!flex [.splide:not(.is-active)_&]:gap-gridline">
-                {% for product in collection.products limit: 3 %}
+                {% for product in collection.products %}
                     {% liquid
                         assign video = product.metafields.custom.livestreaming.value.video
                         assign video_id = video | split: "?v=" | last
