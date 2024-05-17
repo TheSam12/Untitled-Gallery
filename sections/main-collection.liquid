@@ -381,7 +381,7 @@
         :class="{ 'opacity-10' : loading }"
       >
         {%- if collection.products.size > 0 -%}
-          <ul class="collection-list grid grid-cols-2 {{ desktop_grid_class }} gap-gutter bg-gridline-color{% if filters_layout_on_desktop == 'sidebar' %} border-b-gridline border-gridline-color -mb-gridline{% endif %}">
+          <ul class="collection-list grid grid-cols-2 {{ desktop_grid_class }} gap-gutter bg-gridline-color{% if filters_layout_on_desktop == 'sidebar' %} border-b-gridline border-gridline-color -mb-gridline{% endif %} gap-10">
             {%- for product in collection.products -%}
               {%- assign counter = counter | plus: 1 -%}
               <li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-scheme-background text-scheme-text">
