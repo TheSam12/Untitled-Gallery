@@ -38,6 +38,7 @@
                       <li
                           class="splide__slide cursor-pointer"
                       >
+                        <a href="{{ product.url }}">
                           {% render 'upcoming-streaming'
                               banner: banner,
                               desc: desc,
@@ -47,6 +48,7 @@
                               tomorrow: tomorrow,
                               url: url
                           %}
+                        </a>
                       </li>
                     {% endif %}
                 {% endfor %}
