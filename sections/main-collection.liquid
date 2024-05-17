@@ -188,7 +188,7 @@
 {% paginate collection.products by product_limit %}
   <section
     id="filterable"
-    class="collection border-b-gridline border-gridline-color bg-scheme-background text-scheme-text transition-opacity duration-200 ease-in-out"
+    class="collection border-b-gridline border-gridline-color gap-10 bg-scheme-background text-scheme-text transition-opacity duration-200 ease-in-out"
     {% if show_filters or show_sort %}
       x-data="Filterable"
     {% endif %}
@@ -561,7 +561,7 @@
 
   {{ 'modules-product.bundle.css' | asset_url | stylesheet_tag }}
 {% endif %}
-
+<script src="{{ 'countdown-timer.js' | asset_url }}" type="module"></script>
 {% schema %}
 {
   "name": "Collection",
