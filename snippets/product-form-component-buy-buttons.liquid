@@ -164,7 +164,7 @@
                 <span>
                   <template x-if="currentVariantAvailable">
                     <span class="flex gap-[5px] justify-center items-center">
-                      Buy the {% if totalProductsQuantity > 1 %}edition{% else %}original{% endif %} from {% render 'product-form-component-price', block: block, product: product, price_text_size: block.settings.text_size %}
+                      Buy the {% if totalProductsQuantity > 1 %}edition{% else %}original{% endif %} from <span class="text-[13px]">{% render 'product-form-component-price', block: block, product: product, price_text_size: block.settings.text_size %}</span>
                     </span>
                   </template>
                   <template x-if="!currentVariantAvailable">
