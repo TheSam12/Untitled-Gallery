@@ -2,12 +2,27 @@
   "sections": {
     "main_title_BzFwkb": {
       "type": "main-title",
+      "disabled": true,
       "settings": {
-        "title": "SHAKESPEARE WAS RIGHT — ALL THE WORLD REALLY IS A STAGE",
+        "title": "Experience Art Like Never Before: Discover and buy Unique Pieces",
         "fontFormat": "uppercase",
         "position": "center",
-        "desktopFontSize": 32,
-        "mobileFontSize": 28
+        "desktopFontSize": 30,
+        "mobileFontSize": 22
+      }
+    },
+    "rich_text_QjxeNB": {
+      "type": "rich-text",
+      "settings": {
+        "title": "EXPERIENCE ART LIKE NEVER BEFORE",
+        "text": "<p>DISCOVER AND ACQUIRE UNIQUE PIECES THROUGH LIVE-STREAMING EVENTS WITH GLOBALLY-RECOGNIZED ARTISTS<\/p>",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "color_scheme": ""
       }
     },
     "slideshow_ThtBr4": {
@@ -41,7 +56,7 @@
         "title": "Works on untitled gallery",
         "collection": "frontpage",
         "product_tile_type": "standard",
-        "grid": 3,
+        "grid": 4,
         "rows": 2,
         "grid_mobile": "1",
         "show_view_all": true,
@@ -265,6 +280,7 @@
   },
   "order": [
     "main_title_BzFwkb",
+    "rich_text_QjxeNB",
     "slideshow_ThtBr4",
     "upcoming_streaming_mBKP6T",
     "featured_collection_DK46nE",
