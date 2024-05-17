@@ -27,6 +27,7 @@
       {% endif %}
       <div>
         <p class="uppercase sfMono text-[14px] text-[#9d9d9d] mt-[20px] ">Buy the {% if totalProductsQuantity > 1 %}edition{% else %}original{% endif %} now</p>
+        <div>{% render 'product-form-component-price', block: block, product: product, price_text_size: block.settings.text_size %}</div>
       </div>
       {% unless product.has_only_default_variant %}
         {% for option in product.options_with_values %}
