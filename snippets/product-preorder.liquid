@@ -2,6 +2,7 @@
     assign current_date = 'now' | date: '%s'
     assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
     assign upcomming = product.metafields.custom.livestreaming.value.start_time
+    assign notify_at_launch = product.metafields.custom.notify_at_launch.value
 %}
 {% if timer > current_date %}
 <div class="border-solid p-[24px] w-full border-[1px] mt-[24px]">
@@ -16,7 +17,7 @@
         <p class="text-center text-[14px] font-bold sfMono">Release starts</p>
         <p class="text-center text-[14px] sfMono mb-[24px]">{{ upcomming | date: "%A %d, %B %I:%M %p %Z" }}</p>
         <p class="text-center text-[14px] sfMono text-[#9d9d9d] mb-[24px]">Minimum 5 available at launch</p>
-        <a class="bg-[#e5e7eb] py-[16px] text-[14px] text-center w-full flex justify-center gap-[5px] items-center" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Example+Google+Calendar+Event&details=More+help+see:+https://support.google.com/calendar/thread/81344786&dates=20201231T160000/20201231T170000&recur=RRULE:FREQ%3DWEEKLY;UNTIL%3D20210603&ctz=America/Toronto"><span class="h-[14px]">Notify me at launch </span><span>{% render 'icon-bell' %}</span></a>
+        <a class="bg-[#e5e7eb] py-[16px] text-[14px] text-center w-full flex justify-center gap-[5px] items-center" href="{{ notify_at_launch }}"><span class="h-[14px]">Notify me at launch </span><span>{% render 'icon-bell' %}</span></a>
     </div>
 </div>
 <div id="klaviyoModal" class="bid-history-modal">  
