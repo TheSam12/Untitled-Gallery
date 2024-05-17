@@ -103,7 +103,7 @@
             {% endif %}
           {% endif %}
         {% endfor %}
-        {% for product in collection.products limit: 10 %}
+        {% for product in collection.products %}
           {%- liquid
             assign height = section.settings.height
 
