@@ -43,6 +43,7 @@
     },
     "upcoming_streaming_mBKP6T": {
       "type": "upcoming-streaming",
+      "disabled": true,
       "settings": {
         "title": "Upcoming Livestreaming",
         "collection": "frontpage",
