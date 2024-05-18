@@ -68,7 +68,7 @@
     "past_streamings_VckLLb": {
       "type": "past-streamings",
       "settings": {
-        "title": "Past Livestreaming",
+        "title": "Discover artists",
         "pagination": false,
         "collection": "frontpage",
         "color_scheme": "",
