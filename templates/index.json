@@ -82,6 +82,7 @@
       "blocks": {
         "brands_NF43QG": {
           "type": "brands",
+          "disabled": true,
           "settings": {
             "brandImage": "shopify:\/\/shop_images\/Frame_1171276499.png"
           }
@@ -100,6 +101,7 @@
         },
         "brands_FVinXV": {
           "type": "brands",
+          "disabled": true,
           "settings": {
             "brandImage": "shopify:\/\/shop_images\/Frame_1171276501.png"
           }
@@ -112,6 +114,7 @@
         },
         "brands_gaxRmG": {
           "type": "brands",
+          "disabled": true,
           "settings": {
             "brandImage": "shopify:\/\/shop_images\/HYPEBEAST-Logo_1.png"
           }
@@ -189,6 +192,7 @@
         "reviews_6CYhFr",
         "reviews_6nJg3t"
       ],
+      "disabled": true,
       "settings": {
         "title": "What clients say about us",
         "pagination": false,
