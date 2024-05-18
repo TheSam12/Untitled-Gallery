@@ -15,14 +15,14 @@
         "8029b983-fcaa-448f-b0c8-a99a101ca41c": {
           "type": "menu",
           "settings": {
-            "main_linklist": "home-menu",
+            "main_linklist": "",
             "show_heading": true
           }
         },
         "menu": {
           "type": "menu",
           "settings": {
-            "main_linklist": "main-menu",
+            "main_linklist": "",
             "show_heading": true
           }
         }
