@@ -81,7 +81,7 @@
     "video_kHN3Kp": {
       "type": "video",
       "custom_css": [
-        "section {max-height: 750px;}"
+        "section {padding: 14px; max-height: 750px;}"
       ],
       "settings": {
         "title": "Discover Artists",
