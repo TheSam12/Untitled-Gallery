@@ -168,7 +168,7 @@
         "image_position": "left",
         "image_size": "third",
         "crop_image": "1",
-        "indent_image": false,
+        "indent_image": true,
         "fill_image": false,
         "image_color_scheme": "",
         "title": "Our Art Curator",
