@@ -5,10 +5,10 @@
     "announcement_bar_jwMLDh": {
       "type": "announcement-bar",
       "settings": {
-        "home_page_only": false,
+        "home_page_only": true,
         "hide_on_mobile": false,
         "display": "static",
-        "text": "Discover the up-and-coming works of Gemma Alpuente",
+        "text": "Discover the works of Gemma Alpuente",
         "link": "shopify:\/\/products\/untitled",
         "speed": 180,
         "direction": "normal",
