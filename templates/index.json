@@ -91,6 +91,44 @@
         "color_scheme": ""
       }
     },
+    "text_columns_with_images_rwCWVm": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_rMKjxL": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Untitled_design_12.png",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "column_CTkh9d": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Untitled_design_13.png",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_rMKjxL",
+        "column_CTkh9d"
+      ],
+      "settings": {
+        "title": "Our Partners",
+        "crop": "0",
+        "text_alignment": "text-left"
+      }
+    },
     "featured_brands_nDG4md": {
       "type": "featured-brands",
       "blocks": {
@@ -119,6 +157,7 @@
         "brands_ULdXFU",
         "brands_Xz3HLe"
       ],
+      "disabled": true,
       "custom_css": [
         "grid {align-content: center;}"
       ],
@@ -285,6 +324,7 @@
     "featured_collection_DK46nE",
     "past_streamings_VckLLb",
     "video_kHN3Kp",
+    "text_columns_with_images_rwCWVm",
     "featured_brands_nDG4md",
     "reviews_tpmTtJ",
     "newsletter_QPpAxK",
