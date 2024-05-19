@@ -94,12 +94,24 @@
     "text_columns_with_images_rwCWVm": {
       "type": "text-columns-with-images",
       "blocks": {
+        "column_TbnbRa": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Untitled_design_17.png",
+            "title": "Samuel de Sagas",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "scheme1"
+          }
+        },
         "column_rMKjxL": {
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Untitled_design_12.png",
-            "title": "",
+            "image": "shopify:\/\/shop_images\/Untitled_design_18.png",
+            "title": "Pablo Ozo",
             "text": "",
             "cta_link": "",
             "cta_text": "",
@@ -110,23 +122,72 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Untitled_design_13.png",
-            "title": "",
+            "image": "shopify:\/\/shop_images\/Untitled_design_14.png",
+            "title": "Irene Pérez",
             "text": "",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": ""
           }
+        },
+        "column_dkDKWn": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Untitled_design_15.png",
+            "title": "BELIN <br> Miguel Ángel Belinchón",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "scheme1"
+          }
         }
       },
       "block_order": [
+        "column_TbnbRa",
         "column_rMKjxL",
-        "column_CTkh9d"
+        "column_CTkh9d",
+        "column_dkDKWn"
       ],
       "settings": {
-        "title": "Our Partners",
+        "title": "More Artists Coming up...",
         "crop": "0",
         "text_alignment": "text-left"
+      }
+    },
+    "logo_list_WRzBCc": {
+      "type": "logo-list",
+      "blocks": {
+        "image_XPWXMR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_12.png",
+            "link": ""
+          }
+        },
+        "image_eWDfcp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Untitled_design_13.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_XPWXMR",
+        "image_eWDfcp"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "heading": "Our Partners",
+        "max_width": 370,
+        "logo_alignment": "center",
+        "display": "static",
+        "speed": 180,
+        "direction": "normal",
+        "color_scheme": ""
       }
     },
     "featured_brands_nDG4md": {
@@ -325,6 +386,7 @@
     "past_streamings_VckLLb",
     "video_kHN3Kp",
     "text_columns_with_images_rwCWVm",
+    "logo_list_WRzBCc",
     "featured_brands_nDG4md",
     "reviews_tpmTtJ",
     "newsletter_QPpAxK",
