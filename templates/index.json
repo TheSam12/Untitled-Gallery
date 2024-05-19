@@ -15,7 +15,7 @@
       "type": "rich-text",
       "settings": {
         "title": "",
-        "text": "<h1>EXPERIENCE ART LIKE NEVER BEFORE<\/h1><p><br\/>DISCOVER AND COLLECT UNIQUE PIECES THROUGH LIVE-STREAMING EVENTS WITH GLOBALLY-RECOGNIZED ARTISTS<\/p>",
+        "text": "<h1>EXPERIENCE ART LIKE NEVER BEFORE<\/h1><p><br\/>DISCOVER AND COLLECT UNIQUE PIECES THROUGH LIVE-PAINTING EVENTS WITH GLOBALLY-RECOGNIZED ARTISTS<\/p>",
         "text_alignment": "text-center",
         "cta_link": "",
         "cta_text": "",
@@ -205,9 +205,9 @@
         "image_XPWXMR",
         "image_eWDfcp"
       ],
+      "disabled": true,
       "custom_css": [
-        "section {padding: 14px;}",
-        ".font-heading {text-align: center;}"
+        "section {padding: 14px;}"
       ],
       "settings": {
         "heading": "Our Partners",
