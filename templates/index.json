@@ -68,6 +68,7 @@
     },
     "past_streamings_VckLLb": {
       "type": "past-streamings",
+      "disabled": true,
       "settings": {
         "title": "Discover artists",
         "pagination": false,
@@ -75,6 +76,16 @@
         "color_scheme": "",
         "mode": "preview",
         "aspect_ratio": "1.333"
+      }
+    },
+    "video_kHN3Kp": {
+      "type": "video",
+      "settings": {
+        "title": "Discover Artists",
+        "video": "shopify:\/\/files\/videos\/Proceso creativo de la obra SHUFFLE COLORS I y II. Gemma Alpuente.mp4",
+        "mode": "autoplay",
+        "aspect_ratio": "1.778",
+        "color_scheme": ""
       }
     },
     "featured_brands_nDG4md": {
@@ -270,6 +281,7 @@
     "upcoming_streaming_mBKP6T",
     "featured_collection_DK46nE",
     "past_streamings_VckLLb",
+    "video_kHN3Kp",
     "featured_brands_nDG4md",
     "reviews_tpmTtJ",
     "newsletter_QPpAxK",
