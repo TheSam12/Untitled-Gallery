@@ -158,6 +158,31 @@
         "text_alignment": "text-left"
       }
     },
+    "image_with_text_PNFJfw": {
+      "type": "image-with-text",
+      "custom_css": [
+        "section {padding: 16px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled_design_20.png",
+        "image_position": "left",
+        "image_size": "third",
+        "crop_image": "1",
+        "indent_image": false,
+        "fill_image": false,
+        "image_color_scheme": "",
+        "title": "Our Art Curator",
+        "richtext": "<p><strong>Óscar Gracia Garcia <\/strong><br\/><br\/>Independent Curator<br\/>Director of @justfairs<br\/>Cofounder of @plataforma_pac<br\/>Author published by @planetadelibros<br\/><\/p>",
+        "font": "font-body",
+        "text_size": "text-base",
+        "text_alignment": "text-center",
+        "text_position": "items-center",
+        "color_scheme": "",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
     "logo_list_WRzBCc": {
       "type": "logo-list",
       "blocks": {
@@ -389,6 +414,7 @@
     "past_streamings_VckLLb",
     "video_kHN3Kp",
     "text_columns_with_images_rwCWVm",
+    "image_with_text_PNFJfw",
     "logo_list_WRzBCc",
     "featured_brands_nDG4md",
     "reviews_tpmTtJ",
