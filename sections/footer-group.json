@@ -22,7 +22,7 @@
         "menu": {
           "type": "menu",
           "settings": {
-            "main_linklist": "",
+            "main_linklist": "follow-us",
             "show_heading": true
           }
         }
