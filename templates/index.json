@@ -207,7 +207,7 @@
       ],
       "custom_css": [
         "section {padding: 14px;}",
-        "h2 {text-align: center;}"
+        ".font-heading {text-align: center;}"
       ],
       "settings": {
         "heading": "Our Partners",
