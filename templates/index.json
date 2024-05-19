@@ -206,11 +206,11 @@
         "image_eWDfcp"
       ],
       "custom_css": [
-        "section {padding: 14px;}"
+        "section {padding: 14px; text-align: center;}"
       ],
       "settings": {
         "heading": "Our Partners",
-        "max_width": 370,
+        "max_width": 230,
         "logo_alignment": "center",
         "display": "static",
         "speed": 180,
