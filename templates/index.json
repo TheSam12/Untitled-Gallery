@@ -206,7 +206,8 @@
         "image_eWDfcp"
       ],
       "custom_css": [
-        "section {padding: 14px; text-align: center;}"
+        "section {padding: 14px;}",
+        "h2 {text-align: center;}"
       ],
       "settings": {
         "heading": "Our Partners",
