@@ -150,7 +150,7 @@
         "column_dkDKWn"
       ],
       "custom_css": [
-
+        "h1 {text-align: left;}"
       ],
       "settings": {
         "title": "More Artists Coming Soon...",
@@ -181,7 +181,7 @@
         "image_eWDfcp"
       ],
       "custom_css": [
-
+        "section {padding: 14px;}"
       ],
       "settings": {
         "heading": "Our Partners",
