@@ -149,8 +149,11 @@
         "column_CTkh9d",
         "column_dkDKWn"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
-        "title": "More Artists Coming up...",
+        "title": "More Artists Coming Soon...",
         "crop": "0",
         "text_alignment": "text-left"
       }
