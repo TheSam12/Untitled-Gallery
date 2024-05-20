@@ -349,7 +349,7 @@
           "type": "question",
           "settings": {
             "question": "What's a limited edition?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
+            "answer": "<p>Framing options vary for each piece and are listed on the individual artwork pages. Our standard glazing offer is a minimum 90% UV acrylic plexiglass, or you can upgrade to an anti reflective Optium museum plexiglass (please contact us).<\/p>"
           }
         },
         "question_9Mi8zc": {
@@ -363,28 +363,28 @@
           "type": "question",
           "settings": {
             "question": "Are the artists involved in production?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
+            "answer": "<p>Yes, 100%. We work directly with our artists to create editions that accurately represent their body of work. Additionally, every artist personally reviews and approves their final editions.<\/p>"
           }
         },
         "question_jw6gTe": {
           "type": "question",
           "settings": {
             "question": "How do I know my limited edition is authentic?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
+            "answer": "<p>Every original artwork is signed or stamped, and individually numbered. You will also receive a stamped and numbered certificate of authenticity for the limited editions.<\/p>"
           }
         },
         "question_RwzUWW": {
           "type": "question",
           "settings": {
             "question": "Do I own the copyright if I buy a limited edition?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
+            "answer": "<p>No—the copyright is not transferred to the purchaser of the edition.<\/p>"
           }
         },
         "question_qDRrgT": {
           "type": "question",
           "settings": {
-            "question": "Where can I find out more about shipping?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Mauris adipiscing tortor nisl eget vestibulum netus rutrum. Quam imperdiet ac id consequat cursus penatibus ut dignissim. Ornare integer sit sem ac arcu quam tincidunt ridiculus imperdiet. Donec dictum faucibus sapien viverra condimentum eget pharetra pretium orci. Iaculis risus porttitor nisi est.<\/p>"
+            "question": "How shipping works for original artworks?",
+            "answer": "<p>Shipping costs, which depend on the size, weight, and destination of your piece, are calculated after checkout and are not included in the total cost of your order. Once your purchase is complete, we will contact you to arrange delivery. You have the option to have your artwork shipped non-stretched in a tube or stretched, either in a bespoke art carton box or a wood crate. All orders are shipped using our selected premium carriers, ensuring your artwork arrives safely and securely.<\/p>"
           }
         }
       },
