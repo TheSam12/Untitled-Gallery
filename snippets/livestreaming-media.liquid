@@ -9,6 +9,9 @@
     endfor
     assign totalProductsQuantity = totalProductsQuantity | plus: variant.inventory_quantity
   endfor
+  assign current_date = 'now' | date: '%s'
+  assign close_timer = product.metafields.custom.livestreaming.value.end_time | date: '%s'
+  assign close_date = product.metafields.custom.livestreaming.value.end_time 
 %}
 {% comment %}THE EMBED AGORA LIVESTREAMING SHOULD BE BETWEEN THIS COMMENTS{% endcomment %}
 <div class="relative h-[calc(100vh-84.59px)] lg:h-[calc(100vh-86.33px)]">
@@ -69,6 +72,13 @@
                 </div>
                 <div class="bg-white p-[12px]">
                     <div>
+                        {% if current_date != blank or show_bid == false %}
+                            {% if close_timer > current_date %} 
+                                <p class="px-[12px] py-[8px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex gap-[8px] w-fit mb-[10px] items-center">
+                                    <span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span class="h-[12px]">Closes in </span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span>
+                                </p>
+                            {% endif %}
+                        {% endif %}
                     </div>
                 </div>
                 <div class="relative">
