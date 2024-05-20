@@ -80,7 +80,6 @@
                 class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
                 data-index="{{ forloop.index0 }}"
               >
-                <a href="{{ product.url }}" class="cursor-pointer">
                   {%-
                     render 'image-with-text-overlay',
                     height: height,
@@ -101,7 +100,6 @@
                     loading: loading,
                     product: product,
                   -%}
-                </a>
               </li>
             {% endif %}
           {% endif %}
