@@ -2,6 +2,7 @@
     assign section_color = section.settings.section_color
     assign pagination = section.settings.pagination
     assign collection = section.settings.collection
+    assign filled_count = 0
  %}
 <section id="upcoming-streaming-{{ section.id }}" data-color-scheme="{{ section_color }}" class="lg:pl-[14px] pl-[10px]">
     <div
@@ -35,8 +36,9 @@
                         assign colaboration = product.metafields.custom.artist.value.number_of_contributions 
                      %} 
                      {% if video != null %}
+                      {% assign filled_count = filled_count | plus: 1 %}
                      <li
-                        class="splide__slide w-[90%] lg:w-[40%] cursor-pointer" 
+                        class="splide__slide w-[90%] {% if filled_count == 1 %}lg:w-full{% elsif filled_count == 2 %}lg:w-[50%]{% else %}lg:w-[40%]{% endif %} cursor-pointer" 
                     >
                         {% render 'past-streamings'
                             video: video,
