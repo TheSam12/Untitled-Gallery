@@ -93,9 +93,10 @@
                                     <img src="{{ product.featured_image | image_url }}" width="" height="" class="h-[128px]"/>
                                 </div>
                                 <div>
-                                    <h2 class="text-[20px] neueSwift uppercase">{{ product.title }}</h2> 
+                                    <h2 class="text-[24px] neueSwift uppercase">{{ product.title }}</h2> 
                                     <div>
-                                        <p>by <span class="uppercase">{{ product.vendor }}</span></p>
+                                        <p class="text-[14px]">by <span class="uppercase">{{ product.vendor }}</span></p>
+                                        <p class="text-[#9d9d9d] text-[10px]"><span>Limited edition of {{ totalProductsQuantity }}</span></p>
                                     </div>
                                     <a class="bg-black text-white py-[10px] w-full sfMono text-[14px] border-[1px] border-solid text-center items-center flex justify-center border-black " href="{% if show-bid == true %}#bid-form{% else %}#original-product-price{% endif %}">{% if show-bid == true %}Place a Bid{% else %}Buy Original{% endif %}</a>
                                 </div> 
