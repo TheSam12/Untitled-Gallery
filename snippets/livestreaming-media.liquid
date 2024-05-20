@@ -74,7 +74,7 @@
                     <div>
                         {% if current_date != blank or show_bid == false %}
                             {% if close_timer > current_date %} 
-                                <p class="px-[12px] py-[8px] border rounded-[30px] border-color-[#e5e7eb] sfMono flex gap-[8px] w-fit mb-[10px] items-center">
+                                <p class="px-[12px] py-[8px] sfMono flex gap-[8px] mb-[10px] items-center">
                                     <span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span class="h-[12px]">Closes in </span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span>
                                 </p>
                             {% endif %}
