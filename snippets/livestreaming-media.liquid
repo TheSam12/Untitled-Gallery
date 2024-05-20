@@ -1,5 +1,10 @@
 {% liquid 
   assign show-bid = product.metafields.custom.activate_bid.value
+  for variant in product.variants
+    if variant.value == 'Original'
+        assign original = variant.price
+    endif
+  endfor
 %}
 {% comment %}THE EMBED AGORA LIVESTREAMING SHOULD BE BETWEEN THIS COMMENTS{% endcomment %}
 <div class="relative h-[calc(100vh-84.59px)] lg:h-[calc(100vh-86.33px)]">
@@ -31,7 +36,7 @@
                         <div class="flex gap-[5px] items-center">
                             <h2 class="text-[20px] neueSwift uppercase">{{ product.title }}</h2> 
                             <div class="h-[21px]">
-                                <p class="opacity-[0.7] text-[14px] sfMono">{% if show-bid == true %}{{ 100 | money_without_trailing_zeros }}{% else %}{% for variant in product.variants -%}{% if variant.option2 == 'Original' %}{{ variant.price | money_without_trailing_zeros }}{% endif %}{% endfor %}{% endif %}</p> 
+                                <p class="opacity-[0.7] text-[14px] sfMono">{% if show-bid == true %}{{ 100 | money_without_trailing_zeros }}{% else %}{{ original | money_without_trailing_zeros }}{% endif %}</p> 
                                 <p class="uppercase text-[6px] sfMono text-[#9d9d9d]">{% if show-bid == true %}current bid{% else %}original{% endif %}</p>
                             </div>
                         </div> 
@@ -53,19 +58,14 @@
                 <div class="mb-[16px]">
                     {% comment %}HERE SHOULD BE THE LIVE CHAT ALSO{% endcomment %}
                     <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
                     <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 1206 raised to $590</p>
                     <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">📦 Untitled Edition is on it's way to United Kingdom</p>
                     <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">👋 Bidder 0357 joins the live stream</p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
-                    <p class="mb-[12px] text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
-                    <p class="text-[14px] sfMono text-white">🚀 Bidder 2819 raised to $600</p>
                     {% comment %}UNTIL HERE{% endcomment %}
+                </div>
+                <div class="bg-white p-[12px]">
+                    <div>
+                    </div>
                 </div>
                 <div class="relative">
                     {% comment %}HERE SHOULD GO THE LIVE CHAT FORM ALSO{% endcomment %}
