@@ -192,7 +192,7 @@
         class="splide splide--product md:!sticky md:top-sticky-header-less-gridline {% if negative_margin %}md:-mb-gridline{% endif %} product-page__slideshow"
         data-drag-disabled="{{ has_interactive_media }}"
         {% if product.media.size > 1 %} 
-          {% if upcoming_date < current_date or upcoming_date == blank %}
+          {% if upcoming_date < current_date or upcoming_date == blank %} 
             data-slideshow-enabled="true"
             x-data="
               Theme_Slideshow({
