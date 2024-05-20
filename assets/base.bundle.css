@@ -5738,7 +5738,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   }
   .bid-history-modal {
     top:30%;
-    left: 32%;
+    left: calc(50% - 280px);
     width:560px;
   }
 }
