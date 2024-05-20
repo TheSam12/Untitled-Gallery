@@ -16,6 +16,18 @@
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Release Date</h4>
           <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.release_date.value | date: "%B %d, %Y" }}</p>
         </div>
+        {% else %}
+        {% if product.metafields.custom.artist.value.name != blank %}
+          <div class="lg:col-span-5 hidden lg:block">
+            <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Artist</h4>
+            <div class="flex gap-3 items-center">
+              {% if product.metafields.custom.artist.value.photo != null %}
+                <img src="{{ product.metafields.custom.artist.value.photo | file_url }}" height="50" width="50" class="rounded-full w-[50px] h-[50px] object-cover">
+              {% endif %}
+              <p class="sfMono text-[12px]">{{ product.metafields.custom.artist.value.name }}</p>
+            </div>
+          </div>
+        {% endif %}
       {% endif %}
       {% if product.metafields.custom.dimensions.value %}
         <div class="lg:col-span-6">
