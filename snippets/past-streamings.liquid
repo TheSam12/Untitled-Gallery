@@ -24,7 +24,7 @@
   -%}
 <div>
   <div
-    class="{{ container_class }}"
+    class="{% if filled_count == 1 %}lg:pb-[calc(100vh-40px)]{% else %}{{ container_class }}{% endif %}"
     style="--ratio-percent: {{ ratio_percentage }}%;"
   >
     {%- case mode -%}
