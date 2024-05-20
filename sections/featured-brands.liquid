@@ -1,7 +1,5 @@
 {% liquid
     assign size = section.blocks.size 
-    assign first = section.blocks.first 
-    assign last = section.blocks.last 
 %}
 
 <section id="featured-brands-{{ section.id }}" class="mt-[40px] lg:mt-[80px] lg:px-[84px] px-[10px]">
@@ -13,7 +11,7 @@
     <div class="grid {% if size == 1 %}grid-cols-1 lg:grid-cols-1{% elsif size == 2 %}grid-cols-2 gap-3 lg:grid-cols-2{% elsif size == 3 %}grid-cols-3 gap-3 lg:grid-cols-3{% elsif size == 4 %}grid-cols-2 gap-3 lg:grid-cols-4{% elsif size == 5 %}grid-cols-3 gap-3 lg:grid-cols-5 justify-center{% else %}grid-cols-3 gap-3 lg:grid-cols-6{% endif %}">
         {% for block in section.blocks %}
             {% if block.settings.brandImage != blank %}
-                <div class="flex {% if size == 2 and first %}justify-end{% elsif size == 2 and last %}justify-left{% else %}justify-center{% endif %}">
+                <div class="flex {% if size == 2 and forloop.first %}justify-end{% elsif size == 2 and forloop.last %}justify-left{% else %}justify-center{% endif %}">
                     <img src="{{ block.settings.brandImage | image_url }}" alt="{{ section.settings.brandImage.alt }} " width="" height=""/>
                 </div>
             {% endif %}
