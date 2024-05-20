@@ -354,8 +354,7 @@
       </div>
     {% endif %}
     <div class="hidden md:block">
-     {% render 'edition-details',
-      redirect: redirect
+     {% render 'edition-details'
      %}
     </div>
   </div>
@@ -367,8 +366,7 @@
       {%- render 'product-form', section_color: section_color -%}
     </div>
     <div class="md:hidden">
-      {% render 'edition-details',
-        redirect: redirect
+      {% render 'edition-details'
        %} 
     </div>
   </div>
