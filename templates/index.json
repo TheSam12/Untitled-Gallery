@@ -68,7 +68,6 @@
     },
     "past_streamings_VckLLb": {
       "type": "past-streamings",
-      "disabled": true,
       "settings": {
         "title": "Discover artists",
         "pagination": false,
