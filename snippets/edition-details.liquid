@@ -1,12 +1,9 @@
 {% liquid
   for collection in product.collections
-    assign title = collection.title
-    assign url = collection.url
+    if collection.title == product.vendor
+      assign redirect = collection.url
+    endif
   endfor
-  assign vendor = product.vendor
-  if title == vendor
-    assign redirect = url
-  endif
  %}
 
 <div class="pt-[32px] lg:px-[14px]">
