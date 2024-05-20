@@ -99,8 +99,7 @@
                     text: text,
                     desc: desc,
                     loading: loading,
-                    product: product,
-                    url: url,
+                    product: product
                   -%}
               </li>
             {% endif %}
@@ -131,7 +130,6 @@
             assign title = product.metafields.custom.livestreaming.value.title
             assign text = product.metafields.custom.artist.value.name
             assign desc = product.metafields.custom.livestreaming.value.description
-            assign url = product.url
           -%}
           {% if image != null %}
             {% if timer > current_time %}
@@ -157,8 +155,7 @@
                   text: text,
                   desc: desc,
                   loading: loading,
-                  product: product,
-                  url: url,
+                  product: product
                 -%}
               </li>
             {% endif %}
