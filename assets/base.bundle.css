@@ -5736,10 +5736,11 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   .tooltip.buyer-protection-tooltip::after{
     left:50%;
   }
-
+}
+@media screen and (min-width:768px){
   .bid-history-modal {
     top:30%;
-    left: 35%;
+    left: 32%;
     width:560px;
   }
 }
