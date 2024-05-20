@@ -33,14 +33,10 @@
           id="{{ id }}"
           class="absolute inset-0 {% if filled_count == 1 %}lg:h-[calc(100vh-56px)] h-full{% else %}h-full{% endif %} w-full"
           x-data="Video('{{ mode | strip }}')"
-          x-intersect:enter.half="play(true)"
-          x-intersect:leave.half="pause"
         >
           <div
             class="html-video-wrapper h-full"
             x-data="HTMLVideo"
-            @play="play"
-            @pause="pause"
           >
             {%- if video != blank -%}
               <iframe
