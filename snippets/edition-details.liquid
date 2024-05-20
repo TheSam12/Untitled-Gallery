@@ -1,3 +1,14 @@
+{% liquid
+  for collection in product.collections
+    assign title = collection.title
+    assign url = collection.url
+  endfor
+  assign vendor = product.vendor
+  if title == vendor
+    assign redirect = url
+  endif
+ %}
+
 <div class="pt-[32px] lg:px-[14px]">
     <h2 class="neueSwift text-[43px] capitalize pb-[20px] text-[#030303]">Edition Details</h2>
     <div class="lg:grid lg:grid-cols-11 lg:gap-5">

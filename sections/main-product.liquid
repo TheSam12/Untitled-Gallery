@@ -147,11 +147,6 @@
 
   assign complementary_products_block = section.blocks | where: 'type', 'complementary' | first
   assign close_date = product.metafields.custom.livestreaming.value.end_time 
-  for collection in product.collections
-    if product.vendor == collection.title
-      assign redirect == collection.url
-    endif
-  endfor
 -%}
 
 <section
