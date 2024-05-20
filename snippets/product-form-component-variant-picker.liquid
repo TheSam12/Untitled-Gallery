@@ -25,12 +25,10 @@
           <p class="sfMono text-[14px] text-[#9d9d9d] bg-white px-[5px] absolute top-0 right-[50%] leading-[22px]">or</p>
         </div>
       {% endif %}
-      {% unless option_value == "Original" %}
-        <div>
-          <p class="uppercase sfMono text-[14px] text-[#9d9d9d] mt-[20px] mb-[14px]">Buy the {% if totalProductsQuantity > 1 %}edition{% else %}original{% endif %} now</p>
-          <span class="text-[45px] neueSwift">{% render 'product-form-component-price', block: block, product: product, price_text_size: block.settings.text_size %}</span>
-        </div>
-      {% endunless %}
+      <div>
+        <p class="uppercase sfMono text-[14px] text-[#9d9d9d] mt-[20px] mb-[14px]">Buy the {% if totalProductsQuantity > 1 %}edition{% else %}original{% endif %} now</p>
+        <span class="text-[45px] neueSwift">{% render 'product-form-component-price', block: block, product: product, price_text_size: block.settings.text_size %}</span>
+      </div>
       {% unless product.has_only_default_variant %}
         {% for option in product.options_with_values %}
           {% liquid
