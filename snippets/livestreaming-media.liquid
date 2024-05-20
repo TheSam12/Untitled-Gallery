@@ -7,7 +7,7 @@
         {% comment %}HERE SHOULD BE THE LIVESTREAMING VIDEO{% endcomment %}
         <img src="{{ 'live-placeholder.jpg' | asset_url }}" alt="" width="456" height="688" class="w-full h-full object-cover">
         {% comment %}UNTIL HERE{% endcomment %}
-        <div class="absolute top-0 h-full flex flex-col justify-between w-full md:max-w-[350px] md:right-[14px]">
+        <div class="absolute top-0 h-full flex flex-col justify-between w-full">
             <div class="relative top-[24px] flex justify-center w-full">
                 <div>
                 <p class="flex gap-[8px] mb-[12px] text-white uppercase sfMono text-[14px] justify-center">
@@ -16,7 +16,7 @@
                 <p class="text-white text-[12px] sfMono">612 watching</p>
                 </div>
             </div>
-            <div class="lg:hidden px-[10px] pb-[20px]">
+            <div class="lg:hidden px-[10px] pb-[20px] relative md:max-w-[350px] md:right-[14px]">
                 <div class="mb-[12px]">
                     {% comment %}HERE SHOULD BE THE LIVE CHAT{% endcomment %}
                     <p class="mb-[12px] text-[14px] sfMono text-white">👤 Bidder 1032 writes: <span class="font-bold">Lorem ipsum dolor sit amet?</span></p>
