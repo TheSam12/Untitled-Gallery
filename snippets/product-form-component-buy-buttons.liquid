@@ -14,15 +14,7 @@
   for variant in product.variants
     assign totalProductsQuantity = totalProductsQuantity | plus: variant.inventory_quantity
   endfor
-  for variant in product.variants
-    for option in variant.options
-        if option.name == 'Original'
-            assign original = option.name
-        endif
-    endfor
-  endfor
 -%}
-{% unless original %}
 {% if product.selected_or_first_available_variant.available == true %}
   {% if timer < current_date or timer == blank %}
     <div
@@ -258,4 +250,3 @@
     {% endif %}
   {% endif %}
 {% endif %}
-{% endunless %}
