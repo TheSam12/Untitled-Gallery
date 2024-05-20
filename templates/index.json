@@ -73,7 +73,7 @@
         "pagination": false,
         "collection": "frontpage",
         "color_scheme": "",
-        "mode": "preview",
+        "mode": "autoplay",
         "aspect_ratio": "1.333"
       }
     },
