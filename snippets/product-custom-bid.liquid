@@ -1,6 +1,6 @@
 {% liquid
   assign current_date = 'now' | date: '%s'
-  assign timer = product.metafields.custom.livestreaming.value.end_time | date: '%s'
+  assign timer = product.metafields.custom.livestreaming.value.start_time | date: '%s'
   assign show-bid = product.metafields.custom.activate_bid.value
  %}
 {% if show-bid == true %} 
