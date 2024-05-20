@@ -94,16 +94,12 @@
                                     <div class="flex gap-[5px] items-center">
                                         <h2 class="text-[20px] neueSwift uppercase">{{ product.title }}</h2> 
                                         <div class="h-[21px]">
-                                            <p class="opacity-[0.7] text-[14px] sfMono">{% if show-bid == true %}{{ 100 | money_without_trailing_zeros }}{% else %}{{ original | money_without_trailing_zeros }}{% endif %}</p> 
-                                            <p class="uppercase text-[6px] sfMono text-[#9d9d9d]">{% if show-bid == true %}current bid{% else %}original{% endif %}</p>
+                                            <p>by <span class="uppercase">{{ product.vendor }}</span></p>
                                         </div>
+                                        <a class="bg-black text-white py-[10px] w-full sfMono text-[14px] border-[1px] border-solid text-center items-center flex justify-center border-black " href="{% if show-bid == true %}#bid-form{% else %}#original-product-price{% endif %}">{% if show-bid == true %}Place a Bid{% else %}Buy Original{% endif %}</a>
                                     </div> 
                                     <p class="flex gap-[8px]"><span class="relative"><span class="redDot absolute animate-ping"></span><span class="redDot"></span></span><span>Closes in </span><span id="countdownTimerCollection" class="h-[12px] ">{{ close_date }}</span></p>
                                 </div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-[12px] mb-[12px]">
-                                <a class="bg-white w-full text-[14px] sfMono text-center border-solid border-[1px] pt-[10px] border-black" href="#addToCartButton">Edition from {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}<br/><span class="text-[#9d9d9d] text-[8px]">Limited edition of {{ totalProductsQuantity }}</span></a>
-                                <a class="bg-black text-white py-[10px] w-full sfMono text-[14px] border-[1px] border-solid text-center items-center flex justify-center border-black " href="{% if show-bid == true %}#bid-form{% else %}#original-product-price{% endif %}">{% if show-bid == true %}Place a Bid{% else %}Buy Original{% endif %}</a>
                             </div>
                         {% endif %}
                     </div>
