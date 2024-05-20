@@ -191,8 +191,7 @@
       <div
         class="splide splide--product md:!sticky md:top-sticky-header-less-gridline {% if negative_margin %}md:-mb-gridline{% endif %} product-page__slideshow"
         data-drag-disabled="{{ has_interactive_media }}"
-        {% if product.media.size > 1 %} 
-          {% if upcoming_date < current_date %} 
+        {% if product.media.size > 1 and upcoming_date < current_date%} 
             data-slideshow-enabled="true"
             x-data="
               Theme_Slideshow({
@@ -200,8 +199,7 @@
                 loop: false, 
               })
             "
-          {% endif %} 
-        {% endif %}
+        {% endif %} 
         x-ref="splide"
       >
         <div class="transition-[max-height] splide__track{% if settings.fill_image_to_border_edge %} max-md:border-b-gridline border-gridline-color{% endif %}{% unless settings.fill_image_to_border_edge %} md:p-4{% endunless %}{% if negative_margin %} md:border-b-gridline{% endif %}">
