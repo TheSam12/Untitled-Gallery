@@ -193,6 +193,12 @@
             "link": ""
           }
         },
+        "image_eqcw4P": {
+          "type": "image",
+          "settings": {
+            "link": ""
+          }
+        },
         "image_eWDfcp": {
           "type": "image",
           "settings": {
@@ -203,6 +209,7 @@
       },
       "block_order": [
         "image_XPWXMR",
+        "image_eqcw4P",
         "image_eWDfcp"
       ],
       "disabled": true,
