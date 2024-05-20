@@ -31,7 +31,7 @@
       {%- when 'autoplay' -%}
         <div
           id="{{ id }}"
-          class="absolute inset-0 h-full w-full"
+          class="absolute inset-0 h-screen w-full"
           x-data="Video('{{ mode | strip }}')"
           x-intersect:enter.half="play(true)"
           x-intersect:leave.half="pause"
