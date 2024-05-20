@@ -1,9 +1,11 @@
 {% liquid 
   assign show-bid = product.metafields.custom.activate_bid.value
   for variant in product.variants
-    if variant.value == 'Original'
-        assign original = variant.price
-    endif
+    for option in variant.options
+        if option.name == 'Original'
+            assign original = variant.price
+        endif
+    endfor
   endfor
 %}
 {% comment %}THE EMBED AGORA LIVESTREAMING SHOULD BE BETWEEN THIS COMMENTS{% endcomment %}
