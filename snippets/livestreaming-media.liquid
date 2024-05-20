@@ -92,15 +92,13 @@
                                 <div>
                                     <img src="{{ product.featured_image | image_url }}" width="" height="" class="w-[128px] h-[128px]"/>
                                 </div>
-                                <div class="bg-white px-[8px] py-[6px] flex flex-col justify-between">
-                                    <div class="items-center">
-                                        <h2 class="text-[20px] neueSwift uppercase">{{ product.title }}</h2> 
-                                        <div class="h-[21px]">
-                                            <p>by <span class="uppercase">{{ product.vendor }}</span></p>
-                                        </div>
-                                        <a class="bg-black text-white py-[10px] w-full sfMono text-[14px] border-[1px] border-solid text-center items-center flex justify-center border-black " href="{% if show-bid == true %}#bid-form{% else %}#original-product-price{% endif %}">{% if show-bid == true %}Place a Bid{% else %}Buy Original{% endif %}</a>
-                                    </div> 
-                                </div>
+                                <div>
+                                    <h2 class="text-[20px] neueSwift uppercase">{{ product.title }}</h2> 
+                                    <div>
+                                        <p>by <span class="uppercase">{{ product.vendor }}</span></p>
+                                    </div>
+                                    <a class="bg-black text-white py-[10px] w-full sfMono text-[14px] border-[1px] border-solid text-center items-center flex justify-center border-black " href="{% if show-bid == true %}#bid-form{% else %}#original-product-price{% endif %}">{% if show-bid == true %}Place a Bid{% else %}Buy Original{% endif %}</a>
+                                </div> 
                             </div>
                         {% endif %}
                     </div>
