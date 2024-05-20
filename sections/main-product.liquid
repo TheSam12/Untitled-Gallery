@@ -147,6 +147,11 @@
 
   assign complementary_products_block = section.blocks | where: 'type', 'complementary' | first
   assign close_date = product.metafields.custom.livestreaming.value.end_time 
+  for collection in product.collections
+    if product.vendor == collection.title
+      assign redirect == collection.url
+    endif
+  endfor
 -%}
 
 <section
@@ -349,8 +354,8 @@
       </div>
     {% endif %}
     <div class="hidden md:block">
-     {% render 'edition-details'
-      livestreamingOn: livestreamingOn
+     {% render 'edition-details',
+      redirect: redirect
      %}
     </div>
   </div>
@@ -362,7 +367,9 @@
       {%- render 'product-form', section_color: section_color -%}
     </div>
     <div class="md:hidden">
-      {% render 'edition-details' %} 
+      {% render 'edition-details',
+        redirect: redirect
+       %} 
     </div>
   </div>
 

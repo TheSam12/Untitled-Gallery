@@ -19,6 +19,7 @@
         {% else %}
         {% if product.metafields.custom.artist.value.name != blank %}
           <div class="lg:col-span-5 hidden lg:block">
+            <a href="{{ redirect }}"></a>
             <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Artist</h4>
             <div class="flex gap-3 items-center">
               {% if product.metafields.custom.artist.value.photo != null %}
@@ -37,6 +38,7 @@
       {% endif %}
       {% if product.metafields.custom.artist.value.name != blank and product.metafields.custom.release_date.value != blank %}
         <div class="lg:col-span-5 hidden lg:block">
+          <a href="{{ redirect }}"></a>
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Artist</h4>
           <div class="flex gap-3 items-center">
             {% if product.metafields.custom.artist.value.photo != null %}
@@ -76,6 +78,7 @@
           <p class="sfMono text-[12px] mb-[20px]">{{ product.metafields.custom.edition_details.value.release_date | date:  "%B %d, %Y" }}</p>
         {% endif %}
         {% if product.metafields.custom.artist.value.name != blank %}
+          <a href="{{ redirect }}"></a>
           <h4 class="sfMono text-[14px] capitalize mb-[8px] text-[#030303] font-bold">Artist</h4>
           <div class="flex gap-3 items-center">
             {% if product.metafields.custom.artist.value.photo != null %}
