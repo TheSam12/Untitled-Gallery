@@ -7,7 +7,6 @@
   class="bg-scheme-background{% unless no_border %} border-b-gridline border-gridline-color {% endunless %}relative group overflow-hidden {% if height == 'full_screen' %}h-screen-less-gridline first-section:h-screen-less-header-group-less-gridline{% elsif height == 'full_height' %}h-full{% else %}h-auto{% endif %} lg:w-[98%] h-full"
   data-color-scheme="{{ section_color_scheme }}"
 >
-  <a href="{{ product.url | within: collection }}" class="cursor-pointer">
     {% if cta_link != blank %}
       <a href="{{ cta_link }}" class="absolute inset-0 z-11"
         ><span class="sr-only">
@@ -109,5 +108,4 @@
         </div>
       </div>
     </div>
-  </a>
 </div>
