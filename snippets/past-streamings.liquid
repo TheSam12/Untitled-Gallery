@@ -43,19 +43,12 @@
             @pause="pause"
           >
             {%- if video != blank -%}
-              {{
-                video
-                | video_tag:
-                  autoplay: false,
-                  image_size: '2048x',
-                  loop: true,
-                  controls: false,
-                  preload: 'none',
-                  class: media_class,
-                  muted: true,
-                  id: player_id,
-                  x-ref: 'video'
-              }}
+              <iframe
+                src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                class="w-full h-full"
+              ></iframe>
             {%- else -%}
               <video controls class="{{ media_class }}">
                 <source
