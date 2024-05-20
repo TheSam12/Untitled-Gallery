@@ -28,7 +28,7 @@
                 {% for product in collection.products %}
                     {% liquid
                         assign video = product.metafields.custom.livestreaming.value.video
-                        assign video_id = video | split: "?v=" | last
+                        assign video_id = video | split: "=" | last
                         assign mode = section.settings.mode
                         assign ratio = section.settings.aspect_ratio
                         assign avatar = product.metafields.custom.artist.value.photo
@@ -37,6 +37,8 @@
                      %} 
                      {% if video != null %}
                       {% assign filled_count = filled_count | plus: 1 %}
+                    {% endif %}
+                     {% if video != null %}
                      <li
                         class="splide__slide w-[90%] {% if filled_count == 1 %}lg:w-full{% elsif filled_count == 2 %}lg:w-[50%]{% else %}lg:w-[40%]{% endif %} cursor-pointer" 
                     >
