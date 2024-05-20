@@ -179,15 +179,18 @@
       endif
     endfor
   -%}
+  {% if livestreamingOn == 'on' %}
+    <div class="md:col-span-12">
+      {% render 'livestreaming-media' 
+        close_date: close_date
+      %}
+    </div>
+    {% else %}
+  {% endif %}
   <div
     class="relative {% if product.media.size > 1 %}pb-7{% endif %} product-media-container bg-scheme-background text-scheme-text md:pb-0 {{ media_width_desktop }} {% unless settings.fill_image_to_border_edge %}border-b-gridline border-gridline-color md:border-0{% endunless %}"
     data-product-media-container
   >
-    {% if livestreamingOn == 'on' %}
-      {% render 'livestreaming-media' 
-        close_date: close_date
-      %}
-      {% else %}
       <div
         class="splide splide--product md:!sticky md:top-sticky-header-less-gridline {% if negative_margin %}md:-mb-gridline{% endif %} product-page__slideshow"
         data-drag-disabled="{{ has_interactive_media }}"
@@ -345,7 +348,6 @@
           </div>
         {%- endif -%}
       </div>
-    {% endif %}
     <div class="hidden md:block">
      {% render 'edition-details'
      %}
