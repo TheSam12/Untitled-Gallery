@@ -68,6 +68,7 @@
     },
     "past_streamings_VckLLb": {
       "type": "past-streamings",
+      "disabled": true,
       "settings": {
         "title": "Discover artists",
         "pagination": false,
@@ -246,7 +247,6 @@
         "brands_ULdXFU",
         "brands_Xz3HLe"
       ],
-      "disabled": true,
       "custom_css": [
         "grid {align-content: center;}"
       ],
