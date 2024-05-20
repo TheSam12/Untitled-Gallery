@@ -81,6 +81,7 @@
                 class="splide__slide {% unless forloop.first %} [.splide:not(.is-active)_&]:hidden {% endunless %}"
                 data-index="{{ forloop.index0 }}"
               >
+                {{ url }}
                   {%-
                     render 'image-with-text-overlay',
                     height: height,
