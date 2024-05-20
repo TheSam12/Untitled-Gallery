@@ -5737,13 +5737,14 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
     left:50%;
   }
   .bid-history-modal {
+    top:30%;
     left: 32%;
+    width:560px;
   }
 }
 @media (min-width:768px) and (max-width:1023px){
   .bid-history-modal {
     top:30%;
     left: 10px;
-    width:560px;
   }
 }
