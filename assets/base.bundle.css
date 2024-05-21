@@ -5699,7 +5699,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   top:10%;
   z-index: 50;
   width: 97%;
-  height:400px; 
+  height:346px; 
+  overflow-y: scroll;
 }
 
 .low-bid-modal {
