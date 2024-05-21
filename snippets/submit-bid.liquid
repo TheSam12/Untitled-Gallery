@@ -1,4 +1,6 @@
-
+{% comment %}
+    Place Bid Modals
+{% endcomment %}
 <div id="placeBidModal" class="place-bid-modal">
     <div class="bid-history-modal-content p-[20px]">
         <h3 class="text-[20px] sfMono mb-[16px]">You’re about to place a bid for</h3>
@@ -8,14 +10,30 @@
         <button class="close text-center bg-transparent text-[14px] w-full">Cancel</button>
     </div>
 </div>
+<div id="maxBidModal" class="place-bid-modal">
+    <div class="bid-history-modal-content p-[20px]">
+        <h3 class="text-[20px] sfMono mb-[16px]">You’re about to set a max bid of</h3>
+        <h2 class="text-[32px] neueSiwft text-center mb-[20px] mb-[20px]">$1000</h2>
+        <p class="text-center text-[#9d9d9d] text-[14px] sfMono mb-[20px]">As a reminder, all bids are binding. If you’re the highest bidder, you agree to pay for this object. </p>
+        <button class="bg-black p-[10px] w-full text-center text-white sfMono text-[14px] mb-[20px]">Confirm your bid</button>
+        <button class="close text-center bg-transparent text-[14px] w-full">Cancel</button>
+    </div>
+</div>
 <div id="place-bid-overlay" class="modal-overlay"></div> 
 <script>
     const placeBid = document.getElementById('placeBid');
+    const maxBid = document.getElementById('maxBid');
     const placeBidModal = document.getElementById('placeBidModal');
+    const maxBidModal = document.getElementById('maxBidModal');
     const placeBidOverlay = document.getElementById('place-bid-overlay'); 
 
     placeBid.addEventListener('click', function() {
         placeBidModal.style.display = 'block';
+        placeBidOverlay.style.display = 'block';
+    });
+
+    maxBid.addEventListener('click', function() {
+        maxBidModal.style.display = 'block';
         placeBidOverlay.style.display = 'block';
     });
 
