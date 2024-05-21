@@ -57,26 +57,16 @@
                     </div>
                     
                     <script>
-                        const radioInputs = document.querySelectorAll('bidNumbers');
-                        const customInput = document.getElementById('custom-num');
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var radioButtons = document.querySelectorAll('input[name="num"]');
+                            var customNumInput = document.getElementById('custom-num');
                         
-                        customInput.addEventListener('input', updateRadioValues);
-
-                        function updateRadioValues() {
-                            const customValue = parseInt(customInput.value);
-                            if (customValue > radioInputs[radioInputs.length - 1].value) {
-                                const newValues = [];
-                                let currentValue = customValue;
-                                while (newValues.length < radioInputs.length) {
-                                newValues.push(currentValue);
-                                currentValue -= 5;
-                                }
-                                newValues.reverse();
-                                radioInputs.forEach((input, index) => {
-                                input.value = newValues[index];
+                            for (var i = 0; i < radioButtons.length; i++) {
+                                radioButtons[i].addEventListener('change', function() {
+                                    customNumInput.value = '£' + this.value;
                                 });
                             }
-                        }
+                        });
                     </script>
                 </div>
                 <div class="mt-[16px] relative">
