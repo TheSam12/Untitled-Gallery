@@ -5754,7 +5754,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   }
 
   .unsuccessful-modal,
-  .successful-modal {
+  .successful-modal,
+  .place-bid-modal {
     top:calc(50% - 173px);
     left:calc(50% - 220px);
     width: 440px;
