@@ -6,7 +6,7 @@
         <h3 class="text-[20px] sfMono mb-[16px]">You’re about to place a bid for</h3>
         <h2 class="text-[32px] neueSiwft text-center mb-[20px] mb-[20px]">$700</h2>
         <p class="text-center text-[#9d9d9d] text-[14px] sfMono mb-[20px]">As a reminder, all bids are binding. If you’re the highest bidder, you agree to pay for this object. </p>
-        <button class="bg-black p-[10px] w-full text-center text-white sfMono text-[14px] mb-[20px]">Confirm your bid</button>
+        <button class="bg-black p-[10px] w-full text-center text-white sfMono text-[14px] mb-[20px] confirm">Confirm your bid</button>
         <button class="close text-center bg-transparent text-[14px] w-full">Cancel</button>
     </div>
 </div>
@@ -15,7 +15,27 @@
         <h3 class="text-[20px] sfMono mb-[16px]">You’re about to set a max bid of</h3>
         <h2 class="text-[32px] neueSiwft text-center mb-[20px] mb-[20px]">$1000</h2>
         <p class="text-center text-[#9d9d9d] text-[14px] sfMono mb-[20px]">As a reminder, all bids are binding. If you’re the highest bidder, you agree to pay for this object. </p>
-        <button class="bg-black p-[10px] w-full text-center text-white sfMono text-[14px] mb-[20px]">Confirm your bid</button>
+        <button class="bg-black p-[10px] w-full text-center text-white sfMono text-[14px] mb-[20px] confirm">Confirm your bid</button>
+        <button class="close text-center bg-transparent text-[14px] w-full">Cancel</button>
+    </div>
+</div>
+<div id="confirmBidModal" class="confirm-bid-modal">
+    <div class="bid-history-modal-content p-[20px]">
+        <h3 class="text-[20px] sfMono mb-[16px]">Bid reservation</h3>
+        <p class="text-[14px] text-[#9d9d9d] mb-[20px] sfMono">Bids are reserved up to $1000. 
+            If you place the top bid and don’t pay the remaining amount within 3 working days, 
+            the Buyer Protection fee will be charged to this card. If you’re not the top bidder, 
+            the bid reservation will be released. <a class="text-black font-bold cursor-pointer" href="#">More info</a>
+        </p>
+        <h3 class="text-[20px] sfMono mb-[16px]">Add card for bid reservation</h3>
+        <input placeholder="Card holder's name" class="p-[10px] border border-solid mb-[16px]" type="text" required>
+        <div class="flex mb-[20px]">
+            <input type="text" class="w-[95%] p-[10px] border border-solid border-r-0" placeholder="Card number" required>
+            <input type="date" class="w-[5%] p-[10px] border border-solid border-l-0" required>
+        </div>
+        <h2 class="text-[20px] sfMono mb-[16px]">Always ready to bid</h2>
+        <p class="text-center text-[#9d9d9d] text-[14px] sfMono mb-[20px]">We’ll keep your card info safe with our secure payment partner Stripe. By saving you card, you agree to us charging this card for future payments, bid reservations and auction fees. </p>
+        <button class="bg-black p-[10px] w-full text-center text-white sfMono text-[14px] mb-[20px]">Save card</button>
         <button class="close text-center bg-transparent text-[14px] w-full">Cancel</button>
     </div>
 </div>
@@ -26,6 +46,7 @@
     const placeBidModal = document.getElementById('placeBidModal');
     const maxBidModal = document.getElementById('maxBidModal');
     const placeBidOverlay = document.getElementById('place-bid-overlay'); 
+    const confirmBidModal = document.getElementById('confirm-bid-overlay'); 
 
     placeBid.addEventListener('click', function() {
         placeBidModal.style.display = 'block';
@@ -42,12 +63,20 @@
             placeBidModal.style.display = 'none';
             placeBidOverlay.style.display = 'none';
         }
+        if (event.target === placeBidModal || event.target.classList.contains('confirm')) {
+            placeBidModal.style.display = 'none';
+            confirmBidModal.style.display = 'block';
+        }
     });
 
     maxBidModal.addEventListener('click', function(event) {
-        if (event.target === placeBidModal || event.target.classList.contains('close')) {
+        if (event.target === maxBidModal || event.target.classList.contains('close')) {
             maxBidModal.style.display = 'none';
             placeBidOverlay.style.display = 'none';
+        }
+        if (event.target === maxBidModal || event.target.classList.contains('confirm')) {
+            maxBidModal.style.display = 'none';
+            confirmBidModal.style.display = 'block';
         }
     });
 </script>
