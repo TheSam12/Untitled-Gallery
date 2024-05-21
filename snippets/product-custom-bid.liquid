@@ -135,14 +135,3 @@
         </style>
     {% endif %}
 {% endif %}
-<script>
-    const unsuccessfulModal = document.getElementById('unsuccessfulModal');
-    const bidOverlay = document.getElementById('bid-overlay');
-
-    unsuccessfulModal.addEventListener('click', function(event) {
-        if (event.target === unsuccessfulModal || event.target.classList.contains('cerrar')) {
-            unsuccessfulModal.style.display = 'none';
-            bidOverlay.style.display = 'none';
-        }
-    });
-</script>
