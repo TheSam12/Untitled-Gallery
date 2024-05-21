@@ -16,3 +16,14 @@
         </div>
     </div>
 </div>
+<script>
+    const modal = document.getElementById('unsuccesfulModal');
+    const overlay = document.getElementById('overlay');
+
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal || event.target.classList.contains('cerrar')) {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    });
+</script>
