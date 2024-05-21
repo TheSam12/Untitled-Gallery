@@ -4,8 +4,9 @@
   "sections": {
     "announcement_bar_jwMLDh": {
       "type": "announcement-bar",
+      "disabled": true,
       "settings": {
-        "home_page_only": false,
+        "home_page_only": true,
         "hide_on_mobile": true,
         "display": "static",
         "text": "Discover the works of Gemma Alpuente",
