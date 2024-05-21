@@ -5689,7 +5689,6 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   z-index: 50;
   width: 97%;
   height:400px;
-  overflow-y: scroll;
 }
 
 .pre-order-modal {
