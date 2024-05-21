@@ -5748,7 +5748,7 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   display: none;
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:768px){
   .tooltip{
     width: 435px;
     transform: translateX(-50%);
