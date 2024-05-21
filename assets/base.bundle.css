@@ -5682,7 +5682,17 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   overflow-y: scroll;
 }
 
-.unsuccessful-modal {
+.unsuccessful-modal,
+.successful-modal {
+  display: block;
+  position: fixed;
+  top:10%;
+  z-index: 50;
+  width: 97%;
+  height:346px; 
+}
+
+.low-bid-modal {
   display: block;
   position: fixed;
   top:10%;
@@ -5742,11 +5752,18 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
     left: 411px;
   }
 
-  .unsuccessful-modal {
+  .unsuccessful-modal,
+  .successful-modal {
+    top:calc(50% - 173px);
+    left:calc(50% - 220px);
+    width: 440px;
+  }
+
+  .low-bid-modal {
     top:calc(50% - 216px);
     left:calc(50% - 220px);
     width: 440px;
-    height:432px;
+    height: 432px;
   }
 
   .tooltip.buyer-protection-tooltip::after{

@@ -9,14 +9,13 @@
                 <img src="{{ 'unsuccessful-bid.png' | asset_url }}" height="160" width="160">
             </div>
             <div>
-                <h3 class="text-[20px] sfMono mb-[20px]">Your bid is too low</h3>
-                <p class="text-[14px] sfMono text-[#9d9d9d] mb-[20px]">Unfortunately, your bid didn't meet the artwork reserve price. Try again by raising your bid.</p>
-                <p class="text-[14px]">Our expert's value estimate is $1000 - $2000</p>
+                <h3 class="text-[20px] sfMono mb-[20px]">Bid was not placed successfully.</h3>
+                <p class="text-[14px] sfMono text-[#9d9d9d] mb-[20px]">Bid not accepted. The lot is closed.</p>
             </div>
         </div>
     </div>
 </div>
-<div id="bid-overlay" class="modal-overlay" style="display:block"></div> 
+<div id="bid-overlay" class="modal-overlay"></div> 
 <script>
     const unsuccessfulModal = document.getElementById('unsuccessfulModal');
     const bidOverlay = document.getElementById('bid-overlay');
