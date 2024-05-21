@@ -90,8 +90,8 @@
 
     monthControl.addEventListener('input', function() {
         const value = this.value;
-        const year = value.substring(0, 4);
-        const month = value.substring(5, 7);
-        this.value = `${month} / ${year}`;
+        const year = value.substring(3, 7);
+        const month = value.substring(0, 2);
+        this.value = `${year}-${month.padStart(2, '0')}`;
     });
 </script>
