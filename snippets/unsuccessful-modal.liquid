@@ -17,12 +17,12 @@
     </div>
 </div>
 <script>
-    const modal = document.getElementById('unsuccessfulModal');
+    const unsuccessfulModal = document.getElementById('unsuccessfulModal');
     const overlay = document.getElementById('overlay');
 
-    modal.addEventListener('click', function(event) {
-        if (event.target === modal || event.target.classList.contains('cerrar')) {
-            modal.style.display = 'none';
+    unsuccessfulModal.addEventListener('click', function(event) {
+        if (event.target === unsuccessfulModal || event.target.classList.contains('cerrar')) {
+            unsuccessfulModal.style.display = 'none';
             overlay.style.display = 'none';
         }
     });
