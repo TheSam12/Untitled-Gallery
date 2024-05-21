@@ -112,7 +112,7 @@
                 {% render 'low-bid-modal' %}
             {% endif %}
         </div>
-        <div id="overlay" class="modal-overlay" style="display:block"></div> 
+        <div id="bid-overlay" class="modal-overlay" style="display:block"></div> 
         <style>
             @media screen and (min-width:1024px){
                 .tooltip.starting-bid-tooltip::after {
@@ -139,7 +139,7 @@
 {% endif %}
 <script>
     const unsuccessfulModal = document.getElementById('unsuccessfulModal');
-    const overlay = document.getElementById('overlay');
+    const bidOverlay = document.getElementById('bid-overlay');
 
     unsuccessfulModal.addEventListener('click', function(event) {
         if (event.target === unsuccessfulModal || event.target.classList.contains('cerrar')) {
