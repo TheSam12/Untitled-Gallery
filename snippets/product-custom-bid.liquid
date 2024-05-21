@@ -4,7 +4,7 @@
   assign show-bid = product.metafields.custom.activate_bid.value
  %}
 {% if show-bid == true %} 
-    {% if timer > current_date %}
+    {% if timer < current_date %}
         <div class="my-[20px]">
             <div class="relative">
                 <div class="relative flex gap-2 items-center">
