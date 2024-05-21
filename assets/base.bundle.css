@@ -5697,9 +5697,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   display: none;
   position: fixed;
   top:10%;
-  left:calc(50% - 170px); 
   z-index: 50;
-  width: 340px;
+  width: 97%;
   height:346px; 
   overflow-y: scroll;
 }
