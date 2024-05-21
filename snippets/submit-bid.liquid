@@ -86,4 +86,12 @@
             placeBidOverlay.style.display = 'none';
         }
     });
+    const monthControl = document.querySelector('input[type="month"]');
+
+    monthControl.addEventListener('input', function() {
+        const value = this.value;
+        const year = value.substring(0, 4);
+        const month = value.substring(5, 7);
+        this.value = `${month} / ${year}`;
+    });
 </script>
