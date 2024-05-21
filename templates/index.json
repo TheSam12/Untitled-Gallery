@@ -33,7 +33,7 @@
         "collection": "frontpage",
         "autoplay": false,
         "autoplay_interval": "5000",
-        "loop": true,
+        "loop": false,
         "color_scheme": "",
         "pagination": false,
         "content_position": "justify-end items-end text-right",

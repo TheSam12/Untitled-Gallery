@@ -6,7 +6,7 @@
       "type": "announcement-bar",
       "settings": {
         "home_page_only": false,
-        "hide_on_mobile": false,
+        "hide_on_mobile": true,
         "display": "static",
         "text": "Discover the works of Gemma Alpuente",
         "link": "shopify:\/\/products\/untitled",
