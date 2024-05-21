@@ -5747,7 +5747,6 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
     left:calc(50% - 220px);
     width: 440px;
     height:432px;
-    overflow-y: scroll;
   }
 
   .tooltip.buyer-protection-tooltip::after{
