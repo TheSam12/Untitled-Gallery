@@ -2,7 +2,7 @@
 <div id="unsuccessfulModal" class="unsuccessful-modal">
     <div class="bid-history-modal-content p-[12px]">
         <div class="flex justify-end items-center">
-            <span class="cerrar text-[40px] cursor-pointer">&times;</span>
+            <span class="close text-[40px] cursor-pointer">&times;</span>
         </div>
         <div class="mt-0">
             <div class="flex justify-center mb-[32px]">
@@ -22,7 +22,7 @@
     const bidOverlay = document.getElementById('bid-overlay');
 
     unsuccessfulModal.addEventListener('click', function(event) {
-        if (event.target === unsuccessfulModal || event.target.classList.contains('cerrar')) {
+        if (event.target === unsuccessfulModal || event.target.classList.contains('close')) {
             unsuccessfulModal.style.display = 'none';
             bidOverlay.style.display = 'none';
         }
