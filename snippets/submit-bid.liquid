@@ -28,7 +28,7 @@
             the bid reservation will be released. <a class="text-black font-bold cursor-pointer" href="#">More info</a>
         </p>
         <h3 class="text-[20px] sfMono mb-[16px]">Add card for bid reservation</h3>
-        <input placeholder="Card holder's name" class="p-[10px] border border-solid mb-[16px]" type="text" required>
+        <input placeholder="Card holder's name" class="p-[10px] border border-solid mb-[16px] w-full" type="text" required>
         <div class="flex mb-[20px]">
             <input type="text" class="w-[95%] p-[10px] border border-solid border-r-0" placeholder="Card number" required>
             <input type="date" class="w-[5%] p-[10px] border border-solid border-l-0" required>
@@ -77,6 +77,13 @@
         if (event.target === maxBidModal || event.target.classList.contains('confirm')) {
             maxBidModal.style.display = 'none';
             confirmBidModal.style.display = 'block';
+        }
+    });
+
+    confirmBidModal.addEventListener('click', function(event) {
+        if (event.target === confirmBidModal || event.target.classList.contains('close')) {
+            confirmBidModal.style.display = 'none';
+            placeBidOverlay.style.display = 'none';
         }
     });
 </script>
