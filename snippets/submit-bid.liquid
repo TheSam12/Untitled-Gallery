@@ -1,18 +1,11 @@
 
 <div id="placeBidModal" class="place-bid-modal">
-    <div class="bid-history-modal-content p-[12px]">
-        <div class="flex justify-end items-center">
-            <span class="close text-[40px] cursor-pointer">&times;</span>
-        </div>
-        <div class="mt-0">
-            <div class="flex justify-center mb-[32px]">
-                <img src="{{ 'unsuccessful-bid.png' | asset_url }}" height="160" width="160">
-            </div>
-            <div>
-                <h3 class="text-[20px] sfMono mb-[20px]">Bid was not placed successfully.</h3>
-                <p class="text-[14px] sfMono text-[#9d9d9d] mb-[20px]">Bid not accepted. The lot is closed.</p>
-            </div>
-        </div>
+    <div class="bid-history-modal-content p-[20px]">
+        <h3 class="text-[20px] sfMono mb-[16px]">You’re about to place a bid for</h3>
+        <h2 class="text-[32px] neueSiwft text-center mb-[20px] mb-[20px]">$700</h2>
+        <p class="text-center text-[#9d9d9d] text-[14px] sfMono mb-[20px]">As a reminder, all bids are binding. If you’re the highest bidder, you agree to pay for this object. </p>
+        <button class="bg-black p-[10px] w-full text-center text-white sfMono text-[14px] mb-[20px]">Confirm your bid</button>
+        <button class="close text-center bg-transparent text-[14px] w-full">Cancel</button>
     </div>
 </div>
 <div id="place-bid-overlay" class="modal-overlay"></div> 
