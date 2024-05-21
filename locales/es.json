@@ -41,7 +41,7 @@
       "login_form_submit": "Ingresar",
       "signup_form_email_label": "Correo Electrónico",
       "signup_form_success": "¡Te enviaremos un correo electrónico antes de inaugurar!",
-      "admin_link_html": "¿Eres el dueño de la tienda? <a href=\"/admin\" class=\"text-link\">Regístrate aquí</a>",
+      "admin_link_html": "¿Eres el dueño de la tienda? <a href=\"\/admin\" class=\"text-link\">Regístrate aquí<\/a>",
       "password_link": "Entrar usando contraseña",
       "powered_by_shopify_html": "Esta tienda será alimentada por {{ shopify }}"
     },
@@ -106,7 +106,7 @@
       "method": "Métodos de pago"
     },
     "country": {
-      "dropdown_label": "País/región"
+      "dropdown_label": "País\/región"
     },
     "language": {
       "dropdown_label": "Idioma"
@@ -122,7 +122,7 @@
       "pause_slideshow": "Pausar la presentación",
       "rotate_slideshow": "Reproducir la presentación",
       "load_slide": "Cargar diapositiva {{ slide_number }}",
-      "navigation_instructions": "Utiliza las flechas izquierda/derecha para navegar por la presentación o deslízate hacia la izquierda/derecha si usas un dispositivo móvil"
+      "navigation_instructions": "Utiliza las flechas izquierda\/derecha para navegar por la presentación o deslízate hacia la izquierda\/derecha si usas un dispositivo móvil"
     },
     "featured_product": {
       "title": "Producto destacado",
@@ -133,7 +133,7 @@
     "map": {
       "address_error": "No se puede encontrar esa dirección",
       "address_no_results": "No results for that address",
-      "address_query_limit_html": "Se ha excedido el límite de uso de la API de Google . Considere la posibilidad de actualizar a un <a href=\"https://developers.google.com/maps/premium/usage-limits\">Plan Premium</a>.",
+      "address_query_limit_html": "Se ha excedido el límite de uso de la API de Google . Considere la posibilidad de actualizar a un <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Plan Premium<\/a>.",
       "auth_error_html": "Hubo un problema de autenticación con su cuenta de Google Maps.",
       "section_heading": "Ubicación"
     },
@@ -199,15 +199,15 @@
     "general": {
       "title": "Carrito",
       "note": "Agregue una nota a su pedido",
-      "removed_item_html": "Eliminó <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}</span> de tu carrito.",
+      "removed_item_html": "Eliminó <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> de tu carrito.",
       "remove": "Quitar",
       "subtotal": "Subtotal",
       "new_subtotal": "Nuevo subtotal",
       "savings": "Está ahorrando",
       "taxes_and_shipping_at_checkout": "Los impuestos y gastos de envío se calculan en la pantalla de pagos",
-      "taxes_and_shipping_policy_at_checkout_html": "Los impuestos y <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos",
+      "taxes_and_shipping_policy_at_checkout_html": "Los impuestos y <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pagos",
       "taxes_included_but_shipping_at_checkout": "En la pantalla de pagos se incluye el impuesto y se calculan los gastos de envío",
-      "taxes_included_and_shipping_policy_html": "Impuesto incluido. Los <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos.",
+      "taxes_included_and_shipping_policy_html": "Impuesto incluido. Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pagos.",
       "update": "Actualizar carrito",
       "checkout": "Finalizar pedido",
       "empty": "Su carrito actualmente está vacío.",
@@ -248,7 +248,7 @@
       "results_title_many": "Hay {{ count }} tarifas:",
       "estimated_delivery_date": "Fecha estimada de entrega:",
       "submit": "Calcular",
-      "country": "País / Región",
+      "country": "País \/ Región",
       "province": "Provincia",
       "zip": "Código postal"
     }
@@ -317,7 +317,7 @@
       "address1": "Dirección",
       "address2": "Apartamento, suite, etc.",
       "city": "Ciudad",
-      "country": "País / Región",
+      "country": "País \/ Región",
       "province": "Provincia",
       "zip": "Código postal",
       "phone": "Teléfono",
@@ -470,13 +470,13 @@
       "vendor": "Proveedor",
       "quantity_minimum_message": "La cantidad debe ser 1 o más",
       "include_taxes": "Impuesto incluido.",
-      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos.",
+      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pagos.",
       "unit_price_label": "Precio unitario",
       "view_cart": "Ver carrito",
       "availability": "Disponibilidad",
       "from_lowest_price_html": "de {{ lowest_price }}",
       "on_sale_from_html": "En oferta desde {{ price }}",
-      "add_to_cart_confirm_html": "<a href=\"{{ cart_url }}\">Ver carrito</a> o <a href=\"{{ link_url }}\">seguir comprando</a>",
+      "add_to_cart_confirm_html": "<a href=\"{{ cart_url }}\">Ver carrito<\/a> o <a href=\"{{ link_url }}\">seguir comprando<\/a>",
       "media": "Medios",
       "view_in_space": "Ver en tu espacio",
       "view_in_space_label": "Ver en tu espacio, carga el artículo en la ventana de realidad aumentada",
@@ -519,8 +519,8 @@
       "check_other_stores": "Verificar disponibilidad en otras tiendas",
       "pick_up_available": "Retiro disponible",
       "pick_up_currently_unavailable": "Retiro no disponible actualmente",
-      "pick_up_available_at_html": "Retiro disponible en <strong>{{ location_name }}</strong>",
-      "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <strong>{{ location_name }}</strong>"
+      "pick_up_available_at_html": "Retiro disponible en <strong>{{ location_name }}<\/strong>",
+      "pick_up_unavailable_at_html": "Retiro no disponible actualmente en <strong>{{ location_name }}<\/strong>"
     }
   },
   "date_formats": {
@@ -559,5 +559,19 @@
   "media": {
     "play_video": "Reproducir video",
     "play_model": "Reproducir el visor 3D"
+  },
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "deferred_balance_info": {
+          "title": "El saldo de {{amount_due}} vence el {{due_at}}",
+          "due_on_fulfillment_title": "El saldo de {{amount_due}} se debe pagar al momento del cumplimiento"
+        }
+      },
+      "payment_gateway": {
+        "order_deposit_due_now": "{{depositAmount}} vence hoy. El saldo restante está sujeto a los términos de {{translatedName}} y vence el {{dueDate}} .",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} vence hoy. El saldo restante deberá pagarse una vez que se complete su pedido."
+      }
+    }
   }
 }
