@@ -5,7 +5,7 @@
  %}
 {% if show-bid == true %} 
     {% if timer < current_date %} 
-        <div class="my-[20px] relative">
+        <div class="my-[20px] relative" id="bid-form">
             <div class="relative">
                 <div class="relative flex gap-2 items-center">
                     <span class="h-[14px] text-[14px] uppercase text-[#9d9d9d]">{% if timer > current_date %}Starting bid{% else %}{% if product.selected_or_first_available_variant.available %}Current bid{% else %}winning bid{% endif %}{% endif %}</span><span class="cursor-pointer starting-bid-info h-[15px]">{% render 'icon-info' %}</span>
