@@ -5683,7 +5683,8 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
 }
 
 .unsuccessful-modal,
-.successful-modal {
+.successful-modal,
+.place-bid-modal {
   display: none;
   position: fixed;
   top:10%;
