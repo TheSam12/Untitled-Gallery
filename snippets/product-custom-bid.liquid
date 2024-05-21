@@ -55,7 +55,7 @@
                         <button id="placeBid" class="border w-full border-black p-[10px] {% if timer > current_date %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date %}disabled{% endif %}>Place bid</button>
                         <button id="maxBid" class="border w-full border-black p-[10px] bg-black text-white {% if timer > current_date %}opacity-[0.5] cursor-not-allowed{% endif %}" {% if timer > current_date %}disabled{% endif %}>Set max bid</button>
                     </div>
-                    
+                    {% render 'submit-bid' %}
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             var radioButtons = document.querySelectorAll('input[name="num"]');
