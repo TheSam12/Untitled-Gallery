@@ -29,7 +29,7 @@
       "type": "slideshow",
       "settings": {
         "height": "natural",
-        "heading_size": 32,
+        "heading_size": 30,
         "collection": "frontpage",
         "autoplay": false,
         "autoplay_interval": "5000",
