@@ -5,7 +5,7 @@
  %}
 {% if show-bid == true %} 
     {% if timer < current_date %} 
-        <div class="my-[20px]">
+        <div class="my-[20px] relative">
             <div class="relative">
                 <div class="relative flex gap-2 items-center">
                     <span class="h-[14px] text-[14px] uppercase text-[#9d9d9d]">{% if timer > current_date %}Starting bid{% else %}{% if product.selected_or_first_available_variant.available %}Current bid{% else %}winning bid{% endif %}{% endif %}</span><span class="cursor-pointer starting-bid-info h-[15px]">{% render 'icon-info' %}</span>
@@ -107,8 +107,12 @@
                         </div> 
                     </div>
                 </div>
+                {% render 'unsuccessful-modal' %}
+                {% render 'successful-modal' %}
+                {% render 'low-bid-modal' %}
             {% endif %}
         </div>
+        <div id="overlay" class="modal-overlay"></div>
         <style>
             @media screen and (min-width:1024px){
                 .tooltip.starting-bid-tooltip::after {

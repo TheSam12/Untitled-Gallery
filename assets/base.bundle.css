@@ -5682,6 +5682,16 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   overflow-y: scroll;
 }
 
+.unsuccessful-modal {
+  display: block;
+  position: fixed;
+  top:10%;
+  z-index: 50;
+  width: 97%;
+  height:400px;
+  overflow-y: scroll;
+}
+
 .pre-order-modal {
   display: none;
   position: fixed;
@@ -5731,6 +5741,14 @@ html.no-js .splide:not(.is-active) .no-js\:\[\.splide\:not\(\.is-active\)_\&\]\:
   .buyer-protection-tooltip{
     top: -184px;
     left: 411px;
+  }
+
+  .unsuccessful-modal {
+    top:calc(50% - 216px);
+    left:calc(50% - 220px);
+    width: 440px;
+    height:432px;
+    overflow-y: scroll;
   }
 
   .tooltip.buyer-protection-tooltip::after{
