@@ -214,7 +214,8 @@
       "continue_shopping": "Seguir comprando",
       "cart_error": "Se ha producido un error al actualizar tu carrito. Vuelve a intentarlo.",
       "cart_add_error": "Todos los {{ title }} están en su carrito.",
-      "cart_quantity_error_html": "Solo puedes agregar [quantity] de este artículo a tu carrito."
+      "cart_quantity_error_html": "Solo puedes agregar [quantity] de este artículo a tu carrito.",
+      "title": "Carrito"
     },
     "label": {
       "discounted_total": "Descuento total",
