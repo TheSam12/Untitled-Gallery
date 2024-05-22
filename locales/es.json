@@ -197,7 +197,6 @@
   },
   "cart": {
     "general": {
-      "title": "Carrito",
       "note": "Agregue una nota a su pedido",
       "removed_item_html": "Eliminó <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> de tu carrito.",
       "remove": "Quitar",
